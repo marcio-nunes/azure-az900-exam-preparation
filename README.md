@@ -1,4 +1,4 @@
-# Preparação para o exame Azure AZ-900
+# <a name="topo"></a>Preparação para o exame Azure AZ-900
 1. [Princípios básicos do Microsoft Azure](#parte1)
 2. [](#parte2)
 3. [](#parte3)
@@ -26,6 +26,9 @@ Depois de concluir este roteiro de aprendizagem, você poderá:
 - Explicar conceitos de nuvem (alta disponibilidade, escalabilidade, elasticidade, agilidade e recuperação de desastre)
 - Descrever os principais componentes da arquitetura (subscription, managment groups, resource e resource group)
 - Resumir conceitos de distribuição geográfica (regiões do Azure, pares de regiões e zonas de disponibilidade)
+
+🔼 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte1)
 
 ---
 
