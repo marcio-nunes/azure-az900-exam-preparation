@@ -143,9 +143,6 @@ SaaS é um software que é hospedado e gerenciado de maneira centralizada para v
 
 O SaaS oferece os mesmos benefícios que a IaaS, mas, novamente, há alguns benefícios adicionais a ter em mente.
 
-
-![iaas-paas-saas](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/fundamental-azure-concepts/media/iaas-paas-saas-575a09e9.png)
-
 Vantagens:
 - Não há CapEx. Os usuários não têm custos antecipados.
 
@@ -166,6 +163,9 @@ Desvantagem:
 | ----------- | ----------- | ----------- |
 | O serviço de nuvem mais flexível. | Focado no desenvolvimento de aplicativos. | Modelo de preço pago conforme o uso.|
 | Você configura e gerencia o hardware para seu aplicativo. | O gerenciamento de plataforma é realizado pelo provedor de nuvem. | Os usuários pagam pelo software que utilizam em um modelo de assinatura.|
+
+
+![iaas-paas-saas](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/fundamental-azure-concepts/media/iaas-paas-saas-575a09e9.png)
 
  Níveis de responsabilidade entre um provedor de nuvem e um locatário de nuvem.
 
