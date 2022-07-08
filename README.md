@@ -16,7 +16,7 @@ Depois de concluir este roteiro de aprendizagem, você poderá:
 5. [](#parte5)
 6. [](#parte6)
 
-## ☁️ <a name="parte1"></a>Princípios básicos do Microsoft Azure
+# ☁️ <a name="parte1"></a>Princípios básicos do Microsoft Azure
 
 1. [Descrever os principais conceitos do Azure](#parte1-1)
 2. [Descrever os principais serviços do Azure](#parte1-2)
@@ -26,7 +26,7 @@ Depois de concluir este roteiro de aprendizagem, você poderá:
 6. [Parte 6: descrever contratos de nível de serviço e Gerenciamento de Custos da Microsoft](#parte1-6)
 
 ---
-### 🔸<a name="parte1-1"></a> Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure 
+## 🔸<a name="parte1-1"></a> Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure 
 
 [Link para o Microsoft Learn](https://docs.microsoft.com/pt-br/learn/paths/az-900-describe-cloud-concepts/)
 
@@ -36,7 +36,7 @@ Ao concluir este módulo, você poderá:
 - Descrever as diferenças entre as categorias de serviços de nuvem.
 - Descrever as diferenças entre os tipos de computação em nuvem.
 
-## **Modelos de nuvem**
+### **Modelos de nuvem**
 
 **Nuvem pública** - Os serviços são oferecidos pela Internet pública e ficam disponíveis para qualquer pessoa que deseje comprá-los. Os recursos de nuvem são de propriedade e operados por um provedor de serviços de nuvem de terceiros e entregues pela Internet.
 
@@ -56,7 +56,7 @@ Ao concluir este módulo, você poderá:
 - As organizações determinam onde executar seus aplicativos.
 - As organizações controlam a segurança, a conformidade ou os requisitos legais.
 
-## Vantagens da computação em nuvem
+### Vantagens da computação em nuvem
 
 - **Alta disponibilidade**: dependendo do SLA (Contrato de Nível de Serviço) que você escolher, seus aplicativos baseados em nuvem poderão oferecer uma experiência de usuário contínua, sem tempo de inatividade aparente, mesmo quando as coisas derem errado.
 
