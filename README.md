@@ -6,7 +6,7 @@
 5. [](#parte5)
 6. [](#parte6)
 
-## Princípios básicos do Microsoft Azure
+## <a name="#parte1"></a>Princípios básicos do Microsoft Azure
 
 1. [Descrever os principais conceitos do Azure](#parte1-1)
 2. [Descrever os principais serviços do Azure](#parte1-2)
