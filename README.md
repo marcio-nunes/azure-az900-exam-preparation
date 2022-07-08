@@ -36,7 +36,7 @@ Ao concluir este módulo, você poderá:
 - Descrever as diferenças entre as categorias de serviços de nuvem.
 - Descrever as diferenças entre os tipos de computação em nuvem.
 
-### **Modelos de nuvem**
+### Modelos de nuvem
 
 **Nuvem pública** - Os serviços são oferecidos pela Internet pública e ficam disponíveis para qualquer pessoa que deseje comprá-los. Os recursos de nuvem são de propriedade e operados por um provedor de serviços de nuvem de terceiros e entregues pela Internet.
 
@@ -72,7 +72,7 @@ Ao concluir este módulo, você poderá:
 
 - **Recuperação de desastre**: ao aproveitar os serviços de backup baseados em nuvem, a replicação de dados e a distribuição geográfica, você pode implantar os aplicativos com a confiança de saber que seus dados estarão seguros em caso de desastre.
 
-## Despesas de capital vs. despesas operacionais
+### Despesas de capital vs. despesas operacionais
 
 - **CapEx (despesas de capital)** são os gastos antecipados de dinheiro com a infraestrutura física e a posterior dedução dessas despesas antecipadas ao longo do tempo. 
 O custo inicial de CapEx tem um valor que é reduzido ao longo do tempo. Como um investimento de capital foi feito, os contadores categorizam essa transação como uma CapEx. Ao longo do tempo, para considerar a vida útil limitada dos ativos, eles são depreciados ou amortizados.
@@ -88,7 +88,7 @@ Banefícios do modelo baseado em consumo:
 - A capacidade de pagar para obter recursos adicionais quando necessário.
 - A capacidade de parar de pagar por recursos que não são mais necessários.
 
-## Modelos de serviço de nuvem
+### Modelos de serviço de nuvem
 
 ### **IaaS - Infraestructure as a Seervice**
 
@@ -100,7 +100,7 @@ Por exemplo, as máquinas virtuais do Azure são dispositivos de computação vi
 
 Esse modelo de serviço de nuvem é um ambiente de hospedagem gerenciado. O provedor de nuvem gerencia as máquinas virtuais e os recursos de rede e o locatário de nuvem implanta seus aplicativos no ambiente de hospedagem gerenciado. Por exemplo, os Serviços de Aplicativos do Azure fornecem um ambiente de hospedagem gerenciado em que os desenvolvedores podem carregar os aplicativos Web sem precisar se preocupar com os requisitos de software e hardware físico.
 
-### **SaaS - Software as a Service**
+### SaaS - Software as a Service
 
 Nesse modelo de serviço de nuvem, o provedor de nuvem gerencia todos os aspectos do ambiente de aplicativo, como as máquinas virtuais, os recursos de rede, o armazenamento de dados e os aplicativos. O locatário de nuvem só precisa fornecer seus dados para o aplicativo gerenciado pelo provedor de nuvem. Por exemplo, Microsoft Office 365 fornece uma versão totalmente funcional do Microsoft Office que é executada na nuvem. Você só precisa criar seu conteúdo e o Office 365 cuida de todo o resto.
 
