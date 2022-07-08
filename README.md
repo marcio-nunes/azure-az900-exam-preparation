@@ -10,7 +10,8 @@
 6. [Parte 6: descrever contratos de nível de serviço e Gerenciamento de Custos da Microsoft]()
 
 
-# Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure {#principios1} 
+# <a name="principios1"></a> Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure 
+
 [Link para o Microsoft Learn](https://docs.microsoft.com/pt-br/learn/paths/az-900-describe-cloud-concepts/)
 
 Depois de concluir este roteiro de aprendizagem, você poderá:
