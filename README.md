@@ -27,7 +27,7 @@ Depois de concluir este roteiro de aprendizagem, você poderá:
 - Descrever os principais componentes da arquitetura (subscription, managment groups, resource e resource group)
 - Resumir conceitos de distribuição geográfica (regiões do Azure, pares de regiões e zonas de disponibilidade)
 
-🔼 [Voltar ao topo](#topo)
+🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
 
 ---
