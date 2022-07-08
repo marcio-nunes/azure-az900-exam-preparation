@@ -188,6 +188,16 @@ Você examinou vários dos benefícios que a computação em nuvem fornece, como
 
 ### 🔸 <a name="parte1-2"></a> Princípios básicos do Microsoft Azure: Descrever os principais serviços do Azure
 
+Depois de concluir este roteiro de aprendizagem, você poderá:
+
+- Entender a variedade de serviços disponíveis no Azure, incluindo computação, rede, armazenamento e banco de dados
+- Identificar serviços de virtualização, como Máquinas Virtuais do Azure, Instâncias de Contêiner do Azure, Serviço de Kubernetes do Azure e Área de Trabalho Virtual do Azure
+- Comparar os serviços de banco de dados do Azure, como o Azure Cosmos DB, o SQL do Azure, o Banco de Dados do Azure para MySQL, o Banco de Dados do Azure para PostgreSQL e os serviços de Big Data e análise do Azure
+- Examinar recursos de rede do Azure, como Redes Virtuais, Gateways de VPN e o ExpressRoute do Azure
+- Resumir os serviços de armazenamento do Azure, como Armazenamento de Blobs do Azure, Armazenamento em Disco do Azure e Armazenamento de Arquivos do Azure
+
+
+
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
 
