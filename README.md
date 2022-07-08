@@ -36,6 +36,26 @@ Ao concluir este módulo, você poderá:
 - Descrever as diferenças entre as categorias de serviços de nuvem.
 - Descrever as diferenças entre os tipos de computação em nuvem.
 
+## **Modelos de nuvem**
+
+**Nuvem pública** - Os serviços são oferecidos pela Internet pública e ficam disponíveis para qualquer pessoa que deseje comprá-los. Os recursos de nuvem são de propriedade e operados por um provedor de serviços de nuvem de terceiros e entregues pela Internet.
+
+- Nenhuma despesa de capital para escalar verticalmente.
+- Os aplicativos podem ser provisionados e desprovisionados rapidamente.
+- As organizações pagam apenas pelo que utilizam.
+
+**Nuvem privada** - Uma nuvem privada consiste em recursos de computação usados exclusivamente por usuários de uma empresa ou organização. Uma nuvem privada pode estar localizada fisicamente no datacenter (local) da organização ou ser hospedada por um provedor de serviços de terceiros.
+
+- O hardware deve ser comprado para inicialização e manutenção.
+- As organizações têm controle total sobre os recursos e a segurança.
+- As organizações são responsáveis pela manutenção e pelas atualizações de hardware.
+
+**Nuvem híbrida** - Uma nuvem híbrida é um ambiente de computação que combina uma nuvem pública e uma nuvem privada, permitindo que dados e aplicativos sejam compartilhados entre elas.
+
+- Fornece a maior flexibilidade.
+- As organizações determinam onde executar seus aplicativos.
+- As organizações controlam a segurança, a conformidade ou os requisitos legais.
+
 
 
 🔝 [Voltar ao topo](#topo)
@@ -77,3 +97,5 @@ Ao concluir este módulo, você poderá:
 🔼 [Voltar ao índice](#parte1)
 
 ---
+
+## ☁️ <a name="parte2"></a>
