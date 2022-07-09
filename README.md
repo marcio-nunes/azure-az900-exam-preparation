@@ -196,7 +196,36 @@ Depois de concluir este roteiro de aprendizagem, você poderá:
 - Examinar recursos de rede do Azure, como Redes Virtuais, Gateways de VPN e o ExpressRoute do Azure
 - Resumir os serviços de armazenamento do Azure, como Armazenamento de Blobs do Azure, Armazenamento em Disco do Azure e Armazenamento de Arquivos do Azure
 
+### Conceitos básicos da Rede Virtual do Azure
 
+As redes virtuais do Azure permitem que recursos do Azure, como VMs, aplicativos Web e bancos de dados, comuniquem-se uns com os outros, com usuários na Internet e com computadores cliente locais. Você pode pensar em uma rede do Azure como uma extensão de sua rede local com recursos que vinculam outros recursos do Azure.
+
+As redes virtuais do Azure oferecem as seguintes funcionalidades de rede essenciais:
+
+- Isolamento e segmentação
+- Comunicação pela Internet
+- Comunicação entre recursos do Azure
+- Comunicação com os recursos locais
+- Rotear tráfego de rede
+- Filtrar tráfego de rede
+- Conectar redes virtuais
+
+### Isolamento e segmentação
+
+A rede virtual do Azure permite criar várias redes virtuais isoladas. Quando você configura uma rede virtual, define um espaço de endereço IP privado usando intervalos de endereços IP públicos ou privados. O intervalo de IP público existe somente na rede virtual e não é roteável pela Internet. Você pode dividir esse espaço de endereços IP em sub-redes e alocar parte do espaço de endereço definido para cada sub-rede nomeada.
+
+Para a resolução de nomes, é possível usar o serviço de resolução de nomes interno do Azure. Você também pode configurar a rede virtual para usar um servidor DNS interno ou externo.
+
+### Comunicações com a Internet
+
+Uma VM no Azure pode se conectar à Internet por padrão. É possível habilitar conexões de entrada da Internet atribuindo um IP à VM ou colocando a VM atrás de um balanceador de carga público. Para o gerenciamento de VM, você pode se conectar por meio da CLI do Azure, do protocolo RDP ou do Secure Shell.
+
+### Comunicação entre recursos do Azure
+
+Convém habilitar recursos do Azure para que se comuniquem entre si com segurança. 
+
+- **Redes virtuais** As redes virtuais podem conectar não apenas VMs, mas outros recursos do Azure, como o Ambiente do Serviço de Aplicativo para Power Apps, o Serviço de Kubernetes do Azure e os conjuntos de dimensionamento de máquinas virtuais do Azure (VM Scale Set).
+- 
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
