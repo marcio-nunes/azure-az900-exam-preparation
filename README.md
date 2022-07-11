@@ -170,6 +170,102 @@ Vincular recursos de computação e fornecer acesso a aplicativos são as princi
 | Azure Queue storage | Um armazenamento de dados para o enfileiramento de mensagens e a entrega confiável delas entre aplicativos. |
 | Azure Table storage | O armazenamento de tabela é um serviço que armazena dados estruturados não relacionais (também conhecidos como dados NoSQL estruturados) na nuvem, fornecendo um repositório de chave/atributo com um design sem esquema. |
 
+Todos esses serviços compartilham algumas características comuns:
+
+- Duráveis e altamente disponíveis com redundância e replicação.
+- Seguros por meio de criptografia automática e controle de acesso baseado em função.
+- Escalonáveis com um armazenamento praticamente ilimitado.
+- Gerenciados, cuidando da manutenção e de quaisquer eventuais problemas críticos para você.
+- Acessíveis de qualquer lugar do mundo por HTTP ou HTTPS.
+
+### Mobile
+
+Com o Azure, os desenvolvedores podem criar serviços móveis de back-end para aplicativos iOS, Android e Windows de maneira rápida e fácil.
+
+Outros recursos deste serviço incluem:
+
+- Sincronização de dados offline.
+- Conectividade para dados locais.
+- Difusão de notificações por push.
+- Dimensionamento automático para corresponder às necessidades de negócios.
+
+### Bancos de dados
+
+| Nome do serviço | Função do serviço |
+|-|-|
+| Azure Cosmos DB | Banco de dados distribuído globalmente que dá suporte a opções de NoSQL. |
+| Azure SQL Database | Banco de dados relacional totalmente gerenciado com dimensionamento automático, inteligência integral e segurança robusta. |
+| Azure Database for MySQL | Banco de dados relacional MySQL totalmente gerenciado e escalonável, com alta disponibilidade e segurança. |
+| Azure Database for PostgreSQL | Banco de dados relacional PostgreSQL totalmente gerenciado e escalonável, com alta disponibilidade e segurança. |
+| SQL Server on Azure Virtual Machines | Serviço que hospeda aplicativos empresariais do SQL Server na nuvem. |
+| Azure Synapse Analytics | Data warehouse totalmente gerenciado com segurança integral em todos os níveis de escala sem custo adicional. |
+| Azure Database Migration Service | Serviço que migra bancos de dados para a nuvem sem alterações no código do aplicativo. |
+| Azure Cache for Redis | Caches de serviço totalmente gerenciados usados com frequência e dados estáticos para reduzir a latência de dados e de aplicativos. |
+| Azure Database for MariaDB | Banco de dados relacional MariaDB totalmente gerenciado e escalonável, com alta disponibilidade e segurança. |
+
+### Web
+
+O Azure inclui suporte de primeira classe para criar e hospedar aplicativos Web e serviços Web baseados em HTTP.
+
+| Nome do serviço | Função do serviço |
+|-|-|
+| Azure App Service | Crie rapidamente poderosos aplicativos de nuvem baseados na Web. |
+| Azure Notification Hubs | Envie notificações por push para qualquer plataforma de qualquer back-end. |
+| Azure API Management | Publique APIs para desenvolvedores, parceiros e funcionários de maneira segura e em escala. |
+| Azure Cognitive Search | Implante esta pesquisa totalmente gerenciada como serviço. |
+| Web Apps feature of Azure App Service | Crie e implante aplicativos Web críticos em escala. |
+| Azure SignalR Service | Adicione funcionalidades da Web em tempo real com facilidade. |
+
+### IoT
+
+Essa capacidade dos dispositivos de coletar e depois retransmitir informações para análise de dados é conhecida como IoT.
+
+| Nome do serviço | Função do serviço |
+|-|-|
+| IoT Central | Solução SaaS (software como serviço) de IoT global totalmente gerenciada que torna fácil conectar, monitorar e gerenciar os ativos de IoT em escala. |
+| Azure IoT Hub | Hub de mensagens que fornece comunicações seguras e monitoramento entre milhões de dispositivos IoT. |
+| IoT Edge | Serviço totalmente gerenciado que permite que os modelos de análise de dados sejam enviados por push diretamente aos dispositivos de IoT, possibilitando que esses dispositivos reajam rapidamente a alterações de estado sem a necessidade de consultar modelos de IA baseados em nuvem. |
+
+### Big Data 
+
+Tecnologias de cluster de software livre foram desenvolvidas para lidar com esses grandes conjuntos de dados. O Azure é compatível com uma ampla variedade de tecnologias e serviços para fornecer soluções de análises e Big Data.
+
+| Nome do serviço | Função do serviço |
+|-|-|
+| Azure Synapse Analytics | Execute a análise em grande escala usando um data warehouse empresarial baseado em nuvem que aproveita o processamento paralelo massivo para executar consultas complexas rapidamente sobre petabytes de dados. |
+| Azure HDInsight | Processe grandes quantidades de dados com clusters gerenciados de clusters Hadoop na nuvem. |
+| Azure Databricks | Integre esse serviço de análise colaborativa com base no Apache Spark com outros serviços de Big Data do Azure. |
+
+### IA
+
+A IA, no contexto da computação em nuvem, baseia-se em uma ampla variedade de serviços, cujo núcleo é o aprendizado de máquina. O Machine Learning é uma técnica da ciência de dados que permite que os computadores usem os dados existentes para prever tendências, resultados e comportamentos futuros.
+
+| Nome do serviço | Função do serviço |
+|-|-|
+| Azure Machine Learning Service | Ambiente baseado em nuvem você pode usar para desenvolver, treinar, testar, implantar, gerenciar e acompanhar modelos de aprendizado de máquina. Pode automaticamente gerar e ajustar um modelo para você. Permitirá que você inicie o treinamento no computador local e, posteriormente, escale horizontalmente para a nuvem. |
+| Azure ML Studio | Workspace visual colaborativo em que você pode criar, testar e implantar soluções de machine learning usando módulos de manipulação de dados e algoritmos de machine learning predefinidos. |
+
+Os serviços cognitivos são um conjunto de produtos fortemente relacionados. Você pode usar essas APIs predefinidas em seus aplicativos para resolver problemas complexos.
+
+| Nome do serviço | Função do serviço |
+|-|-|
+| Vision | Use algoritmos de processamento de imagens para identificar, legendar, indexar e moderar de modo inteligente suas imagens e vídeos. |
+| Speech | Converta áudio falado em texto, use voz para verificação ou adicione reconhecimento de locutor ao seu aplicativo. |
+| Knowledge mapping | Mapeie dados e informações complexos para executar tarefas como recomendações inteligentes e pesquisa semântica. |
+| Bing Search | Adicione APIs de Pesquisa do Bing a seus aplicativos e aproveite a capacidade de vasculhar bilhões de páginas da Web, imagens, vídeos e notícias com uma única chamada à API. |
+| Natural Language processing | permita que seus aplicativos processem linguagem natural com scripts pré-criados, avalie sentimentos e aprenda a reconhecer o que os usuários desejam. |
+
+### DevOps
+
+O DevOps reúne pessoas, processos e tecnologias, automatizando a entrega de software para fornecer valor contínuo aos usuários. Com o Azure DevOps você pode criar, compilar e lançar pipelines que fornecem integração, entrega e implantação contínuas para seus aplicativos. Você pode integrar repositórios e testes de aplicativos, executar o monitoramento de aplicativo e trabalhar com artefatos de compilação. Você também pode trabalhar os itens e inseri-los em uma lista de pendências do produto para acompanhar, automatizar a implantação de infraestrutura e integrar uma série de ferramentas e serviços de terceiros, como Jenkins e Chef. 
+
+| Nome do serviço | Função do serviço |
+|-|-|
+| Azure DevOps | Use ferramentas de colaboração de desenvolvimento, tais como pipelines de alto desempenho, repositórios Git privados gratuitos, quadros Kanban configuráveis e amplos testes de carga baseados em nuvem automatizados. Anteriormente conhecido como Visual Studio Team Services. |
+| Azure DevTest Labs | Crie rapidamente ambientes Windows e Linux sob demanda para testar ou demonstrar aplicativos diretamente dos pipelines de implantação. |
+
+### Introdução a contas do Azure
+
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
