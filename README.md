@@ -9,7 +9,7 @@ Icons ☁️🔸
 - [Parte 5: Descrever recursos de identidade, governança, privacidade e conformidade](#parte5)
 - [Parte 6: descrever contratos de nível de serviço e Gerenciamento de Custos da Microsoft](#parte6)
 
-# ☁️ <a name="parte1"></a>Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure
+# ☁️ <a name="parte1"></a>Parte 1: Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure
 
 Depois de concluir este roteiro de aprendizagem, você poderá:
 
@@ -24,6 +24,152 @@ Depois de concluir este roteiro de aprendizagem, você poderá:
 
 
 ## 🔸 <a name="Introdução_aos_conceitos_básicos_do_Azure"></a>Introdução aos conceitos básicos do Azure
+
+Após concluir este módulo, você poderá:
+
+- Descrever os conceitos básicos da computação em nuvem.
+- Determinar se o Azure é a solução certa para suas necessidades de negócios.
+- Diferenciar entre os diferentes métodos de criação de uma assinatura do Azure.
+
+O Azure é uma plataforma de computação em nuvem com um conjunto de serviços em constante expansão, projetado para ajudar você a criar soluções e cumprir suas metas de negócios. 
+
+O Azure fornece uma infinidade de serviços baseados em nuvem:
+
+- Armazenamento remoto
+- Hospedagem de banco de dados 
+- Gerenciamento de conta centralizado
+- Rede
+- VMs
+- IA 
+- IoT (Internet das Coisas)
+- Outros
+
+### Preparação para o Exame AZ-900
+
+Esse exame inclui seis áreas de domínio de conhecimento:
+
+|Área de domínio do AZ-900|Weight|
+|-|-|
+|Descrever os conceitos da nuvem|20-25%|
+|Descrever os principais serviços do Azure|15-20%|
+|Descrever as principais soluções e ferramentas de gerenciamento no Azure|10-15%|
+|Descrever os recursos gerais de segurança de rede e segurança|10-15%|
+|Descrever recursos de identidade, governança, privacidade e conformidade|20-25%|
+|Descrever os Contratos de Nível de Serviço e o Gerenciamento de Custos da Microsoft|10-15%|
+
+### O que é a computação em nuvem?
+
+É a entrega de serviços de computação pela Internet. Esses serviços incluem servidores, armazenamentos, bancos de dados, redes, software, análises e inteligência. A computação em nuvem oferece inovação mais rápida, recursos flexíveis e economias de escala.
+
+### Por que a computação em nuvem normalmente é mais econômica?
+
+Normalmente, você paga apenas pelos serviços de nuvem que usa, o que ajuda a:
+
+- Reduzir os custos operacionais.
+- Executar a infraestrutura com mais eficiência.
+- Escale as operações de acordo com as necessidades de negócios.
+
+A computação em nuvem é uma forma de alugar capacidade computacional e armazenamento do datacenter de terceiros. Você será cobrado apenas pelo que usar.
+
+Em vez de manter CPUs e armazenamento no seu datacenter, você aluga esses recursos pelo tempo necessário.
+
+O provedor em nuvem é responsável por manter a infraestrutura subjacente.
+
+### Por que devo migrar para a nuvem?
+
+A nuvem ajuda você a avançar com mais rapidez e a inovar de maneiras que antes eram quase impossíveis.
+
+- As equipes entregam novos recursos aos usuários em tempo recorde.
+- Os usuários esperam uma experiência cada vez mais sofisticada e envolvente em seus dispositivos e software.
+
+Hoje em dia, as equipes lançam recursos em lotes menores, o que geralmente resulta em lançamentos semanais ou diários. Algumas equipes geram atualizações de software o tempo todo, algumas vezes disponibilizando várias versões no mesmo dia.
+
+Para alavancar seus serviços e oferecer experiências novas e inovadoras a seus usuários, a nuvem concede acesso sob demanda a:
+
+- Um pool quase ilimitado de componentes brutos de rede, armazenamento e computação.
+- Reconhecimento de fala e outros serviços cognitivos que ajudam a dar destaque ao seu aplicativo em meio a tantos outros.
+- Serviços de análise que fornecem dados de telemetria por meio de software e dispositivos.
+
+### O que é o Azure?
+
+O Azure é um conjunto de serviços de nuvem, em constante expansão, que ajuda sua organização a superar os desafios empresariais atuais e se preparar para os desafios futuros. O Azure oferece a liberdade de criar, gerenciar e implantar aplicativos em uma enorme rede global usando suas ferramentas e estruturas favoritas.
+
+O Azure fornece mais de 100 serviços que permitem que você faça de tudo, desde a execução de aplicativos existentes em máquinas virtuais até a exploração de novos paradigmas de software, como bots inteligentes e realidade misturada.
+
+### O que é o portal do Azure?
+
+O portal do Azure é um console unificado baseado na Web que fornece uma alternativa para as ferramentas de linha de comando. 
+
+- Compile, gerencie e monitore tudo, desde aplicativos Web simples a implantações em nuvem complexas.
+- Crie painéis personalizados para ter uma exibição organizada dos recursos.
+- Configure opções de acessibilidade para ter a experiência ideal.
+- O portal do Azure foi projetado para ter resiliência e disponibilidade contínua. 
+- Ele mantém uma presença em todos os datacenters do Azure. 
+    - Essa configuração torna o portal do Azure resiliente a falhas de datacenters individuais
+    - Evita a lentidão da rede ao se manter perto dos usuários. 
+- O portal do Azure é atualizado continuamente e não requer nenhum tempo de inatividade para atividades de manutenção.
+
+### O que é o Azure Marketplace?
+
+O Azure Marketplace ajuda a conectar usuários a parceiros da Microsoft, fornecedores independentes de software e startups que estão oferecendo soluções e serviços otimizados para execução no Azure. Os clientes do Azure Marketplace podem localizar, experimentar, comprar e provisionar aplicativos e serviços de centenas dos principais provedores de serviço. Todas as soluções e serviços são certificados para execução no Azure.
+
+### Tour pelos serviços do Azure
+
+![azure-services](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/intro-to-azure-fundamentals/media/azure-services-6c41a736.png)
+
+Analise mais detalhadamente as categorias mais usadas:
+
+- Computação
+- Rede
+- Armazenamento
+- Móvel
+- Bancos de dados
+- Web
+- Internet das coisas (IoT)
+- Big Data
+- IA
+- DevOps
+
+### Computação
+
+| Nome do serviço | Função do serviço |
+|-|-|
+| Azure Virtual Machines | VMs (máquinas virtuais) do Windows ou do Linux hospedadas no Azure. |
+| Azure Virtual Machine Scale Sets | Escala para VMs do Windows ou do Linux hospedadas no Azure.|
+| Azure Kubernetes Service | Gerenciamento de clusters para VMs que executam serviços em contêineres. |
+| Azure Service Fabric | Plataforma de sistemas distribuídos executada no Azure ou localmente. |
+| Azure Batch | Serviço gerenciado para aplicativos de computação paralelos e de alto desempenho. |
+| Azure Container Instances | Aplicativos em contêineres executados no Azure sem o provisionamento de servidores ou de VMs. |
+| Azure Functions | Um serviço de computação sem servidor controlado por eventos. |
+
+### Rede
+
+Vincular recursos de computação e fornecer acesso a aplicativos são as principais funções da rede do Azure. A funcionalidade de rede do Azure inclui uma série de opções para conectar o mundo exterior aos serviços e recursos dos datacenters globais do Azure.
+
+| Nome do serviço | Função do serviço |
+|-|-|
+| Azure Virtual Network | Conecta VMs a conexões VPN (rede virtual privada) de entrada. |
+| Azure Load Balancer | Equilibra as conexões de entrada e saída para pontos de extremidade de serviço ou aplicativos. |
+| Azure Application Gateway | Otimiza a entrega de farm de servidores de aplicativo, aumentando simultaneamente a segurança do aplicativo. |
+| Azure VPN Gateway | Acessa as Redes Virtuais do Azure por meio de gateways de VPN de alto desempenho. |
+| Azure DNS | Fornece respostas DNS extremamente rápidas e disponibilidade de domínio extremamente alta. |
+| Azure Content Delivery Network | Distribui o conteúdo de alta largura de banda para clientes no mundo todo. |
+| Azure DDoS Protection | Protege os aplicativos hospedados no Azure contra ataques de DDoS (negação de serviço distribuído). |
+| Azure Traffic Manager | Distribui o tráfego de rede entre as regiões do Azure no mundo todo. |
+| Azure ExpressRoute | Conecta-se ao Azure por meio de conexões seguras dedicadas de alta largura de banda. |
+| Azure Network Watcher | Monitora e diagnostica problemas de rede usando a análise baseada em cenário. |
+| Azure Firewall | Implementa um firewall de alta segurança e alta disponibilidade com escalabilidade ilimitada. |
+| Azure Virtual WAN | Cria uma WAN (rede de longa distância) unificada que conecta sites remotos e locais. |
+
+### Armazenamento
+
+| Nome do serviço | Função do serviço |
+|-|-|
+| Azure Blob storage | Serviço de armazenamento para objetos muito grandes, como arquivos de vídeo ou bitmaps. |
+| Azure File storage | Compartilhamentos de arquivos que podem ser acessados e gerenciados como um servidor de arquivos. |
+| Azure Queue storage | Um armazenamento de dados para o enfileiramento de mensagens e a entrega confiável delas entre aplicativos. |
+| Azure Table storage | O armazenamento de tabela é um serviço que armazena dados estruturados não relacionais (também conhecidos como dados NoSQL estruturados) na nuvem, fornecendo um repositório de chave/atributo com um design sem esquema. |
+
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
