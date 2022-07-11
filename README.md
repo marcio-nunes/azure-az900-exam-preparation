@@ -2,6 +2,15 @@
 
 ☁️🔸
 
+- [Parte 1: Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure](#parte1)
+- [Parte 2: Descrever os principais serviços do Azure](#parte2)
+- [Parte 3: Descrever as principais soluções e ferramentas de gerenciamento no Azure](#parte3)
+- [Parte 4: Descrever os recursos gerais de segurança de rede e segurança](#parte4)
+- [Parte 5: Descrever recursos de identidade, governança, privacidade e conformidade](#parte5)
+- [Parte 6: descrever contratos de nível de serviço e Gerenciamento de Custos da Microsoft](#parte6)
+
+# ☁️ <a name="parte1"></a>Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure
+
 Depois de concluir este roteiro de aprendizagem, você poderá:
 
 - Entenderá os benefícios da computação em nuvem e como ela pode poupar tempo e dinheiro
@@ -9,14 +18,16 @@ Depois de concluir este roteiro de aprendizagem, você poderá:
 - Descrever os principais componentes da arquitetura (subscription, managment groups, resource e resource group)
 - Resumir conceitos de distribuição geográfica (regiões do Azure, pares de regiões e zonas de disponibilidade)
 
-1. [Princípios básicos do Microsoft Azure](#parte1)
-2. [](#parte2)
-3. [](#parte3)
-4. [](#parte4)
-5. [](#parte5)
-6. [](#parte6)
+1. [Introdução aos conceitos básicos do Azure](#Introdução_aos_conceitos_básicos_do_Azure)
+2. [Discutir conceitos fundamentais do Azure](Discutir_conceitos_fundamentais_do_Azure)
+3. [Descrever os principais componentes da arquitetura do Azure](Descrever_os_principais_componentes_da_arquitetura_do_Azure)
 
-# ☁️ <a name="parte1"></a>Princípios básicos do Microsoft Azure
+
+## 🔸 Introdução aos conceitos básicos do Azure
+
+## 🔸 Discutir conceitos fundamentais do Azure
+
+## 🔸 Descrever os principais componentes da arquitetura do Azure
 
 1. [Descrever os principais conceitos do Azure](#parte1-1)
 2. [Descrever os principais serviços do Azure](#parte1-2)
