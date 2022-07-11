@@ -1,6 +1,6 @@
 # <a name="topo"></a>Preparação para o exame Azure AZ-900
 
-☁️🔸
+Icons ☁️🔸
 
 - [Parte 1: Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure](#parte1)
 - [Parte 2: Descrever os principais serviços do Azure](#parte2)
@@ -19,15 +19,30 @@ Depois de concluir este roteiro de aprendizagem, você poderá:
 - Resumir conceitos de distribuição geográfica (regiões do Azure, pares de regiões e zonas de disponibilidade)
 
 1. [Introdução aos conceitos básicos do Azure](#Introdução_aos_conceitos_básicos_do_Azure)
-2. [Discutir conceitos fundamentais do Azure](Discutir_conceitos_fundamentais_do_Azure)
-3. [Descrever os principais componentes da arquitetura do Azure](Descrever_os_principais_componentes_da_arquitetura_do_Azure)
+2. [Discutir conceitos fundamentais do Azure](#Discutir_conceitos_fundamentais_do_Azure)
+3. [Descrever os principais componentes da arquitetura do Azure](#Descrever_os_principais_componentes_da_arquitetura_do_Azure)
 
 
-## 🔸 Introdução aos conceitos básicos do Azure
+## 🔸 <a name="Introdução_aos_conceitos_básicos_do_Azure"></a>Introdução aos conceitos básicos do Azure
 
-## 🔸 Discutir conceitos fundamentais do Azure
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte1)
 
-## 🔸 Descrever os principais componentes da arquitetura do Azure
+---
+
+## 🔸 <a name="Discutir_conceitos_fundamentais_do_Azure"></a>Discutir conceitos fundamentais do Azure
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte1)
+
+---
+
+## 🔸 <a name="Descrever_os_principais_componentes_da_arquitetura_do_Azure"></a>Descrever os principais componentes da arquitetura do Azure
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte1)
+
+---
 
 1. [Descrever os principais conceitos do Azure](#parte1-1)
 2. [Descrever os principais serviços do Azure](#parte1-2)
