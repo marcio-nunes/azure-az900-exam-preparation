@@ -284,6 +284,13 @@ Você vai configurar as seguintes opções para uma rede virtual básica:
 - **DDoS Protection Standard** é um serviço Premium
 - **Firewall** é um serviço de segurança cloud-based gerenciado que protege seus recursos de Rede Virtual do Azure. 
 
+### Definir configurações adicionais
+
+Depois de criar uma rede virtual, você poderá definir outras configurações. 
+
+- **Network security group** possui regras de segurança que permitem filtrar o tipo de tráfego de rede que pode entrar e sair das sub-redes da rede virtual e interfaces de rede. Crie o grupo de segurança de rede separadamente. Depois associe-a a cada sub-rede na rede virtual.
+- **Route table** O Azure cria automaticamente uma tabela de rotas para cada sub-rede dentro de uma rede virtual do Azure e adiciona as rotas padrão de sistema à tabela. Você pode adicionar tabelas de rotas personalizadas para modificar o tráfego entre sub-redes e redes virtuais.
+- **Subnet Delegation** Você pode designar a sub-rede para ser usado por um serviço dedicado.
 
 
 
