@@ -292,6 +292,114 @@ Depois de criar uma rede virtual, você poderá definir outras configurações.
 - **Route table** O Azure cria automaticamente uma tabela de rotas para cada sub-rede dentro de uma rede virtual do Azure e adiciona as rotas padrão de sistema à tabela. Você pode adicionar tabelas de rotas personalizadas para modificar o tráfego entre sub-redes e redes virtuais.
 - **Subnet Delegation** Você pode designar a sub-rede para ser usado por um serviço dedicado.
 
+### Configurar redes virtuais
+
+Depois de criar uma rede virtual, você poderá alterar configurações adicionais no painel Redes virtuais no portal do Azure ou usar comandos do PowerShell ou comandos no Cloud Shell.
+
+- **Address spaces**: você pode adicionar mais espaços de endereço à definição inicial.
+- **Connected devices**: veja uma lista de todos os host conectados na rede virtual.
+- **Subnets**: você pode adicionar outras sub-redes.
+- **DDos protection**: você pode habilitar ou desabilitar o plano de proteção contra DDos Padrão.
+- **Firewall**: defina as configurações de firewall com o serviço de Firewall do Azure para a rede virtual.
+- **Security**: fornece recomendação de segurança que você pode aplicar à sua rede virtual.
+- **Network Manager**: veja a configuração de administrador de segurança e conectividade à qual a rede virtual está associada.
+- **DNS servers**: configure os servidores DNS internos ou externos que os recursos na rede virtual usarão.
+- **Peerings**: vincule redes virtuais nas disposições de emparelhamento.
+- **Service endpoints**: habilita pontos de extremidade de serviço e os aplica a várias sub-redes.
+- **Private endpoints**: veja uma lista de endpoints privados habilitados em uma sub-rede.
+
+Você também pode monitorar e exibir métricas para solucionar problemas em suas redes virtuais.
+
+Redes virtuais são mecanismos avançados e altamente configuráveis para conectar entidades no Azure. Você pode conectar recursos do Azure entre si ou aos recursos existentes no local. Você pode isolar, filtrar e rotear o tráfego de rede. O Azure permite que você aumente a segurança onde achar necessário.
+
+### Conceitos básicos do Gateway de VPN do Azure
+
+VPNs usam um túnel criptografado dentro de outra rede. Normalmente, elas são implantadas para conectar duas ou mais redes privadas confiáveis entre si em uma rede não confiável (normalmente a Internet pública). O tráfego é criptografado ao viajar pela rede não confiável para evitar interceptação ou outros ataques.
+
+### Gateways VPN
+
+Um gateway de VPN é um tipo de gateway de rede virtual. As instâncias do Gateway de VPN do Azure são implantadas em uma subrede dedicada da rede virtual e permitem a seguinte conectividade:
+
+- Conecte datacenters on-premises a redes virtuais por meio de uma conexão site-to-site.
+- Conecte dispositivos individuais a redes virtuais por meio de uma conexão point-to-site.
+- Conecte redes virtuais a outras redes virtuais por meio de uma conexão network-to-network.
+
+![vpngateway-site-to-site-connection-diagram](https://docs.microsoft.com/en-us/learn/azure-fundamentals/azure-networking-fundamentals/media/vpngateway-site-to-site-connection-diagram-0e1e7db2.png)
+
+- Você só poderá implantar 1 gateway de VPN em cada rede virtual, mas poderá usar um gateway para se conectar a vários locais, incluindo outras redes virtuais ou datacenters locais.
+- Ao implantar um gateway de VPN, você especifica o tipo de VPN: baseada em política (policy-based) ou baseada em rota (route-based). 
+    - A principal diferença entre esses dois tipos de VPN é como o tráfego a ser criptografado é especificado. 
+    - Ambos usam uma chave pré-compartilhada como o único método de autenticação. 
+    - Ambos os tipos também dependem do protocolo IKE na versão 1 ou na versão 2 e do protocolo IPsec. 
+    - O IKE é usado para configurar uma associação de segurança (um contrato da criptografia) entre dois pontos de extremidade. Essa associação é passada para o conjunto do IPsec, que criptografa e descriptografa os pacotes de dados encapsulados no túnel VPN.
+
+### Policy-based VPNs
+
+Gateways de VPN baseados em política especificam estaticamente o endereço IP dos pacotes que devem ser criptografados por meio de cada túnel. Esse tipo de dispositivo avalia cada pacote de dados em relação a esses conjuntos de endereços IP para escolher o túnel para o qual o pacote será enviado.
+
+ Principais recursos dos gateways de VPN baseados em políticas:
+
+ - Suporte apenas para IKEv1.
+- O uso do roteamento estático (static routing), em que as combinações de prefixos de endereço de ambas as redes controlam o modo como o tráfego é criptografado e descriptografado por meio do túnel VPN. A origem e o destino das redes por túnel são declarados na política e não precisam ser declarados em tabelas de roteamento.
+- As VPNs baseadas em política devem ser usadas em cenários específicos que as exigem, por exemplo, para compatibilidade com os dispositivos VPN locais herdados.
+
+### Route-based VPNs
+
+Caso seja muito complicado definir quais endereços IP estão por trás de cada túnel, será possível usar gateways baseados em rota. Com isso, os túneis IPSec são modelados como uma interface de rede ou uma interface de túnel virtual. O roteamento de IP (protocolos de roteamento dinâmico ou rotas estáticas) decide qual dessas interfaces de túnel usar ao enviar cada pacote. VPNs baseadas em rota são o método preferido para conectar dispositivos locais. Elas são mais resilientes a alterações de topologia, como a criação de novas sub-redes.
+
+Use um gateway de VPN baseado em rota se precisar de qualquer um dos seguintes tipos de conectividade:
+
+- Conexões entre redes virtuais
+- Conexões point-to-site
+- Conexões multissite
+- Coexistência com um gateway do Azure ExpressRoute
+
+Principais recursos de gateways de VPN baseados em rota:
+
+- Dá suporte ao IKEv2
+- Usa seletores de tráfego any-to-any (wildcard)
+- Pode usar protocolos de roteamento dinâmico (dynamic routing protocols), em que as tabelas de roteamento/encaminhamento direcionam o tráfego para túneis IPsec diferentes. Nesse caso, as redes de origem e de destino não são definidas estaticamente, pois estão em VPNs baseadas em políticas ou mesmo em VPNs baseadas em rota com roteamento estático. Em vez disso, os pacotes de dados são criptografados com base em tabelas de roteamento de rede que são criadas dinamicamente usando protocolos de roteamento como o BGP (Border Gateway Protocol).
+
+### Tamanhos do gateway de VPN
+
+|SKU|Túneis de site a site/rede a rede|Parâmetro de comparação de taxa de transferência agregada|Suporte ao BGP (Border Gateway Protocol)|
+|--|--|--|--|
+|Básico [Veja a Observação]|Máximo: 10|100 Mbps|Sem suporte|
+|VpnGw1/Az|Máximo: 30|650 Mbps|Com suporte|
+|VpnGw2/Az|Máximo: 30|1 Gbps|Com suporte|
+|VpnGw3/Az|Máximo: 30|1,25 Gbps|Com suporte|
+|VpnGw4/Az|Máximo: 100|5 Gbps|Com suporte|
+|VpnGw5/Az|Máximo: 100|10 Gbps|Com suporte|
+
+> Um Gateway de VPN Básico deve ser usado apenas para cargas de trabalho de Desenvolvimento/Teste. Além disso, não há suporte para migrar do Básico para os SKUs VpnGW1/2/3/Az posteriormente sem precisar remover e reimplantar o gateway.
+
+### Implantar gateways de VPN
+
+Serão necessários os seguintes recursos do Azure antes que você possa implantar um gateway de VPN operacional:
+
+- **Rede virtual**. Implante uma rede virtual com espaço de endereço suficiente para a sub-rede adicional que será necessária para o gateway de VPN. 
+    - O espaço de endereço dessa rede virtual não pode se sobrepor à rede local à qual você se conectará. 
+    - Só é possível implantar um único gateway de VPN em uma rede virtual.
+
+- **GatewaySubnet**. Implante uma sub-rede chamada GatewaySubnet para o gateway de VPN. Use uma máscara de endereço de pelo menos /27 para garantir que você tenha endereços IP suficientes na sub-rede para crescimento futuro.    
+    - Não é possível usar essa sub-rede para nenhum outro serviço.
+
+- **Endereço IP público**. Crie um endereço IP público dinâmico do SKU Básico se você estiver usando um gateway sem reconhecimento de zona. Esse endereço fornece um endereço IP roteável público como o destino do dispositivo VPN local. 
+    - Embora esse endereço IP seja dinâmico, ele não será alterado a menos que você exclua e recrie o gateway de VPN.
+
+- **Gateway de rede local**. Crie um gateway de rede local para definir a configuração da rede local, como onde o gateway de VPN se conectará e a que ele se conectará. Essa configuração inclui o endereço IPv4 público do dispositivo VPN local e as redes roteáveis locais. Essas informações são usadas pelo gateway de VPN para rotear, por meio do túnel IPsec, pacotes destinados a redes locais.
+
+- **Gateway de rede virtual**. Crie o gateway de rede virtual para rotear tráfego entre a rede virtual e o datacenter on-premises ou outras redes virtuais. O gateway de rede virtual pode ser um gateway de VPN ou ExpressRoute, mas esta unidade lida apenas com gateways de rede virtual de VPN. 
+
+- **Connection**. Crie um recurso de conexão para criar uma conexão lógica entre o gateway de VPN e o gateway de rede local.
+    - A conexão é realizada com o endereço IPv4 do dispositivo VPN local conforme definido pelo gateway de rede local.
+    - A conexão é realizada do gateway de rede virtual e seu endereço IP público associado.
+
+> É possível criar várias conexões.
+
+![resource-requirements-for-vpn-gateway](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-networking-fundamentals/media/resource-requirements-for-vpn-gateway-2518703e.png)
+
+### Recursos locais necessários
 
 
 🔝 [Voltar ao topo](#topo)
