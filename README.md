@@ -373,7 +373,7 @@ Principais recursos de gateways de VPN baseados em rota:
 
 > Um Gateway de VPN Básico deve ser usado apenas para cargas de trabalho de Desenvolvimento/Teste. Além disso, não há suporte para migrar do Básico para os SKUs VpnGW1/2/3/Az posteriormente sem precisar remover e reimplantar o gateway.
 
-### Implantar gateways de VPN
+### Deploy VPN gateways
 
 Serão necessários os seguintes recursos do Azure antes que você possa implantar um gateway de VPN operacional:
 
@@ -400,6 +400,90 @@ Serão necessários os seguintes recursos do Azure antes que você possa implant
 ![resource-requirements-for-vpn-gateway](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-networking-fundamentals/media/resource-requirements-for-vpn-gateway-2518703e.png)
 
 ### Recursos locais necessários
+
+Para conectar seu datacenter a um gateway de VPN, serão necessários os seguintes recursos locais:
+
+- Um dispositivo VPN que dá suporte a gateways de VPN baseada em política ou em rota
+- Um endereço IPv4 (roteável pela Internet) voltado para o público
+
+### Cenários de alta disponibilidade
+
+### Active/standby
+
+Quando a manutenção planejada ou a interrupção não planejada afeta a instância ativa, a instância de modo de espera assume automaticamente a responsabilidade pelas conexões sem nenhuma intervenção do usuário. Durante esse failover, as conexões são interrompidas, mas normalmente são restauradas em alguns segundos para manutenção planejada e dentro de 90 segundos em caso de interrupções não planejadas.
+
+![active-standby](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-networking-fundamentals/media/active-standby-c4a3c14d.png)
+
+### Active/active
+
+Nessa configuração, você atribui um endereço IP público exclusivo a cada instância. Em seguida, cria túneis do dispositivo local para cada endereço IP. É possível estender a alta disponibilidade implantando um dispositivo VPN local adicional.
+
+![dual-redundancy](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-networking-fundamentals/media/dual-redundancy-d76100c9.png)
+
+### Failover do ExpressRoute
+
+Outra opção de alta disponibilidade é configurar um gateway de VPN como um caminho de failover seguro para conexões ExpressRoute.
+
+Em cenários de alta disponibilidade, nos quais há risco associado a uma interrupção de um circuito do ExpressRoute, você também pode provisionar um gateway de VPN que usa a Internet como um método alternativo de conectividade. Dessa forma, você pode garantir que sempre haja uma conexão com as redes virtuais.
+
+### Gateways com redundância de zona
+
+Essa configuração oferece resiliência, escalabilidade e maior disponibilidade para os gateways de rede virtual. A implantação de gateways em zonas de disponibilidade do Azure separa de forma física e lógica os gateways em uma região, enquanto protege a conectividade de rede local com o Azure contra falhas no nível da zona. Esses gateways exigem SKUs de gateway diferentes e usam os endereços IP públicos Standard em vez dos Básicos.
+
+### Conceitos básicos do ExpressRoute do Azure
+
+ O ExpressRoute permite que você estenda suas redes locais para a nuvem da Microsoft em uma conexão privada com a ajuda de um provedor de conectividade. 
+
+ A conectividade pode ocorrer de uma rede any-to-any (VPN de IP), uma rede Ethernet ponto a ponto ou uma conexão cruzada virtual por meio de um provedor de conectividade em uma colocação. 
+ 
+- As conexões não passam pela Internet pública. 
+- Mais confiabilidade, mais velocidade, latências consistentes
+- mais segurança do que as conexões típicas pela Internet
+
+![azure-expressroute-overview](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-networking-fundamentals/media/azure-expressroute-overview-5520731d.png)
+
+Nos concentraremos em duas camadas diferentes do modelo de OSI (Open Systems Interconnection):
+
+- **Camada 2 (L2)**: essa é a Camada de Vínculo de Dados, que fornece comunicação de nó para nó entre dois nós na mesma rede.
+- **Camada 3 (L3)**: essa é a Camada de Rede, que fornece endereçamento e roteamento entre nós em uma rede de vários nós.
+
+### Recursos e benefícios do ExpressRoute
+
+- Conectividade de Camada 3 entre sua rede local e a Microsoft Cloud por meio de um provedor de conectividade. A conectividade pode ocorrer de uma rede any-to-any (IPVPN), de uma conexão Ethernet ponto a ponto ou por meio de uma conexão cruzada virtual via troca Ethernet.
+
+- Conectividade com os serviços de nuvem da Microsoft em todas as regiões da região geopolítica.
+
+- Conectividade global com os serviços da Microsoft em todas as regiões com o complemento premium do ExpressRoute.
+
+- Roteamento dinâmico entre sua rede e a Microsoft por meio do BGP.
+
+- Redundância interna em cada local de emparelhamento para proporcionar maior confiabilidade.
+
+- SLAdo tempo de atividade da conexão.
+
+- Suporte a QoS para Skype for Business.
+
+### Conectividade de Camada 3
+
+O ExpressRoute oferece conectividade de Camada 3 (nível do endereço) entre sua rede local e a nuvem da Microsoft é fornecida por meio de parceiros de conectividade. Essas conexões podem ser de uma rede ponto a ponto ou any-to-any. Elas também podem ser conexões cruzadas virtuais por meio de uma troca.
+
+### Redundância interna
+
+Cada provedor de conectividade usa dispositivos redundantes para verificar se as conexões estabelecidas com a Microsoft estão altamente disponíveis. É possível configurar vários circuitos para complementar esse recurso. Todas as conexões redundantes são configuradas com conectividade de Camada 3 para atender aos contratos de nível de serviço.
+
+### Conectividade com serviços em nuvem da Microsoft
+
+O ExpressRoute permite acesso direto aos seguintes serviços em todas as regiões:
+
+- Microsoft Office 365
+- Microsoft Dynamics 365
+- Serviços de computação do Azure, como as Máquinas Virtuais do Azure
+- Serviços de Nuvem do Azure, como o Azure Cosmos DB e o Armazenamento do Azure
+
+### Conectividade local com Alcance Global do ExpressRoute
+
+Você pode habilitar o Alcance Global do ExpressRoute para trocar dados entre sites locais conectando seus circuitos do ExpressRoute. Por exemplo, suponha que você tenha um datacenter privado na Califórnia conectado ao ExpressRoute no Vale do Silício. Você tem outro datacenter privado no Texas conectado ao ExpressRoute em Dallas. Com o Alcance Global do ExpressRoute, você pode conectar seus datacenters privados por meio de dois circuitos do ExpressRoute. Seu tráfego entre datacenters percorrerá a rede da Microsoft.
+
 
 
 🔝 [Voltar ao topo](#topo)
