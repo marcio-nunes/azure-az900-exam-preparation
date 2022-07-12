@@ -639,12 +639,8 @@ Outro cenário em que você usaria grupos de gerenciamento é fornecer acesso de
 🔼 [Voltar ao índice](#parte1)
 
 ---
----
----
----
----
 
-## ☁️ <a name="parte2"></a>Parte 2: Princípios básicos do Microsoft Azure: Descrever os principais serviços do Azure
+# ☁️ <a name="parte2"></a>Parte 2: Princípios básicos do Microsoft Azure: Descrever os principais serviços do Azure
 
 Depois de concluir este roteiro de aprendizagem, você poderá:
 
@@ -655,10 +651,11 @@ Depois de concluir este roteiro de aprendizagem, você poderá:
 - Resumir os serviços de armazenamento do Azure, como Armazenamento de Blobs do Azure, Armazenamento em Disco do Azure e Armazenamento de Arquivos do Azure
 
 1. [Explorar os serviços de computação do Azure](#Explorar_os_serviços_de_computação_do_Azure)
-2. 
-3. 
+2. [Explorar os serviços de rede do Azure](#Explorar_os_serviços_de_rede_do_Azure)
+3. [Explorar os serviços do Armazenamento do Azure](#Explorar_os_serviços_do_Armazenamento_do_Azure)
+4. [Explorar os serviços de banco de dados e análise do Azure](#Explorar_os_serviços_de_banco_de_dados_e_análise_do_Azure)
 
-### <a name="Explorar_os_serviços_de_computação_do_Azure"></a>Explorar os serviços de computação do Azure
+## 🔸 <a name="Explorar_os_serviços_de_computação_do_Azure"></a>Explorar os serviços de computação do Azure
 
 Depois de concluir este módulo, você poderá descrever os benefícios e o uso destes serviços:
 
@@ -669,6 +666,274 @@ Depois de concluir este módulo, você poderá descrever os benefícios e o uso 
 - Azure Functions
 - Área de Trabalho Virtual do Azure
 
+## Visão geral dos serviços de computação do Azure
+
+A computação do Azure é um serviço de computação sob demanda para execução de aplicativos baseados em nuvem. Ela fornece recursos de computação, como discos, processadores, memória, rede e sistemas operacionais. Os recursos estão disponíveis sob demanda e normalmente podem ser disponibilizados em minutos ou até mesmo segundos. Você só paga pelos recursos utilizados e apenas pelo tempo que utilizar.
+
+### Virtual machines
+
+Máquinas virtuais são emulações de software de computadores físicos. Elas incluem um processador virtual, memória, armazenamento e recursos de rede. As VMs hospedam um sistema operacional, e você pode instalar e executar o software como se fosse um computador físico. Utilize um cliente da Área de Trabalho Remota para usar e controlar a VM como se estivesse na frente dela.
+
+As Máquinas Virtuais fornecem IaaS (infraestrutura como serviço) e podem ser usadas de maneiras diferentes. Quando você precisa ter controle total sobre um sistema operacional e ambiente, as VMs são a opção ideal. 
+
+### Virtual machine scale sets
+
+são um recurso de computação do Azure que você pode usar para implantar e gerenciar um conjunto de VMs idênticas. Com todas as VMs configuradas da mesma forma, os conjuntos de dimensionamento de máquinas virtuais têm a finalidade de dar suporte ao verdadeiro dimensionamento automático. Nenhum provisionamento prévio das VMs é necessário. Por esse motivo, é mais fácil criar serviços de grande escala direcionados a grandes cargas de trabalho de computação, Big Data e em contêineres. Conforme a demanda aumenta, mais instâncias de VM podem ser adicionadas. Conforme a demanda diminui, instâncias de VM podem ser removidas. O processo pode ser manual, automatizado ou uma combinação de ambos.
+
+### Contêineres e Kubernetes
+
+As Instâncias de Contêiner e o Serviço de Kubernetes do Azure são recursos de Computação do Azure que você pode usar para implantar e gerenciar contêineres. Contêineres são ambientes de aplicativos leves e virtualizados. Eles foram projetados para serem criados rapidamente, escalados horizontalmente e interrompidos dinamicamente. Você pode executar várias instâncias de um aplicativo em contêineres em um computador host.
+
+### App Service
+
+Com o Serviço de Aplicativo do Azure, você pode criar, implantar e dimensionar rapidamente aplicativos Web, móveis e de API de nível empresarial executados em qualquer plataforma. Você pode atender a requisitos rigorosos de desempenho, escalabilidade, segurança e conformidade ao usar uma plataforma totalmente gerenciada para executar a manutenção de infraestrutura. O Serviço de Aplicativo é uma oferta de PaaS (plataforma como serviço).
+
+### Functions
+
+As funções são ideais quando você está preocupado apenas com o código que executa o serviço, e não com a plataforma ou a infraestrutura subjacente. Elas costumam ser usadas quando você precisa executar um trabalho em resposta a um evento (geralmente por meio de uma solicitação REST), um temporizador ou uma mensagem de outro serviço do Azure, e quando esse trabalho pode ser concluído dentro de segundos.
+
+## Decidir quando usar Máquinas Virtuais do Azure
+
+Como em um computador físico, você pode personalizar todos os programas de software em execução na VM. As VMs são uma opção ideal quando você precisa de:
+
+- Controle total sobre o SO (sistema operacional).
+- Capacidade para executar um software personalizado.
+- Usar configurações personalizadas de hospedagem.
+
+Uma VM do Azure oferece a flexibilidade da virtualização sem a necessidade de comprar e manter o hardware físico que a executa. Você ainda precisa configurar, atualizar e manter o software executado na VM.
+
+Uma imagem é um modelo usado para criar uma VM. Esses modelos já incluem um sistema operacional e, muitas vezes, outros programas de software, como ferramentas de desenvolvimento ou ambientes de hospedagem na Web.
+
+### Exemplos de quando usar VMs
+
+- **Durante o teste e o desenvolvimento**. As VMs fornecem uma maneira rápida e fácil de criar diferentes configurações de sistema operacional e de aplicativo. A equipe de teste e desenvolvimento pode excluir facilmente as VMs quando não precisarem mais delas.
+
+- **Ao executar aplicativos na nuvem**. A capacidade de executar determinados aplicativos na nuvem pública, em vez de criar uma infraestrutura tradicional para executá-los, pode trazer benefícios econômicos substanciais. Por exemplo, um aplicativo pode precisar lidar com flutuações na demanda. Desligar VMs quando elas não são necessárias ou iniciá-las rapidamente para atender a um aumento repentino na demanda significa que você paga apenas pelos recursos que usa.
+
+- **Ao estender seu datacenter para a nuvem**. Uma organização pode estender os recursos de sua própria rede local criando uma rede virtual no Azure e adicionando VMs a ela. Aplicativos como o SharePoint podem, então, ser executados em uma VM do Azure em vez de localmente. É mais fácil ou menos caro implantar dessa forma do que em um ambiente local.
+
+- **Durante a recuperação de desastre**. Assim como acontece com a execução de determinados tipos de aplicativos na nuvem e com a extensão de uma rede local para a nuvem, você pode conseguir economias significativas usando uma abordagem baseada em IaaS para a recuperação de desastre. Se um datacenter primário falhar, você poderá criar VMs em execução no Azure para executar seus aplicativos críticos e desligá-los quando o datacenter primário ficar operacional novamente.
+
+### Migrar para a nuvem com VMs
+
+As VMs também são uma excelente opção quando você migra de um servidor físico para a nuvem (também conhecido como lift-and-shift). Você pode criar uma imagem do servidor físico e hospedá-la em uma VM com poucas ou nenhuma alteração. Assim como um servidor físico local, você deve manter a VM. Atualize o sistema operacional instalado e o software em que ele é executado.
+
+### Dimensionar VMs no Azure
+
+Você pode executar VMs únicas para teste, desenvolvimento ou para tarefas secundárias. Ou pode agrupar VMs para fornecer alta disponibilidade, escalabilidade e redundância. Independentemente dos seus requisitos de tempo de atividade, o Azure conta com diversos recursos para atendê-los. Esses recursos incluem:
+
+- Virtual machine scale sets
+- Azure Batch
+
+### O que são os Virtual machine scale sets?
+
+- Permitem criar e gerenciar um grupo de VMs idênticas e com balanceamento de carga. 
+- Permitem que você gerencie, configure e atualize centralmente um grande número de VMs em minutos para fornecer aplicativos de alta disponibilidade. O número de instâncias de VM pode aumentar ou diminuir automaticamente em resposta à demanda ou a um agendamento definido. 
+
+### O que é o Azure Batch?
+
+O Azure Batch, trabalhos em lotes paralelos e de HPC (computação de alto desempenho) de grande escala com a capacidade de dimensionar dezenas, centenas ou milhares de VMs.
+
+Quando você estiver pronto para executar um trabalho, o Batch fará o seguinte:
+
+- Iniciar um pool de VMs de computação para você.
+- Instalar aplicativos e dados de preparo.
+- Executar trabalhos com todas as tarefas que você tiver.
+- Identificar falhas.
+- Colocar o trabalho em filas.
+- Reduzir verticalmente o pool conforme o trabalho for concluído.
+- Pode haver situações em que você precise de potência de computação bruta ou de potência de computação no nível de supercomputador. O Azure fornece esses recursos.
+
+## Decidir quando usar o Azure App Service
+
+O Serviço de Aplicativo permite que você crie e hospede aplicativos Web, trabalhos em segundo plano, back-ends de dispositivos móveis e APIs RESTful na linguagem de programação de sua escolha sem gerenciar a infraestrutura. Ele oferece dimensionamento automático e alta disponibilidade. O Serviço de Aplicativo é compatível com Windows e Linux e permite implantações automatizadas do GitHub, Azure DevOps ou qualquer repositório Git para dar suporte a um modelo de deploy contínuo.
+
+Esse ambiente de PaaS (plataforma como serviço) permite que você se concentre no site e na lógica da API, enquanto o Azure manipula a infraestrutura para executar e dimensionar seus aplicativos Web.
+
+### Custos do App Service
+
+Você paga pelos recursos de Computação do Azure que o seu aplicativo usa ao processar solicitações com base no plano do App Service que você escolher. O plano do App Service determina a quantidade de hardware dedicada ao host. Por exemplo, o plano determina se ele tem hardware dedicado ou compartilhado e a quantidade de memória reservada para ele. Há até mesmo uma camada gratuita que você pode usar para hospedar sites pequenos e de baixo tráfego.
+
+### Tipos de serviços de aplicativos
+
+- Aplicativos Web
+- Aplicativos de API
+- WebJobs
+- Aplicativos móveis
+
+O Serviço de Aplicativo cuida da maioria das decisões de infraestrutura com as quais você lida ao hospedar aplicativos acessíveis pela Web:
+
+- A implantação e o gerenciamento são integrados à plataforma.
+- Pontos de extremidade podem ser protegidos.
+- Sites podem ser dimensionados rapidamente para lidar com cargas de alto tráfego.
+- O balanceamento de carga interno e o gerenciador de tráfego fornecem alta disponibilidade.
+
+Todos esses estilos de aplicativos são hospedados na mesma infraestrutura e compartilham esses benefícios. Essa flexibilidade torna o Serviço de Aplicativo a escolha ideal para hospedar aplicativos voltados para a Web.
+
+### Aplicativos Web
+
+Da mesma forma como se hospeda um site, você pode criar APIs Web baseadas em REST usando a linguagem e a estrutura que você quiser. Receba o suporte completo do Swagger e a capacidade de empacotar e publicar sua API no Azure Marketplace. Os aplicativos produzidos podem ser consumidos em qualquer cliente baseado em HTTP ou HTTPS.
+
+### WebJobs
+
+Você pode usar o recurso do WebJobs para executar um script (.cmd, .bat, PowerShell ou Bash) ou um programa (.exe, Java, PHP, Python ou Node.js) no mesmo contexto de um aplicativo Web, aplicativo de API ou aplicativo móvel. Eles também podem ser agendados ou executados por um gatilho. O WebJobs geralmente é usado para executar tarefas em segundo plano como parte da lógica do aplicativo.
+
+### Aplicativos móveis
+
+Use o recurso Aplicativos Móveis do Serviço de Aplicativo para criar rapidamente um back-end para aplicativos iOS e Android. Com apenas alguns cliques no portal do Azure, você pode:
+
+- Armazenar dados de aplicativo móvel em um Banco de Dados SQL baseado em nuvem.
+- Autenticar os clientes em relação a provedores sociais comuns, como MSA, Google, Twitter e Facebook.
+- Enviar notificações por push.
+- Executar a lógica personalizada de back-end no C# ou Node.js.
+
+No lado do aplicativo móvel, há suporte do SDK para aplicativos nativos para iOS, Android, Xamarin e React.
+
+## Decidir quando usar as Instâncias de Contêiner do Azure ou o Serviço de Kubernetes do Azure
+
+Embora as máquinas virtuais sejam uma excelente maneira de reduzir os custos em comparação com os investimentos necessários para o hardware físico, elas ainda estão limitadas a um sistema operacional por máquina virtual. Se você quer executar várias instâncias de um aplicativo em um só computador host, os contêineres são uma ótima opção.
+
+### O que são contêineres?
+
+Contêineres são um ambiente de virtualização. Assim como a execução de várias máquinas virtuais em um só host físico, você pode executar vários contêineres em apenas um host físico ou virtual. 
+
+Diferentemente das máquinas virtuais, você não gerencia o sistema operacional para um contêiner. As máquinas virtuais parecem ser uma instância de um sistema operacional ao qual você pode se conectar e que você pode gerenciar, mas os contêineres são leves e projetados para serem criados, dimensionados e interrompidos dinamicamente. 
+
+Embora seja possível criar e implantar máquinas virtuais à medida que a demanda do aplicativo aumenta, os contêineres são projetados para permitir que você responda às alterações sob demanda. Com contêineres, você pode reiniciar rapidamente no caso de uma falha ou de uma interrupção de hardware. 
+
+### Gerenciar contêineres
+
+Os contêineres são gerenciados por meio de um orquestrador de contêineres, que pode iniciar, interromper e dimensionar as instâncias do aplicativo conforme necessário. Há duas maneiras de gerenciar contêineres baseados no Docker e na Microsoft no Azure: Instâncias de Contêiner do Azure e AKS (Serviço de Kubernetes do Azure).
+
+### Instâncias de Contêiner do Azure
+
+As Instâncias de Contêiner do Azure oferecem a maneira mais rápida e simples de executar um contêiner no Azure, sem a necessidade de gerenciar máquinas virtuais nem adotar serviços adicionais. Trata-se de uma oferta de PaaS (plataforma como serviço) que permite que você carregue contêineres, que ela executará para você.
+
+### Serviço de Kubernetes do Azure
+
+A tarefa de automatizar, gerenciar e interagir com um grande número de contêineres é conhecida como orquestração. O Serviço de Kubernetes do Azure é um serviço de orquestração completa para contêineres com arquiteturas distribuídas e grandes volumes de contêineres.
+
+### Usar contêineres em suas soluções
+
+Contêineres geralmente são usados para criar soluções que utilizam uma arquitetura de microsserviço. Essa arquitetura é onde você divide as soluções em partes menores e independentes. Por exemplo, você pode dividir um site em um contêiner que hospeda o front-end, outro que hospeda o back-end e um terceiro para o armazenamento. Essa divisão permite separar as partes do aplicativo em seções lógicas que podem ser mantidas, dimensionadas ou atualizadas de forma independente.
+
+Imagine que o back-end do site atingiu a capacidade, mas o front-end e o armazenamento não estão sob pressão. Você pode:
+
+- Dimensionar o back-end separadamente para aprimorar o desempenho.
+- Optar por usar outro serviço de armazenamento.
+- Substituir o contêiner de armazenamento sem afetar o restante do aplicativo.
+
+## Decidir quando usar o Azure Functions
+
+- A computação sem servidor é a abstração de servidores, infraestrutura e sistemas operacionais. 
+- Com a computação sem servidor, o Azure cuida do gerenciamento da infraestrutura de servidor e da alocação e desalocação de recursos com base na demanda. 
+- Você não precisa se preocupar com a infraestrutura. A colocação em escala e o desempenho são manipulados automaticamente. 
+- Você é cobrado apenas pelos recursos exatos que usa. Não é necessário ter capacidade reserva.
+
+A computação sem servidor inclui a abstração de servidores, uma escala controlada por eventos e uma microcobrança:
+
+- **Abstraction of servers**: 
+    - a computação sem servidor abstrai os servidores em que você executa. 
+    - Você nunca reserva instâncias de servidor explicitamente. A plataforma gerencia isso para você. 
+    - A execução de cada função pode ser executada em uma instância de computação diferente. Esse contexto de execução é transparente para o código. 
+    - Com a arquitetura sem servidor, você implanta seu código, que, por sua vez, é executado com alta disponibilidade.
+
+- **Event-driven scale**: 
+    - A computação sem servidor é uma opção excelente para cargas de trabalho que respondem a eventos de entrada. Os eventos incluem gatilhos por:
+        - Temporizadores, por exemplo, se uma função precisar ser executada todos os dias às 10h00 UTC.
+        - HTTP, por exemplo, em cenários com API e webhook.
+        - Filas, por exemplo, com o processamento em ordem.
+        - E muito mais.
+
+Em vez de escrever um aplicativo inteiro, o desenvolvedor cria uma função, que contém o código e os metadados sobre seus gatilhos e associações. 
+
+A plataforma agenda automaticamente a função para execução e dimensiona o número de instâncias de computação com base na taxa de eventos de entrada. 
+
+Gatilhos definem como uma função é invocada. As associações fornecem uma forma declarativa de conectar-se a serviços de dentro do código.
+
+- **Microcobrança**: 
+    - a computação tradicional cobra por um bloco de tempo, por exemplo, com o pagamento de uma taxa mensal ou anual pela hospedagem de sites. Esse método de cobrança é conveniente, mas nem sempre é econômico. Mesmo que o site de um cliente receba apenas uma visita por dia, ele ainda pagará pela disponibilidade de um dia inteiro. 
+    - Com a computação sem servidor, ele paga apenas pelo tempo em que seu código é executado. Se nenhuma execução de função ativa ocorrer, ele não será cobrado. Por exemplo, se o código for executado uma vez por dia por dois minutos, ele será cobrado por uma execução e dois minutos de tempo de computação.
+
+### Computação sem servidor no Azure
+
+O Azure tem duas implementações de computação sem servidor:
+
+- **Azure Functions**: o Functions pode executar o código praticamente em qualquer linguagem de programação moderna.
+- **Azure Logic Apps**: os aplicativos lógicos foram desenvolvidos em um designer baseado na Web e podem executar a lógica disparada pelos serviços do Azure sem escrever nenhum código.
+
+### Azure Functions
+
+O Azure Functions é ideal para você caso esteja preocupado apenas com o código do serviço. As funções costumam ser usadas quando você precisa executar um trabalho em resposta a um evento (geralmente por meio de uma solicitação REST), um temporizador ou uma mensagem de outro serviço do Azure.
+
+As funções são dimensionadas automaticamente com base na demanda; assim sendo, trata-se de uma boa opção quando a demanda é variável. Por exemplo, você pode receber mensagens de uma solução de IoT (Internet das Coisas) usada para monitorar uma frota de veículos de entrega. Provavelmente, a maioria dos dados é recebida durante o horário comercial.
+
+Usando uma abordagem baseada em máquina virtual, você incorreria em custos mesmo quando a máquina virtual estivesse ociosa. Com funções, o Azure executa o código quando este é disparado e desaloca os recursos automaticamente quando a função é concluída. Neste modelo, você só é cobrado pelo tempo de CPU usado durante a execução da função.
+
+As funções podem ser sem estado (stateless) ou com estado (stateful). 
+- Quando são sem estado (o padrão), elas se comportam como se fossem reiniciadas sempre que respondem a um evento. 
+- Quando são com estado (chamadas de Durable Functions), um contexto é passado pela função para acompanhar a atividade anterior.
+
+As funções são um componente chave da computação sem servidor. Elas também são uma plataforma de computação geral para executar qualquer tipo de código. Se as necessidades do aplicativo do desenvolvedor forem alteradas, você poderá implantar o projeto em um ambiente que não seja sem servidor. Essa flexibilidade permite gerenciar o dimensionamento, executar em redes virtuais e até mesmo isolar completamente as funções.
+
+### Azure Logic Apps
+
+Os aplicativos lógicos são semelhantes às funções. Ambos permitem que você dispare lógica com base em um evento. Enquanto as funções executam código, os aplicativos lógicos executam fluxos de trabalho criados para automatizar cenários de negócios com base em blocos de lógica predefinida.
+
+- Cada fluxo de trabalho de aplicativo lógico do Azure começa com um gatilho, que é acionado quando um evento específico ocorre ou quando novos dados disponíveis atendem a critérios específicos. 
+
+- Vários gatilhos incluem recursos básicos de agendamento, para que os desenvolvedores possam especificar a regularidade das execuções das suas cargas de trabalho. 
+
+- Cada vez que o gatilho é acionado, o mecanismo de Aplicativos Lógicos cria uma instância de aplicativo lógico que executa as ações no fluxo de trabalho. Essas ações também podem incluir 
+    - conversões de dados
+    - controles de fluxo, como instruções condicionais
+    - instruções de comutação
+    - loops e ramificações.
+
+Você cria fluxos de trabalho de aplicativo lógico usando um designer visual no portal do Azure ou no Visual Studio. Os fluxos de trabalho são mantidos como um arquivo JSON com um esquema de fluxo de trabalho conhecido.
+
+O Azure fornece mais de 200 conectores e blocos de processamento para você interagir com diferentes serviços. Você também pode criar etapas de fluxo de trabalho e conectores personalizados caso o serviço com o qual precisa interagir não esteja coberto. 
+
+Você passa dados pelo fluxo de trabalho para fazer o processamento personalizado, geralmente sem escrever nenhum código.
+
+Por exemplo, digamos que chegou um tíquete no Zendesk. Você pode:
+
+- Detectar a intenção da mensagem com os serviços cognitivos.
+- Criar um item no SharePoint para acompanhar o problema.
+- Adicionar o cliente ao seu sistema de CRM do Dynamics 365 caso ele não esteja no banco de dados.
+- Envie um email de acompanhamento para confirmar a solicitação.
+- Ideal para uma função de analista de negócios.
+
+### Functions vs. Aplicativos Lógicos
+
+O Functions e os Aplicativos Lógicos podem criar orquestrações complexas. Uma orquestração é uma coleção de funções ou etapas que são executadas para realizar uma tarefa complexa.
+
+- Com o Functions, você escreve código para concluir cada etapa.
+- Com os Aplicativos Lógicos, você usa uma GUI para definir as ações e como elas se relacionam entre si.
+
+Você pode combinar serviços ao compilar uma orquestração, chamando funções de aplicativos lógicos e chamando aplicativos lógicos de funções. No entanto, há algumas diferenças entre essas implementações.
+
+||Funções|Aplicativos Lógicos|
+|-|-|-|
+|Estado|Normalmente sem estado, mas as Durable Functions fornecem o estado.|Com estado.|
+|Desenvolvimento|Code First (imperativo).Designer First (declarativo).|
+|Conectividade|Cerca de uma dezena de tipos de associação internos. Escrever código para associações personalizadas.|Ampla coleção de conectores. Enterprise Integration Pack para cenários B2B. Crie conectores personalizados.|
+|Ações|Cada atividade é uma função do Azure. Escreva o código para as funções de atividade.|Ampla coleção de ações prontas.|
+|Monitoramento|Azure Application Insights.|Portal do Azure, Log Analytics.|
+|Gerenciamento|API REST, Visual Studio.|Portal do Azure, API REST, PowerShell, Visual Studio.|
+|Contexto de execução|Podem ser executadas no local ou na nuvem.|São executados somente na nuvem.|
+
+
+#estouaqui
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte1)
+
+---
+---
+---
+---
+---
 
 ### Conceitos básicos da Rede Virtual do Azure
 
