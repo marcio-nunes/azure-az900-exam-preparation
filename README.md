@@ -1614,8 +1614,8 @@ Ao final deste roteiro de aprendizagem, você poderá:
 - Escolher a tecnologia de computação sem servidor certa para seu cenário de negócios.
 - Escolher o melhor serviço de IoT do Azure para um determinado cenário de negócios.
 
-## 🔸 <a name="Escolha_o_serviço_de_IoT_do_Azure_mais_adequado_para_o_seu_aplicativo">Escolha o serviço de IoT do Azure mais adequado para o seu aplicativo
-#estouaqui
+## 🔸 <a name="Escolha_o_serviço_de_IoT_do_Azure_mais_adequado_para_o_seu_aplicativo"></a>Escolha o serviço de IoT do Azure mais adequado para o seu aplicativo
+
 ### Identificar as opções de produto
 
 A IoT habilita os dispositivos para coletar e retransmitir informações a fim de obter uma análise dos dados. Os dispositivos inteligentes são equipados com sensores que coletam dados. Alguns sensores comuns que medem os atributos do mundo físico incluem:
