@@ -1347,10 +1347,110 @@ Você conheceu os benefícios e o uso da Rede Virtual do Azure, do Gateway de VP
 
 # 🔸 <a name="Explorar_os_serviços_do_Armazenamento_do_Azure"></a>Explorar os serviços do Armazenamento do Azure
 
+Depois de concluir este módulo, você poderá descrever os benefícios e o uso destes serviços:
 
+- Azure Blob Storage
+- Azure Disk Storage
+- Azure Files
+- Camadas de acesso do Azure Blob 
 
+## Conceitos básicos da conta do Azure Storage 
 
-#estouaqui
+É um serviço que você pode usar para armazenar arquivos, mensagens, tabelas e outros tipos de informações.
+
+Você pode criar uma conta de Armazenamento do Azure usando o portal do Azure, o PowerShell ou a CLI do Azure.
+
+Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armazenamento do Microsoft Azure, que podem ser acessados de qualquer lugar do mundo por HTTP ou HTTPS. Os dados nesta conta são seguros, altamente disponíveis, duráveis e maciçamente escalonáveis.
+
+## Conceitos básicos do Disk storage
+
+O Armazenamento em Disco fornece discos para máquinas virtuais do Azure. Aplicativos e outros serviços podem acessar e usar os discos conforme necessário, do mesmo modo que aconteceria em cenários locais. O Armazenamento em Disco permite que os dados sejam armazenados de forma persistente e acessados de um disco rígido virtual anexado.
+
+Os discos são apresentados em vários tamanhos e níveis de desempenho diferentes, de SSDs até HDs tradicionais, com diferentes níveis de desempenho. 
+
+É possível usar discos SSD e HDD padrão para cargas de trabalho menos críticas, discos SSD premium para aplicativos de produção críticos e discos ultra para cargas de trabalho com uso intensivo de dados, como SAP HANA, bancos de dados de nível superior e cargas de trabalho com muitas transações. 
+
+O Azure tem fornecido consistentemente a durabilidade de nível empresarial para laas (infraestrutura como serviço), com uma taxa de falha anual de 0% líder no setor.
+
+A ilustração a seguir mostra uma máquina virtual do Azure que usa discos separados para armazenar dados diferentes.
+
+![azure-disks](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-storage-fundamentals/media/azure-disks-7841e01e.png)
+
+## Conceitos básicos do Azure Blob storage
+
+O Armazenamento de Blobs do Azure é uma solução de armazenamento de objetos para a nuvem. Ele pode armazenar grandes quantidades de dados, como texto ou dados binários. O Armazenamento de Blobs do Azure não é estruturado, o que significa que não há nenhuma restrição quanto aos tipos de dados que ele pode armazenar. O Armazenamento de Blobs pode gerenciar milhares de carregamentos simultâneos, grandes quantidades de dados de vídeo, arquivos de log em constante crescimento e pode ser acessado de qualquer lugar com uma conexão com a Internet.
+
+Os blobs não estão limitados a formatos de arquivo comuns. Um blob pode conter gigabytes de dados binários transmitidos de um instrumento científico, uma mensagem criptografada para outro aplicativo ou dados em um formato personalizado para um aplicativo que você está desenvolvendo. 
+
+Uma vantagem do armazenamento de blobs sobre o armazenamento em disco é que os desenvolvedores não precisam pensar em discos nem gerenciá-los. Os dados são carregados como blobs, e o Azure cuida das necessidades do armazenamento físico.
+
+O Armazenamento de Blobs é ideal para:
+
+- Fornecimento de imagens ou de documentos diretamente a um navegador.
+- Armazenamento de arquivos para acesso distribuído.
+- Transmissão por streaming de áudio e vídeo.
+- Armazenamento de dados de backup e restauração, recuperação de desastres e arquivamento.
+- Armazenamento de dados para análise por um serviço local ou hospedado no Azure.
+- Armazenamento de até 8 TB de dados para máquinas virtuais.
+
+Você pode armazenar os blobs em contêineres, o que ajuda a organizá-los de acordo com suas necessidades de negócios.
+
+O diagrama a seguir ilustra como você pode usar contas, contêineres e blobs do Azure.
+
+![account-container-blob](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-storage-fundamentals/media/account-container-blob-4da0ac47.png)
+
+## Conceitos básicos do Azure Files
+
+Os Arquivos do Azure oferecem compartilhamentos de arquivo totalmente gerenciados na nuvem que são acessíveis por meio dos protocolos SMB e Network File System (versão prévia) padrão do setor. 
+
+Os compartilhamentos de arquivos do Azure podem ser montados de maneira simultânea por implantações locais ou na nuvem do Windows, do Linux e do MacOS. 
+
+Aplicativos executados em máquinas virtuais do Azure ou em serviços de nuvem podem montar um compartilhamento de armazenamento de arquivo para acessar dados de arquivos, assim como um aplicativo de área de trabalho montaria um compartilhamento SMB típico. 
+
+Qualquer quantidade de máquinas virtuais ou funções do Azure podem montar e acessar o compartilhamento de armazenamento de arquivos simultaneamente. Um cenário de uso típico seria compartilhar arquivos em qualquer lugar no mundo, bem como dados de diagnóstico ou compartilhamento de dados do aplicativo.
+
+Use Arquivos do Azure para as seguintes situações:
+
+- Muitos aplicativos locais usam compartilhamentos de arquivos. Os Arquivos do Azure facilitam a migração desses aplicativos que compartilham dados para o Azure. Se você montar o compartilhamento de arquivo do Azure na mesma letra da unidade que o aplicativo local usa, a parte do aplicativo que acessa o compartilhamento de arquivo deverá funcionar com alterações mínimas, se houver.
+
+- Armazene arquivos de configuração em um compartilhamento de arquivos e acesse-os de várias VMs. As ferramentas e utilitários usados por vários desenvolvedores em um grupo podem ser armazenados em um compartilhamento de arquivos, garantindo que todas as pessoas possam encontrá-los, e que usem a mesma versão.
+
+- Grave dados em um compartilhamento de arquivos e processe ou analise os dados mais tarde. Por exemplo, talvez você queira fazer isso com logs de diagnóstico, métricas e despejos de memória.
+
+A ilustração a seguir mostra os Arquivos do Azure usados para compartilhar dados entre dois locais geográficos. Os Arquivos do Azure garantem que os dados sejam criptografados em repouso, e o protocolo SMB garante que eles sejam criptografados em trânsito.
+
+![azure-files](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-storage-fundamentals/media/azure-files-5f942c3e.png)
+
+Uma característica que distingue os Arquivos do Azure dos arquivos de um compartilhamento corporativo é que você pode acessá-los em qualquer lugar do mundo usando uma URL que aponte para eles. Você também pode usar tokens SAS (Shared Access Signature) para permitir o acesso a um ativo privado por um período específico.
+
+Veja um exemplo de um URI de SAS de serviço, mostrando o URI de recurso e o token SAS:
+
+![sas-storage-uri](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-storage-fundamentals/media/sas-storage-uri-037308fa.png)
+
+## Noções básicas sobre as camadas de acesso de blobs
+
+Os dados armazenados na nuvem podem crescer em um ritmo exponencial. Para gerenciar os custos de suas necessidades cada vez maiores de armazenamento, é útil organizar seus dados com base em atributos como frequência de acesso e período de retenção planejado. 
+
+Alguns dados são ativamente acessados e modificados durante seu ciclo de vida. Alguns dados são acessados com frequência no início do seu tempo de vida, mas esse acesso cai drasticamente à medida que os dados envelhecem. Alguns dados permanecem ociosos na nuvem e raramente são acessos depois de armazenados, talvez nunca. 
+
+O Armazenamento do Azure oferece diferentes camadas de acesso para seu armazenamento de blobs, ajudando você a armazenar dados de objeto da maneira mais econômica. 
+
+- **Hot access tier**: otimizada para armazenar dados que são acessados com frequência (por exemplo, imagens de seu site).
+- **Cool access tier**: otimizada para dados acessados com menos frequência e armazenados por pelo menos 30 dias (por exemplo, faturas de seus clientes).
+- **Archive access tier**: adequada para dados acessados raramente e armazenados por pelo menos 180 dias, com requisitos de latência flexíveis (por exemplo, backups de longo prazo).
+
+As seguintes considerações se aplicam às diferentes camadas de acesso:
+
+- Apenas as camadas de acesso Hot e Cool podem ser definidas no nível da conta. A camada de acesso aos arquivos não está disponível no nível da conta.
+- Camadas de acesso frequente, esporádico e de arquivos podem ser definidas no nível do blob, durante ou após o upload.
+- Os dados na camada de acesso Cool podem tolerar uma disponibilidade ligeiramente inferior, mas ainda requerem alta durabilidade, latência de recuperação e características de taxa de transferência semelhantes a dados de acesso frequente. Para dados de acesso esporádico, um SLA (contrato de nível de serviço) de disponibilidade ligeiramente inferior e custos de acesso mais altos comparados com os dados de acesso frequente são compensações aceitáveis para custos de armazenamento mais baixos.
+- O armazenamento de arquivos armazena dados offline e oferece os custos de armazenamento mais baixos, mas também os mais altos custos para reidratar e acessar dados.
+
+### Resumo
+
+Neste módulo, você descobriu como o Armazenamento do Azure pode fornecer à sua empresa uma variedade de opções para armazenar seus dados. Por exemplo, você aprendeu que sua primeira etapa ao usar o Armazenamento do Azure é criar uma conta de armazenamento. Depois que você faz isso, o Azure fornece várias opções para armazenar seus dados.
+
+Além disso, o Azure fornece várias camadas de acesso que você pode usar para equilibrar custos de armazenamento com suas necessidades de negócios.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
