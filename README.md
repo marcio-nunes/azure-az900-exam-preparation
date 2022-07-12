@@ -1707,7 +1707,36 @@ A IoT é uma evolução empolgante na computação que conecta os mundos físico
 
 ---
 
-### 🔸 <a name="Escolha_o_melhor_serviço_de_IA_para_suas_necessidades"></a> Escolha o melhor serviço de IA para suas necessidades
+## 🔸 <a name="Escolha_o_melhor_serviço_de_IA_para_suas_necessidades"></a> Escolha o melhor serviço de IA para suas necessidades
+
+Após concluir este módulo, você conseguirá:
+
+- Escolher os serviços de IA do Azure que melhor atendam aos desafios comerciais de sua empresa.
+
+### Identificar as opções de produto
+
+A IA é uma classificação de computação ampla que permite a um sistema de software perceber seu ambiente e tomar medidas que maximizem sua chance de atingir as metas. Umas das metas da IA é criar um sistema de software capaz de adaptar-se ou de aprender algo por conta própria sem ser explicitamente programado para isso.
+
+Há duas abordagens básicas à IA. A primeira é empregar um sistema de aprendizado profundo modelado na rede neural da mente humana, permitindo que ele descubra, aprenda e cresça com a experiência.
+
+A segunda abordagem é o machine learning, uma técnica de ciência de dados que usa dados existentes para treinar um modelo, testá-lo e, em seguida, aplicar esse modelo a novos dados para prever comportamentos, resultados e tendências futuros.
+
+As estimativas ou previsões de aprendizado de máquina podem tornar aplicativos e dispositivos mais inteligentes.
+
+Praticamente todos os dispositivos ou sistemas de software que coletam dados textuais, visuais e de áudio podem alimentar um modelo de machine learning que torna esse dispositivo ou sistema de software mais inteligente sobre como ele funciona no futuro.
+
+### Opções de produto do Azure
+
+#### Azure Machine Learning
+
+O Azure Machine Learning é uma plataforma para fazer previsões. Ele consiste em ferramentas e serviços que permitem que você se conecte a dados para treinar e testar modelos para encontrar um que preveja com mais precisão um resultado futuro. Depois de executar experimentos para testar o modelo, você pode implantar e usá-lo em tempo real por meio de um ponto de extremidade da API Web.
+
+Com o Azure Machine Learning, você pode:
+
+- Criar um processo que define como obter dados, como lidar com casos de dados ausentes ou inválidos, como dividir os dados em um conjunto de treinamento ou de teste e como entregar os dados ao processo de treinamento.
+- Treinar e avaliar modelos de previsão usando ferramentas e linguagens de programação familiares aos cientistas de dados.
+- Criar pipelines que definem onde e quando executar os experimentos com uso intensivo de computação necessários para pontuar os algoritmos com base nos dados de treinamento e teste.
+- Implantar o algoritmo de melhor desempenho como uma API para um ponto de extremidade para que ele possa ser consumido em tempo real por outros aplicativos.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
