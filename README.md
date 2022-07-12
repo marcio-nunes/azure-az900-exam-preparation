@@ -1596,9 +1596,14 @@ Além disso, você viu como o Azure Cosmos DB funciona com uma variedade de APIs
 
 ---
 
-#estouaqui
+# ☁️ <a name="parte3"></a> Princípios básicos do Microsoft Azure: Descrever as principais soluções e ferramentas de gerenciamento no Azure
 
-### 🔸 <a name="parte1-3"></a> Princípios básicos do Microsoft Azure: Descrever as principais soluções e ferramentas de gerenciamento no Azure
+1. [Escolha o serviço de IoT do Azure mais adequado para o seu aplicativo](#Escolha_o_serviço_de_IoT_do_Azure_mais_adequado_para_o_seu_aplicativo)
+2. [Escolha o melhor serviço de IA para suas necessidades](#Escolha_o_melhor_serviço_de_IA_para_suas_necessidades)
+3. [Escolher a melhor tecnologia sem servidor do Azure para seu cenário empresarial](#Escolher_a_melhor_tecnologia_sem_servidor_do_Azure_para_seu_cenário_empresarial)
+4. [Escolha as melhores ferramentas para ajudar as organizações a criar soluções melhores](#Escolha_as_melhores_ferramentas_para_ajudar_as_organizações_a_criar_soluções_melhores)
+5. [Escolha as melhores ferramentas para gerenciar e configurar seu ambiente do Azure](#Escolha_as_melhores_ferramentas_para_gerenciar_e_configurar_seu_ambiente_do_Azure)
+6. [Escolher o melhor serviço de monitoramento para visibilidade, insight e mitigação de interrupções](#Escolher_o_melhor_serviço_de_monitoramento_para_visibilidade_insight_e_mitigação_de_interrupções)
 
 Ao final deste roteiro de aprendizagem, você poderá:
 
@@ -1609,10 +1614,8 @@ Ao final deste roteiro de aprendizagem, você poderá:
 - Escolher a tecnologia de computação sem servidor certa para seu cenário de negócios.
 - Escolher o melhor serviço de IoT do Azure para um determinado cenário de negócios.
 
-Depois de concluir este módulo, você poderá:
-
-- Escolher o serviço IoT do Azure mais adequado para lidar com seu cenário de negócios.
-
+## 🔸 <a name="Escolha_o_serviço_de_IoT_do_Azure_mais_adequado_para_o_seu_aplicativo">Escolha o serviço de IoT do Azure mais adequado para o seu aplicativo
+#estouaqui
 ### Identificar as opções de produto
 
 A IoT habilita os dispositivos para coletar e retransmitir informações a fim de obter uma análise dos dados. Os dispositivos inteligentes são equipados com sensores que coletam dados. Alguns sensores comuns que medem os atributos do mundo físico incluem:
