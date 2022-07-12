@@ -998,7 +998,7 @@ Você aprendeu a usar:
 
 ---
 
-## Explorar os serviços de rede do Azure
+## 🔸 <a name="Explorar_os_serviços_de_rede_do_Azure"></a>Explorar os serviços de rede do Azure
 
 Neste módulo, você examinará vários dos principais recursos de rede que estão disponíveis no Azure. Você aprenderá sobre a Rede Virtual do Azure, que pode ser configurada em um ambiente de rede personalizado que atenda às necessidades da sua empresa. Você também aprenderá a usar o Gateway de VPN do Azure e o Azure ExpressRoute para criar túneis de comunicação segura entre as diferentes localizações da sua empresa.
 
@@ -1006,7 +1006,6 @@ Depois de concluir este módulo, você poderá:
 
 - Descrever os principais recursos de rede que estão disponíveis no Azure.
 - Descrever os benefícios e o uso da Rede Virtual, do Gateway de VPN e do ExpressRoute.
-#estouaqui
 
 ## Conceitos básicos da Rede Virtual do Azure
 
@@ -1073,7 +1072,7 @@ Você pode vincular redes virtuais usando o emparelhamento dessas redes. O netwo
 
 ![local-or-remote-gateway-in-peered-virual-network](https://docs.microsoft.com/en-us/learn/azure-fundamentals/azure-networking-fundamentals/media/local-or-remote-gateway-in-peered-virual-network-21106a38.png)
 
-### Configurações de Rede Virtual do Azure
+## Configurações de Rede Virtual do Azure
 
 Você pode criar e configurar redes virtuais do Azure via portal do Azure, Azure PowerShell, CLI do Azure, Azure Cloud Shell ou um modelo do ARM.
 
@@ -1124,7 +1123,7 @@ Você também pode monitorar e exibir métricas para solucionar problemas em sua
 
 Redes virtuais são mecanismos avançados e altamente configuráveis para conectar entidades no Azure. Você pode conectar recursos do Azure entre si ou aos recursos existentes no local. Você pode isolar, filtrar e rotear o tráfego de rede. O Azure permite que você aumente a segurança onde achar necessário.
 
-### Conceitos básicos do Gateway de VPN do Azure
+## Conceitos básicos do Gateway de VPN do Azure
 
 VPNs usam um túnel criptografado dentro de outra rede. Normalmente, elas são implantadas para conectar duas ou mais redes privadas confiáveis entre si em uma rede não confiável (normalmente a Internet pública). O tráfego é criptografado ao viajar pela rede não confiável para evitar interceptação ou outros ataques.
 
@@ -1242,7 +1241,7 @@ Em cenários de alta disponibilidade, nos quais há risco associado a uma interr
 
 Essa configuração oferece resiliência, escalabilidade e maior disponibilidade para os gateways de rede virtual. A implantação de gateways em zonas de disponibilidade do Azure separa de forma física e lógica os gateways em uma região, enquanto protege a conectividade de rede local com o Azure contra falhas no nível da zona. Esses gateways exigem SKUs de gateway diferentes e usam os endereços IP públicos Standard em vez dos Básicos.
 
-### Conceitos básicos do ExpressRoute do Azure
+## Conceitos básicos do ExpressRoute do Azure
 
  O ExpressRoute permite que você estenda suas redes locais para a nuvem da Microsoft em uma conexão privada com a ajuda de um provedor de conectividade. 
 
@@ -1344,6 +1343,23 @@ Você conheceu os benefícios e o uso da Rede Virtual do Azure, do Gateway de VP
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
 
+---
+
+# 🔸 <a name="Explorar_os_serviços_do_Armazenamento_do_Azure"></a>Explorar os serviços do Armazenamento do Azure
+
+
+
+
+#estouaqui
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte1)
+
+---
+---
+---
+---
+---
 ---
 
 ### 🔸 <a name="parte1-3"></a> Princípios básicos do Microsoft Azure: Descrever as principais soluções e ferramentas de gerenciamento no Azure
