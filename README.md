@@ -1588,7 +1588,15 @@ O Azure Databricks ajuda a descobrir insights dos seus dados e a criar soluçõe
 
 O Azure Data Lake Analytics é um serviço de trabalho de análise sob demanda que simplifica Big Data. Em vez de implantar, configurar e ajustar o hardware, você cria consultas para transformar os dados e extrair insights importantes. O serviço de análise pode manipular trabalhos de qualquer escala de maneira instantânea, simplesmente configurando o controle para a quantidade de potência necessária. Você pagará pelo trabalho somente quando ele estiver em execução, tornando-o mais econômico.
 
+### Resumo
+
+Você viu como o Banco de Dados SQL do Azure, o Banco de Dados do Azure para MySQL e o Banco de Dados do Azure para PostgreSQL permitem que a empresa migre os bancos de dados existentes do SQL Server, do MySQL e do PostgreSQL para a nuvem. Você pode fazer isso ao mesmo tempo que preserva os pontos fortes da administração de banco de dados e o desenvolvimento da sua empresa.
+
+Além disso, você viu como o Azure Cosmos DB funciona com uma variedade de APIs populares, incluindo o SQL, o MongoDB, o Cassandra, o Tables e o Gremlin. Você pode usá-los para migrar os seus dados para a nuvem e manter ou aprimorar as habilidades dos seus desenvolvedores. Você também aprendeu a usar os serviços de análise e de Big Data, como o Azure Synapse Analytics, o Azure HDInsight, o Azure Databricks e o Azure Data Lake Analytics, para analisar grandes volumes de dados.
+
 ---
+
+#estouaqui
 
 ### 🔸 <a name="parte1-3"></a> Princípios básicos do Microsoft Azure: Descrever as principais soluções e ferramentas de gerenciamento no Azure
 
