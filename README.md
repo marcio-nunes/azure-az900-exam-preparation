@@ -291,15 +291,6 @@ A oferta da conta de estudante gratuita do Azure inclui:
 
 A conta de estudante gratuita do Azure é uma oferta para estudantes que oferece US$ 100 de crédito e ferramentas para desenvolvedores gratuitas. Além disso, você pode se inscrever sem um cartão de crédito.
 
-
-### Resumo
-
-Neste módulo, você aprendeu a:
-
-- Descrever os conceitos básicos da computação em nuvem.
-- Determinar se o Azure é a solução certa para suas necessidades de negócios.
-- Diferenciar entre os diferentes métodos de criação de uma assinatura do Azure.
-
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
 
