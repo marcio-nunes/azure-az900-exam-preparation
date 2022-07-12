@@ -944,10 +944,46 @@ Você pode fornecer propriedade individual por meio de áreas de trabalho pessoa
 
 ### Aprimorar a segurança
 
+- A Azure Virtual Desktop oferece gerenciamento de segurança centralizado para as áreas de trabalho dos usuários com o Azure AD (Azure Active Directory). 
+- Você pode habilitar a autenticação multifator para proteger as entradas do usuário. 
+- Você também pode proteger o acesso aos dados atribuindo RBACs (Role-based Access Control) granulares aos usuários.
+- Os dados e aplicativos ficam separados do hardware local. O risco de dados confidenciais serem deixados em um dispositivo pessoal é reduzido.
+- As sessões de usuário são isoladas em ambientes de sessão única e de várias sessões.
 
+A Azure Virtual Desktop também aprimora a segurança usando a tecnologia de conexão reversa. Esse tipo de conexão é mais seguro do que o protocolo RDP. Não abrimos portas de entrada para as VMs do host de sessão.
 
+### Quais são alguns dos principais recursos do Azure Virtual Desktop?
 
-#estouaqui
+#### Gerenciamento simplificado
+
+- Você usa o Azure AD e RBACs para gerenciar o acesso aos recursos. 
+- Com o Azure, você também obtém ferramentas para automatizar implantações de VM, gerenciar atualizações de VM e fornecer recuperação de desastre. 
+- Usa o Azure Monitor para monitoramento e alertas. Essa padronização permite que os administradores identifiquem problemas por meio de uma interface.
+
+#### Gerenciamento de desempenho
+
+A Azure Virtual Desktop oferece opções para balancear a carga dos usuários em seus pools de host de VM. Os pools de host são coleções de VMs com a mesma configuração atribuída a vários usuários. Para obter o melhor desempenho, você pode configurar o balanceamento de carga para ocorrer conforme os usuários entram (breadth mode). 
+
+Com o breadth mode, os usuários são alocados sequencialmente no pool de host para sua carga de trabalho. Para economizar custos, você pode configurar suas VMs para o balanceamento de carga do modo de profundidade, em que os usuários são totalmente alocados em uma VM antes de passar para a próxima. 
+
+A Azure Virtual Desktop fornece ferramentas para provisionar automaticamente VMs adicionais quando a demanda de entrada excede um limite especificado.
+
+#### Implantação do Windows 10 multissessão
+
+A Azure Virtual Desktop permite que você use a multissessão do Windows 10 Enterprise, o único sistema operacional baseado em cliente Windows que habilita vários usuários simultâneos em uma VM. A Área de Trabalho Virtual do Azure também fornece uma experiência mais consistente com suporte a aplicativos mais amplo em comparação com sistemas operacionais baseados no Windows Server.
+
+### Como você pode reduzir os custos com a Azure Virtual Desktop?
+
+#### Traga sua própria licença
+
+A Azure Virtual Desktop estará disponível para você sem custos adicionais se você tiver uma licença do Microsoft 365 qualificada. Pague apenas pelos recursos do Azure usados pela Azure Virtual Desktop.
+
+- Traga sua licença do Windows ou Microsoft 365 qualificada para obter aplicativos e áreas de trabalho do Windows 10 Enterprise e Windows 7 Enterprise sem custo adicional.
+- Se você for um cliente com licença de acesso para cliente aos Serviços de Área de Trabalho Remota da Microsoft, os aplicativos e as áreas de trabalho dos Serviços de Área de Trabalho Remota do Windows Server estarão disponíveis sem custo adicional.
+
+#### Economize em custos de computação
+
+Compre Instâncias de Máquinas Virtuais Reservadas do Azure de um ou de três anos para economizar até 72% em relação aos preços pagos conforme o uso. Você pode pagar por uma reserva de forma antecipada ou mensal. As reservas fornecem um desconto de cobrança e não afetam o estado de runtime dos recursos.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
