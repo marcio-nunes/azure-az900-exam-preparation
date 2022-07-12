@@ -994,7 +994,7 @@ Você aprendeu a usar:
 - Azure Virtual Desktop para fornecer rapidamente um ambiente personalizado de software e sistema operacional para seus funcionários remotos.
 
 🔝 [Voltar ao topo](#topo)
-🔼 [Voltar ao índice](#parte1)
+🔼 [Voltar ao índice](#parte2)
 
 ---
 
@@ -1341,7 +1341,7 @@ Com o ExpressRoute, os seus dados não passam pela Internet pública e, portanto
 Você conheceu os benefícios e o uso da Rede Virtual do Azure, do Gateway de VPN do Azure e do Azure ExpressRoute.
 
 🔝 [Voltar ao topo](#topo)
-🔼 [Voltar ao índice](#parte1)
+🔼 [Voltar ao índice](#parte2)
 
 ---
 
@@ -1453,7 +1453,7 @@ Neste módulo, você descobriu como o Armazenamento do Azure pode fornecer à su
 Além disso, o Azure fornece várias camadas de acesso que você pode usar para equilibrar custos de armazenamento com suas necessidades de negócios.
 
 🔝 [Voltar ao topo](#topo)
-🔼 [Voltar ao índice](#parte1)
+🔼 [Voltar ao índice](#parte2)
 
 ---
 
@@ -1593,6 +1593,9 @@ O Azure Data Lake Analytics é um serviço de trabalho de análise sob demanda q
 Você viu como o Banco de Dados SQL do Azure, o Banco de Dados do Azure para MySQL e o Banco de Dados do Azure para PostgreSQL permitem que a empresa migre os bancos de dados existentes do SQL Server, do MySQL e do PostgreSQL para a nuvem. Você pode fazer isso ao mesmo tempo que preserva os pontos fortes da administração de banco de dados e o desenvolvimento da sua empresa.
 
 Além disso, você viu como o Azure Cosmos DB funciona com uma variedade de APIs populares, incluindo o SQL, o MongoDB, o Cassandra, o Tables e o Gremlin. Você pode usá-los para migrar os seus dados para a nuvem e manter ou aprimorar as habilidades dos seus desenvolvedores. Você também aprendeu a usar os serviços de análise e de Big Data, como o Azure Synapse Analytics, o Azure HDInsight, o Azure Databricks e o Azure Data Lake Analytics, para analisar grandes volumes de dados.
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte2)
 
 ---
 
@@ -1743,18 +1746,30 @@ Com o Azure Machine Learning, você pode:
 
 ---
 
-### 🔸 <a name="parte1-5"></a> Princípios básicos do Microsoft Azure: Descrever recursos de identidade, governança, privacidade e conformidade
+### 🔸 <a name=""></a> 
 
 🔝 [Voltar ao topo](#topo)
-🔼 [Voltar ao índice](#parte1)
+🔼 [Voltar ao índice](#parte3)
 
 ---
 
-### 🔸 <a name="parte1-6"></a> Princípios básicos do Microsoft Azure: Descrever contratos de nível de serviço e Gerenciamento de Custos da Microsoft
+### 🔸 <a name=""></a> 
 
 🔝 [Voltar ao topo](#topo)
-🔼 [Voltar ao índice](#parte1)
+🔼 [Voltar ao índice](#parte3)
 
 ---
 
-## ☁️ <a name="parte2"></a>
+### 🔸 <a name=""></a> 
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte3)
+
+---
+
+### 🔸 <a name=""></a> 
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte3)
+
+---
