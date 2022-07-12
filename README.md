@@ -1456,10 +1456,138 @@ Além disso, o Azure fornece várias camadas de acesso que você pode usar para 
 🔼 [Voltar ao índice](#parte1)
 
 ---
----
----
----
----
+
+## 🔸 <a name="Explorar_os_serviços_de_banco_de_dados_e_análise_do_Azure"></a> Explorar os serviços de banco de dados e análise do Azure
+
+Depois de concluir este módulo, você poderá descrever os benefícios e o uso destes serviços:
+
+- Azure Cosmos DB
+- Banco de Dados SQL do Azure
+- Instância Gerenciada do Azure SQL
+- Banco de Dados do Azure para MySQL
+- Banco de Dados do Azure para PostgreSQL
+- Azure Synapse Analytics
+- Azure HDInsight
+- Azure Databricks
+- Análise Azure Data Lake
+
+## Explorar o Azure Cosmos DB
+
+O Azure Cosmos DB é um serviço de multimodelo de banco de dados distribuído globalmente. Você pode escalar de modo elástico e independente a taxa de transferência e o armazenamento em qualquer número de regiões do Azure em todo o mundo. Você pode aproveitar o acesso a dados rápido e em poucos milissegundos usando uma das várias APIs populares. O Azure Cosmos DB fornece contratos de nível de serviço abrangentes para taxa de transferência, latência, disponibilidade e garantias de consistência.
+
+O Azure Cosmos DB dá suporte a dados sem esquema, o que permite criar aplicativos "Always On" altamente responsivos para dar suporte a dados em constante mudança. Você pode usar esse recurso para armazenar dados que são atualizados e mantidos por usuários em todo o mundo.
+
+O Azure Cosmos DB é flexível. No nível mais baixo, o Azure Cosmos DB armazena dados no formato ARS (atom-record-sequence). Os dados são então abstraídos e projetados como uma API, que você especifica ao criar o seu banco de dados. Suas opções incluem SQL, MongoDB, Cassandra, Tables e Gremlin. Esse nível de flexibilidade significa que, conforme você migra os bancos de dados da empresa para o Azure Cosmos DB, os desenvolvedores podem continuar usando as APIs com as quais se sentem mais confortáveis.
+
+## Explorar o Banco de Dados SQL do Azure
+
+O Banco de Dados SQL do Azure é um banco de dados relacional baseado na última versão estável do mecanismo de banco de dados do Microsoft SQL Server. O Banco de Dados SQL é um banco de dados confiável, totalmente gerenciado, seguro e de alto desempenho. Ele pode ser usado para criar aplicativos orientados a dados e sites na linguagem de programação de sua escolha, sem a necessidade de gerenciar a infraestrutura.
+
+### Recursos
+
+- O Banco de Dados SQL do Azure é um mecanismo de banco de dados de PaaS (plataforma como serviço). 
+- Ele lida com a maioria das funções de gerenciamento de banco de dados – como atualização, aplicação de patches, backups e monitoramento – sem envolvimento do usuário. 
+- O Banco de Dados SQL fornece 99,99% de disponibilidade. 
+- As funcionalidades de PaaS internas do Banco de Dados SQL permitem que você se concentre nas atividades de administração e otimização de banco de dados específicas do domínio que são críticas para a sua empresa. 
+- O Banco de Dados SQL é um serviço totalmente gerenciado que tem alta disponibilidade interna, backups e outras operações de manutenção comuns. 
+- A Microsoft administra todas as atualizações para o código do sistema operacional e do SQL. Não é preciso gerenciar a infraestrutura subjacente.
+
+O Banco de Dados SQL pode ser a escolha certa para diversos aplicativos de nuvem modernos, pois permite processar dados relacionais e estruturas não relacionais, como grafos, JSON, espaciais e XML.
+
+Você recebe as funcionalidades mais recentes do SQL Server sem a sobrecarga de atualizações ou upgrades, testadas em milhões de bancos de dados.
+
+### Migração
+
+Você pode migrar os seus bancos de dados existentes do SQL Server com o tempo de inatividade mínimo usando o Serviço de Migração de Banco de Dados do Azure. O Assistente de Migração de Dados da Microsoft pode gerar relatórios de avaliação que fornecem recomendações para orientar você quanto às alterações necessárias antes de executar uma migração. Após avaliar e resolver qualquer correção necessária, você estará pronto para iniciar o processo de migração. O Serviço de Migração de Banco de Dados do Azure executa todas as etapas necessárias. Você apenas altera a cadeia de conexão em seus aplicativos.
+
+## Explorar o banco de dados do Azure para MySQL
+
+- O Banco de Dados do Azure para MySQL é um serviço de banco de dados relacional na nuvem que se baseia no mecanismo de banco de dados MySQL Community Edition, nas versões 5.6, 5.7 e 8.0. 
+- Tem um SLA de 99,99% de disponibilidade no Azure, capacitado por uma rede global de datacenters gerenciados pela Microsoft. Isso ajuda a manter o seu aplicativo em execução 24/7. 
+- Você tira proveito dos recursos internos de segurança, tolerância a falhas e proteção de dados que, em outras situações, seria necessário comprar ou projetar, criar e gerenciar. 
+- Você pode usar a restauração pontual para recuperar um servidor para um estado anterior, com alcance de até 35 dias.
+
+O Banco de Dados do Azure para MySQL fornece:
+
+- Alta disponibilidade interna sem nenhum custo adicional.
+- Desempenho previsível e pagamento conforme o uso inclusivo.
+- Escale em segundos, conforme o necessário.
+- Capacidade de proteger dados confidenciais inativos e em uso.
+- Backups automáticos.
+- Segurança e conformidade de nível empresarial.
+
+Esses recursos não precisam de quase nenhuma administração e todos são fornecidos sem nenhum custo adicional. Eles permitem que você se concentre no desenvolvimento rápido de aplicativos e acelere o tempo de colocação no mercado, em vez de precisar gerenciar as máquinas virtuais e a infraestrutura. Além disso, você pode migrar os seus bancos de dados MySQL existentes com tempo de inatividade mínimo usando o Serviço de Migração de Banco de Dados do Azure. Depois de concluir a migração, você poderá continuar a desenvolver o seu aplicativo com as ferramentas de software livre e a plataforma de sua escolha. Você não precisa aprender novas habilidades.
+
+O Banco de Dados do Azure para MySQL oferece várias camadas de serviço e cada uma oferece desempenho e funcionalidades diferentes para dar suporte a cargas de trabalho de banco de dados leves e pesadas. Você pode criar seu primeiro aplicativo em um banco de dados pequeno por poucos dólares ao mês e depois ajustar a escala para atender às necessidades da solução. A escalabilidade dinâmica permite que o banco de dados responda de forma transparente a mudanças rápidas nos requisitos de recursos. Você paga apenas pelos recursos de que precisa, e somente quando precisa deles.
+
+## Explorar o Banco de Dados do Azure para PostgreSQL
+
+O Banco de Dados do Azure para PostgreSQL é um serviço de banco de dados relacional na nuvem. O software para servidores se baseia na versão da comunidade do mecanismo de banco de dados PostgreSQL de software livre. 
+
+Além disso, o Banco de Dados do Azure para PostgreSQL oferece os seguintes benefícios:
+ 
+- Alta disponibilidade interna em comparação com recursos locais. Não há nenhuma configuração, replicação ou custo adicionais necessários para garantir que os seus aplicativos estejam sempre disponíveis.
+- Preços simples e flexíveis. Você tem um desempenho previsível com base em uma opção de tipo de preço selecionada que inclui aplicação de patch de software, backups automáticos, monitoramento e segurança.
+- Escale ou reduza verticalmente conforme necessário em segundos. Você pode dimensionar a computação ou o armazenamento de forma independente, conforme necessário, para garantir a adaptação do serviço para que ele corresponda ao uso.
+- Backups automáticos ajustáveis e restauração pontual por até 35 dias.
+- Segurança e conformidade de nível corporativo para proteger dados confidenciais em repouso e em movimento. Essa segurança aborda a criptografia de dados em disco e a criptografia SSL na comunicação entre o cliente e o servidor.
+
+O Banco de Dados do Azure para PostgreSQL está disponível em duas opções de implantação: Servidor Único e Hiperescala (Citus).
+
+### Servidor único
+
+A opção de implantação Servidor Único oferece:
+
+- Alta disponibilidade interna sem custo adicional (99,99% de SLA).
+- Desempenho previsível e pagamento conforme o uso inclusivo.
+- Escale verticalmente em segundos, conforme o necessário.
+- Monitoramento e alertas para avaliar o servidor.
+- Segurança e conformidade de nível empresarial.
+- Capacidade de proteger dados confidenciais em repouso e em movimento.
+- Backups automáticos e restauração pontual por até 35 dias.
+
+A opção de implantação Servidor Único oferece três tipos de preço: Básico, Uso Geral e Otimizado para Memória. Cada tipo oferece recursos diferentes para dar suporte a suas cargas de trabalho do banco de dados.
+
+### Hiperescala (Citus)
+
+A opção de Hiperescala (Citus) escala horizontalmente as consultas em vários computadores usando a fragmentação. Seu mecanismo de consulta faz a correspondência entre consultas SQL recebidas nesses servidores para obter respostas mais rápidas em grandes conjuntos de dados. Ele serve para aplicativos que exigem maior escala e desempenho, que geralmente são as cargas de trabalho que estão se aproximando ou já excederam 100 GB de dados.
+
+A opção de implantação de Hiperescala (Citus) dá suporte para aplicativos multilocatários, análise operacional em tempo real e cargas de trabalho transacionais com alta taxa de transferência. Os aplicativos criados para o PostgreSQL podem executar consultas distribuídas em Hiperescala (Citus) com bibliotecas de conexão padrão e alterações mínimas.
+
+## Explorar o Azure SQL Managed Instance
+
+A Instância Gerenciada de SQL do Azure é um serviço de dados de nuvem escalonável que fornece a mais ampla compatibilidade do mecanismo de banco de dados do SQL Server com todos os benefícios de uma plataforma como serviço totalmente gerenciada. Dependendo do cenário, a Instância Gerenciada de SQL do Azure pode oferecer mais opções para suas necessidades de banco de dados.
+
+Assim como o Banco de Dados SQL do Azure, a Instância Gerenciada de SQL do Azure é um mecanismo de banco de dados PaaS (plataforma como serviço), o que significa que sua empresa poderá tirar proveito dos melhores recursos ao mover seus dados para a nuvem em um ambiente totalmente gerenciado.
+
+Por exemplo, a empresa não precisará mais comprar e gerenciar hardwares caros, e você não precisará manter a sobrecarga adicional de gerenciar a infraestrutura local. Sua empresa também se beneficiará dos recursos de provisionamento rápido e dimensionamento de serviços do Azure, bem como da aplicação de patch automatizada e das atualizações de versão. Além disso, você poderá ter a certeza de que seus dados sempre estarão lá quando você precisar deles, por meio de recursos internos de alta disponibilidade e de um SLA (contrato de nível de serviço) de 99,99% de tempo de atividade. Você também poderá proteger os dados com backups automatizados e um período de retenção de backup configurável.
+
+No entanto, a Instância Gerenciada de SQL do Azure fornece várias opções que podem não estar disponíveis no Banco de Dados SQL do Azure. 
+
+### Migração
+
+A Instância Gerenciada de SQL do Azure facilita a migração de dados locais no SQL Server para a nuvem usando o DMS (Serviço de Migração de Banco de Dados) do Azure ou backup e a restauração nativos. Depois de descobrir todos os recursos que sua empresa usa, você precisa avaliar quais instâncias do SQL Server locais pode migrar para a Instância Gerenciada de SQL do Azure para ver se há algum problema de bloqueio. Após resolver possíveis problemas, você pode migrar os dados e fazer a transferência do SQL Server local para a Instância Gerenciada de SQL do Azure alterando a cadeia de conexão em seus aplicativos.
+
+## Explorar Big Data e Analytics
+
+Tecnologias de cluster de software livre foram desenvolvidas, com o passar do tempo, para lidar com esses grandes conjuntos de dados. O Microsoft Azure dá suporte a uma ampla variedade de tecnologias e serviços para fornecer Big Data e soluções analíticas, incluindo o Azure Synapse Analytics, o Azure HDInsight, o Azure Databricks e o Azure Data Lake Analytics.
+
+### Azure Synapse Analytics
+
+O Azure Synapse Analytics (antigo SQL Data Warehouse do Azure) é um serviço de análise ilimitado que reúne data warehouse corporativo e análise de Big Data. Você pode consultar dados da maneira que preferir, usando recursos sem servidor ou provisionados em escala. Você tem uma experiência unificada para ingerir, preparar, gerenciar e fornecer dados para atender às necessidades imediatas de business intelligence e de aprendizado de máquina.
+
+### Azure HDInsight
+
+O Azure HDInsight é um serviço de análise de software livre totalmente gerenciado para empresas. Trata-se de um serviço de nuvem que torna mais fácil, mais rápido e mais econômico o processamento de grandes quantidades de dados. Você pode executar estruturas de software livre populares e criar tipos de cluster como Apache Spark, Apache Hadoop, Apache Kafka, Apache HBase, Apache Storm e Serviços de Machine Learning. O HDInsight também dá suporte a uma ampla gama de cenários, como ETL (extração, transformação e carregamento), data warehousing, machine learning e IoT.
+
+### Azure Databricks
+
+O Azure Databricks ajuda a descobrir insights dos seus dados e a criar soluções de inteligência artificial. Você pode configurar seu ambiente do Apache Spark em minutos, dimensioná-lo automaticamente e colaborar em projetos compartilhados em um workspace interativo. O Azure Databricks dá suporte a Python, Scala, R, Java e SQL, bem como a bibliotecas e estruturas de ciência de dados, incluindo TensorFlow, PyTorch e scikit-learn.
+
+### Azure Data Lake Analytics
+
+O Azure Data Lake Analytics é um serviço de trabalho de análise sob demanda que simplifica Big Data. Em vez de implantar, configurar e ajustar o hardware, você cria consultas para transformar os dados e extrair insights importantes. O serviço de análise pode manipular trabalhos de qualquer escala de maneira instantânea, simplesmente configurando o controle para a quantidade de potência necessária. Você pagará pelo trabalho somente quando ele estiver em execução, tornando-o mais econômico.
+
 ---
 
 ### 🔸 <a name="parte1-3"></a> Princípios básicos do Microsoft Azure: Descrever as principais soluções e ferramentas de gerenciamento no Azure
