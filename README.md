@@ -1739,7 +1739,7 @@ Com o Azure Machine Learning, você pode:
 - Implantar o algoritmo de melhor desempenho como uma API para um ponto de extremidade para que ele possa ser consumido em tempo real por outros aplicativos.
 
 🔝 [Voltar ao topo](#topo)
-🔼 [Voltar ao índice](#parte1)
+🔼 [Voltar ao índice](#parte3)
 
 ---
 
