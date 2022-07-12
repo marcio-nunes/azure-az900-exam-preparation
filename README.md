@@ -644,7 +644,7 @@ Outro cenário em que você usaria grupos de gerenciamento é fornecer acesso de
 ---
 ---
 
-### 🔸 <a name="parte1-2"></a> Princípios básicos do Microsoft Azure: Descrever os principais serviços do Azure
+## ☁️ <a name="parte2"></a>Parte 2: Princípios básicos do Microsoft Azure: Descrever os principais serviços do Azure
 
 Depois de concluir este roteiro de aprendizagem, você poderá:
 
@@ -653,6 +653,22 @@ Depois de concluir este roteiro de aprendizagem, você poderá:
 - Comparar os serviços de banco de dados do Azure, como o Azure Cosmos DB, o SQL do Azure, o Banco de Dados do Azure para MySQL, o Banco de Dados do Azure para PostgreSQL e os serviços de Big Data e análise do Azure
 - Examinar recursos de rede do Azure, como Redes Virtuais, Gateways de VPN e o ExpressRoute do Azure
 - Resumir os serviços de armazenamento do Azure, como Armazenamento de Blobs do Azure, Armazenamento em Disco do Azure e Armazenamento de Arquivos do Azure
+
+1. [Explorar os serviços de computação do Azure](#Explorar_os_serviços_de_computação_do_Azure)
+2. 
+3. 
+
+### <a name="Explorar_os_serviços_de_computação_do_Azure"></a>Explorar os serviços de computação do Azure
+
+Depois de concluir este módulo, você poderá descrever os benefícios e o uso destes serviços:
+
+- Máquinas Virtuais do Azure
+- Serviço de aplicativo do Azure
+- Instâncias de Contêiner do Azure
+- Serviço de Kubernetes do Azure
+- Azure Functions
+- Área de Trabalho Virtual do Azure
+
 
 ### Conceitos básicos da Rede Virtual do Azure
 
