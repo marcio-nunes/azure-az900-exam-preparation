@@ -1616,7 +1616,11 @@ Ao final deste roteiro de aprendizagem, você poderá:
 
 ## 🔸 <a name="Escolha_o_serviço_de_IoT_do_Azure_mais_adequado_para_o_seu_aplicativo"></a>Escolha o serviço de IoT do Azure mais adequado para o seu aplicativo
 
-### Identificar as opções de produto
+Depois de concluir este módulo, você poderá:
+
+- Escolher o serviço IoT do Azure mais adequado para lidar com seu cenário de negócios.
+
+## Identificar as opções de produto
 
 A IoT habilita os dispositivos para coletar e retransmitir informações a fim de obter uma análise dos dados. Os dispositivos inteligentes são equipados com sensores que coletam dados. Alguns sensores comuns que medem os atributos do mundo físico incluem:
 
@@ -1678,17 +1682,17 @@ O Azure Sphere é fornecido em três partes:
 
 Depois que o sistema do Azure Sphere tiver validado a autenticidade do dispositivo e feito a autenticação dele, o dispositivo poderá interagir com outros serviços IoT do Azure enviando informações de telemetria e de erro.
 
-### Analisar os critérios de decisão
+## Analisar os critérios de decisão
 
 Critérios que os especialistas empregam quando decidem qual serviço IoT usar para uma determinada necessidade comercial.
 
-#### É essencial garantir que o dispositivo não seja comprometido?
+### É essencial garantir que o dispositivo não seja comprometido?
 
 Não em todos os casos. Os fabricantes e os clientes não querem que os respectivos dispositivos sejam comprometidos por ações mal-intencionadas e usados para fins maliciosos, mas, em alguns casos, a garantia da integridade é mais crítica do que em outros. Um exemplo seria um caixa eletrônico em comparação com uma máquina de lavar roupas. Quando a segurança é uma consideração crítica no design do seu produto, a melhor opção de produto é o Azure Sphere, que fornece uma solução abrangente de ponta a ponta para dispositivos IoT.
 
 Como mencionamos na unidade anterior, o Azure Sphere garante um canal seguro de comunicação entre o dispositivo e o Azure controlando tudo, do hardware ao sistema operacional, além do processo de autenticação. Isso garante que a integridade do dispositivo não seja comprometida. Depois que um canal seguro for estabelecido, o dispositivo poderá receber mensagens com segurança. Além disso, as mensagens ou atualizações de software poderão ser enviadas ao dispositivo de maneira remota.
 
-#### Preciso de um painel para relatórios e gerenciamento?
+### Preciso de um painel para relatórios e gerenciamento?
 
 Sua próxima decisão deverá ser baseada no nível dos serviços que você exige de sua solução de IoT. Caso queira somente se conectar aos dispositivos remotos para receber telemetria e, ocasionalmente, enviar atualizações por push e não há necessidade de obter funcionalidades de relatório, talvez você prefira implementar somente o Hub IoT do Azure. Seus programadores ainda poderão criar um conjunto personalizado de ferramentas e relatórios de gerenciamento usando a API RESTful do Hub IoT.
 
@@ -1698,13 +1702,12 @@ O IoT Central integra-se com muitos produtos diferentes do Azure, incluindo o Hu
 
 A IoT é uma evolução empolgante na computação que conecta os mundos físicos e digitais. Os serviços IoT do Azure fornecem uma quantidade significativa de funcionalidades para as organizações que desejam criar soluções controladas por dispositivos e sensores.
 
-
 🔝 [Voltar ao topo](#topo)
-🔼 [Voltar ao índice](#parte1)
+🔼 [Voltar ao índice](#parte3)
 
 ---
 
-### 🔸 <a name="parte1-4"></a> Princípios básicos do Microsoft Azure: Descrever os recursos gerais de segurança de rede e segurança
+### 🔸 <a name="Escolha_o_melhor_serviço_de_IA_para_suas_necessidades"></a> Escolha o melhor serviço de IA para suas necessidades
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
