@@ -985,16 +985,30 @@ A Azure Virtual Desktop estará disponível para você sem custos adicionais se 
 
 Compre Instâncias de Máquinas Virtuais Reservadas do Azure de um ou de três anos para economizar até 72% em relação aos preços pagos conforme o uso. Você pode pagar por uma reserva de forma antecipada ou mensal. As reservas fornecem um desconto de cobrança e não afetam o estado de runtime dos recursos.
 
+## Resumo
+
+Você aprendeu a usar:
+
+- O Azure App Service para criar os front-ends de site.
+- O Azure Functions criar uma lógica de aplicativo controlada por evento que só é executada quando você precisa dela.
+- Azure Virtual Desktop para fornecer rapidamente um ambiente personalizado de software e sistema operacional para seus funcionários remotos.
+
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
 
 ---
----
----
----
----
 
-### Conceitos básicos da Rede Virtual do Azure
+## Explorar os serviços de rede do Azure
+
+Neste módulo, você examinará vários dos principais recursos de rede que estão disponíveis no Azure. Você aprenderá sobre a Rede Virtual do Azure, que pode ser configurada em um ambiente de rede personalizado que atenda às necessidades da sua empresa. Você também aprenderá a usar o Gateway de VPN do Azure e o Azure ExpressRoute para criar túneis de comunicação segura entre as diferentes localizações da sua empresa.
+
+Depois de concluir este módulo, você poderá:
+
+- Descrever os principais recursos de rede que estão disponíveis no Azure.
+- Descrever os benefícios e o uso da Rede Virtual, do Gateway de VPN e do ExpressRoute.
+#estouaqui
+
+## Conceitos básicos da Rede Virtual do Azure
 
 As redes virtuais do Azure permitem que recursos do Azure, como VMs, aplicativos Web e bancos de dados, comuniquem-se uns com os outros, com usuários na Internet e com computadores cliente locais. Você pode pensar em uma rede do Azure como uma extensão de sua rede local com recursos que vinculam outros recursos do Azure.
 
