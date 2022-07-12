@@ -923,6 +923,29 @@ Você pode combinar serviços ao compilar uma orquestração, chamando funções
 |Gerenciamento|API REST, Visual Studio.|Portal do Azure, API REST, PowerShell, Visual Studio.|
 |Contexto de execução|Podem ser executadas no local ou na nuvem.|São executados somente na nuvem.|
 
+## Decidir quando usar Azure Virtual Desktop
+
+A Área de Trabalho Virtual do Azure é um serviço de virtualização de área de trabalho e aplicativos que é executado na nuvem. 
+
+- Ele permite que os usuários usem uma versão do Windows hospedada na nuvem em qualquer localização. 
+- Funciona em dispositivos como Windows, Mac, iOS, Android e Linux. 
+- Funciona com aplicativos de acesso de Áreas de Trabalho Remotas (Remote Desktop). 
+- Pode usar os navegadores para acessar experiências hospedadas na Azure Virtual Desktop.
+
+### Fornecer a melhor experiência do usuário
+
+Os usuários têm a liberdade de se conectar à Área de Trabalho Virtual do Azure com qualquer dispositivo pela Internet.
+
+Você pode garantir que suas VMs (máquinas virtuais) do host de sessão sejam executadas perto de aplicativos e serviços que se conectam ao seu datacenter ou à nuvem. 
+
+A conexão do usuário na Área de Trabalho Virtual do Azure é rápida porque os perfis de usuário são colocados em contêineres usando o FSLogix.
+
+Você pode fornecer propriedade individual por meio de áreas de trabalho pessoais (persistentes). Por exemplo, talvez seja interessante fornecer Áreas de Trabalho Remotas pessoais para membros de uma equipe de engenharia. Eles podem adicionar ou remover programas sem afetar outros usuários nessa Área de Trabalho Remota.
+
+### Aprimorar a segurança
+
+
+
 
 #estouaqui
 
