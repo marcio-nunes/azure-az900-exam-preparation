@@ -1,5 +1,7 @@
 # <a name="topo"></a>Preparação para o exame Azure AZ-900
 
+[Microsoft Learn path](https://docs.microsoft.com/pt-br/learn/paths/az-900-describe-cloud-concepts/)
+
 Icons ☁️🔸
 
 - [Parte 1: Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure](#parte1)
@@ -266,6 +268,37 @@ O DevOps reúne pessoas, processos e tecnologias, automatizando a entrega de sof
 
 ### Introdução a contas do Azure
 
+Para criar e usar os serviços do Azure, você precisa de uma assinatura do Azure. 
+
+Depois de criar uma conta do Azure, você poderá criar assinaturas adicionais. Por exemplo: a empresa pode usar apenas uma conta do Azure para os negócios, com assinaturas separadas para os departamentos de desenvolvimento, marketing e vendas. 
+
+![scope-levels](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/intro-to-azure-fundamentals/media/scope-levels-12669ee1.png)
+
+A conta gratuita do Azure inclui:
+
+- Acesso gratuito a produtos populares do Azure por 12 meses.
+- Um crédito a ser gasto nos primeiros 30 dias.
+- Acesso a mais de 25 produtos que são sempre gratuitos.
+
+
+### O que é a conta de estudante gratuita do Azure?
+
+A oferta da conta de estudante gratuita do Azure inclui:
+
+- Acesso gratuito a determinados produtos do Azure por 12 meses.
+- Um crédito a ser usado nos primeiros 12 meses.
+- Acesso gratuito a determinadas ferramentas para desenvolvedores de software.
+
+A conta de estudante gratuita do Azure é uma oferta para estudantes que oferece US$ 100 de crédito e ferramentas para desenvolvedores gratuitas. Além disso, você pode se inscrever sem um cartão de crédito.
+
+
+### Resumo
+
+Neste módulo, você aprendeu a:
+
+- Descrever os conceitos básicos da computação em nuvem.
+- Determinar se o Azure é a solução certa para suas necessidades de negócios.
+- Diferenciar entre os diferentes métodos de criação de uma assinatura do Azure.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
@@ -273,30 +306,6 @@ O DevOps reúne pessoas, processos e tecnologias, automatizando a entrega de sof
 ---
 
 ## 🔸 <a name="Discutir_conceitos_fundamentais_do_Azure"></a>Discutir conceitos fundamentais do Azure
-
-🔝 [Voltar ao topo](#topo)
-🔼 [Voltar ao índice](#parte1)
-
----
-
-## 🔸 <a name="Descrever_os_principais_componentes_da_arquitetura_do_Azure"></a>Descrever os principais componentes da arquitetura do Azure
-
-🔝 [Voltar ao topo](#topo)
-🔼 [Voltar ao índice](#parte1)
-
----
-
-1. [Descrever os principais conceitos do Azure](#parte1-1)
-2. [Descrever os principais serviços do Azure](#parte1-2)
-3. [Descrever as principais soluções e ferramentas de gerenciamento no Azure](#parte1-3)
-4. [Descrever os recursos gerais de segurança de rede e segurança](#parte1-4)
-5. [Descrever recursos de identidade, governança, privacidade e conformidade](#parte1-5)
-6. [Parte 6: descrever contratos de nível de serviço e Gerenciamento de Custos da Microsoft](#parte1-6)
-
----
-## 🔸<a name="parte1-1"></a> Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure 
-
-[Link para o Microsoft Learn](https://docs.microsoft.com/pt-br/learn/paths/az-900-describe-cloud-concepts/)
 
 Ao concluir este módulo, você poderá:
 
@@ -452,6 +461,196 @@ Você examinou vários dos benefícios que a computação em nuvem fornece, como
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
 
+---
+
+## 🔸 <a name="Descrever_os_principais_componentes_da_arquitetura_do_Azure"></a>Descrever os principais componentes da arquitetura do Azure
+
+### Visão geral de assinaturas, grupos de gerenciamento e recursos do Azure
+
+- **Resource**: recursos são instâncias de serviços que você cria, como máquinas virtuais, armazenamento ou bancos de dados SQL.
+
+- **Resource Group**: os recursos são combinados em grupos de recursos, que atuam como um contêiner lógico no qual os recursos do Azure, como aplicativos Web, bancos de dados e contas de armazenamento, são implantados e gerenciados.
+
+- **Subscriptions**: uma assinatura agrupa contas de usuário e os recursos que foram criados por elas. Para cada assinatura, há limites ou cotas na quantidade de recursos que você pode criar e usar. As organizações podem usar assinaturas para gerenciar os custos e os recursos criados por usuários, equipes ou projetos.
+
+- **Management groups**: esses grupos ajudam a gerenciar o acesso, a política e a conformidade para várias assinaturas. Todas as assinaturas em um grupo de gerenciamento herdam automaticamente as condições aplicadas ao grupo de gerenciamento.
+
+### Regiões do Azure, zonas de disponibilidade e pares de regiões
+
+Os recursos são criados em regiões, que são diferentes localizações geográficas no mundo inteiro que contêm datacenters do Azure.
+
+### Regiões do Azure
+
+Uma região é uma área geográfica do planeta que contém pelo menos um, mas possivelmente vários data centers próximos e conectados a uma rede de baixa latência. 
+
+Essas regiões dão flexibilidade para aproximar os aplicativos dos usuários, não importa onde estejam. As regiões globais proporcionam maior escalabilidade e redundância. Elas também preservam a residência de dados de seus serviços.
+
+### Regiões especiais do Azure
+
+Para fins de conformidade ou jurídicos.
+
+- **US DoD Central, US Gov – Virgínia, US Gov Iowa, entre outros**: essas regiões são instâncias lógicas e físicas do Azure isoladas da rede, destinadas a parceiros e órgãos do governo dos EUA. Esses datacenters são operados por cidadãos selecionados dos EUA e incluem certificações de conformidade adicionais.
+
+- **Leste da China, Norte da China, entre outros**: essas regiões estão disponíveis por meio de uma parceria exclusiva entre a Microsoft e a 21Vianet, segundo a qual a Microsoft não mantém diretamente os data centers.
+
+### Zonas de disponibilidade do Azure
+
+Zonas de disponibilidade são datacenters separados fisicamente dentro de uma região do Azure. Cada zona de disponibilidade é composta de um ou mais datacenters equipados com energia, resfriamento e rede independentes. 
+
+Uma zona de disponibilidade é configurada para ser um limite de isolamento. Se uma zona ficar inativa, as outras continuarão funcionando. 
+
+Zonas de disponibilidade são conectadas por meio de redes de fibra óptica privadas de alta velocidade.
+
+![availability-zones](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-architecture-fundamentals/media/availability-zones-5c3c490c.png)
+
+> Nem todas as regiões têm suporte para zonas de disponibilidade.
+
+Você pode usar as zonas de disponibilidade para executar aplicativos críticos e incorporar alta disponibilidade à arquitetura do aplicativo, colocalizando seus recursos de computação, armazenamento, rede e dados em uma zona e replicando em outras zonas. Tenha em mente que pode haver um custo para duplicar seus serviços e transferir dados entre zonas.
+
+As zonas de disponibilidade são destinadas, principalmente, a VMs, discos gerenciados, balanceadores de carga e bancos de dados SQL. As seguintes categorias de serviços do Azure dão suporte a zonas de disponibilidade:
+
+- **Serviços em zonas (Zonal services)**: você fixa o recurso a uma zona específica (por exemplo, VMs, discos gerenciados, endereços IP).
+- **Serviços com redundância de zona (Zone-redundant services)**: a plataforma replica automaticamente entre zonas (por exemplo, armazenamento com redundância de zona, Banco de Dados SQL).
+- **Serviços não regionais (Non-regional services)**: os serviços estão sempre disponíveis em geografias do Azure e são resilientes a interrupções em toda a zona, bem como a interrupções em toda a região.
+
+### Pares de regiões do Azure
+
+Cada região do Azure é sempre emparelhada com outra região na mesma área geográfica (como EUA, Europa ou Ásia) a pelo menos 300 milhas (cerca de 480 km) de distância. Essa abordagem permite a replicação de recursos, como o armazenamento de VM, em uma geografia, o que ajuda a reduzir a probabilidade de interrupções devido a eventos como desastres naturais, conflitos civis, quedas de energia ou interrupções de rede física afetarem as duas regiões ao mesmo tempo. Se uma região em um par de regiões fosse afetada por um desastre natural, por exemplo, os serviços fariam failover automaticamente para a outra região desse par.
+
+Como o par de regiões está diretamente conectado e suficientemente afastado para ser isolado contra desastres regionais, você pode usá-lo para fornecer redundância de dados e serviços confiáveis. Alguns serviços oferecem armazenamento com redundância geográfica automática usando pares de regiões.
+
+#### Vantagens adicionais dos pares de regiões:
+
+- Se ocorrer uma interrupção ampla do Azure, uma região de cada par será priorizada para que pelo menos uma seja restaurada o quanto antes para os aplicativos hospedados nesse par de regiões.
+- As atualizações planejadas do Azure são distribuídas para regiões emparelhadas uma por vez, de modo a minimizar o tempo de inatividade e o risco de interrupção dos aplicativos.
+- Os dados continuam residindo na mesma geografia que seu par (com exceção do Sul do Brasil) para fins de jurisdição do imposto e aplicação da lei.
+
+> Ter um conjunto de datacenters distribuído em larga escala permite que o Azure forneça uma garantia de alta disponibilidade.
+
+### Recursos do Azure e Azure Resource Manager
+
+- **Recurso**: um item gerenciável disponibilizado por meio do Azure. VMs (máquinas virtuais), contas de armazenamento, aplicativos Web, bancos de dados e redes virtuais são exemplos de recursos.
+
+- **Grupo de recursos**: um contêiner que armazena os recursos relacionados de uma solução do Azure. O grupo de recursos inclui os recursos que você deseja gerenciar como um grupo. Você decide quais recursos pertencem a um grupo de recursos com base no que faz mais sentido para sua organização.
+
+### Grupos de recursos do Azure
+
+- Um grupo de recursos é um contêiner lógico para recursos implantados no Azure. Esses recursos são tudo o que você cria em uma assinatura do Azure, como VMs, instâncias do Gateway de Aplicativo do Azure e instâncias do Azure Cosmos DB. 
+- Todos os recursos precisam estar em um grupo, e um recurso pode ser um membro de apenas um grupo de recursos. 
+- Muitos recursos podem ser movidos entre grupos de recursos com alguns serviços que têm limitações ou requisitos específicos de movimentação. 
+- Os grupos de recursos não podem ser aninhados. 
+- Para que qualquer recurso possa ser provisionado, é necessário colocá-lo em um grupo de recursos.
+
+### Agrupamento lógico
+
+Os grupos de recursos existem para ajudar a gerenciar e organizar seus recursos do Azure. 
+
+### Ciclo de vida
+
+Se você excluir um grupo de recursos, todos os recursos contidos nele também serão excluídos. Organizar recursos por ciclo de vida pode ser útil em ambientes de não produção, em que você pode realizar um experimento e, depois, descartá-lo. Os grupos de recursos facilitam a remoção de um conjunto de recursos de uma só vez.
+
+### Autorização
+
+Grupos de recursos também são um escopo para a aplicação de permissões de RBAC (Role-based Access Control). Ao aplicar permissões de RBAC a um grupo de recursos, você pode facilitar a administração e limitar o acesso, a fim de permitir apenas o que é necessário.
+
+### Azure Resource Manager
+
+O Azure Resource Manager é o serviço de implantação e gerenciamento do Azure. Ele fornece uma camada de gerenciamento que lhe permite criar, atualizar e excluir recursos em sua conta do Azure. Você usa recursos de gerenciamento como controle de acesso, bloqueios e marcas para proteger e organizar seus recursos após a implantação.
+
+Quando um usuário envia uma solicitação de ferramentas, APIs ou SDKs do Azure, o Resource Manager recebe a solicitação. Ele autentica e autoriza a solicitação. O Resource Manager envia a solicitação para o serviço do Azure, que executa a ação solicitada. Como todas as solicitações são manipuladas por meio da mesma API, você verá funcionalidades e resultados uniformes em todas as diferentes ferramentas.
+
+![consistent-management-layer](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-architecture-fundamentals/media/consistent-management-layer-feef9259.png)
+
+Todos os recursos disponíveis no portal do Azure também estão disponíveis por meio do PowerShell, da CLI do Azure, das APIs REST e dos SDKs de cliente. 
+
+### Os benefícios de usar o Gerenciador de Recursos
+
+Com o Resource Manager, você pode:
+
+- Gerenciar sua infraestrutura por meio de modelos declarativos em vez de scripts. Um modelo do Resource Manager é um arquivo JSON que define o que você deseja implantar no Azure.
+- Implantar, gerenciar e monitorar todos os recursos da sua solução como um grupo em vez de tratá-los individualmente.
+- Reimplantar a solução durante o ciclo de vida de desenvolvimento e ter confiança de que os recursos serão implantados em um estado consistente.
+- Definir as dependências entre os recursos para que eles sejam implantados na ordem correta.
+- Aplicar o controle de acesso a todos os serviços porque o RBAC é integrado nativamente à plataforma de gerenciamento.
+- Aplicar marcas aos recursos para organizar de modo lógico todos os recursos em sua assinatura.
+- Esclarecer a cobrança da organização exibindo os custos de um grupo de recursos que compartilham a mesma marca.
+
+### Assinaturas e Grupos de Gerenciamento do Azure
+
+### Assinaturas do Azure
+
+A utilização do Azure exige uma Assinatura do Azure. Uma assinatura fornece a você acesso autenticado e autorizado a serviços e produtos do Azure. Ela também permite que você provisione recursos. Uma assinatura do Azure é uma unidade lógica de serviços do Azure que se vincula a uma conta do Azure, que é uma identidade no Azure AD (Azure Active Directory) ou em um diretório no qual o Azure AD confia.
+
+Uma conta pode ter uma ou várias assinaturas com diferentes modelos de cobrança e às quais você aplica diferentes políticas de gerenciamento de acesso. Você pode usar as assinaturas do Azure para definir limites em relação a produtos, serviços e recursos do Azure. Você pode usar dois tipos de limites de assinatura:
+
+- **Limite de cobrança**: Esse tipo de assinatura determina como uma conta do Azure é cobrada pelo uso do Azure. Você pode criar várias assinaturas para atender a diferentes tipos de requisitos de cobrança. O Azure gera relatórios de cobrança e faturas separados para cada assinatura, para que você possa organizar e gerenciar os custos.
+
+- **Limite de controle de acesso**: O Azure aplica políticas de gerenciamento de acesso no nível da assinatura, e você pode criar assinaturas separadas para refletir diferentes estruturas organizacionais. Um exemplo disso é que, em um negócio, você tem diferentes departamentos aos quais aplica políticas de assinatura do Azure distintas. Esse modelo de cobrança permite gerenciar e controlar o acesso aos recursos que os usuários provisionam com assinaturas específicas.
+
+### Criar assinaturas adicionais do Azure
+
+Talvez você queira criar assinaturas adicionais para fins de gerenciamento de recursos ou orçamento. Por exemplo, é possível criar assinaturas adicionais para separar:
+
+- **Ambientes**: Ao gerenciar seus recursos, você pode optar por criar assinaturas adicionais a fim de configurar ambientes separados para desenvolvimento e teste, segurança ou para isolar dados por motivos de conformidade. Esse design é particularmente útil porque o controle de acesso ao recurso ocorre no nível da assinatura.
+
+- **Estruturas organizacionais**: É possível criar assinaturas para refletir diferentes estruturas organizacionais. Você poderia, por exemplo, limitar a equipe a recursos de baixo custo, enquanto permite uma gama completa para o departamento de TI. Esse design permite gerenciar e controlar o acesso aos recursos que os usuários provisionam em cada assinatura.
+
+- **Cobrança**: Talvez você também queira criar assinaturas adicionais para fins de cobrança. Como os custos são agregados primeiro no nível da assinatura, talvez você queira criar assinaturas para gerenciar e controlar os custos com base em suas necessidades. Por exemplo, talvez você queira criar uma assinatura para as cargas de trabalho de produção e outra para as cargas de trabalho de desenvolvimento e teste.
+
+Talvez você também precise de assinaturas adicionais devido a:
+
+**Limites da assinatura**: As assinaturas estão associadas a algumas limitações rigorosas. Por exemplo, o número máximo de circuitos do Azure ExpressRoute por assinatura é 10. Esses limites devem ser considerados enquanto você cria assinaturas em sua conta. Se for preciso ultrapassar esses limites em cenários específicos, talvez seja necessário ter assinaturas adicionais.
+
+## Personalizar a cobrança para atender às suas necessidades
+
+Se você tiver várias assinaturas, poderá organizá-las em seções de fatura. Cada seção de fatura é um item de linha na fatura que mostra os encargos incorridos nesse mês. Por exemplo, você pode precisar de uma única fatura para sua organização, mas deseja organizar os encargos por departamento, equipe ou projeto.
+
+Dependendo de suas necessidades, é possível configurar várias faturas dentro da mesma conta de cobrança. Para fazer isso, crie perfis de cobrança adicionais. Cada perfil de cobrança tem sua própria fatura mensal e formas de pagamento.
+
+O diagrama a seguir mostra uma visão geral de como a cobrança é estruturada. 
+
+
+![billing-structure-overview](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-architecture-fundamentals/media/billing-structure-overview-2c81a8ad.png)
+
+### Grupos de gerenciamento do Azure
+
+Se a organização tiver muitas assinaturas, talvez você precise de uma forma de gerenciar o acesso, as políticas e a conformidade com eficiência para essas assinaturas. 
+
+Os grupos de gerenciamento do Azure fornecem um nível de escopo acima das assinaturas. 
+
+Você organiza as assinaturas em contêineres chamados grupos de gerenciamento e aplica suas condições de governança a esses grupos. 
+
+Todas as assinaturas dentro de um grupo de gerenciamento herdam automaticamente as condições aplicadas ao grupo de gerenciamento. 
+
+Os grupos de gerenciamento fornecem gerenciamento de nível empresarial em larga escala, independentemente do tipo de assinaturas que você possa ter. Todas as assinaturas dentro de um grupo de gerenciamento devem confiar no mesmo locatário do Azure AD.
+
+Por exemplo, você pode aplicar políticas a um grupo de gerenciamento para limitar as regiões disponíveis para criação de VMs. Essa política seria aplicada a todos os grupos de gerenciamento, assinaturas e recursos nesse grupo de gerenciamento, permitindo que as VMs fossem criadas nessa região.
+
+### Hierarquia de grupos de gerenciamento e assinaturas
+
+É possível compilar uma estrutura flexível de grupos de gerenciamento e assinaturas para organizar seus recursos em uma hierarquia para políticas unificadas e gerenciamento de acesso. O diagrama a seguir mostra um exemplo de criação de uma hierarquia de governança usando grupos de gerenciamento.
+
+![management-groups-and-subscriptions](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/azure-architecture-fundamentals/media/management-groups-and-subscriptions-bba71896.png)
+
+Você pode criar uma hierarquia que aplica uma política. Por exemplo, você pode limitar os locais de VM à região Oeste dos EUA em um grupo chamado Produção. Essa política herdará todas as assinaturas do Contrato Enterprise que são descendentes desse grupo de gerenciamento e será aplicada a todas as VMs nessas assinaturas. Essa política de segurança não pode ser alterada pelo proprietário da assinatura nem do recurso, o que permite uma governança aprimorada.
+
+Outro cenário em que você usaria grupos de gerenciamento é fornecer acesso de usuário a várias assinaturas. Ao mover várias assinaturas nesse grupo de gerenciamento, você poderá criar uma atribuição de RBAC (controle de acesso baseado em função) no grupo de gerenciamento, que herdará esse acesso a todas as assinaturas. Uma atribuição no grupo de gerenciamento pode permitir que os usuários tenham acesso a tudo o que precisam em vez de fazer script de atribuições de RBAC em várias assinaturas.
+
+### Fatos importantes sobre os grupos de gerenciamento
+
+- 10.000 grupos de gerenciamento podem ter suporte em um único diretório.
+- Uma árvore do grupo de gerenciamento pode dar suporte a até seis níveis de profundidade. Esse limite não inclui o nível raiz nem o nível da assinatura.
+- Cada grupo de gerenciamento e assinatura podem dar suporte a somente um pai.
+- Cada grupo de gerenciamento pode ter vários elementos filhos.
+- Todas as assinaturas e todos os grupos de gerenciamento estão em uma única hierarquia em cada diretório.
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte1)
+
+---
+---
+---
+---
 ---
 
 ### 🔸 <a name="parte1-2"></a> Princípios básicos do Microsoft Azure: Descrever os principais serviços do Azure
