@@ -1765,21 +1765,142 @@ Os bots podem ser usados para deslocar tarefas simples e repetitivas, como fazer
 
 ---
 
-### 🔸 <a name="Escolher_a_melhor_tecnologia_sem_servidor_do_Azure_para_seu_cenário_empresarial"></a>Escolher a melhor tecnologia sem servidor do Azure para seu cenário empresarial
+## 🔸 <a name="Escolher_a_melhor_tecnologia_sem_servidor_do_Azure_para_seu_cenário_empresarial"></a>Escolher a melhor tecnologia sem servidor do Azure para seu cenário empresarial
+
+A computação sem servidor é um termo usado para descrever um ambiente de execução configurado e gerenciado para você. Você só precisa especificar o que deseja que aconteça escrevendo código ou conectando e configurando componentes em um editor visual e, então, especificar as ações que disparam sua funcionalidade, como um temporizador ou uma solicitação HTTP. Seu código pode ser dimensionado instantaneamente para atender à demanda, e você só paga pelo uso real dele.
+
+Depois de concluir este módulo, você poderá:
+
+- Escolher a tecnologia de computação sem servidor que melhor atende ao seu cenário empresarial.
+
+### Identificar as opções de produto
+
+A ideia principal é que você não seja responsável por configurar nem por manter esse servidor. Você não precisará se preocupar em dimensioná-lo quando houver aumento da demanda, nem com interrupções. O fornecedor de nuvem cuida de todas as questões de manutenção e dimensionamento para você.
+
+Você cria uma instância do serviço e adiciona seu código. Nenhuma configuração ou manutenção da infraestrutura é necessária, nem mesmo permitida. 
+
+Você configura os aplicativos sem servidor para responder a eventos. Um evento pode ser um ponto de extremidade REST, um temporizador periódico ou até mesmo uma mensagem recebida de outro serviço do Azure.
+
+Você é cobrado apenas pelos recursos que utiliza. Você nem precisa reservar recursos.
+
+A computação sem servidor é normalmente usada para lidar com cenários de back-end. Em outras palavras, a computação sem servidor é responsável por enviar mensagens de um sistema para outro ou processar mensagens que foram enviadas de outros sistemas. 
+
+### Azure Functions
+
+Com o serviço do Azure Functions, você pode hospedar um único método ou função usando uma linguagem de programação popular na nuvem que é executada em resposta a um evento. Um exemplo de evento pode ser uma solicitação HTTP, uma nova mensagem em uma fila ou uma mensagem em um temporizador.
+
+O Azure Functions é dimensionado automaticamente, e as cobranças são geradas apenas quando uma função é disparada. Essas qualidades tornam o Azure Functions uma escolha sólida quando a demanda é variável. 
+
+Uma função do Azure é um ambiente sem estado (stateless). Essa função se comporta como se fosse reiniciada sempre que responde a um evento. Esse recurso é ideal para o processamento de dados de entrada. E, se o estado for necessário, a função poderá ser conectada a uma conta de armazenamento do Azure.
+
+O Azure Functions pode executar tarefas de orquestração usando uma extensão chamada Durable Functions, que permite aos desenvolvedores encadear funções mantendo o estado.
+
+### Azure Logic Apps
+
+Os Aplicativos Lógicos são uma plataforma de desenvolvimento de código baixo/sem código hospedada como um serviço de nuvem. O serviço ajuda a automatizar e orquestrar tarefas, processos empresariais e fluxos de trabalho quando você precisa integrar aplicativos, dados, sistemas e serviços em empresas ou organizações.
+
+Os Aplicativos Lógicos do Azure são projetados em um designer baseado na Web e podem executar a lógica disparada pelos serviços do Azure sem haver necessidade de codificação. Você cria um aplicativo vinculando gatilhos a ações com conectores. 
+
+Existem ações lógicas como aquelas que você encontra na maioria das linguagens de programação. Exemplos de ações incluem trabalho com variáveis, loops e instruções de decisão e tarefas de análise e modificação de dados.
+
+Para criar soluções de integração corporativa com Aplicativos Lógicos do Azure, você pode escolher em uma galeria crescente de mais de 200 conectores.
+
+Se você não encontrar a ação ou o conector de que precisa, poderá criar o seu usando código personalizado.
+
+O Azure Functions é um serviço de computação sem servidor, enquanto os Aplicativos Lógicos do Azure se destinam a ser um serviço de orquestração sem servidor. Embora você possa usar o Azure Functions para orquestrar um processo empresarial de longa execução que envolva diversas conexões, esse não era o caso de uso principal dele quando foi projetado.
+
+Os dois serviços também têm preços diferentes. O preço do Azure Functions é baseado no número de execuções e no tempo de execução de cada uma. O preço dos Aplicativos Lógicos é baseado no número de execuções e no tipo de conectores que elas utilizam.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte3)
 
 ---
 
-### 🔸 <a name=""></a> 
+## 🔸 <a name=""></a> Escolha as melhores ferramentas para ajudar as organizações a criar soluções melhores
+
+Depois de concluir este módulo, você será capaz de:
+
+- Escolher os serviços e as ferramentas de processo de desenvolvimento de software que melhor atendem a cenários de negócios específicos.
+
+A Microsoft criou um conjunto abrangente de ferramentas que ajudam as organizações a implementar práticas de DevOps, desenvolver soluções e economizar dinheiro no processo. Neste módulo, você vai aprender a escolher as ferramentas corretas para dar suporte a essas práticas.
+
+## Entender as opções de produtos
+
+O DevOps é um conceito que combina filosofias e práticas para auxiliar as equipes técnicas nos esforço para alcançar metas comuns. Para chegar a esse alinhamento, as organizações empregam práticas e processos que automatizam o desenvolvimento, a manutenção e a implantação contínuos dos sistemas de software. O objetivo é agilizar o lançamento de alterações de software, garantir a implantabilidade contínua do sistema e assegurar que todas as alterações atendam a um elevado padrão de qualidade.
+
+O DevOps requer uma mudança de mentalidade fundamental de cima para baixo. As organizações não podem simplesmente instalar ferramentas de software nem adotar serviços e esperar obter todos os benefícios prometidos pelo DevOps.
+
+As ferramentas da Microsoft permitem gerenciamento de código-fonte, CI/CD (integração contínua e entrega contínua) e automatizam a criação de ambientes de teste. 
+
+### Azure DevOps Services
+
+O Azure DevOps Services é um conjunto de serviços que lidam com cada fase do ciclo de vida do desenvolvimento de software.
+
+- O **Azure Repos** é um repositório de código-fonte centralizado no qual profissionais de desenvolvimento de software, engenharia de DevOps e documentação podem publicar código para revisão e colaboração.
+- O **Azure Boards** é um pacote de gerenciamento de projetos ágil que inclui quadros Kanban, relatórios e acompanhamento de ideias e trabalho, de epics de alto nível a itens de trabalho e problemas.
+- O **Azure Pipelines** é uma ferramenta de automação do pipeline de CI/CD.
+- O **Azure Artifacts** é um repositório para hospedagem de artefatos, como o código-fonte compilado, que podem ser inseridos nas etapas dos pipelines de teste ou de implantação.
+- O **Azure Test Plans** é uma ferramenta de teste automatizado que pode ser usada em um pipeline de CI/CD para garantir a qualidade antes da liberação de um software.
+
+O Azure DevOps é uma ferramenta madura, com um grande conjunto de recursos, que começou como um software para servidores local e evoluiu para uma oferta de SaaS (software como serviço) da Microsoft.
+
+### GitHub e GitHub Actions
+
+O GitHub é, sem dúvida, o repositório de código mais popular do mundo para software livre. O Git é uma ferramenta de gerenciamento de código-fonte descentralizada, e o GitHub é uma versão hospedada do Git que serve como o remoto primário. O GitHub se baseia no Git para fornecer serviços relacionados para coordenar trabalhos, relatar e discutir problemas, fornecer documentação e muito mais. Ele oferece a seguinte funcionalidade:
+
+- Trata-se de um repositório de código-fonte compartilhado, incluindo ferramentas que permitem aos desenvolvedores executar revisões de código adicionando comentários e perguntas em uma exibição da Web do código-fonte antes que ele possa ser mesclado na base de código principal.
+- Ele facilita o gerenciamento de projetos, incluindo quadros Kanban.
+- Ele dá suporte para relatórios, discussões e acompanhamento de problemas.
+- Ele conta com ferramentas de automação do pipeline de CI/CD.
+- Ele inclui um wiki para documentação colaborativa.
+- Ele pode ser executado na nuvem ou no local
+
+Mais relevante para este módulo, o GitHub Actions permite a automação do fluxo de trabalho com gatilhos para muitos eventos do ciclo de vida. Um exemplo seria automatizar uma cadeia de ferramentas de CI/CD.
+
+Uma cadeia de ferramentas é uma combinação de ferramentas de software que auxiliam na entrega, no desenvolvimento e no gerenciamento de aplicativos de software durante o ciclo de vida de desenvolvimento de um sistema. 
+- A saída de uma ferramenta na cadeia de ferramentas é a entrada da próxima ferramenta na cadeia de ferramentas. 
+- Funções típicas das ferramentas vão desde:
+    - executar atualizações de dependência automatizadas até a criação e a configuração do software
+    - a entrega dos artefatos de build a vários locais
+    - a realização de testes e assim por diante.
+
+Embora o Azure DevOps e o GitHub permitam repositórios de código públicos e privados, o GitHub tem um longo histórico com repositórios públicos e conta com a confiança de dezenas de milhares de proprietários de projetos de software livre.
+
+- O GitHub é uma ferramenta mais leve do que o Azure DevOps, com foco em desenvolvedores individuais que contribuem para o código de software livre. 
+- O Azure DevOps, por outro lado, é mais focado em desenvolvimento corporativo, com ferramentas de planejamento e gerenciamento de projeto mais pesadas e controle de acesso mais refinado.
+
+> Suas opções não estão limitadas ao Azure DevOps Services ou ao GitHub e o GitHub Actions. Na prática, você pode misturar e combinar esses serviços conforme necessário. Por exemplo, você pode usar repositórios GitHub com Azure Boards para acompanhamento de item de trabalho.
+
+### Azure DevTest Labs
+
+O Azure DevTest Labs fornece um meio automatizado de gerenciar o processo de criação, configuração e remoção de VMs (máquinas virtuais) que contêm builds de seus projetos de software. Dessa maneira, desenvolvedores e testadores podem executar testes em uma variedade de ambientes e builds. E isso não fica limitado às VMs. Tudo o que você pode implantar no Azure por meio de um modelo do ARM pode ser provisionado pelo DevTest Labs. O provisionamento de ambientes de laboratório pré-criados com as ferramentas e as configurações necessárias já instaladas economiza muito tempo para desenvolvedores e profissionais de garantia de qualidade.
+
+Suponha que você precise testar um novo recurso em uma versão antiga de um sistema operacional. O Azure DevTest Labs pode configurar tudo automaticamente após a solicitação. Depois que o teste for concluído, os DevTest Labs poderão desligar e desprovisionar a VM, o que economiza dinheiro quando ela não está em uso. A fim de controlar custos, a equipe de gerenciamento pode restringir quantos laboratórios podem ser criados, por quanto tempo eles são executados e assim por diante.
+
+No entanto, você pode automatizar o provisionamento de novos laboratórios como parte de uma cadeia de ferramentas usando o GitHub Actions ou o Azure Pipelines.
+
+O GitHub funciona em um modelo simples de permissões de leitura/gravação para cada recurso. Já o Azure DevOps tem um conjunto muito mais granular de permissões que possibilita às organizações refinar quem pode executar a maioria das operações em todo o conjunto de ferramentas.
+
+Embora o GitHub tenha itens de trabalho, problemas e um quadro Kanban, o gerenciamento de projeto e os relatórios são as áreas de excelência do Azure DevOps. O Azure DevOps é altamente personalizável, o que permite que um administrador adicione campos personalizados para capturar metadados e outras informações junto com cada item de trabalho. Por outro lado, o recurso de Problemas do GitHub usa marcações como o principal meio de ajudar uma equipe a categorizar os problemas.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte3)
 
 ---
 
-### 🔸 <a name=""></a> 
+## 🔸 <a name="">Escolha_as_melhores_ferramentas_para_gerenciar_e_configurar_seu_ambiente_do_Azure</a> Escolha as melhores ferramentas para gerenciar e configurar seu ambiente do Azure
+
+Depois de concluir este módulo, você poderá:
+
+- Escolher as ferramentas de gerenciamento do Azure que atendem melhor às necessidades e aos desafios técnicos de sua organização.
+
+Usando as ferramentas de gerenciamento, os administradores, desenvolvedores e gerentes do Azure podem interagir com o ambiente de nuvem para executar tarefas como:
+
+- Implantação de dezenas ou centenas de recursos de cada vez.
+- Configuração programática de serviços individuais.
+- Exibição de relatórios avançados sobre uso, integridade, custos e muito mais.
+
+
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte3)
