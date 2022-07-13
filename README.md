@@ -2193,6 +2193,15 @@ Você é cobrado pelo host dedicado, independentemente do número de VMs implant
 
 O licenciamento de software, o armazenamento e o uso de rede são cobrados separadamente do host e das VMs. 
 
+### Resumo
+
+Neste módulo, você aprendeu sobre os serviços do Azure relacionados à segurança. Confira abaixo um breve resumo:
+
+- A Central de Segurança do Azure fornece visibilidade da postura de segurança em todos os serviços, tanto no Azure quanto localmente.
+- O Azure Sentinel agrega dados de segurança de várias fontes diferentes e fornece funcionalidades adicionais para a detecção de – e a resposta a – ameaças.
+- O Azure Key Vault armazena os segredos dos aplicativos (como senhas, chaves de criptografia e certificados) em um só local centralizado.
+- O Host Dedicado do Azure fornece servidores físicos dedicados para hospedar as VMs do Azure para Windows e Linux.
+
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte4)
 
