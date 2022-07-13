@@ -2043,3 +2043,31 @@ O Service Health ajuda você a ficar atento a vários tipos de evento:
 🔼 [Voltar ao índice](#parte3)
 
 ---
+
+# ☁️ <a name="parte4"></a>Parte 4: Descrever os recursos gerais de segurança de rede e segurança
+
+Ter uma boa estratégia de segurança é essencial no mundo digital atual. Cada aplicativo e serviço, seja local ou na nuvem, precisa ser projetado tendo a segurança em mente. A segurança precisa ocorrer no nível do aplicativo, no nível dos dados e no nível da rede.
+
+1. [Proteger contra ameaças à segurança no Azure](#Proteger_contra_ameaças_à_segurança_no_Azure)
+2. [Conectividade de rede segura no Azure](#Conectividade_de_rede_segura_no_Azure)
+
+Depois de concluir este módulo, você poderá:
+
+- Fortalecer sua postura de segurança e se proteger contra ameaças usando a Central de Segurança do Azure.
+- Coletar dados de segurança de várias fontes diferentes e atuar sobre eles usando o Azure Sentinel.
+- Armazenar e acessar informações confidenciais (como senhas e chaves de criptografia) com segurança no Azure Key Vault.
+- Gerenciar servidores físicos dedicados para hospedar suas VMs do Azure para Windows e Linux usando o Host Dedicado do Azure.
+
+## 🔸 <a name="Proteger_contra_ameaças_à_segurança_no_Azure"></a> Proteger-se contra ameaças à segurança usando a Central de Segurança do Azure
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte4)
+
+---
+
+## 🔸 <a name="Conectividade_de_rede_segura_no_Azure"></a> Conectividade de rede segura no Azure
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte4)
+
+---
