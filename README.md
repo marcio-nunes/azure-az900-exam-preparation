@@ -1741,12 +1741,31 @@ Com o Azure Machine Learning, você pode:
 - Criar pipelines que definem onde e quando executar os experimentos com uso intensivo de computação necessários para pontuar os algoritmos com base nos dados de treinamento e teste.
 - Implantar o algoritmo de melhor desempenho como uma API para um ponto de extremidade para que ele possa ser consumido em tempo real por outros aplicativos.
 
+Escolha o Azure Machine Learning quando os cientistas de dados precisarem de controle total sobre o design e o treinamento de um algoritmo usando os próprios dados. 
+
+### Azure Cognitive Services
+
+Os Serviços Cognitivos do Azure fornecem modelos de machine learning pré-criados que permitem que os aplicativos vejam, ouçam, falem, entendam e até mesmo comecem a raciocinar. Use os Serviços Cognitivos do Azure para resolver problemas gerais, como análise de texto quanto a sentimentos emocionais ou análise de imagens para reconhecer objetos ou rostos. Você não precisa de machine learning especial nem de conhecimento de ciência de dados para usar esses serviços. Os desenvolvedores acessam os Serviços Cognitivos do Azure por meio de APIs e podem facilmente incluir esses recursos em apenas algumas linhas de código.
+
+Os Serviços Cognitivos do Azure podem ser divididos nas seguintes categorias:
+
+- **Language services**: permita que seus aplicativos processem linguagem natural com scripts pré-criados, avalie sentimentos e aprenda a reconhecer o que os usuários desejam.
+- **Speech services**: converta fala em texto e texto em fala natural. Traduza de um idioma para outro e habilite o reconhecimento e a verificação do locutor.
+- **Vision services**: adicione funcionalidades de reconhecimento e identificação ao analisar imagens, vídeos e outros conteúdos visuais.
+- **Decision services**: adicione recomendações personalizadas para cada usuário que melhorem automaticamente a cada vez que forem usadas, conteúdo moderado para monitorar e remover conteúdo ofensivo ou arriscado e detectar anormalidades nos dados de série temporal.
+
+### Serviço de Bot do Azure
+
+O Serviço de Bot do Azure e o Bot Framework são plataformas para a criação de agentes virtuais que compreendem e respondem a perguntas como um ser humano. Ele cria um agente virtual capaz de se comunicar de maneira inteligente com humanos. Nos bastidores, o bot que você cria usa outros serviços do Azure, como os Serviços Cognitivos do Azure, para entender o que as suas contrapartes humanas estão solicitando.
+
+Os bots podem ser usados para deslocar tarefas simples e repetitivas, como fazer uma reserva de jantar ou coletar informações de perfil, para sistemas automatizados que podem não exigir mais intervenção humana direta. Os usuários conversam com os bots usando texto, cartões interativos e fala. Uma interação de bot pode ser uma pergunta e resposta rápidas, ou pode ser uma conversa sofisticada que fornece acesso aos serviços de forma inteligente.
+
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte3)
 
 ---
 
-### 🔸 <a name=""></a> 
+### 🔸 <a name="Escolher_a_melhor_tecnologia_sem_servidor_do_Azure_para_seu_cenário_empresarial"></a>Escolher a melhor tecnologia sem servidor do Azure para seu cenário empresarial
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte3)
