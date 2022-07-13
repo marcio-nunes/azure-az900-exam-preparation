@@ -1964,7 +1964,80 @@ O portal do Azure pode executar a maioria (se não todas) das ações administra
 
 ## 🔸 <a name="Escolher_o_melhor_serviço_de_monitoramento_para_visibilidade_insight_e_mitigação_de_interrupções"></a> Escolher o melhor serviço de monitoramento para visibilidade, insight e mitigação de interrupções
 
+Os sistemas de software modernos em execução na nuvem são complexos, e obter visibilidade sobre a integridade e o desempenho de seu ambiente de hospedagem de aplicativos em todas as suas camadas de serviços é desafiador. Felizmente, a Microsoft oferece várias soluções que podem ajudar você a reagir rapidamente a interrupções, pesquisar problemas intermitentes, otimizar o uso e ser proativo no tratamento de futuros tempos de inatividade planejados.
 
+Depois de concluir este módulo, você poderá:
+
+- Escolher o serviço de monitoramento em nuvem que melhor atende aos desafios comerciais de sua empresa.
+
+### Identificar suas opções de produto
+
+Todas as empresas que usam a nuvem têm várias perguntas ou preocupações básicas.
+
+- Estamos usando a nuvem corretamente? Podemos obter mais desempenho dos nossos gastos com a nuvem?
+- Estamos gastando mais do que precisamos?
+- Nossos sistemas estão protegidos adequadamente?
+- Qual é o grau de resiliência dos nossos recursos? Se passássemos por uma interrupção regional, poderíamos fazer failover para outra região?
+- Como é possível diagnosticar e corrigir problemas que ocorrem de modo intermitente?
+- Como podemos determinar rapidamente a causa de uma interrupção?
+- Como podemos aprender sobre o tempo de inatividade planejado?
+
+Felizmente, ao usar uma combinação de soluções de monitoramento no Azure, você pode:
+
+- Obter respostas, insights e alertas para ajudar a garantir que tenha otimizado o uso da nuvem.
+- Verificar a causa raiz de problemas não planejados.
+- Preparar-se antecipadamente para interrupções planejadas.
+
+### Opções do produto
+
+Em um alto nível, há três ofertas principais de monitoramento do Azure, cada uma voltada a um público-alvo e a um caso de uso específicos e fornecendo um conjunto diversificado de ferramentas, serviços, APIs programáticas e muito mais.
+
+### Azure Advisor
+
+O Azure Advisor avalia seus recursos do Azure e faz recomendações para ajudar a melhorar a confiabilidade, a segurança e o desempenho, alcançar a excelência operacional e reduzir os custos. O Assistente foi projetado para ajudar você a poupar tempo na otimização da nuvem. O serviço de recomendação inclui ações sugeridas que você pode adotar imediatamente, adiar ou ignorar.
+
+As recomendações estão disponíveis por meio do portal do Azure e da API, e é possível configurar notificações para alertar você sobre novas recomendações.
+
+Quando você estiver no portal do Azure, o painel do Azure Advisor exibirá recomendações personalizadas para todas as suas assinaturas, e você poderá usar filtros para selecionar recomendações de serviços, grupos de recursos ou assinaturas específicas. As recomendações são divididas em cinco categorias:
+
+- **Confiabilidade**: usada para garantir e aprimorar a continuidade dos seus aplicativos comercialmente críticos.
+- **Segurança**: usada para detectar ameaças e vulnerabilidades que podem levar a violações de segurança.
+- **Desempenho**: usado para aprimorar a velocidade de seus aplicativos.
+- **Custo**: usado para otimizar e reduzir seus gastos gerais com o Azure.
+- **Excelência operacional**: usada para ajudar você a obter eficiência de processo e fluxo de trabalho, gerenciamento de recursos e melhores práticas de implantação.
+
+### Azure Monitor
+
+O Azure Monitor é uma plataforma para coleta, análise, visualização e potencial execução de ações com base dos dados de registro em log e de métrica de todo o ambiente do Azure e local.
+
+![identify-product-options](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/monitoring-fundamentals/media/2-identify-product-options-01.png)
+
+- À esquerda fica uma lista das fontes dos dados de registro em log e de métrica que podem ser coletados em cada camada na arquitetura do aplicativo, indo do aplicativo ao sistema operacional e à rede.
+- No centro, é possível ver como os dados de registro em log e de métrica são armazenados em repositórios centrais.
+- À direita, os dados são usados de várias maneiras. 
+    - Você pode exibir o desempenho histórico e em tempo real em cada camada da arquitetura ou informações agregadas e detalhadas. 
+    - Os dados são exibidos em diferentes níveis para públicos-alvo diferentes. 
+    - É possível exibir relatórios de alto nível no painel do Azure Monitor ou criar modos de exibição personalizados usando consultas do Power BI e do Kusto.
+
+Além disso, os dados podem ser usados para ajudar você a reagir a eventos críticos em tempo real, por meio de alertas entregues às equipes por SMS, email etc.
+
+Outra opção é usar limites a fim de disparar a funcionalidade de dimensionamento automático para aumentar ou reduzir conforme a demanda.
+
+Alguns produtos populares, como o **Application Insights** do Azure, um serviço para envio de informações de telemetria do código-fonte do aplicativo para o Azure, usam o Azure Monitor nos bastidores. Com o Application Insights, os desenvolvedores de aplicativos podem aproveitar a poderosa plataforma de análise de dados no Azure Monitor para ter insights aprofundados sobre as operações de um aplicativo e diagnosticar erros sem ter que esperar que um usuário os relate.
+
+### Azure Service Health
+
+A Integridade do Serviço do Azure fornece uma exibição personalizada da integridade dos serviços, regiões e recursos do Azure dos quais você depende. O site status.azure.com, que exibe apenas os principais problemas que afetam amplamente os clientes do Azure, não fornece o panorama completo. 
+
+Você pode configurar alertas que ajudam a fazer a triagem de interrupções e manutenção planejada. Após uma interrupção, a Integridade do Serviço fornece relatórios oficiais de incidentes, chamados de RCAs (root cause analyses), que podem ser compartilhados com os stakeholders.
+
+O Service Health ajuda você a ficar atento a vários tipos de evento:
+
+- **Problemas de serviço** são problemas no Azure, como interrupções, que afetam você no momento. Você pode analisar detalhadamente o impacto em serviços e regiões, atualizações de suas equipes de engenharia e encontrar maneiras de compartilhar e acompanhar as informações mais recentes.
+
+- Os eventos de **manutenção planejada** podem afetar sua disponibilidade. Você pode analisar detalhadamente os serviços, as regiões e os detalhes afetados para mostrar como um evento afetará você e o que é necessário fazer. No caso raro em que uma reinicialização seja necessária, o Service Health permite que você escolha quando realizar a manutenção para minimizar o tempo de inatividade.
+
+- Os **Health advisories** são problemas que exigem que você aja para evitar a interrupção do serviço, incluindo descontinuações de serviço e alterações significativas. Os comunicados de integridade são anunciados com antecedência para permitir que você se planeje.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte3)
