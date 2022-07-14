@@ -3,7 +3,7 @@
 [Microsoft Learn path](https://docs.microsoft.com/pt-br/learn/paths/az-900-describe-cloud-concepts/)
 [AZ-900: Microsoft Azure Fundamentals Sample Questions](https://docs.microsoft.com/en-us/learn/certifications/resources/az-900-sample-questions?azure-portal=true)
 [Exame AZ-900: Fundamentos do Microsoft Azure](https://docs.microsoft.com/pt-br/learn/certifications/exams/az-900)
-
+[Study Guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY)
 
 Icons: ☁️🔸
 
