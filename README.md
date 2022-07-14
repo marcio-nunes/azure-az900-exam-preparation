@@ -2481,14 +2481,132 @@ Proteção completa é o tema recorrente. Pense na segurança como um interesse 
 
 # ☁️ <a name="parte5"></a> Princípios Básicos do Microsoft Azure: descrever recursos de identidade, governança, privacidade e conformidade
 
-Com o aumento do trabalho remoto, de práticas de BYOD (traga seu próprio dispositivo), do uso de aplicativos móveis e aplicativos de nuvem, o limite de segurança primário foi transferido dos firewalls e controles de acesso físico para a identidade.
+Com o aumento do trabalho remoto, de práticas de BYOD (bring your own device), do uso de aplicativos móveis e aplicativos de nuvem, o limite de segurança primário foi transferido dos firewalls e controles de acesso físico para a identidade.
 
 Entender quem está usando seus sistemas e o que eles têm permissão para fazer são essenciais para manter seus dados protegidos contra invasores. Para se manter organizado, gerenciar custos e atender às suas metas de conformidade, você precisa de uma boa estratégia de governança de nuvem.
 
 1. [Proteger o acesso aos seus aplicativos usando os serviços de identidade do Azure](#Proteger_o_acesso_aos_seus_aplicativos_usando_os_serviços_de_identidade_do_Azure)
 2. [Criar uma estratégia de governança de nuvem no Azure](#Criar_uma_estratégia_de_governança_de_nuvem_no_Azure)
+3. [Conheça os padrões de privacidade, conformidade e proteção de dados do Azure](#Conheça_os_padrões_de_privacidade_conformidade_e_proteção_de_dados_do_Azure)
+
+## 🔸 <a name="Proteger_o_acesso_aos_seus_aplicativos_usando_os_serviços_de_identidade_do_Azure"></a> Proteger o acesso aos seus aplicativos usando os serviços de identidade do Azure
+
+Saiba como o Azure Active Directory ajuda a gerenciar e proteger identidades. Além disso, veja como o logon único, a autenticação multifator e o Acesso Condicional permitem que os usuários acessem com segurança recursos e aplicativos na intranet e em redes públicas.
+
+Depois de concluir este módulo, você poderá:
+
+- Explicar a diferença entre autenticação e autorização.
+- Descrever como o Azure Active Directory fornece gerenciamento de identidade e acesso.
+- Explicar a função que o SSO (single sign-on), a autenticação multifator e o Acesso Condicional desempenham no gerenciamento da identidade do usuário.
+
+A identidade tornou-se o novo limite de segurança primário. Provar com precisão que alguém é um usuário válido do sistema, com um nível apropriado de acesso, é crítico para manter o controle dos dados. Agora, é mais comum que essa camada de identidade seja o alvo dos ataques, e não a rede.
+
+Dois conceitos fundamentais que você precisa entender ao falar sobre identidade e acesso são autenticação (AuthN) e autorização (AuthZ). A autenticação e a autorização dão suporte a todo o restante. Elas ocorrem em sequência no processo de identidade e acesso.
+
+**Autenticação** é o processo de estabelecer a identidade de uma pessoa ou serviço que deseja acessar um recurso. Ela envolve o ato de solicitar credenciais legítimas de uma parte e fornece a base para criação de uma entidade de segurança para controle de acesso e identidade. Estabelece se o usuário é quem diz ser.
+
+A **autenticação** estabelece a identidade do usuário, enquanto a autorização é o processo de estabelecer o nível de acesso que uma pessoa ou um serviço autenticado tem. Especifica quais dados podem ser acessados e que a pessoa ou serviço pode fazer com eles.
+
+### O que é o Azure Active Directory?
+
+O Active Directory está relacionado ao Azure AD, mas há algumas diferenças importantes.
+
+O Azure AD é o serviço de gerenciamento de acesso e identidade baseado em nuvem da Microsoft. Com o Azure AD, você controla as contas de identidade, mas a Microsoft garante que o serviço esteja disponível globalmente.
+
+Quando você conecta o Active Directory ao Azure AD, a Microsoft pode ajudar a protegê-lo detectando tentativas de conexão suspeitas sem custo adicional. Por exemplo, o Azure AD pode detectar tentativas de conexão de locais inesperados ou dispositivos desconhecidos.
+
+O Azure AD é para:
+
+**Administradores de TI** - Os administradores podem usar o Azure AD para controlar o acesso a aplicativos e recursos com base em seus requisitos de negócios.
+
+**Desenvolvedores de aplicativos** - Os desenvolvedores podem usar o Azure AD para fornecer uma abordagem baseada em padrões para adicionar funcionalidade a aplicativos que eles criam, como adicionar a funcionalidade de SSO a um aplicativo ou habilitar um aplicativo para trabalhar com as credenciais existentes de um usuário.
+
+**Usuários** - Os usuários podem gerenciar suas identidades. Por exemplo, a redefinição de senha por autoatendimento permite que os usuários alterem ou redefinam a senha sem envolvimento de um administrador de TI nem do suporte técnico.
+
+**Assinantes do serviço online** - Os assinantes do Microsoft 365, do Microsoft Office 365, do Azure e do Microsoft Dynamics CRM Online já estão usando o Azure AD.
+    - Um locatário é uma representação de uma organização. Normalmente, um locatário é separado de outros locatários e tem a própria identidade. Cada locatário do Microsoft 365, do Office 365, do Azure e do Dynamics CRM Online é automaticamente um locatário do Azure AD.
+
+### Que serviços o Azure AD fornece?
+
+O Azure AD fornece serviços como:
+
+- **Autenticação** - Inclui verificar a identidade para acessar aplicativos e recursos. Também inclui fornecer funcionalidades como redefinição de senha por autoatendimento, autenticação multifator, uma lista personalizada de senhas banidas e serviços de bloqueio inteligente.
+
+**Logon Único** - O SSO permite que você se lembre de apenas um nome de usuário e uma senha para acessar vários aplicativos. Uma única identidade é vinculada a um usuário, o que simplifica o modelo de segurança. À medida que os usuários trocam de funções ou saem de uma organização, as modificações de acesso são vinculadas àquela identidade, o que reduz consideravelmente o esforço necessário para alterar ou desabilitar contas.
+
+**Gerenciamento de aplicativos** - Você pode gerenciar seus aplicativos de nuvem e locais usando o Azure AD. Recursos como Proxy de Aplicativo, aplicativos SaaS, o portal Meus Aplicativos (também conhecido como Painel de Acesso) e o logon único proporcionam uma experiência do usuário aprimorada.
+
+**Gerenciamento de dispositivos** - Além das contas de pessoas individuais, o Azure AD dá suporte ao registro de dispositivos. O registro permite que os dispositivos sejam gerenciados por meio de ferramentas como o Microsoft Intune. Também permite que políticas de Acesso Condicional baseadas no dispositivo restrinjam tentativas de acesso somente às provenientes de dispositivos conhecidos, independentemente da conta de usuário solicitante.
+
+O Azure AD ajuda os usuários a acessar recursos internos e externos.
+
+Os recursos externos podem incluir Microsoft Office 365, o portal do Azure e milhares de outros aplicativos SaaS.
+
+Os recursos internos podem incluir aplicativos em sua rede corporativa e intranet, juntamente com qualquer aplicativo de nuvem desenvolvido em sua organização.
+
+### O que é o logon único?
+
+O logon único permite que um usuário entre uma vez e use essa credencial para acessar vários recursos e aplicativos de provedores diferentes.
+
+Um número maior de identidades significa mais senhas para se lembrar e alterar. As políticas de senha podem variar entre aplicativos. Quanto mais senhas um usuário precisa gerenciar, maior o risco de um incidente de segurança relacionado às credenciais.
+
+Se um usuário sai de uma organização, o rastreamento de todas essas identidades e a garantia de que elas estão desabilitadas podem ser um desafio. 
+
+Usar SSO para contas torna mais fácil para os usuários gerenciar suas identidades e aumenta as funcionalidades de segurança.
+
+### Como posso conectar o Active Directory ao Azure AD?
+
+Há algumas maneiras de conectar sua instalação existente do Active Directory ao Azure AD. Talvez o método mais popular seja usar o Azure AD Connect.
+
+O Azure AD Connect sincroniza identidades de usuário entre o Active Directory local e o Azure AD. O Azure AD Connect sincroniza alterações entre os dois sistemas de identidade, o que permite que você use recursos como SSO, autenticação multifator e redefinição de senha por autoatendimento em ambos. A redefinição de senha por autoatendimento impede que os usuários usem senhas comprometidas conhecidas.
+
+![azure-ad-connect](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/secure-access-azure-identity-services/media/3-azure-ad-connect.png)
+
+### O que é a autenticação multifator?
+
+Autenticação multifator é um processo em que o usuário deve fornecer uma forma adicional de identificação durante o processo de entrada. Exemplos incluem um código no telefone celular ou uma verificação de impressão digital.
+
+A autenticação multifator fornece segurança adicional para as identidades, exigindo dois ou mais elementos para a autenticação completa.
+
+Esses elementos se enquadram em três categorias:
+
+- Algo que o usuário sabe - Pode ser um endereço de email e uma senha.
+- Algo que o usuário tem - Pode ser um código enviado para o telefone celular do usuário.
+- Algo que o usuário é - Normalmente é algum tipo de propriedade biométrica, como uma impressão digital ou verificação de detecção facial usada em muitos dispositivos móveis.
+
+A autenticação multifator aumenta a segurança de identidade, limitando o impacto da exposição da credencial (por exemplo, nomes de acesso e senhas roubados). 
+
+Esses serviços fornecem funcionalidades de Autenticação Multifator do Azure AD:
+
+**Azure Active Directory** - A edição gratuita do Azure Active Directory habilita a Autenticação Multifator do Azure AD para administradores com o nível de acesso de administrador global por meio do aplicativo Microsoft Authenticator, de chamada telefônica ou de código SMS. Você também pode impor a Autenticação Multifator do Azure AD para todos os usuários por meio apenas do aplicativo Microsoft Authenticator habilitando padrões de segurança em seu locatário do Azure AD.
+
+**O Azure Active Directory Premium (licenças P1 ou P2)** - permite uma configuração abrangente e granular da Autenticação Multifator do Azure AD por meio de políticas de Acesso Condicional
+
+**Autenticação multifator para o Office 365** - Um subconjunto de funcionalidades da Autenticação Multifator do Azure AD faz parte da sua assinatura do Office 365.
+
+### O que é Acesso Condicional?
 
 
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte5)
+
+---
+
+## 🔸 <a name="Criar_uma_estratégia_de_governança_de_nuvem_no_Azure"></a> Proteger o acesso aos seus aplicativos usando os serviços de identidade do Azure
+
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte5)
+
+---
+
+## 🔸 <a name="Conheça_os_padrões_de_privacidade_conformidade_e_proteção_de_dados_do_Azure"></a> Conheça os padrões de privacidade, conformidade e proteção de dados do Azure
+
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte5)
+
+---
+
+# ☁️ <a name="parte6"></a> 
