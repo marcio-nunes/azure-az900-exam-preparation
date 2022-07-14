@@ -2586,7 +2586,42 @@ Esses serviços fornecem funcionalidades de Autenticação Multifator do Azure A
 
 ### O que é Acesso Condicional?
 
+O Acesso Condicional é uma ferramenta que o Azure Active Directory usa para permitir (ou negar) o acesso a recursos com base em sinais de identidade. Esses sinais incluem quem é o usuário, onde ele está e de qual dispositivo está solicitando acesso.
 
+O acesso condicional ajuda os administradores de TI a:
+
+- Capacitar os usuários a serem produtivos em qualquer lugar e sempre.
+- Proteger os ativos da organização.
+
+O Acesso Condicional também proporciona uma experiência de autenticação multifator mais granular para os usuários. Por exemplo, um segundo fator de autenticação poderá não ser solicitado se o usuário estiver em uma localização conhecida. No entanto, ele poderá ser solicitado se os sinais de conexão do usuário forem incomuns ou se o usuário estiver em uma localização inesperada.
+
+Durante a conexão, o acesso condicional coleta sinais do usuário, toma decisões com base nesses sinais e impõe essa decisão, permitindo ou negando a solicitação de acesso ou solicitando uma resposta de autenticação multifator.
+
+O acesso condicional é útil quando você precisa:
+
+- Exigir autenticação multifator para acessar um aplicativo.
+- Você pode configurar se todos os usuários precisam de autenticação multifator ou apenas determinados usuários, como administradores.
+- Você também pode configurar se a autenticação multifator se aplica ao acesso de todas as redes ou apenas de redes não confiáveis.
+- Exigir acesso a serviços somente por meio de aplicativos cliente aprovados.
+    - Por exemplo, talvez você queira permitir que os usuários acessem os serviços do Office 365 usando um dispositivo móvel, desde que usem aplicativos cliente aprovados, como o aplicativo móvel do Outlook.
+- Exigir que os usuários acessem seu aplicativo somente de dispositivos gerenciados.
+    - Um dispositivo gerenciado é um dispositivo que atende aos seus padrões de segurança e conformidade.
+- Bloquear o acesso de fontes não confiáveis, como o acesso de locais desconhecidos ou inesperados.
+
+O acesso condicional vem com uma ferramenta What If, que ajuda a planejar e solucionar problemas de suas políticas de acesso condicional. Você pode usar essa ferramenta para modelar as políticas de Acesso Condicional propostas em tentativas de conexão recentes de seus usuários para ver qual teria sido o impacto se essas políticas tivessem sido habilitadas. 
+
+A ferramenta What If permite que você teste as políticas de Acesso Condicional propostas antes de implementá-las.
+
+Para usar o acesso condicional, você precisa de uma licença do Azure AD Premium P1 ou P2. Se você tiver uma licença do Microsoft 365 Business Premium, também terá acesso aos recursos de Acesso Condicional.
+
+### Resumo
+
+- A AuthN (autenticação) estabelece a identidade do usuário.
+- A AuthZ (autorização) estabelece o nível de acesso que um usuário autenticado tem.
+- O SSO (logon único) permite que um usuário entre uma vez e use essa credencial para acessar vários recursos e aplicativos.
+- O Azure AD (Azure Active Directory) é um serviço de gerenciamento de identidade e acesso baseado em nuvem. O Azure AD permite que a organização controle o acesso a aplicativos e recursos com base em seus requisitos empresariais.
+- A Autenticação Multifator do Azure AD fornece segurança adicional para as identidades, exigindo dois ou mais elementos para a autenticação completa. De modo geral, a autenticação multifator pode incluir algo que o usuário sabe, algo que o usuário tem e algo que o usuário é.
+- O Acesso Condicional é uma ferramenta usada pelo Azure AD para permitir ou negar o acesso a recursos com base em sinais de identidade, como a localização do usuário.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte5)
