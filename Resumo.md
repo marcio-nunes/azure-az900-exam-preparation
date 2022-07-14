@@ -1,4 +1,5 @@
 # Skills measured
+
 - Describe cloud concepts (25–30%)
 - Describe Azure architecture and services (35–40%)
 - Describe Azure management and governance (30–35%)
@@ -6,6 +7,7 @@
 ## Functional groups
 
 ## Describe cloud concepts (25—30%)
+
 - Describe cloud computing
 	- Define cloud computing
 	- Describe the shared responsibility model
@@ -25,6 +27,7 @@
 	- Identify appropriate use cases for each cloud service (IaaS, PaaS, SaaS)
 
 ## Describe Azure architecture and services (35—40%)
+
 - Describe the core architectural components of Azure
 	- Describe Azure regional, regional pairs, and sovereign regions
 	- Describe availability zones
@@ -59,6 +62,7 @@
 	- Describe the purpose of Microsoft Defender for Cloud
 
 ## Describe Azure management and governance (30—35%)
+
 - Describe cost management in Azure
 	- Describe factors that can affect costs in Azure
 	- Compare the Pricing calculator and the Total Cost of Ownership (TCO) calculator Describe the Azure Cost Management and Billing tool
