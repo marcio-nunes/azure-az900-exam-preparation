@@ -2741,19 +2741,229 @@ As marcas fornecem informações extras ou metadados sobre os recursos. Esses me
 - **Governança e conformidade regulatória** - As tags permitem que você identifique recursos que se alinham com os requisitos de conformidade regulatória ou de governança, como a ISO 27001. Elas também podem fazer parte dos seus esforços de imposição de padrões. Por exemplo, você pode exigir que todos os recursos sejam marcados com um proprietário ou um nome de departamento.
 - **Automação e otimização de carga de trabalho** - As tags podem ajudar você a visualizar todos os recursos que participam de implantações complexas. Por exemplo, você pode marcar um recurso com o nome da carga de trabalho ou do aplicativo associado e usar um software como o Azure DevOps para executar tarefas automatizadas nesses recursos.
 
-### Como fazer para gerenciar marcas de recursos?
+### Como fazer para gerenciar tags de recursos?
 
+Você pode adicionar, modificar ou excluir tags de recursos por meio do PowerShell, da CLI do Azure, dos modelos do Azure Resource Manager, da API REST ou do portal do Azure.
 
+Você também pode gerenciar tags usando o Azure Policy.
 
+Por exemplo, você pode aplicar tags a um grupo de recursos, mas essas marcas não são aplicadas automaticamente aos recursos nesse grupo de recursos. Você pode usar o Azure Policy para fazer com que um recurso herde as mesmas tags do grupo de recursos pai. 
 
+Use também o Azure Policy para impor regras e convenções de marcação. Por exemplo, exija que determinadas tags sejam adicionadas aos novos recursos à medida que eles forem provisionados. Defina também regras que reaplicam as tags removidas.
 
+Tenha em mente que não é necessário impor a presença de uma tag específica em todos os recursos. Por exemplo, você pode decidir que apenas os recursos críticos tenham a tag Impact. Em seguida, todos os recursos não marcados não serão considerados críticos.
 
+### Controlar e auditar seus recursos usando o Azure Policy
 
+Como garantir que seus recursos permaneçam em conformidade? Você poderá receber um alerta se a configuração de um recurso for alterada?
 
+O Azure Policy é um serviço do Azure que permite criar, atribuir e gerenciar políticas que controlam ou auditam os recursos. Essas políticas impõem regras diferentes sobre as configurações dos recursos, de modo que essas configurações permaneçam em conformidade com os padrões corporativos.
 
+### Como o Azure Policy define as políticas?
 
+O Azure Policy permite que você defina políticas individuais e grupos de políticas relacionadas, conhecidas como iniciativas.
 
+O Azure Policy avalia seus recursos e realça os que não estão em conformidade com as políticas criadas por você. Ele também pode impedir a criação de recursos sem conformidade.
 
+O Azure Policy vem com definições de iniciativa e política internas para Armazenamento, Rede, Computação, Central de Segurança e Monitoramento. Por exemplo, se você definir uma política que permita que apenas um determinado tamanho de SKU (stock-keeping unit - unidade de manutenção de estoque) para VMs (máquinas virtuais) seja usado em seu ambiente, essa política será invocada quando você criar VMs e sempre que você redimensionar as VMs existentes. O Azure Policy também avalia e monitora todas as VMs atuais do ambiente.
+
+Em alguns casos, ele pode corrigir automaticamente os recursos e as configurações sem conformidade para garantir a integridade do estado dos recursos. Por exemplo, se todos os recursos de determinado grupo de recursos precisarem ser marcados com AppName e um valor igual a "SpecialOrders", o Azure Policy reaplicará automaticamente essa tag se ela estava ausente.
+
+Além disso, o Azure Policy se integra ao Azure DevOps aplicando as políticas de pipeline de entrega e integração contínua que pertencem às fases pré e pós-implantação dos seus aplicativos.
+
+A implementação de uma política no Azure Policy envolve três tarefas:
+
+1. Criar uma definição da política.
+2. Atribuir a definição aos recursos.
+3. Examinar os resultados da avaliação.
+
+### Tarefa 1. Criar uma definição da política
+
+Uma definição de política expressa o que avaliar e qual ação será tomada. Por exemplo, você pode impedir que as VMs sejam implantadas em determinadas regiões do Azure. Você também pode auditar suas contas de armazenamento para confirmar se elas só aceitam conexões de redes permitidas.
+
+Cada definição de política tem condições sob as quais ela é imposta. Uma definição de política também tem um efeito de acompanhamento que ocorre quando as condições são atendidas. 
+
+Estes são alguns exemplos de definições de política:
+
+- SKUs de máquina virtual permitidos Esta política permite que você especifique um conjunto de SKUs de VM que sua organização pode implantar.
+- Locais permitidos Esta política permite que você restrinja os locais que sua organização pode especificar quando implanta recursos. Seu efeito é usado para impor seus requisitos de conformidade geográfica.
+- A MFA deve ser habilitada nas contas com permissões de gravação na assinatura Essa política exige que a MFA (autenticação multifator) esteja habilitada em todas as contas de assinaturas com privilégios de gravação, a fim de impedir uma violação de contas ou de recursos.
+- O CORS não deve permitir que todos os recursos tenham acesso aos seus aplicativos Web O CORS (compartilhamento de recurso entre origens) é um recurso HTTP que permite que um aplicativo Web em execução em um domínio acesse recursos em outro domínio. Por motivos de segurança, os navegadores da Web modernos restringem o cross-site scripting por padrão. Essa política permite que só os domínios necessários interajam com o aplicativo Web.
+- As atualizações do sistema devem ser instaladas em seus computadores - Essa política permite que a Central de Segurança do Azure recomende atualizações ausentes do sistema de segurança nos seus servidores.
+
+### Tarefa 2. Atribuir a definição aos recursos
+
+Para implementar suas definições de política, atribua definições aos recursos. Uma atribuição de política é uma definição de política que ocorre em um escopo específico. Esse escopo pode ser um grupo de gerenciamento (uma coleção de várias assinaturas), uma assinatura única ou um grupo de recursos.
+
+As atribuições de política são herdadas por todos os recursos filho no escopo. 
+
+### Tarefa 3. Examinar os resultados da avaliação
+
+Quando uma condição é avaliada em relação aos recursos existentes, cada recurso é marcado como em conformidade ou sem conformidade. Você pode examinar os resultados da política sem conformidade e executar qualquer ação necessária.
+
+A avaliação de política ocorre uma vez por hora. Se você fizer alterações na definição de política e criar uma atribuição de política, essa política avaliará seus recursos dentro da próxima hora.
+
+### O que são iniciativas do Azure Policy?
+
+Uma iniciativa do Azure Policy é uma forma de agrupar políticas relacionadas. A definição de iniciativa contém todas as definições de política para ajudar a acompanhar seu estado de conformidade para atingir uma meta maior.
+
+Por exemplo, o Azure Policy inclui uma iniciativa chamada Habilitar o Monitoramento na Central de Segurança do Azure. A meta dela é monitorar todas as recomendações de segurança disponíveis para todos os tipos de recursos do Azure na Central de Segurança do Azure.
+
+Com essa iniciativa, as seguintes definições de política são incluídas:
+
+- **Monitorar um banco de dados SQL não criptografado na Central de Segurança** - Essa política monitora servidores e bancos de dados SQL não criptografados.
+- **Monitorar vulnerabilidades de SO na Central de Segurança** - Esta política monitora servidores que não atendem à linha de base de vulnerabilidade do sistema operacional configurado.
+- **Monitorar o Endpoint Protection ausente na Central de Segurança** - Essa política monitora servidores que não têm um agente de proteção de ponto de extremidade instalado.
+
+Na verdade, a iniciativa Habilitar o Monitoramento na Central de Segurança do Azure contém mais de 100 definições de política separadas.
+
+O Azure Policy também inclui iniciativas que dão suporte a padrões de conformidade regulatória, como o HIPAA e a ISO 27001.
+
+## Controlar várias assinaturas usando o Azure Blueprints
+
+O que acontece quando seu ambiente de nuvem começa a crescer além de apenas uma assinatura? Como você pode escalar a configuração desses recursos, sabendo que eles precisam ser impostos para os recursos em novas assinaturas?
+
+Em vez de ter que configurar recursos como o Azure Policy para cada nova assinatura, com o Azure Blueprints, você pode definir um conjunto repetível de ferramentas de governança e de recursos padrão do Azure necessário para a sua organização. Assim, as equipes de desenvolvimento podem criar e implementar rapidamente novos ambientes, sabendo que eles estão sendo criados de acordo com as especificações da organização, com um conjunto de componentes internos que aceleram as fases de desenvolvimento e implantação.
+
+O Azure Blueprints orquestra a implantação de vários modelos de recursos e outros artefatos, como:
+
+- Atribuições de função
+- Atribuições de política
+- Modelos do Azure Resource Manager
+- Grupos de recursos
+
+Ao formar uma equipe de centro de excelência em nuvem ou uma equipe de custodiantes da nuvem, essa equipe pode usar o Azure Blueprints para escalar as práticas de governança em toda a organização.
+
+A implementação de um blueprint no Azure Blueprints envolve estas três etapas:
+
+1. Criar um Azure Blueprint.
+2. Atribuir o blueprint.
+3. Acompanhar as atribuições de blueprint.
+
+Com o Azure Blueprints, a relação entre a definição do blueprint (o que deve ser implantado) e a atribuição do blueprint (o que foi implantado) é preservada. Em outras palavras, o Azure cria um registro que associa um recurso ao blueprint que o define. Essa conexão ajuda você a acompanhar e auditar suas implantações.
+
+Os blueprints também têm controle de versão. O controle de versão permite que você acompanhe e comente as alterações no blueprint.
+
+### O que são artefatos de blueprint?
+
+Cada componente na definição de blueprint é conhecido como um artefato.
+
+É possível que os artefatos não tenham parâmetros adicionais (configurações). Um exemplo é a política Implantar detecção de ameaças nos servidores SQL, que não requer nenhuma configuração adicional.
+
+Os artefatos também podem conter um ou mais parâmetros que você pode configurar. 
+
+Você pode especificar o valor de um parâmetro ao criar a definição de blueprint ou atribuí-la a um escopo. Com isso, você pode manter um blueprint padrão, mas ter a flexibilidade de especificar os parâmetros de configuração relevantes em cada escopo no qual a definição é atribuída.
+
+A ISO 27001 é um padrão que se aplica à segurança de sistemas de TI publicado pela Organização Internacional de Normalização
+
+## Acelere sua jornada de adoção da nuvem usando o Cloud Adoption Framework para Azure
+
+O Cloud Adoption Framework para Azure fornece diretrizes comprovadas para ajudar com a sua jornada de adoção da nuvem. O Cloud Adoption Framework ajuda você a criar e implementar as estratégias de negócios e de tecnologia necessárias para ter sucesso na nuvem.
+
+o Cloud Adoption Framework consiste em ferramentas, documentação e práticas comprovadas. O Cloud Adoption Framework inclui estas fases:
+
+- Definir sua estratégia.
+- Criar um plano.
+- Preparar sua organização.
+- Adotar a nuvem.
+- Controlar e gerenciar seus ambientes de nuvem.
+
+![framework-stages](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/build-cloud-governance-strategy-azure/media/2-framework-stages-9b54ccbe.png)
+
+### Definir sua estratégia
+
+Aqui, você explicará por que está migrando para a nuvem e indicará o que deseja obter com a migração. Você precisa escalar seus negócios para atender à demanda ou alcançar novos mercados? Isso reduzirá os custos ou aumentará a agilidade dos negócios? Ao definir sua estratégia de negócios de nuvem, entenda a economia de nuvem, o impacto nos negócios, o tempo de retorno, o alcance global, o desempenho, entre outros.
+
+1. **Definir e documentar suas motivações**: reunir-se com os stakeholders e a liderança pode ajudar você a explicar por que está migrando para a nuvem.
+2. **Documentar os resultados dos negócios**: reúna-se com a liderança dos grupos de finanças, marketing, vendas e recursos humanos para ajudar você a documentar suas metas.
+3. **Avalie as considerações financeiras**: avalie os objetivos e identifique o retorno esperado de um investimento específico.
+4. **Entenda as considerações técnicas**: avalie as considerações técnicas por meio da seleção e da conclusão do seu primeiro projeto técnico.
+
+### Criar um plano
+
+Aqui, você criará um plano que mapeia suas metas ambiciosas para ações específicas. Um bom plano ajuda a garantir que os seus esforços sejam mapeados para os resultados de negócios desejados.
+
+1. **Propriedade digital**: crie um inventário dos ativos digitais e das cargas de trabalho existentes que você pretende migrar para a nuvem.
+2. **Alinhamento organizacional inicial**: verifique se as pessoas certas estão envolvidas nos seus esforços de migração, do ponto de vista técnico e da governança de nuvem.
+3. **Plano de preparação de habilidades**: crie um plano que ajude os indivíduos a criar as habilidades de que precisam para operar na nuvem.
+4. **Plano de adoção da nuvem**: crie um plano abrangente que reúne as equipes de desenvolvimento, operações e negócios em direção a uma meta de adoção da nuvem compartilhada.
+
+### Preparar sua organização
+
+1. **Guia de configuração do Azure**: Examine o Guia de Configuração do Azure para se familiarizar com as ferramentas e as abordagens necessárias para criar uma zona de destino.
+2. **Zona de destino do Azure**: comece a criar as assinaturas do Azure que dão suporte a cada uma das principais áreas do seu negócio. Uma zona de destino inclui a infraestrutura de nuvem, bem como funcionalidades de governança, contabilidade e segurança.
+3. **Expandir a zona de destino**: refine sua zona de destino para garantir que ela atende às suas necessidades de operações, governança e segurança.
+4. **Melhores práticas**: comece com as práticas recomendadas e comprovadas para ajudar a garantir que seus esforços de migração para a nuvem sejam escalonáveis e possam ser mantidos.
+
+### Adotar a nuvem
+
+Aqui, você começará a migrar seus aplicativos para a nuvem. Ao longo do caminho, você poderá encontrar maneiras de modernizar seus aplicativos e criar soluções inovadoras que usam os serviços de nuvem.
+
+O Cloud Adoption Framework divide essa fase em duas partes: migração e inovação.
+
+### Migrar
+
+1. **Migrar sua primeira carga de trabalho**: use o guia de migração do Azure para implantar seu primeiro projeto na nuvem.
+2. **Cenários de migração**: use guias detalhados adicionais para explorar cenários de migração mais complexos.
+3. **Melhores práticas**: dê uma olhada na lista de verificação de melhores práticas de migração para a nuvem do Azure para confirmar se você está seguindo as práticas recomendadas.
+4. **Aprimoramentos de processo**: identifique maneiras de escalar o processo de migração, exigindo menos esforço.
+
+### Inovar
+
+1. **Consenso do valor comercial**: confirme se os investimentos em inovações agregam valor aos negócios e atendem às necessidades dos clientes.
+2. **Guia de inovação do Azure**: use esse guia para acelerar o desenvolvimento e criar um MVP (produto mínimo viável) para a sua ideia.
+3. **Melhores práticas**: confirme se o seu progresso é mapeado para as práticas recomendadas antes de prosseguir.
+4. **Loops de comentários**: pergunte frequentemente aos seus clientes se você está criando algo de que eles precisam.
+
+### Controlar e gerenciar seus ambientes de nuvem
+
+Aqui, você começará a formar suas estratégias de governança e gerenciamento de nuvem. À medida que o estado da nuvem se altera ao longo do tempo, o mesmo ocorrerá com os processos e as políticas de governança da nuvem. Você precisará criar soluções resilientes que sejam constantemente otimizadas.
+
+1. **Metodologia**: considere sua solução de estado final. Em seguida, defina uma metodologia que leve você incrementalmente das primeiras etapas à governança de nuvem completa.
+2. **Parâmetro de comparação**: use a ferramenta **governance benchmark tool** de governança para avaliar o estado atual e o estado futuro e estabelecer uma visão para a aplicação da estrutura.
+3. **Base de governança inicial**: crie um MVP que capture as primeiras etapas do plano de governança.
+4. **Aprimorar a base de governança inicial**: adicione iterativamente controles de governança que resolvam os riscos tangíveis à medida que você progride rumo à solução de estado final.
+
+### Gerenciar
+
+1. **Estabelecer uma linha de base de gerenciamento**: defina seu compromisso mínimo com o gerenciamento de operações. Uma linha de base de gerenciamento é o conjunto mínimo de ferramentas e processos que devem ser aplicados a todos os ativos em um ambiente.
+2. **Definir compromissos empresariais**: Documente as cargas de trabalho compatíveis para estabelecer compromissos operacionais com o negócio e entre em acordo sobre investimentos em gerenciamento de nuvem para cada carga de trabalho.
+3. **Expandir a linha de base de gerenciamento**: aplique as práticas recomendadas para iterar pela linha de base de gerenciamento inicial.
+4. **Operações avançadas e princípios de design**: para cargas de trabalho que exigem um nível mais alto de compromisso de negócios, execute uma análise mais profunda da arquitetura para cumprir seus compromissos de resiliência e confiabilidade.
+
+## Criar uma estratégia de governança de assinatura
+
+No início de qualquer implementação de governança de nuvem, você identifica uma estrutura de organização em nuvem que atende às suas necessidades de negócios. Esta etapa geralmente envolve a formação de uma equipe do centro de excelência na nuvem (também chamada de equipe de habilitação de nuvem ou uma equipe custodiante de nuvem). Essa equipe está capacitada para implementar práticas de governança de um local centralizado para toda a organização.
+
+As equipes costumam iniciar a estratégia de governança do Azure no nível da assinatura. Há três aspectos principais a serem considerados ao criar e gerenciar assinaturas: cobrança, controle de acesso e limites de assinatura.
+
+### Cobrança
+
+Você pode criar um relatório de cobrança por assinatura. Caso você tenha vários departamentos e precise fazer um "estorno" dos custos da nuvem, uma solução possível é organizar as assinaturas por departamento ou por projeto.
+
+As tags de recurso também podem ajudar. Quando você define quantas assinaturas são necessárias e como nomeá-las, leve em consideração seus requisitos internos de cobrança.
+
+### Controle de acesso
+
+Uma assinatura é um limite de implantação para os recursos do Azure. Cada assinatura é associada a um locatário do Azure Active Directory. Cada locatário fornece aos administradores a capacidade de configurar o acesso granular por meio de funções definidas usando o controle de acesso baseado em função do Azure.
+
+Quando projetar a arquitetura da assinatura, leve em conta o fator de limite de implantação. Por exemplo, você precisa ter assinaturas separadas para ambientes de desenvolvimento e produção? Com assinaturas separadas, você pode controlar o acesso a cada um separadamente e isolar os recursos uns dos outros.
+
+### Limites de assinatura
+
+As assinaturas também têm algumas limitações de recursos. Por exemplo, o número máximo de circuitos do Azure ExpressRoute na rede por assinatura é 10. Esses limites devem ser considerados durante a fase de design. Se você precisar exceder esses limites, talvez seja necessário adicionar mais assinaturas. Se você atingir um limite rígido máximo, não haverá flexibilidade para aumentá-lo.
+
+Os grupos de gerenciamento também estão disponíveis para auxiliar no gerenciamento de assinaturas. Um grupo de gerenciamento gerencia o acesso, as políticas e a conformidade em várias assinaturas do Azure.
+
+## Resumo
+
+A governança de nuvem exige uma boa coleta de requisitos e análise. A boa notícia é que o Cloud Adoption Framework para Azure pode ajudar você a definir e implementar sua estratégia de governança. Há vários serviços e recursos no Azure que dão suporte a esses esforços:
+
+- O RBAC do Azure (controle de acesso baseado em função do Azure) permite que você crie funções que definem permissões de acesso.
+- Os bloqueios de recursos impedem que os recursos sejam excluídos ou alterados acidentalmente.
+- As marcas de recursos fornecem informações extras ou metadados sobre os recursos.
+- O Azure Policy é um serviço do Azure que permite criar, atribuir e gerenciar políticas que controlam ou auditam os recursos.
+- O Azure Blueprints permite que você defina um conjunto repetível de ferramentas de governança e de recursos padrão do Azure necessário para a sua organização.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte5)
