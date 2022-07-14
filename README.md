@@ -2630,6 +2630,130 @@ Para usar o acesso condicional, você precisa de uma licença do Azure AD Premiu
 
 ## 🔸 <a name="Criar_uma_estratégia_de_governança_de_nuvem_no_Azure"></a> Proteger o acesso aos seus aplicativos usando os serviços de identidade do Azure
 
+Saiba como acessar políticas, bloqueios de recursos e tags, além de descobrir como os serviços do Azure, como o Azure Policy e o Azure Blueprints, podem ajudar você a criar uma estratégia de governança de nuvem abrangente.
+
+Depois de concluir este módulo, você poderá:
+
+- Tomar decisões organizacionais sobre seu ambiente de nuvem usando o Cloud Adoption Framework para Azure.
+- Definir quem pode acessar recursos de nuvem usando o controle de acesso baseado em função do Azure.
+- Aplique um bloqueio de recurso para evitar a exclusão acidental dos recursos do Azure.
+- Aplique marcas aos recursos do Azure para ajudar a descrever a finalidade deles.
+- Controle e audite como os recursos são criados usando o Azure Policy.
+- Habilite a governança em escala em várias assinaturas do Azure usando o Azure Blueprints.
+
+O termo governança descreve o processo geral de estabelecer regras e políticas e garantir que elas sejam impostas.
+
+Manter o controle sobre o seu ambiente garante que você permaneça em conformidade com:
+
+- Padrões do setor, como o PCI DSS.
+- Padrões corporativos ou organizacionais, como a garantia de que os dados da rede são criptografados.
+
+A governança é mais benéfica quando você tem:
+
+- Várias equipes de engenharia trabalhando no Azure.
+- Várias assinaturas a serem gerenciadas.
+- Requisitos regulatórios que precisam ser impostos.
+- Padrões que precisam ser seguidos para todos os recursos de nuvem.
+
+### Controlar o acesso a recursos de nuvem usando o controle de acesso baseado em função do Azure
+
+É uma boa prática de segurança conceder aos usuários apenas os direitos de que precisam para executar o trabalho e somente aos recursos relevantes.
+
+O Azure permite controlar o acesso por meio do RBAC do Azure (role-based control access).
+
+O Azure fornece funções internas que descrevem regras de acesso comuns para os recursos de nuvem. Você também pode definir suas funções. Cada função tem um conjunto associado de permissões de acesso relacionadas a essa função. Quando você atribui indivíduos ou grupos a uma ou mais funções, eles recebem todas as permissões de acesso associadas.
+
+O RBAC (controle de acesso baseado em função) é aplicado a um escopo, que é um recurso ou um conjunto de recursos ao qual esse acesso se aplica.
+
+Os escopos incluem:
+
+- Um grupo de gerenciamento (uma coleção de várias assinaturas).
+- Uma assinatura única.
+- Um grupo de recursos.
+- Um recurso individual.
+
+Quando você permite acesso a um escopo pai, essas permissões são herdadas por todos os escopos filho.
+
+### Quando devo usar o RBAC do Azure?
+
+Use o RBAC do Azure quando precisar:
+
+- Permitir que um usuário gerencie VMs em uma assinatura e outro usuário gerencie redes virtuais.
+- Permitir que um grupo de Administradores de Banco de Dados gerencie bancos de dados SQL em uma assinatura.
+- Permitir que um usuário gerencie todos os recursos em um grupo de recursos, como máquinas virtuais, sites e sub-redes.
+- Permitir que um aplicativo acesse todos os recursos em um grupo de recursos.
+
+O RBAC do Azure é imposto em qualquer ação iniciada em um recurso do Azure que passa pelo Azure Resource Manager. 
+
+**Resource Manager** é um serviço de gerenciamento que fornece um modo de organizar e proteger seus recursos de nuvem.
+
+Normalmente, você acessa o Resource Manager no portal do Azure, no Azure Cloud Shell, no Azure PowerShell e na CLI do Azure. O RBAC do Azure não impõe permissões de acesso no nível do aplicativo nem dos dados. 
+
+> A segurança do aplicativo precisa ser realizada pelo aplicativo.
+
+O RBAC usa um modelo de permissão. Quando você recebe uma função, o RBAC permite que você execute determinadas ações, como leitura, gravação ou exclusão. 
+
+Você pode aplicar o RBAC do Azure a uma pessoa ou a um grupo. Você também pode aplicar o RBAC do Azure a outros tipos de identidades especiais, como entidades de serviço e identidades gerenciadas. Esses tipos de identidade são usados por aplicativos e serviços para automatizar o acesso aos recursos do Azure.
+
+Gerencie as permissões de acesso no painel Access control (IAM) no portal do Azure. Esse painel mostra quem tem acesso a qual escopo e quais funções se aplicam. Você também pode permitir ou remover o acesso nesse painel.
+
+### Impedir alterações acidentais usando bloqueios de recursos
+
+Um bloqueio de recurso (Resource Lock) impede que os recursos sejam excluídos ou alterados acidentalmente.
+
+Mesmo com as políticas do controle de acesso baseado em função do Azure (RBAC do Azure) em vigor, ainda há um risco de que as pessoas com o nível correto de acesso possam excluir recursos de nuvem críticos. 
+
+### Como fazer para gerenciar os bloqueios de recursos?
+
+Gerencie os bloqueios de recursos no portal do Azure, no PowerShell, na CLI do Azure ou em um modelo do Azure Resource Manager.
+
+Para ver, adicionar ou excluir bloqueios no portal do Azure, acesse a seção Configurações do painel Bloqueios de um recurso no portal do Azure.
+
+Você pode aplicar bloqueios a uma assinatura, a um grupo de recursos ou a um recurso individual. É possível definir o nível de bloqueio como CanNotDelete ou ReadOnly.
+
+- **CanNotDelete** significa que as pessoas autorizadas ainda podem ler e modificar um recurso, mas não podem excluir o recurso sem antes remover o bloqueio.
+- **ReadOnly** significa que pessoas autorizadas podem ler um recurso, mas não podem excluir nem alterar o recurso. 
+
+### Como fazer para excluir ou alterar um recurso bloqueado?
+
+Embora o bloqueio ajude a evitar alterações acidentais, você ainda poderá fazer alterações seguindo um processo de duas etapas.
+
+Para modificar um recurso bloqueado, primeiro, você precisará remover o bloqueio. Depois de remover o bloqueio, aplique qualquer ação que você tenha permissões para executar. 
+
+### Combinar bloqueios de recursos com o Azure Blueprints
+
+Para tornar o processo de proteção mais robusto, você pode combinar bloqueios de recursos com o Azure Blueprints. O Azure Blueprints permite que você defina o conjunto de recursos padrão de recursos do Azure necessário para a sua organização. Por exemplo, você pode definir um blueprint que especifica que determinado bloqueio de recurso precisa existir. O Azure Blueprints poderá substituir automaticamente o bloqueio de recurso se esse bloqueio for removido.
+
+### Organizar seus recursos do Azure usando Tags
+
+À medida que o seu uso de nuvem aumenta, passa a ser cada vez mais importante manter-se organizado. 
+
+- Uma forma de organizar os recursos relacionados é colocá-los nas próprias assinaturas. 
+- Use também grupos de recursos para gerenciar os recursos relacionados. 
+- As marcas de recursos são outra maneira de organizar os recursos. 
+
+As marcas fornecem informações extras ou metadados sobre os recursos. Esses metadados são úteis para:
+
+- **Gerenciamento de recursos** - As tags permitem que você localize em recursos associados a cargas de trabalho, ambientes, unidades de negócios e proprietários específicos e realize ações nesses recursos.
+- **Gerenciamento e otimização de recursos** - As tags permitem agrupar os recursos para que você possa relatar custos, alocar centros de custos internos, acompanhar orçamentos e prever o custo estimado.
+- **Gerenciamento de operações** - As tags permitem que você agrupe os recursos de acordo com o grau de importância da disponibilidade deles para os seus negócios. Esse agrupamento ajuda você a formular SLAs (Contratos de Nível de Serviço). Um SLA é uma garantia de tempo de atividade ou desempenho acordada entre você e seus usuários.
+- **Segurança** - As tags permitem que você classifique os dados pelo nível de segurança, como público ou confidencial.
+- **Governança e conformidade regulatória** - As tags permitem que você identifique recursos que se alinham com os requisitos de conformidade regulatória ou de governança, como a ISO 27001. Elas também podem fazer parte dos seus esforços de imposição de padrões. Por exemplo, você pode exigir que todos os recursos sejam marcados com um proprietário ou um nome de departamento.
+- **Automação e otimização de carga de trabalho** - As tags podem ajudar você a visualizar todos os recursos que participam de implantações complexas. Por exemplo, você pode marcar um recurso com o nome da carga de trabalho ou do aplicativo associado e usar um software como o Azure DevOps para executar tarefas automatizadas nesses recursos.
+
+### Como fazer para gerenciar marcas de recursos?
+
+
+
+
+
+
+
+
+
+
+
+
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte5)
