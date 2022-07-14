@@ -2972,6 +2972,93 @@ A governança de nuvem exige uma boa coleta de requisitos e análise. A boa not�
 
 ## 🔸 <a name="Conheça_os_padrões_de_privacidade_conformidade_e_proteção_de_dados_do_Azure"></a> Conheça os padrões de privacidade, conformidade e proteção de dados do Azure
 
+Neste módulo, você aprenderá sobre o compromisso da Microsoft com a privacidade e sobre como o Azure segue os padrões comuns de regulamentação e de conformidade.
+
+Se sua organização for um departamento ou uma agência governamental ou se você precisar realizar implantações em regiões da China, você também aprenderá sobre alguns aspectos que não se aplicam a outros usuários do Azure.
+
+De modo geral, conformidade significa obedecer a uma lei, um padrão ou um conjunto de diretrizes. Conformidade regulatória refere-se à disciplina e ao processo de garantir que uma empresa siga as leis impostas pelos órgãos governamentais.
+
+Depois de concluir este módulo, você poderá:
+
+- Explicar os tipos de ofertas de conformidade disponíveis no Azure.
+- Acessar a Política de Privacidade, os Termos dos Serviços Online e o Adendo de Proteção de Dados da Microsoft para saber quais dados pessoais a Microsoft coleta, como a Microsoft os utiliza e para quais finalidades.
+- Conhecer os padrões regulatórios e a conformidade do Azure com base na Central de Confiabilidade e na documentação de conformidade do Azure.
+- Explicar as funcionalidades do Azure específicas para agências governamentais.
+
+## Explorar termos e requisitos de conformidade
+
+- O quanto o Azure mantém a conformidade com relação à manipulação de dados pessoais?
+- O quanto cada um dos serviços individuais do Azure se mantém em conformidade?
+
+Os serviços online da Microsoft são baseados em um conjunto comum de controles regulatórios e de conformidade. Considere um controle como um bom padrão conhecido com o qual você pode comparar sua solução para garantir a segurança. Esses controles tratam das regulamentações atuais e se adaptam conforme as regulamentações evoluem.
+
+### Quais categorias de conformidade estão disponíveis no Azure?
+
+Embora haja muitas outras, a imagem a seguir mostra algumas das ofertas de conformidade mais populares disponíveis no Azure. Essas ofertas são agrupadas em quatro categorias: Global, Governo dos EUA, Setor e Regional.
+
+![compliance-matrix](https://docs.microsoft.com/pt-br/learn/azure-fundamentals/examine-privacy-compliance-data-protection-standards/media/2-compliance-matrix-383090ad.png)
+
+Embora nem todas essas ofertas de conformidade sejam relevantes para você ou para sua equipe, elas mostram que o compromisso da Microsoft com a conformidade é amplo, contínuo e testado e comprovado de maneira independente.
+
+### Serviço de Informações de Justiça Criminal
+
+Qualquer agência estadual ou local dos EUA que deseja acessar o banco de dados dos CJIS (Serviços de Informações de Justiça Criminal) do FBI precisa aderir à Política de Segurança dos CJIS.
+
+### Certificação STAR da Cloud Security Alliance
+
+A Certificação STAR baseia-se na obtenção da certificação ISO/IEC (Organização Internacional de Normalização/Comissão Eletrotécnina Internacional) 27001 e na adesão aos critérios especificados na CCM (Matriz de Controles de Nuvem). Essa certificação demonstra que um provedor de serviços de nuvem:
+
+- Está em conformidade com os requisitos aplicáveis do ISO/IEC 27001.
+- Tratou de problemas críticos para a segurança da nuvem, conforme descrito na CCM.
+- Foi avaliado em relação ao Modelo de Maturidade de Capacidade STAR para o gerenciamento de atividades em áreas de controle da CCM.
+
+### Cláusulas Modelo da União Europeia
+
+A Microsoft oferece aos clientes as Cláusulas Contratuais Padrão da UE (União Europeia), que fornecem garantias contratuais com relação às transferências de dados pessoais fora da UE.
+
+### Lei Health Insurance Portability and Accountability dos EUA
+
+A lei HIPAA (Health Insurance Portability e Accountability) é uma lei federal dos EUA que regula as PHI (informações de saúde protegidas) dos pacientes.
+
+O Azure oferece aos clientes um BAA (contrato de associado corporativo)do HIPAA, que estipula a adesão a determinadas provisões de privacidade e segurança da HIPAA e da lei HITECH. Para ajudar os clientes em seus esforços de conformidade individuais, a Microsoft oferece um contrato de associado empresarial aos clientes do Azure como um adendo do contrato.
+
+### Organização Internacional de Normalização/Comissão Eletrotécnina Internacional 27018
+
+A Microsoft é o primeiro provedor de nuvem a adotar o código de conduta ISO/IEC 27018, que abrange o processamento de informações pessoais por provedores de serviço de nuvem.
+
+### Multi-Tier Cloud Security – Singapura
+
+Após rigorosas avaliações realizadas pelo órgão de certificação de MTCS (Multi-Tier Cloud Security), os serviços em nuvem da Microsoft receberam a certificação MTCS 584:2013 em todas as três classificações de serviço:
+
+- IaaS (infraestrutura como serviço)
+- PaaS (plataforma como serviço)
+- SaaS (software como serviço)
+
+### Controles de Organização de Serviço 1, 2 e 3
+
+Os serviços de nuvem cobertos pela Microsoft são auditados pelo menos uma vez ao ano em relação à estrutura de relatório SOC (Controles de Organização de Serviço) por auditores terceirizados independentes.
+
+A auditoria dos serviços em nuvem da Microsoft aborda os controles de segurança, disponibilidade, processamento, integridade e confidencialidade dos dados, conforme aplicável aos princípios de confiança em escopo de cada serviço.
+
+### National Institute of Standards and Technology Cybersecurity Framework
+
+O NIST (National Institute of Standards and Technology ) CSF (Cybersecurity Framework) é uma estrutura voluntária que consiste em padrões, diretrizes e melhores práticas para gerenciar riscos de segurança cibernética.
+
+### Government G-Cloud do Reino Unido
+
+O Government G-Cloud do UK (Reino Unido) é uma certificação de computação em nuvem para serviços usados por entidades governamentais no Reino Unido. O Azure recebeu credenciamento oficial do governo do Reino Unido.
+
+## Acessar a Política de Privacidade, os Termos dos Serviços Online e o Adendo de Proteção de Dados da Microsoft
+
+Nesta seção, você verá como a Política de Privacidade, os Termos dos Serviços Online e o Adendo de Proteção de Dados da Microsoft explicam os dados pessoais coletados pela Microsoft, como ela os utiliza e para quais finalidades.
+
+A política de privacidade abrange todos os serviços, sites, aplicativos, softwares, servidores e dispositivos da Microsoft. Essa lista inclui desde produtos corporativos e de servidor até dispositivos que você usa em casa, passando pelos softwares que os alunos usam na escola.
+
+A política de privacidade da Microsoft também fornece informações relevantes para produtos específicos, como o Windows e o Xbox.
+
+O OST (Termos dos Serviços Online) é um contrato legal entre a Microsoft e o cliente. O OST detalha as obrigações das duas partes em relação ao processamento e à segurança de dados de clientes e dados pessoais. O OST se aplica especificamente ao serviços online da Microsoft que você licencia por meio de uma assinatura, incluindo o Azure, o Dynamics 365, o Office 365 e o Bing Mapas.
+
+
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte5)
