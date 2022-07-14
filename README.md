@@ -1,8 +1,11 @@
 # <a name="topo"></a>Preparação para o exame Azure AZ-900
 
 [Microsoft Learn path](https://docs.microsoft.com/pt-br/learn/paths/az-900-describe-cloud-concepts/)
+[AZ-900: Microsoft Azure Fundamentals Sample Questions](https://docs.microsoft.com/en-us/learn/certifications/resources/az-900-sample-questions?azure-portal=true)
+[Exame AZ-900: Fundamentos do Microsoft Azure](https://docs.microsoft.com/pt-br/learn/certifications/exams/az-900)
 
-Icons ☁️🔸
+
+Icons: ☁️🔸
 
 - [Parte 1: Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure](#parte1)
 - [Parte 2: Descrever os principais serviços do Azure](#parte2)
@@ -2475,3 +2478,17 @@ Proteção completa é o tema recorrente. Pense na segurança como um interesse 
 🔼 [Voltar ao índice](#parte4)
 
 ---
+
+# ☁️ <a name="parte5"></a> Princípios Básicos do Microsoft Azure: descrever recursos de identidade, governança, privacidade e conformidade
+
+Com o aumento do trabalho remoto, de práticas de BYOD (traga seu próprio dispositivo), do uso de aplicativos móveis e aplicativos de nuvem, o limite de segurança primário foi transferido dos firewalls e controles de acesso físico para a identidade.
+
+Entender quem está usando seus sistemas e o que eles têm permissão para fazer são essenciais para manter seus dados protegidos contra invasores. Para se manter organizado, gerenciar custos e atender às suas metas de conformidade, você precisa de uma boa estratégia de governança de nuvem.
+
+1. [Proteger o acesso aos seus aplicativos usando os serviços de identidade do Azure](#Proteger_o_acesso_aos_seus_aplicativos_usando_os_serviços_de_identidade_do_Azure)
+2. [Criar uma estratégia de governança de nuvem no Azure](#Criar_uma_estratégia_de_governança_de_nuvem_no_Azure)
+
+
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte5)
