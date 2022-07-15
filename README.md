@@ -5,14 +5,29 @@
 [Exame AZ-900: Fundamentos do Microsoft Azure](https://docs.microsoft.com/pt-br/learn/certifications/exams/az-900)
 [Study Guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY)
 
+## Preparação para o Exame AZ-900
+
+Esse exame inclui seis áreas de domínio de conhecimento:
+
+|Área de domínio do AZ-900|Weight|
+|-|-|
+|Descrever os conceitos da nuvem|20-25%|
+|Descrever os principais serviços do Azure|15-20%|
+|Descrever as principais soluções e ferramentas de gerenciamento no Azure|10-15%|
+|Descrever os recursos gerais de segurança de rede e segurança|10-15%|
+|Descrever recursos de identidade, governança, privacidade e conformidade|20-25%|
+|Descrever os Contratos de Nível de Serviço e o Gerenciamento de Custos da Microsoft|10-15%|
+
 Icons: ☁️🔸
 
-- [Parte 1: Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure](#parte1)
+# ☁️ Princípios básicos do Microsoft Azure
+
+- [Parte 1: Descrever os principais conceitos do Azure](#parte1)
 - [Parte 2: Descrever os principais serviços do Azure](#parte2)
 - [Parte 3: Descrever as principais soluções e ferramentas de gerenciamento no Azure](#parte3)
 - [Parte 4: Descrever os recursos gerais de segurança de rede e segurança](#parte4)
 - [Parte 5: Descrever recursos de identidade, governança, privacidade e conformidade](#parte5)
-- [Parte 6: descrever contratos de nível de serviço e Gerenciamento de Custos da Microsoft](#parte6)
+- [Parte 6: Descrever contratos de nível de serviço e Gerenciamento de Custos da Microsoft](#parte6)
 
 # ☁️ <a name="parte1"></a>Parte 1: Princípios básicos do Microsoft Azure: descrever os principais conceitos do Azure
 
@@ -48,19 +63,6 @@ O Azure fornece uma infinidade de serviços baseados em nuvem:
 - IA 
 - IoT (Internet das Coisas)
 - Outros
-
-### Preparação para o Exame AZ-900
-
-Esse exame inclui seis áreas de domínio de conhecimento:
-
-|Área de domínio do AZ-900|Weight|
-|-|-|
-|Descrever os conceitos da nuvem|20-25%|
-|Descrever os principais serviços do Azure|15-20%|
-|Descrever as principais soluções e ferramentas de gerenciamento no Azure|10-15%|
-|Descrever os recursos gerais de segurança de rede e segurança|10-15%|
-|Descrever recursos de identidade, governança, privacidade e conformidade|20-25%|
-|Descrever os Contratos de Nível de Serviço e o Gerenciamento de Custos da Microsoft|10-15%|
 
 ### O que é a computação em nuvem?
 
