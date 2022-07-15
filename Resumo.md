@@ -31,6 +31,7 @@
 	- Identify appropriate use cases for each cloud model
 	- Describe the consumption-based model
 	- Compare cloud pricing models
+
 - Describe the benefits of using cloud services
 	- Describe the benefits of high availability and scalability in the cloud
 		- **Alta disponibilidade**: dependendo do SLA que você escolher, seus aplicativos poderão oferecer uma experiência de usuário contínua, sem tempo de inatividade aparente, mesmo quando as coisas derem errado.
@@ -39,7 +40,10 @@
     		- **Dimensionar horizontalmente** - aumentar a capacidade de computação adicionando instâncias de recursos.
 
 	- Describe the benefits of reliability and predictability in the cloud
-		- **Recuperação de desastre**: ao aproveitar os serviços de backup baseados em nuvem, a replicação de dados e a distribuição geográfica, você pode implantar os aplicativos com a confiança de saber que seus dados estarão seguros em caso de desastre.
+		- **Confiabilidade** garante que seu aplicativo possa cumprir os compromissos que você assume com seus clientes.
+			- Garante que suas cargas de trabalho fiquem disponíveis e possam se recuperar de falhas em qualquer escala.
+			- **Recuperação de desastre**: ao aproveitar os serviços de backup baseados em nuvem, a replicação de dados e a distribuição geográfica, você pode implantar os aplicativos com a confiança de saber que seus dados estarão seguros em caso de desastre.
+			
 		- 
 
 	- Describe the benefits of security and governance in the cloud
