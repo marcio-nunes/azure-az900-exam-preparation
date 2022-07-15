@@ -10,14 +10,38 @@
 
 - Describe cloud computing
 	- Define cloud computing
+		- É a entrega de serviços de computação pela Internet.
+
 	- Describe the shared responsibility model
+
 	- Define cloud models, including public, private, and hybrid
+		- **Nuvem pública** - Os serviços são oferecidos pela Internet pública e disponíveis para qualquer pessoa que deseje comprá-los. São de propriedade e operados por um provedor de serviços de nuvem de terceiros e entregues pela Internet.
+			- Nenhuma despesa de capital para escalar verticalmente.
+			- Os aplicativos podem ser provisionados e desprovisionados rapidamente.
+			- As organizações pagam apenas pelo que utilizam.
+		- **Nuvem privada** - consiste em recursos de computação usados exclusivamente por usuários de uma empresa/organização. Pode estar localizada fisicamente no datacenter (local) da organização ou hospedada por um provedor de serviços de terceiros.
+			- O hardware deve ser comprado para inicialização e manutenção.
+			- As organizações têm controle total sobre os recursos e a segurança.
+			- As organizações são responsáveis pela manutenção e pelas atualizações de hardware.
+		- **Nuvem híbrida** - é um ambiente de computação que combina uma nuvem pública e uma nuvem privada, permitindo que dados e aplicativos sejam compartilhados entre elas.
+			- Fornece a maior flexibilidade.
+			- As organizações determinam onde executar seus aplicativos.
+			- As organizações controlam a segurança, a conformidade ou os requisitos legais.
+
 	- Identify appropriate use cases for each cloud model
 	- Describe the consumption-based model
 	- Compare cloud pricing models
 - Describe the benefits of using cloud services
 	- Describe the benefits of high availability and scalability in the cloud
+		- **Alta disponibilidade**: dependendo do SLA que você escolher, seus aplicativos poderão oferecer uma experiência de usuário contínua, sem tempo de inatividade aparente, mesmo quando as coisas derem errado.
+		- **Escalabilidade**: os aplicativos na nuvem podem ser dimensionados verticalmente e horizontalmente:
+    		- **Dimensione verticalmente** - aumentar a capacidade de computação adicionando RAM ou CPUs a uma máquina virtual.
+    		- **Dimensionar horizontalmente** - aumentar a capacidade de computação adicionando instâncias de recursos.
+
 	- Describe the benefits of reliability and predictability in the cloud
+		- **Recuperação de desastre**: ao aproveitar os serviços de backup baseados em nuvem, a replicação de dados e a distribuição geográfica, você pode implantar os aplicativos com a confiança de saber que seus dados estarão seguros em caso de desastre.
+		- 
+
 	- Describe the benefits of security and governance in the cloud
 	- Describe the benefits of manageability in the cloud
 - Describe cloud service types
