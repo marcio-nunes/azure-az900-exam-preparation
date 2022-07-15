@@ -3630,7 +3630,13 @@ Você pode acessar as versões prévias dos serviços pelo portal do Azure.
 
 Quando você estiver usando a versão prévia do portal do Azure, o elemento Microsoft Azure (versão prévia) será exibido no cabeçalho da página para lembrar qual versão do portal do Azure você está usando. 
 
+### Resumo
 
+Um SLA (Contrato de Nível de Serviço) é o contrato formal entre uma empresa de serviços e o cliente. No caso do Azure, esse contrato define os padrões de desempenho com os quais a Microsoft se compromete a fornecer para seus clientes.
+
+Conforme os requisitos evoluem, é importante que a equipe entenda como o SLA de cada serviço escolhido afeta as garantias gerais de desempenho dos aplicativos.
+
+Ao definir seus requisitos de SLA, considere as suas necessidades comerciais e o tempo necessário para restaurar um componente após uma falha. Considere também como o uso de versões prévias dos recursos e serviços pode afetar seus sistemas em produção.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte6)
