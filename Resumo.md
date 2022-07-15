@@ -41,9 +41,9 @@
 
 	- Describe the benefits of reliability and predictability in the cloud
 		- **Confiabilidade** garante que seu aplicativo possa cumprir os compromissos que você assume com seus clientes.
+			- A confiabilidade é uma responsabilidade compartilhada
 			- Garante que suas cargas de trabalho fiquem disponíveis e possam se recuperar de falhas em qualquer escala.
 			- **Recuperação de desastre**: ao aproveitar os serviços de backup baseados em nuvem, a replicação de dados e a distribuição geográfica, você pode implantar os aplicativos com a confiança de saber que seus dados estarão seguros em caso de desastre.
-			
 		- 
 
 	- Describe the benefits of security and governance in the cloud
