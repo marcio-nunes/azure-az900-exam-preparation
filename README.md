@@ -3056,9 +3056,84 @@ A política de privacidade abrange todos os serviços, sites, aplicativos, softw
 
 A política de privacidade da Microsoft também fornece informações relevantes para produtos específicos, como o Windows e o Xbox.
 
-O OST (Termos dos Serviços Online) é um contrato legal entre a Microsoft e o cliente. O OST detalha as obrigações das duas partes em relação ao processamento e à segurança de dados de clientes e dados pessoais. O OST se aplica especificamente ao serviços online da Microsoft que você licencia por meio de uma assinatura, incluindo o Azure, o Dynamics 365, o Office 365 e o Bing Mapas.
+O OST (Online Services Terms - Termos dos Serviços Online) é um contrato legal entre a Microsoft e o cliente. O OST detalha as obrigações das duas partes em relação ao processamento e à segurança de dados de clientes e dados pessoais. O OST se aplica especificamente ao serviços online da Microsoft que você licencia por meio de uma assinatura, incluindo o Azure, o Dynamics 365, o Office 365 e o Bing Mapas.
 
+### O que é o Adendo de Proteção de Dados?
 
+O DPA (Adendo de Proteção de Dados - Data Protection Addendum) define com mais profundidade os termos de segurança e processamento de dados dos serviços online. Esses termos incluem:
+
+- Conformidade com as leis.
+- Divulgação de dados processados.
+- Segurança de Dados, que inclui políticas e práticas de segurança, criptografia de dados, acesso a dados, responsabilidades do cliente e conformidade com auditorias.
+- Transferência, retenção e exclusão de dados.
+
+Para acessar o DPA:
+
+1. Acesse a Documentação e os Termos de Licenciamento.
+2. Na barra de pesquisa, insira DPA.
+3. Nos resultados da pesquisa, localize o link para o DPA no idioma de sua preferência. 
+
+### Explorar a Central de Confiabilidade
+
+A Central de Confiabilidade demonstra os princípios da Microsoft para manutenção da integridade dos dados na nuvem e como a Microsoft implementa e dá suporte à segurança, à privacidade, à conformidade e à transparência em todos os seus produtos e serviços em nuvem.
+
+A Central de Confiabilidade fornece:
+
+- Informações detalhadas sobre segurança, privacidade, ofertas de conformidade, políticas, recursos e práticas recomendadas em todos os produtos de nuvem da Microsoft.
+- Recursos adicionais sobre cada tópico.
+- Links para os blogs de segurança, privacidade e conformidade e eventos futuros.
+
+A Central de Confiabilidade é um excelente recurso para outras pessoas de sua organização que podem desempenhar funções de segurança, privacidade e conformidade.
+
+## Acessar a documentação de conformidade do Azure
+
+Aqui, você aprende a acessar a documentação detalhada sobre a conformidade e os padrões legais e regulatórios no Azure.
+
+A documentação de conformidade do Azure fornece uma documentação detalhada sobre a conformidade e os padrões legais e regulatórios no Azure.
+
+Aqui, você encontra ofertas de conformidade nestas categorias:
+
+- Global
+- Governo dos EUA
+- Serviços financeiros
+- Saúde
+- Mídia e manufatura
+- Regional
+
+Também há recursos de conformidade adicionais, como relatórios de auditoria, informações de privacidade, mapeamentos e implementações de conformidade e white papers e relatórios de analistas. Diretrizes de privacidade e de conformidade de países e regiões também estão incluídas.
+
+## O que é o Azure Governamental?
+
+O Azure Government é uma instância separada do serviço do Microsoft Azure. Ele atende às necessidades de segurança e de conformidade das agências federais dos EUA, de governos estaduais e locais e de seus provedores de soluções. O Azure Government oferece isolamento físico de implantações que não são do governo dos EUA e fornece uma equipe de TI selecionada.
+
+Os serviços do Azure Government lidam com os dados que estão sujeitos a determinadas normas e requisitos governamentais:
+
+- FedRAMP (Federal Risk and Authorization Management Program)
+- NIST (National Institute of Standards and Technology) 800.171 DIB (Defense Industrial Base)
+- ITAR (Regulamentos de Tráfego Internacional de Armas)
+- IRS (Receita Federal dos Estados Unidos) 1075
+- DoD (Departamento de Defesa dos Estados Unidos) L4
+- CJIS (Serviço de Informações de Justiça Criminal)
+
+Para fornecer o mais elevado nível de segurança e conformidade, o Azure Government usa redes e data centers isolados fisicamente, localizados apenas nos EUA. Os clientes do Azure Government, como os governos locais, estaduais e federal dos EUA ou seus parceiros, estão sujeitos a uma validação quanto à elegibilidade.
+
+## O que é o Azure China 21Vianet?
+
+A Azure China 21Vianet é operada pela 21Vianet. Trata-se de uma instância fisicamente separada dos serviços de nuvem localizados na China. O Azure China 21Vianet é operado e administrado de maneira independente pela Xangai Blue Cloud Technology Co., Ltd. ("21Vianet"), uma subsidiária de propriedade total Beijing 21Vianet Broadband Data Center Co., Ltd.
+
+De acordo com a Regulamentação de Telecomunicação da China, os provedores de serviços de nuvem, IaaS (infraestrutura como serviço) e PaaS (plataforma como serviço) precisam ter permissões de telecomunicação de valor agregado. Somente empresas registradas localmente com menos de 50% de investimento estrangeiro se qualificam para essas permissões. 
+
+Os serviços do Azure são baseados nas mesmas tecnologias do Azure, do Office 365 e do Power BI que compõem o serviço de nuvem global da Microsoft, com níveis de serviço comparáveis. Os acordos e contratos do Azure na China, onde aplicável, são assinados entre os clientes e a 21Vianet.
+
+## Resumo
+
+Neste módulo, você aprendeu sobre a abordagem da Microsoft à privacidade, à segurança e à conformidade. Você explorou recursos específicos dos serviços online, incluindo o Azure, e como governos podem usar o Azure para atender às suas necessidades específicas de segurança e conformidade.
+
+- A Política de Privacidade da Microsoft proporciona confiança na forma como a Microsoft coleta, protege e usa dados do cliente.
+- A Central de Confiabilidade fornece documentação sobre padrões de conformidade e sobre como o Azure pode dar suporte à sua empresa.
+- A documentação de conformidade do Azure inclui informações detalhadas sobre a conformidade e os padrões legais e regulatórios no Azure.
+
+Tenha em mente que o status de conformidade dos produtos e serviços do Azure não implica automaticamente conformidade para o serviço ou aplicativo que você cria ou hospeda no Azure. Você é responsável por garantir a conformidade com os padrões legais e regulatórios que precisa seguir.
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte5)
