@@ -3461,6 +3461,175 @@ Cada serviço do Azure define o próprio SLA. Os serviços do Azure são organiz
 
 ### O que há em um SLA típico?
 
+- **Introdução** - Esta seção explica o que esperar desse SLA, incluindo o escopo e como as renovações de assinatura podem afetar os termos.
+- **Termos gerais** - Esta seção contém termos que são usados em todo o SLA para que ambas as partes (você e a Microsoft) tenham um vocabulário consistente. Por exemplo, esta seção pode definir o que significa tempo de inatividade, incidentes e códigos de erro. Esta seção também define os termos gerais do contrato, incluindo como enviar um requerimento, receber crédito por problemas de desempenho ou disponibilidade e limitações do contrato.
+- **Detalhes de SLA** - Esta seção define as garantias específicas para o serviço. Os compromissos de desempenho geralmente são medidos como um percentual. Essa porcentagem normalmente varia de 99,9% ("três noves") a 99,99% ("quatro noves").
+    - O principal compromisso de desempenho geralmente se concentra em tempo de atividade ou no percentual de tempo em que um produto ou serviço está funcionando com êxito. Alguns SLAs se concentram também em outros fatores, incluindo latência ou quão rápido o serviço deve responder a uma solicitação.
+    - Esta seção também define quaisquer termos adicionais específicos para esse serviço.
+
+### Como os percentuais estão relacionados ao tempo de inatividade total?
+
+O tempo de inatividade refere-se à duração da indisponibilidade do serviço.
+
+A diferença entre 99,9% e 99,99% pode parecer pequena, mas é importante entender o que esses números significam em termos de tempo de inatividade total.
+
+| Percentual de SLA	| Tempo de inatividade por semana | Tempo de inatividade por mês | Tempo de inatividade por ano |
+|-|-|-|-|
+| 99 | 1,68 hora | 7,2 horas | 3,65 dias |
+| 99,9 | 10,1 minutos | 43,2 minutos | 8,76 horas |
+| 99,95 | 5 minutos | 21,6 minutos | 4,38 horas |
+| 99,99 | 1,01 minuto | 4,32 minutos | 52,56 minutos |
+| 99,999 | 6 segundos | 25,9 segundos | 5,26 minutos |
+
+> Esses valores são cumulativos, o que significa que a duração de várias interrupções de serviço diferentes é combinada ou somada.
+
+### O que são créditos de serviço?
+
+Um crédito do serviço é o percentual dos valores pagos que são creditados de volta para você de acordo com o processo de aprovação da declaração.
+
+Um SLA descreve como a Microsoft responde quando o desempenho de um serviço do Azure não cumpre as especificações. Por exemplo, você pode receber um desconto em sua fatura do Azure como compensação quando um serviço não tem desempenho de acordo com o SLA.
+
+Normalmente, os créditos aumentam conforme o tempo de atividade diminui.
+
+### Qual é o SLA para serviços gratuitos?
+
+Produtos gratuitos normalmente não têm um SLA.
+
+### Como saber quando há uma interrupção?
+
+O status do Azure fornece uma exibição global da integridade dos serviços e regiões do Azure. A suspeita de uma interrupção geralmente é um bom ponto de partida para a investigação.
+
+O status do Azure fornece um RSS feed de alterações à integridade dos serviços do Azure que você pode assinar. 
+
+Na página de status do Azure, você também pode acessar a Integridade do Serviço do Azure. Ela fornece uma exibição personalizada da integridade dos serviços e das regiões do Azure que você está usando diretamente no portal do Azure.
+
+### Como posso solicitar um crédito de serviço da Microsoft?
+
+Normalmente, você precisa registrar um requerimento com a Microsoft para receber um crédito de serviço. Se você comprar os serviços do Azure de um parceiro CSP (Provedor de Soluções na Nuvem), o CSP normalmente gerenciará o processo de reivindicações.
+
+Cada SLA especifica o prazo até o qual você deve enviar seu requerimento e quando a Microsoft o processará. Para muitos serviços, você deve enviar seu requerimento até o final do mês do calendário após o mês em que o incidente ocorreu.
+
+## Definir o SLA do aplicativo
+
+Um SLA aplicativo define os requisitos de SLA para um aplicativo específico. Esse termo geralmente se refere a um aplicativo que você compilar no Azure.
+
+Há muitas decisões de design que você pode tomar para melhorar a disponibilidade e a resiliência dos aplicativos e dos serviços que cria no Azure. Essas decisões se estendem além do SLA para um serviço específico.
+
+Um bom ponto de partida é discutir com a equipe a importância da disponibilidade de cada aplicativo para o seu negócio. 
+
+- **Impacto aos negócios** - Se o aplicativo falhar, qual será o impacto aos negócios? Nesse caso, os clientes não podem inserir novos pedidos por meio da loja e a equipe não pode verificar o status de pedidos existentes. Os clientes precisarão tentar novamente mais tarde ou, possivelmente, ir para um concorrente.
+
+- **Efeito sobre outras operações de negócios** - Se o aplicativo falhar, afetará outros serviços?
+
+- **Padrões de uso** - Os padrões de uso definem quando e como os usuários acessam seu aplicativo.
+    - Uma questão a ser considerada é se o requisito de disponibilidade é diferente entre períodos críticos e não críticos. Por exemplo, um aplicativo de declaração de imposto não pode falhar durante um prazo de entrega da declaração.
+
+### O que a equipe decide?
+
+Digamos que a empresa decida que um SLA de 99,9% é aceitável para um aplicativo. Isso dá à empresa um tempo de inatividade estimado de 10,1 minutos por semana. Mas como ela fará com que suas opções de tecnologia deem suporte ao SLA de seu aplicativo?
+
+## Projetar seu aplicativo para atender ao seu SLA
+
+Agora, você precisa criar uma solução eficiente e confiável para esse aplicativo no Azure, mantendo o SLA do aplicativo em mente. 
+
+Na realidade, ocorrerão falhas. O hardware pode falhar. A rede pode ter períodos de tempo limite intermitentes. Embora seja raro que um serviço ou região inteira sofra uma interrupção, você ainda precisa planejar esses eventos.
+
+### Identificar suas cargas de trabalho
+
+Uma carga de trabalho é uma funcionalidade ou tarefa distinta logicamente separada de outras tarefas em termos de requisitos de armazenamento de dados e lógica de negócios. Cada carga de trabalho define um conjunto de requisitos de disponibilidade, escalabilidade, consistência de dados e recuperação de desastres.
+
+No Azure, o aplicativo exemplo exigirá:
+
+- Duas máquinas virtuais.
+- Uma instância do Banco de Dados SQL do Azure.
+- Uma instância do Azure Load Balancer.
+
+### Combinar SLAs para computar o SLA composto
+
+Depois de identificar o SLA para as cargas de trabalho individuais no aplicativo, você pode observar que esses SLAs não são todos iguais. Como isso afeta nosso requisito geral de SLA de aplicativo de 99,9%? Para resolver isso, você precisará fazer alguns cálculos.
+
+O processo de combinar SLAs ajuda a computar o SLA composto para um conjunto de serviços. A computação do SLA composto exige que você multiplique o SLA de cada serviço individual.
+
+Em [Contratos de Nível de Serviço](https://azure.microsoft.com/pt-br/support/legal/sla/), você descobre o SLA para cada serviço do Azure de que precisa. Eles são:
+
+| Serviço | Contrato de Nível de Serviço |
+|-|-|
+| 2 Máquinas Virtuais do Azure | 99,9% |
+| 1 Banco de Dados SQL do Azure | 99,99% |
+| 1 Azure Load Balancer | 99,99% |
+
+Portanto, para o aplicativo, o SLA composto seria:
+
+SLA Composto = 99,9% x 99,9% x 99,99% x 99,99% 
+
+SLA Composto = 0,999 x 0,999 x 0,9999 x 0,9999 
+
+SLA Composto = 0.9978 = 99.78%
+
+> Lembre-se de que você precisa de duas máquinas virtuais. Portanto, você inclui o SLA de Máquinas Virtuais de 99,9% duas vezes na fórmula.
+
+Observe que, embora todos os serviços individuais tenham SLAs iguais ou melhores que o SLA de aplicativo, a combinação deles resulta em um número geral menor do que o percentual de 99,9% necessário. 
+
+Você vê aqui que o SLA composto de 99,78% não cumpre o SLA necessário de 99,9%. Você pode voltar à sua equipe e perguntar se isso é aceitável. Ou pode implementar outras estratégias no design para melhorar o SLA.
+
+### O que acontece quando o SLA composto não atende às suas necessidades?
+
+#### Escolher as opções de personalização que atendam ao SLA necessário
+
+Cada uma das cargas de trabalho definidas anteriormente tem o próprio SLA, e as opções de personalização feitas ao provisionar cada carga de trabalho afetam o SLA. Por exemplo:
+
+- **Discos** - Com as Máquinas Virtuais, você pode escolher entre um disco gerenciado HDD Standard, um disco gerenciado SSD Standard, um SSD Premium ou um Disco Ultra. O SLA para uma única VM seria de 95%, 99,5% ou 99,9%, dependendo da escolha do disco.
+
+- **Camadas** - Alguns serviços do Azure são oferecidos como um produto de camada gratuita e como um serviço pago padrão. Por exemplo, a Automação do Azure fornece 500 minutos de runtime de trabalho em uma conta gratuita do Azure, mas não tem o suporte de um SLA. O SLA da camada Standard para a Automação do Azure é de 99,9%.
+
+Suas decisões de compra devem levar em conta o impacto sobre o SLA para os serviços do Azure escolhidos. Isso garante que o SLA dê suporte ao SLA de aplicativo necessário.
+
+#### Insira requisitos de disponibilidade no design
+
+Há considerações de design de aplicativo que você pode usar com relação à infraestrutura de nuvem subjacente.
+
+Por exemplo, para melhorar a disponibilidade do aplicativo, evite pontos únicos de falha. Assim, em vez de adicionar mais máquinas virtuais, você pode implantar uma ou mais instâncias adicionais da mesma máquina virtual em diferentes zonas de disponibilidade na mesma região do Azure.
+
+Uma zona de disponibilidade é um local físico exclusivo dentro de uma região do Azure. Cada zona é composta por um ou mais datacenters equipados com energia, resfriamento e rede independentes. Essas zonas usam agendas diferentes para manutenção, ou seja, se uma zona for afetada, sua instância de máquina virtual na outra zona não será afetada.
+
+A implantação de duas ou mais instâncias de uma máquina virtual do Azure em duas ou mais zonas de disponibilidade eleva o SLA da máquina virtual a 99,99%. O recálculo de seu SLA composto acima com esse SLA de Máquinas Virtuais dá a você um SLA de aplicativo de:
+
+SLA Composto = 99,99% x 99,99% x 99,99% x 99,99% = 99,96%
+
+Esse SLA revisado de 99,96% excede o seu alvo de 99,9%.
+
+#### Incluir redundância para aumentar a disponibilidade
+
+Para garantir alta disponibilidade, você pode planejar que seu aplicativo tenha componentes duplicados em várias regiões, o que é conhecido como redundância. Por outro lado, para minimizar os custos durante períodos não críticos, você pode executar o aplicativo somente em uma única região. 
+
+Para alcançar a disponibilidade máxima em seu aplicativo, adicione redundância a cada parte do aplicativo. Essa redundância inclui o próprio aplicativo, bem como os serviços e a infraestrutura subjacentes. No entanto, esteja ciente de que isso pode ser difícil e caro e, muitas vezes, resulta em soluções desnecessariamente complexas.
+
+Considere a importância da alta disponibilidade para seus requisitos antes de adicionar redundância. Pode haver maneiras mais simples de cumprir o SLA do aplicativo.
+
+#### É difícil alcançar um desempenho muito alto
+
+Metas de desempenho acima de 99,99% são muito difíceis de alcançar. Um SLA de 99,99% significa ter 1 minuto de tempo de inatividade por semana. É difícil seres humanos responderem a falhas com rapidez suficiente para cumprir metas de desempenho de SLA superiores a 99,99%. Em vez disso, seu aplicativo deve ser capaz de realizar os próprios diagnósticos e reparos durante uma interrupção.
+
+## Acessar versões prévias dos recursos e dos serviços
+
+### O que é o ciclo de vida do serviço?
+
+O ciclo de vida do serviço define como cada serviço do Azure é liberado para uso público.
+
+Cada serviço do Azure começa na fase de desenvolvimento. Nesta fase, a equipe do Azure coleta e define seus requisitos e começa a criar o serviço.
+
+Em seguida, o serviço é liberado para a fase de versão prévia pública. Durante essa fase, o público pode acessá-lo, experimentá-lo e fornecer comentários reais. 
+
+Depois que um novo serviço do Azure for validado e testado, ele será liberado a todos os clientes como um serviço pronto para produção. Isso é conhecido como GA (disponibilidade geral).
+
+Cada versão prévia do Azure define os próprios termos e condições. 
+
+Algumas versões prévias podem não estar cobertas pelo suporte ao cliente e podem estar sujeitas a compromissos de segurança, conformidade e privacidade reduzidos ou diferentes. Por esses motivos, as versões prévias não são recomendadas para cargas de trabalho comercialmente críticas.
+
+Você pode acessar as versões prévias dos serviços pelo portal do Azure.
+
+Quando você estiver usando a versão prévia do portal do Azure, o elemento Microsoft Azure (versão prévia) será exibido no cabeçalho da página para lembrar qual versão do portal do Azure você está usando. 
+
 
 
 🔝 [Voltar ao topo](#topo)
