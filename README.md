@@ -1605,7 +1605,7 @@ Além disso, você viu como o Azure Cosmos DB funciona com uma variedade de APIs
 
 ---
 
-# ☁️ <a name="parte3"></a> Princípios básicos do Microsoft Azure: Descrever as principais soluções e ferramentas de gerenciamento no Azure
+# ☁️ <a name="parte3"></a> Parte 3: Princípios básicos do Microsoft Azure: Descrever as principais soluções e ferramentas de gerenciamento no Azure
 
 1. [Escolha o serviço de IoT do Azure mais adequado para o seu aplicativo](#Escolha_o_serviço_de_IoT_do_Azure_mais_adequado_para_o_seu_aplicativo)
 2. [Escolha o melhor serviço de IA para suas necessidades](#Escolha_o_melhor_serviço_de_IA_para_suas_necessidades)
@@ -2482,7 +2482,7 @@ Proteção completa é o tema recorrente. Pense na segurança como um interesse 
 
 ---
 
-# ☁️ <a name="parte5"></a> Princípios Básicos do Microsoft Azure: descrever recursos de identidade, governança, privacidade e conformidade
+# ☁️ <a name="parte5"></a> Parte 5: Princípios Básicos do Microsoft Azure: descrever recursos de identidade, governança, privacidade e conformidade
 
 Com o aumento do trabalho remoto, de práticas de BYOD (bring your own device), do uso de aplicativos móveis e aplicativos de nuvem, o limite de segurança primário foi transferido dos firewalls e controles de acesso físico para a identidade.
 
@@ -3143,7 +3143,7 @@ Tenha em mente que o status de conformidade dos produtos e serviços do Azure n�
 
 ---
 
-# ☁️ <a name="parte6"></a> Conceitos Básicos do Microsoft Azure: descrever os contratos de nível de serviço e o Gerenciamento de Custos da Microsoft
+# ☁️ <a name="parte6"></a> Parte 6: Conceitos Básicos do Microsoft Azure: descrever os contratos de nível de serviço e o Gerenciamento de Custos da Microsoft
 
 A migração para a nuvem apresenta novas maneiras de pensar em suas despesas de TI. A nuvem também elimina a carga de oferecer suporte à infraestrutura de TI.
 
