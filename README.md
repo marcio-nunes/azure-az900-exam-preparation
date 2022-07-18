@@ -730,7 +730,110 @@ Uma nuvem híbrida é um ambiente de computação que usa nuvens públicas e pri
 | As organizações pagam apenas pelo que utilizam | O hardware deve ser comprado para o início e a manutenção | As organizações controlam a segurança, a conformidade ou os requisitos legais |
 |As organizações não têm controle total sobre os recursos e a segurança | As organizações são responsáveis pela manutenção e pelas atualizações de hardware | - |
 
+### Várias nuvens
+
+Em um cenário de várias nuvens, você usa vários provedores de nuvem pública. 
+
+- Talvez você use recursos diferentes de diferentes provedores de nuvem. 
+- Você pode ter iniciado seu percurso de nuvem com um provedor e esteja em processo de migração para um provedor diferente. 
+
+Independentemente disso, em um ambiente de várias nuvens, você lida com dois (ou mais) provedores de nuvem pública e gerencia recursos e segurança em ambos os ambientes.
+
+### Azure Arc
+
+O Azure Arc é um conjunto de tecnologias que ajuda a gerenciar seu ambiente de nuvem. O Azure Arc pode ajudar a gerenciar sua nuvem pública de nuvem exclusivamente no Azure, em uma nuvem privada em seu datacenter, em uma configuração híbrida ou até mesmo em um ambiente de várias nuvens em execução em vários provedores de nuvem ao mesmo tempo.
+
+### Solução VMware no Azure
+
+E se você já estiver estabelecido com o VMware em um ambiente de nuvem privada, mas quiser migrar para uma nuvem pública ou híbrida? A Solução VMware no Azure permite executar suas cargas de trabalho do VMware no Azure com integração e escalabilidade total.
+
+## Descrever o modelo baseado em consumo
+
+Há dois tipos de despesas a serem consideradas:
+
+- **CapEx** - normalmente é uma despesa inicial única para comprar ou proteger recursos tangíveis. Um prédio novo, a repavimentação do estacionamento, a construção de um datacenter ou a compra de um veículo da empresa são exemplos de CapEx.
+- **OpEx** - é o gasto de capital em serviços ou produtos ao longo do tempo. O aluguel de um centro de convenções, o leasing de um veículo da empresa ou a assinatura de serviços de nuvem são exemplos de OpEx.
+
+Na computação em nuvem, você não paga pela infraestrutura física, pela eletricidade, pela segurança nem por nada que esteja associado à manutenção de um datacenter. Você paga pelos recursos de TI que usa. 
+
+Um modelo baseado em consumo oferece vários benefícios, como:
+
+- Sem custos prévios.
+- Não há necessidade de comprar nem gerenciar uma infraestrutura cara que os usuários talvez não usem na capacidade máxima.
+- A capacidade de pagar para obter mais recursos quando necessário.
+- A capacidade de parar de pagar por recursos que não são mais necessários.
+
+A nuvem permite que você supere rapidamente os desafios empresariais mais difíceis e ofereça soluções de ponta para seus usuários.
+
+- Planeje e gerencie os custos operacionais.
+- Executar a infraestrutura com mais eficiência.
+- Escale as operações de acordo com as necessidades de negócios.
+
+### Resumo
+
+Neste módulo, você aprendeu os conceitos gerais de nuvem. No início, você entendeu o que é a computação em nuvem. Você também entendeu o modelo de responsabilidade compartilhada e como você e o provedor de nuvem compartilham a responsabilidade de manter a segurança das informações na nuvem. Abordamos rapidamente as diferenças entre os modelos de nuvem (público, privado, híbrido e multinuvem). Depois, concluímos com uma unidade explicando como a nuvem muda os gastos de TI de despesa de capital para despesa operacional.
+
 ## 🔸 <a name=""></a> Descrever os benefícios do uso de serviços de nuvem
+
+Ao concluir este módulo, você será capaz de:
+
+- Descrever os benefícios da alta disponibilidade e da escalabilidade na nuvem.
+- Descrever os benefícios da confiabilidade e da previsibilidade na nuvem.
+- Descrever os benefícios da segurança e da governança na nuvem.
+- Descrever os benefícios da capacidade de gerenciamento na nuvem.
+
+## Descrever os benefícios da alta disponibilidade e da escalabilidade na nuvem
+
+- **Alta disponibilidade** - Quando você está implantando qualquer recurso de TI, é importante que os recursos estejam disponíveis quando necessário. A alta disponibilidade se concentra em garantir a disponibilidade máxima, independentemente de interrupções ou eventos que possam ocorrer. Ao arquitetar sua solução, você precisará considerar as garantias de disponibilidade do serviço. O Azure é um ambiente de nuvem altamente disponível com garantias de tempo de atividade, dependendo do serviço. Essas garantias fazem parte dos SLAs (Contratos de Nível de Serviço).
+
+- **Escalabilidade** - Outro grande benefício da computação em nuvem é a escalabilidade dos recursos de nuvem. A escalabilidade refere-se à capacidade de ajustar recursos para atender à demanda. Se você experimentar um pico repentino de tráfego e seus sistemas ficarem sobrecarregados, a capacidade de escalar significa que você poderá adicionar mais recursos para lidar melhor com o aumento da demanda. O outro benefício da escalabilidade é que você não está pagando além do necessário pelos serviços. Como a nuvem é um modelo baseado em consumo, você paga apenas pelo que usa. Se a demanda cair, você poderá reduzir seus recursos e, assim, reduzir seus custos.
+
+A escala geralmente vem em duas variedades:
+- A escala vertical se concentra em aumentar ou diminuir a capacidade dos recursos. 
+- A escala horizontal é adição ou subtração do número de recursos.
+
+## Descrever os benefícios da confiabilidade e da previsibilidade na nuvem
+
+- **Confiabilidade** - Resiliência é a capacidade que um sistema tem de se recuperar de falhas e continuar funcionando. 
+    - Com um design descentralizado, a nuvem permite que você tenha recursos implantados em várias regiões do mundo. Com essa escala global, mesmo que ocorra um evento catastrófico em uma região, as outras regiões ainda estarão em funcionamento.
+- **Previsibilidade** - A previsibilidade na nuvem permite que você avance com confiança. 
+    - Pode se concentrar na previsibilidade de desempenho ou na previsibilidade de custo. 
+    - Ambos são bastante influenciadas pelo Microsoft Azure Well-Architected Framework. Implante uma solução criada com base nessa estrutura e você terá uma solução com custo e desempenho previsíveis.
+        - **Previsibilidade de Desempenho** - se concentra em prever os recursos necessários para oferecer uma experiência positiva aos clientes. O dimensionamento automático, o balanceamento de carga e a alta disponibilidade são apenas alguns dos conceitos de nuvem que dão suporte à previsibilidade de desempenho.
+        - **Previsibilidade de custos** - se concentra em prever o custo dos gastos com a nuvem. Operando na nuvem e usando a análise e as informações da nuvem, você pode prever custos futuros e ajustar os recursos conforme o necessário. Você pode até mesmo usar ferramentas como TCO (custo total de propriedade) ou a Calculadora de Preços para obter uma estimativa de possíveis gastos com a nuvem.
+
+## Descrever os benefícios da segurança e da governança na nuvem
+
+- **Governança** - Se você estiver implantando infraestrutura como serviço ou software como serviço, os recursos de nuvem vão dar suporte à governança e à conformidade. Itens como modelos de conjunto ajudam a garantir que todos os seus recursos implantados atendam aos padrões corporativos e aos requisitos regulatórios governamentais. Além disso, você pode atualizar todos os seus recursos implantados com novos padrões à medida que os padrões são alterados. A auditoria baseada em nuvem ajuda a sinalizar qualquer recurso que esteja fora de conformidade com seus padrões corporativos e fornece estratégias de mitigação. Dependendo do seu modelo operacional, patches de software e atualizações também podem ser aplicados automaticamente, o que ajuda na governança e na segurança.
+
+- **Segurança** - Se você quiser o controle máximo da segurança, a infraestrutura como serviço fornecerá recursos físicos, mas permitirá que você gerencie os sistemas operacionais e o software instalado, incluindo aplicação de patches e manutenção. Se você quiser que a aplicação de patches e a manutenção sejam tratadas automaticamente, as implantações de plataforma como serviço ou software como serviço podem ser as melhores estratégias de nuvem para você.
+
+Ao estabelecer uma presença de governança o mais cedo possível, você poderá manter sua presença de nuvem atualizada, protegida e bem gerenciada.
+
+## Descrever os benefícios da capacidade de gerenciamento na nuvem
+
+### Gerenciamento da nuvem
+
+O gerenciamento da nuvem diz respeito a gerenciar seus recursos de nuvem. Na nuvem, você pode:
+
+- Escalar automaticamente a implantação de recursos com base na necessidade.
+- Implantar recursos com base em um modelo pré-configurado, removendo a necessidade de configuração manual.
+- Monitorar a integridade dos recursos e substituir automaticamente os recursos com falha.
+- Receber alertas automáticos com base em métricas configuradas, de modo a ficar ciente do desempenho em tempo real.
+
+### Gerenciamento na nuvem
+
+O gerenciamento na nuvem diz respeito à maneira de gerenciar seu ambiente de nuvem e seus recursos. Você pode gerenciá-los:
+
+- Por meio de um portal da Web.
+- Usando uma interface de linha de comando.
+- Usando APIs.
+- Usando o PowerShell.
+
+
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte1)
 
 ## 🔸 <a name=""></a> Descrever os tipos de serviço de nuvem
 
