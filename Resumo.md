@@ -11,9 +11,15 @@
 - Describe cloud computing
 	- Define cloud computing
 		- É a entrega de serviços de computação pela Internet.
+		- Os serviços de computação incluem infraestrutura de TI comum, como máquinas virtuais, armazenamento, bancos de dados e rede. Os serviços de nuvem também expandem as ofertas tradicionais de TI para incluir itens como IoT (Internet das Coisas), ML (machine learning) e IA (inteligência artificial).
 
 	- Describe the shared responsibility model
 		- o usuário gerencia e mantém os serviços que provisionou e o provedor de nuvem gerencia e mantém a infraestrutura de nuvem
+		- À medida que você faz a migração para a nuvem, algumas responsabilidades são transferidas para a Microsoft. 
+		- As responsabilidades da carga de trabalho variam dependendo se a carga de trabalho está hospedada
+			- IaaS - Você configura e gerencia o hardware para seu aplicativo.
+			- PaaS - O gerenciamento de plataforma é realizado pelo provedor de nuvem.
+			- Saas - Os usuários pagam pelo software que utilizam em um modelo de assinatura.
 
 	- Define cloud models, including public, private, and hybrid
 		- **Nuvem pública** - Os serviços são oferecidos pela Internet pública e disponíveis para qualquer pessoa que deseje comprá-los. São de propriedade e operados por um provedor de serviços de nuvem de terceiros e entregues pela Internet.
@@ -34,16 +40,12 @@
 		- **Modelo baseado em consumo**. As organizações pagam apenas pelo que usam e operam em um modelo de OpEx (despesas operacionais).
 
 	- Compare cloud pricing models
-		- pay as you go
-		- reserved instances
-		- spot instances.
-		- Azure Free Tier
-			- 12 Months Free Use
-			- Credit for First 30 Days
-			- Does Azure Charge After the Free Trial?
-			- Is Azure Free Forever?
+		- Avaliação gratuita - Uma assinatura de avaliação gratuita fornece 12 meses de serviços gratuitos populares, um crédito para explorar qualquer serviço do Azure por 30 dias e mais de 25 serviços que são sempre gratuitos. Os serviços do Azure são desabilitados quando a avaliação termina ou quando seu crédito expira para produtos pagos, a menos que você atualize para uma assinatura paga.
+		- Pago conforme o uso - Uma assinatura com Pagamento Conforme o Uso permite que você pague pelo que usar vinculando um cartão de crédito ou débito à sua conta. As organizações podem se candidatar a descontos por volume e a faturamento pré-pago.
+		- Ofertas de membro - Sua associação existente a determinados produtos e serviços da Microsoft pode fornecer créditos para sua conta do Azure e taxas reduzidas nos serviços do Azure. Por exemplo, ofertas de membros estão disponíveis para assinantes do Visual Studio, membros da Microsoft Partner Network, membros da Microsoft para Startups e membros do Microsoft Imagine.
 
 - Describe the benefits of using cloud services
+	- Alta disponibilidade, escalabilidade e distribuição geográfica. 
 	- Describe the benefits of high availability and scalability in the cloud
 		- **Alta disponibilidade**: dependendo do SLA que você escolher, seus aplicativos poderão oferecer uma experiência de usuário contínua, sem tempo de inatividade aparente, mesmo quando as coisas derem errado.
 		- **Escalabilidade**: os aplicativos na nuvem podem ser dimensionados verticalmente e horizontalmente:

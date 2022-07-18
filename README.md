@@ -24,6 +24,7 @@ Icons: ☁️🔸
 # ☁️ Princípios básicos do Microsoft Azure
 
 - [Parte 1: Descrever os principais conceitos do Azure](#parte1)
+    - [Descrever os conceitos de nuvem](#parte1-2)
 - [Parte 2: Descrever os principais serviços do Azure](#parte2)
 - [Parte 3: Descrever as principais soluções e ferramentas de gerenciamento no Azure](#parte3)
 - [Parte 4: Descrever os recursos gerais de segurança de rede e segurança](#parte4)
@@ -640,6 +641,98 @@ Outro cenário em que você usaria grupos de gerenciamento é fornecer acesso de
 - Cada grupo de gerenciamento e assinatura podem dar suporte a somente um pai.
 - Cada grupo de gerenciamento pode ter vários elementos filhos.
 - Todas as assinaturas e todos os grupos de gerenciamento estão em uma única hierarquia em cada diretório.
+
+🔝 [Voltar ao topo](#topo)
+🔼 [Voltar ao índice](#parte1)
+
+---
+
+# ☁️ <a name="parte1-2"></a> Parte 1-2: Princípios básicos do Microsoft Azure: descrever os conceitos de nuvem
+
+Depois de concluir este módulo, você poderá:
+
+- Definir computação em nuvem.
+- Descrever o modelo de responsabilidade compartilhada.
+- Definir modelos de nuvem, incluindo público, privado e híbrido.
+- Identificar os casos de uso apropriados para cada modelo de nuvem.
+- Descrever o modelo baseado no consumo.
+- Comparar os modelos de preços de nuvem.
+
+1. [Descrever a computação em nuvem](#Descrever_a_computação_em_nuvem)
+2. [Descrever os benefícios do uso de serviços de nuvem](#Descrever_os_benefícios_do_uso_de_serviços_de_nuvem)
+3. [Descrever os tipos de serviço de nuvem](#Descrever_os_tipos_de_serviço_de_nuvem)
+
+## 🔸 <a name=""></a> Descrever a computação em nuvem
+
+## O que é computação em nuvem
+
+A computação em nuvem é a entrega de serviços de computação pela Internet. Os serviços de computação incluem infraestrutura de TI comum, como máquinas virtuais, armazenamento, bancos de dados e rede. Os serviços de nuvem também expandem as ofertas tradicionais de TI para incluir itens como IoT (Internet das Coisas), ML (machine learning) e IA (inteligência artificial).
+
+Como a computação em nuvem usa a Internet para fornecer esses serviços, ela não precisa ficar restrita pela infraestrutura física da mesma forma que um datacenter tradicional. Isso significa que, se você precisar aumentar rapidamente sua infraestrutura de TI, não precisará esperar para construir um novo datacenter; você pode usar a nuvem para expandir rapidamente seu volume de TI.
+
+## Descrever o modelo de responsabilidade compartilhada
+
+Num datacenter corporativo tradicional a empresa é responsável por manter o espaço físico, garantir a segurança e manter ou substituir os servidores se algo acontecer. TI é responsável por manter toda a infraestrutura e o software necessários para manter o datacenter em funcionamento. É provável que eles também sejam responsáveis por manter todos os sistemas corrigidos e na versão correta.
+
+Com o modelo de responsabilidade compartilhada, essas responsabilidades são compartilhadas entre o provedor de nuvem e o consumidor. 
+- Segurança física, energia, resfriamento e conectividade de rede são responsabilidade do provedor de nuvem. 
+- O consumidor é responsável pelos dados e pelas informações armazenados na nuvem e pela segurança de acesso, o que significa que você só dá acesso àqueles que precisam.
+
+Então, para algumas coisas, a responsabilidade depende da situação. 
+
+- A IaaS coloca a maior responsabilidade sobre o consumidor, com o provedor de nuvem sendo responsável pelas questões básicas de segurança física, energia e conectividade. 
+- O SaaS coloca a maior parte da responsabilidade no provedor de nuvem. 
+- A PaaS, sendo um meio termo entre IaaS e SaaS, distribui uniformemente a responsabilidade entre o provedor de nuvem e o consumidor.
+
+Você sempre será responsável por:
+
+- Informações e dados armazenados na nuvem
+- Dispositivos que têm permissão para se conectar à nuvem (telefones celulares, computadores e assim por diante)
+- Contas e identidades das pessoas, serviços e dispositivos em sua organização
+
+O provedor de nuvem é sempre responsável por:
+
+- Datacenter físico
+- Rede física
+- Hosts físicos
+
+Seu modelo de serviço determinará a responsabilidade por coisas como:
+
+- Sistemas operacionais
+- Controles de rede
+- Aplicativos
+- Identidade e infraestrutura
+
+## Definir modelos de nuvem
+
+Os modelos de nuvem definem o tipo de implantação de recursos de nuvem. 
+
+### Nuvem privada
+
+É uma nuvem (que fornece serviços de TI pela Internet) que é criada, controlada e mantida por uma única entidade. 
+
+- A nuvem privada fornece um controle muito maior para a empresa e o departamento de TI. 
+- Ela também tem mais custos e menos benefícios em relação a uma implantação de nuvem pública. 
+- Pode ser hospedada em seu datacenter local. Ela também pode ser hospedada em um datacenter dedicado externo, até mesmo por terceiros que tenham dedicado esse datacenter à sua empresa.
+
+### Nuvem pública
+
+Uma nuvem pública é criada, controlada e mantida por um provedor de nuvem de terceiros. Com uma nuvem pública, qualquer pessoa que queira comprar serviços de nuvem pode acessar e usar os recursos. A disponibilidade pública geral é uma diferença fundamental entre nuvens públicas e privadas.
+
+### Nuvem híbrida
+
+Uma nuvem híbrida é um ambiente de computação que usa nuvens públicas e privadas em um ambiente interconectado. Um ambiente de nuvem híbrida pode ser usado para permitir que uma nuvem privada escale para atender a uma demanda maior temporária implantando recursos de nuvem pública. A nuvem híbrida pode ser usada para fornecer uma camada adicional de segurança. Por exemplo, os usuários podem escolher com flexibilidade quais serviços manter na nuvem pública e quais implantar na infraestrutura de nuvem privada.
+
+| Nuvem pública | Nuvem privada | Nuvem híbrida |
+|-|-|-|
+| Nenhuma despesa de capital para escalar verticalmente | As organizações têm controle total sobre os recursos e a segurança | Fornece a maior flexibilidade |
+| Os aplicativos podem ser provisionados e desprovisionados rapidamente | Os dados não são colocados com os dados de outras organizações | As organizações determinam o local para executar os aplicativos |
+| As organizações pagam apenas pelo que utilizam | O hardware deve ser comprado para o início e a manutenção | As organizações controlam a segurança, a conformidade ou os requisitos legais |
+|As organizações não têm controle total sobre os recursos e a segurança | As organizações são responsáveis pela manutenção e pelas atualizações de hardware | - |
+
+## 🔸 <a name=""></a> Descrever os benefícios do uso de serviços de nuvem
+
+## 🔸 <a name=""></a> Descrever os tipos de serviço de nuvem
 
 🔝 [Voltar ao topo](#topo)
 🔼 [Voltar ao índice](#parte1)
