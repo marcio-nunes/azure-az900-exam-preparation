@@ -713,7 +713,7 @@ Os modelos de nuvem definem o tipo de implantação de recursos de nuvem.
 
 - A nuvem privada fornece um controle muito maior para a empresa e o departamento de TI. 
 - Ela também tem mais custos e menos benefícios em relação a uma implantação de nuvem pública. 
-- Pode ser hospedada em seu datacenter local. Ela também pode ser hospedada em um datacenter dedicado externo, até mesmo por terceiros que tenham dedicado esse datacenter à sua empresa.
+- Pode ser hospedada em seu datacenter local ou em um datacenter dedicado externo, até mesmo por terceiros que tenham dedicado esse datacenter à sua empresa.
 
 ### Nuvem pública
 

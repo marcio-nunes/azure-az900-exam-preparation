@@ -33,13 +33,15 @@
 			- Hosts físicos
 
 	- Define cloud models, including public, private, and hybrid
-		- **Nuvem pública** - Os serviços são oferecidos pela Internet pública e disponíveis para qualquer pessoa que deseje comprá-los. São de propriedade e operados por um provedor de serviços de nuvem de terceiros e entregues pela Internet.
+		- **Nuvem pública** - Os serviços são oferecidos pela Internet pública e disponíveis para qualquer pessoa que deseje comprá-los. 
+			- Uma nuvem pública é criada, controlada e mantida por um provedor de nuvem de terceiros.
 			- Nenhuma despesa de capital para escalar verticalmente.
 			- Os aplicativos podem ser provisionados e desprovisionados rapidamente.
 			- As organizações pagam apenas pelo que utilizam.
-		- **Nuvem privada** - consiste em recursos de computação usados exclusivamente por usuários de uma empresa/organização. Pode estar localizada fisicamente no datacenter (local) da organização ou hospedada por um provedor de serviços de terceiros.
+		- **Nuvem privada** - É uma nuvem (que fornece serviços de TI pela Internet) que é criada, controlada e mantida por uma única entidade. consiste em recursos de computação usados exclusivamente por usuários de uma empresa/organização. Pode estar localizada fisicamente no datacenter (local) da organização ou hospedada por um provedor de serviços de terceiros.
 			- O hardware deve ser comprado para inicialização e manutenção.
-			- As organizações têm controle total sobre os recursos e a segurança.
+			- A nuvem privada fornece um controle muito maior para a empresa e o departamento de TI. 
+			- Ela também tem mais custos e menos benefícios em relação a uma implantação de nuvem pública. 
 			- As organizações são responsáveis pela manutenção e pelas atualizações de hardware.
 		- **Nuvem híbrida** - é um ambiente de computação que combina uma nuvem pública e uma nuvem privada, permitindo que dados e aplicativos sejam compartilhados entre elas.
 			- Fornece a maior flexibilidade.
@@ -48,7 +50,10 @@
 
 	- Identify appropriate use cases for each cloud model
 	- Describe the consumption-based model
-		- **Modelo baseado em consumo**. As organizações pagam apenas pelo que usam e operam em um modelo de OpEx (despesas operacionais).
+		- Na computação em nuvem, você não paga pela infraestrutura física, pela eletricidade, pela segurança nem por nada que esteja associado à manutenção de um datacenter. Você paga pelos recursos de TI que usa. 
+			- **Modelo baseado em consumo**. As organizações pagam apenas pelo que usam e operam em um modelo de OpEx (despesas operacionais).
+			- **OpEx** - é o gasto de capital em serviços ou produtos ao longo do tempo. O aluguel de um centro de convenções, o leasing de um veículo da empresa ou a assinatura de serviços de nuvem são exemplos de OpEx.
+			- **CapEx** - normalmente é uma despesa inicial única para comprar ou proteger recursos tangíveis. Um prédio novo, a repavimentação do estacionamento, a construção de um datacenter ou a compra de um veículo da empresa são exemplos de CapEx.
 
 	- Compare cloud pricing models
 		- Avaliação gratuita - Uma assinatura de avaliação gratuita fornece 12 meses de serviços gratuitos populares, um crédito para explorar qualquer serviço do Azure por 30 dias e mais de 25 serviços que são sempre gratuitos. Os serviços do Azure são desabilitados quando a avaliação termina ou quando seu crédito expira para produtos pagos, a menos que você atualize para uma assinatura paga.
