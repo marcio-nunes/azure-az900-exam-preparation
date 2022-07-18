@@ -364,7 +364,7 @@ Banefícios do modelo baseado em consumo:
 
 ### Modelos de serviço de nuvem
 
-### <u>IaaS - Infraestructure as a Seervice</u>
+### <u>IaaS - Infraestructure as a Service</u>
 
 Esse modelo de serviço de nuvem é o mais próximo do gerenciamento de servidores físicos; um provedor de nuvem manterá o hardware atualizado, mas a manutenção do sistema operacional e a configuração da rede ficam a cargo do locatário da nuvem. 
 

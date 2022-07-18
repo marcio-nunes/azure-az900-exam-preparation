@@ -13,6 +13,7 @@
 		- É a entrega de serviços de computação pela Internet.
 
 	- Describe the shared responsibility model
+		- o usuário gerencia e mantém os serviços que provisionou e o provedor de nuvem gerencia e mantém a infraestrutura de nuvem
 
 	- Define cloud models, including public, private, and hybrid
 		- **Nuvem pública** - Os serviços são oferecidos pela Internet pública e disponíveis para qualquer pessoa que deseje comprá-los. São de propriedade e operados por um provedor de serviços de nuvem de terceiros e entregues pela Internet.
@@ -30,7 +31,17 @@
 
 	- Identify appropriate use cases for each cloud model
 	- Describe the consumption-based model
+		- **Modelo baseado em consumo**. As organizações pagam apenas pelo que usam e operam em um modelo de OpEx (despesas operacionais).
+
 	- Compare cloud pricing models
+		- pay as you go
+		- reserved instances
+		- spot instances.
+		- Azure Free Tier
+			- 12 Months Free Use
+			- Credit for First 30 Days
+			- Does Azure Charge After the Free Trial?
+			- Is Azure Free Forever?
 
 - Describe the benefits of using cloud services
 	- Describe the benefits of high availability and scalability in the cloud
