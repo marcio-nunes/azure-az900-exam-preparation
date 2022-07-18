@@ -10,16 +10,27 @@
 
 - Describe cloud computing
 	- Define cloud computing
-		- É a entrega de serviços de computação pela Internet.
-		- Os serviços de computação incluem infraestrutura de TI comum, como máquinas virtuais, armazenamento, bancos de dados e rede. Os serviços de nuvem também expandem as ofertas tradicionais de TI para incluir itens como IoT (Internet das Coisas), ML (machine learning) e IA (inteligência artificial).
+		- É a entrega de serviços de computação pela Internet. Esses serviços incluem servidores, armazenamentos, bancos de dados, redes, software, análises e inteligência. A computação em nuvem oferece inovação mais rápida, recursos flexíveis e economias de escala.
 
 	- Describe the shared responsibility model
-		- o usuário gerencia e mantém os serviços que provisionou e o provedor de nuvem gerencia e mantém a infraestrutura de nuvem
-		- À medida que você faz a migração para a nuvem, algumas responsabilidades são transferidas para a Microsoft. 
-		- As responsabilidades da carga de trabalho variam dependendo se a carga de trabalho está hospedada
-			- IaaS - Você configura e gerencia o hardware para seu aplicativo.
-			- PaaS - O gerenciamento de plataforma é realizado pelo provedor de nuvem.
-			- Saas - Os usuários pagam pelo software que utilizam em um modelo de assinatura.
+		- Num datacenter corporativo tradicional a empresa é responsável por manter o espaço físico, garantir a segurança e manter ou substituir os servidores se algo acontecer. TI é responsável por manter toda a infraestrutura e o software necessários para manter o datacenter em funcionamento. É provável que eles também sejam responsáveis por manter todos os sistemas corrigidos e na versão correta.
+		- Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem e o consumidor. 
+			- Responsabilidade do provedor de nuvem: Segurança física, energia, resfriamento e conectividade de rede. 
+			- O consumidor: é responsável pelos dados e pelas informações armazenados na nuvem e pela segurança de acesso, o que significa que você só dá acesso àqueles que precisam.
+
+		- Então, para algumas coisas, a responsabilidade depende da situação. 
+			- A IaaS coloca a maior responsabilidade sobre o consumidor, com o provedor de nuvem sendo responsável pelas questões básicas de segurança física, energia e conectividade. 
+			- O SaaS coloca a maior parte da responsabilidade no provedor de nuvem. 
+			- A PaaS, sendo um meio termo entre IaaS e SaaS, distribui uniformemente a responsabilidade entre o provedor de nuvem e o consumidor.
+
+		- Você sempre será responsável por:
+			- Informações e dados armazenados na nuvem
+			- Dispositivos que têm permissão para se conectar à nuvem (telefones celulares, computadores e assim por diante)
+			- Contas e identidades das pessoas, serviços e dispositivos em sua organização
+		- O provedor de nuvem é sempre responsável por:
+			- Datacenter físico
+			- Rede física
+			- Hosts físicos
 
 	- Define cloud models, including public, private, and hybrid
 		- **Nuvem pública** - Os serviços são oferecidos pela Internet pública e disponíveis para qualquer pessoa que deseje comprá-los. São de propriedade e operados por um provedor de serviços de nuvem de terceiros e entregues pela Internet.
