@@ -570,8 +570,8 @@ Com o Resource Manager, você pode:
 - Reimplantar a solução durante o ciclo de vida de desenvolvimento e ter confiança de que os recursos serão implantados em um estado consistente.
 - Definir as dependências entre os recursos para que eles sejam implantados na ordem correta.
 - Aplicar o controle de acesso a todos os serviços porque o RBAC é integrado nativamente à plataforma de gerenciamento.
-- Aplicar marcas aos recursos para organizar de modo lógico todos os recursos em sua assinatura.
-- Esclarecer a cobrança da organização exibindo os custos de um grupo de recursos que compartilham a mesma marca.
+- Aplicar tags aos recursos para organizar de modo lógico todos os recursos em sua assinatura.
+- Esclarecer a cobrança da organização exibindo os custos de um grupo de recursos que compartilham a mesma tag.
 
 ### Assinaturas e Grupos de Gerenciamento do Azure
 

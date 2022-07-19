@@ -189,6 +189,7 @@ Como um provedor de nuvem global, o Azure tem datacenters em todo o mundo. No en
 ### - Describe Azure resources and resource groups
 
 - **Recurso**: um item gerenciável disponibilizado por meio do Azure. VMs (máquinas virtuais), contas de armazenamento, aplicativos Web, bancos de dados e redes virtuais são exemplos de recursos.
+
 - **Grupo de recursos**: um contêiner que armazena os recursos relacionados de uma solução do Azure. O grupo de recursos inclui os recursos que você deseja gerenciar como um grupo. Você decide quais recursos pertencem a um grupo de recursos com base no que faz mais sentido para sua organização.
 	- Os grupos de recursos existem para ajudar a gerenciar e organizar seus recursos do Azure. 
 	- Um grupo de recursos é um contêiner lógico para recursos implantados no Azure. Esses recursos são tudo o que você cria em uma assinatura do Azure, como VMs, instâncias do Gateway de Aplicativo do Azure e instâncias do Azure Cosmos DB. 
@@ -198,7 +199,7 @@ Como um provedor de nuvem global, o Azure tem datacenters em todo o mundo. No en
 	- Para que qualquer recurso possa ser provisionado, é necessário colocá-lo em um grupo de recursos.
 	- Grupos de recursos também são um escopo para a aplicação de permissões de RBAC (Role-based Access Control). Ao aplicar permissões de RBAC a um grupo de recursos, você pode facilitar a administração e limitar o acesso, a fim de permitir apenas o que é necessário.
 
-O Azure Resource Manager é o serviço de implantação e gerenciamento do Azure. Ele fornece uma camada de gerenciamento que lhe permite criar, atualizar e excluir recursos em sua conta do Azure. Você usa recursos de gerenciamento como controle de acesso, bloqueios e marcas para proteger e organizar seus recursos após a implantação.
+O Azure Resource Manager é o serviço de implantação e gerenciamento do Azure. Ele fornece uma camada de gerenciamento que lhe permite criar, atualizar e excluir recursos em sua conta do Azure. Você usa recursos de gerenciamento como controle de acesso, bloqueios e tags para proteger e organizar seus recursos após a implantação.
 
 Se você excluir um grupo de recursos, todos os recursos contidos nele também serão excluídos.
 
@@ -209,22 +210,61 @@ Com o Resource Manager, você pode:
 - Reimplantar a solução durante o ciclo de vida de desenvolvimento e ter confiança de que os recursos serão implantados em um estado consistente.
 - Definir as dependências entre os recursos para que eles sejam implantados na ordem correta.
 - Aplicar o controle de acesso a todos os serviços porque o RBAC é integrado nativamente à plataforma de gerenciamento.
-- Aplicar marcas aos recursos para organizar de modo lógico todos os recursos em sua assinatura.
-- Esclarecer a cobrança da organização exibindo os custos de um grupo de recursos que compartilham a mesma marca.
+- Aplicar tags aos recursos para organizar de modo lógico todos os recursos em sua assinatura.
+- Esclarecer a cobrança da organização exibindo os custos de um grupo de recursos que compartilham a mesma tag.
 
 ### Describe subscriptions
 
+- Uma assinatura fornece a você acesso autenticado e autorizado a serviços e produtos do Azure. 
+- As assinaturas são uma unidade de gerenciamento, cobrança e escala. As assinaturas permitem organizar logicamente seus grupos de recursos e facilitar a cobrança.
+- Ela também permite que você provisione recursos. 
+- Uma assinatura do Azure é uma unidade lógica de serviços do Azure que se vincula a uma conta do Azure, que é uma identidade no Azure AD (Azure Active Directory) ou em um diretório no qual o Azure AD confia.
+- Uma conta pode ter uma ou várias assinaturas com diferentes modelos de cobrança e às quais você aplica diferentes políticas de gerenciamento de acesso.
+-  Você pode usar as assinaturas do Azure para definir limites em relação a produtos, serviços e recursos do Azure. 
+	- **Limite de cobrança**: Esse tipo de assinatura determina como uma conta do Azure é cobrada pelo uso do Azure. Você pode criar várias assinaturas para atender a diferentes tipos de requisitos de cobrança. O Azure gera relatórios de cobrança e faturas separados para cada assinatura, para que você possa organizar e gerenciar os custos.
+	- **Limite de controle de acesso**: O Azure aplica políticas de gerenciamento de acesso no nível da assinatura, e você pode criar assinaturas separadas para refletir diferentes estruturas organizacionais. Um exemplo disso é que, em um negócio, você tem diferentes departamentos aos quais aplica políticas de assinatura do Azure distintas. Esse modelo de cobrança permite gerenciar e controlar o acesso aos recursos que os usuários provisionam com assinaturas específicas.
+- Se você tiver várias assinaturas, poderá organizá-las em seções de fatura. Cada seção de fatura é um item de linha na fatura que mostra os encargos incorridos nesse mês. Por exemplo, você pode precisar de uma única fatura para sua organização, mas deseja organizar os encargos por departamento, equipe ou projeto.
 
 ### Describe management groups
 
+- Você organiza as assinaturas em contêineres chamados grupos de gerenciamento e aplica suas condições de governança a esses grupos. 
+- Se a organização tiver muitas assinaturas, talvez você precise de uma forma de gerenciar o acesso, as políticas e a conformidade com eficiência para essas assinaturas. 
+- Os grupos de gerenciamento do Azure fornecem um nível de escopo acima das assinaturas. 
+- Todas as assinaturas dentro de um grupo de gerenciamento herdam automaticamente as condições aplicadas ao grupo de gerenciamento. 
+- Os grupos de gerenciamento fornecem gerenciamento de nível empresarial em larga escala, independentemente do tipo de assinaturas que você possa ter.
 
+### Describe the hierarchy of resource groups, subscriptions, and management groups
 
+- O nível mais alto desses componentes de arquitetura do Azure é o Grupo de Gerenciamento. 
+	- **Grupos de Gerenciamento** contêm uma ou mais assinaturas. 
+		- **Assinatura** pode ter muitos grupos de recursos, mas um grupo de recursos pode pertencer a apenas uma assinatura. 
+			- **Grupos de Recursos** - Dentro das Assinaturas estão os Grupos de Recursos. Os Grupos de Recursos pertencem a exatamente uma Assinatura. 
+				- **Recursos** (os serviços de nuvem do Azure) - podem ser agrupados em grupos de recursos.
 
+- **Management groups** - O nível mais alto desses componentes de arquitetura do Azure é o Grupo de Gerenciamento (management groups). 
+	- Management groups -> Subscriptions -> Resource groups	-> Resources
+	- Management groups existem acima do nível de assinatura. 
+	- Cada diretório recebe um único grupo de gerenciamento de nível superior conhecido como Root. 
+	- Este é um único limite para a gestão. Se você tiver várias assinaturas, todas elas pertencerão ao grupo de gerenciamento de nível superior. 
+	- Os grupos de gerenciamento também podem ser criados para um subconjunto de assinaturas, tornando possível gerenciar esse subconjunto de assinaturas em conjunto.
+	- Usado para aplicar padrões e políticas em várias assinaturas do Azure
+	- Os Grupos de Gerenciamento contêm uma ou mais assinaturas. 
 
-- Describe the hierarchy of resource groups, subscriptions, and management groups
+- **Subscriptions** - Uma assinatura no Azure é um contêiner lógico usado para provisionar serviços em nuvem. 
+	- As empresas podem criar várias assinaturas se os limites de assinatura única forem atingidos. 
+	- Cada serviço em uma assinatura tem certos limites e, se houver necessidade de escala extremamente alta, mais de uma assinatura pode ser necessária. 
+	- A outra razão para ter mais de uma assinatura é ter várias opções de pagamento. 
+	- Você pode isolar recursos entre vários projetos ou departamentos em diferentes assinaturas. Eles ajudam você a organizar o acesso aos recursos do Azure e determinar como o uso de recursos é relatado, cobrado e pago.
+	- Dentro das Assinaturas estão os Grupos de Recursos. 
+	- Uma assinatura pode ter muitos grupos de recursos, mas um grupo de recursos pode pertencer a apenas uma assinatura. 
+	
+- **Resource Groups** - Eles são um bloco de construção que possibilita agrupar serviços relacionados para fornecer uma solução completa. 
+	- Grupos de recursos são frequentemente usados ​​para agrupar recursos que compartilham o mesmo ciclo de vida de recursos. 
+	- Você pode implantar recursos em várias regiões do Azure em um único grupo de recursos.
+	- Os Grupos de Recursos pertencem a exatamente uma Assinatura. 
+	- Os próprios recursos (os serviços de nuvem do Azure) podem ser agrupados em grupos de recursos.
 
-
-- Describe Azure compute and networking services
+### Describe Azure compute and networking services
 	- Compare compute types, including container instances, virtual machines (VMs), and functions
 	- Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
 	- Describe resources required for virtual machines
