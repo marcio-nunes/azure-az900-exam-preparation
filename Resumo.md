@@ -4,34 +4,33 @@
 - Describe Azure architecture and services (35-40%)
 - Describe Azure management and governance (30-35%)
 
-## Functional groups
+# Describe cloud concepts (25-30%)
 
-## Describe cloud concepts (25-30%)
+## Describe cloud computing
 
-### Describe cloud computing
+### Define cloud computing
 
-- Define cloud computing
-	- É a entrega de serviços de computação pela Internet. Esses serviços incluem servidores, armazenamentos, bancos de dados, redes, software, análises e inteligência. A computação em nuvem oferece inovação mais rápida, recursos flexíveis e economias de escala.
+É a entrega de serviços de computação pela Internet. Esses serviços incluem servidores, armazenamentos, bancos de dados, redes, software, análises e inteligência. A computação em nuvem oferece inovação mais rápida, recursos flexíveis e economias de escala.
 
-- Describe the shared responsibility model
-	- Num datacenter corporativo tradicional a empresa é responsável por manter o espaço físico, garantir a segurança e manter ou substituir os servidores se algo acontecer. TI é responsável por manter toda a infraestrutura e o software necessários para manter o datacenter em funcionamento. É provável que eles também sejam responsáveis por manter todos os sistemas corrigidos e na versão correta.
-	- Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem e o consumidor. 
-		- Responsabilidade do provedor de nuvem: Segurança física, energia, resfriamento e conectividade de rede. 
-		- O consumidor: é responsável pelos dados e pelas informações armazenados na nuvem e pela segurança de acesso, o que significa que você só dá acesso àqueles que precisam.
+### Describe the shared responsibility model
 
+- Num datacenter corporativo tradicional a empresa é responsável por manter o espaço físico, garantir a segurança e manter ou substituir os servidores se algo acontecer. TI é responsável por manter toda a infraestrutura e o software necessários para manter o datacenter em funcionamento. É provável que eles também sejam responsáveis por manter todos os sistemas corrigidos e na versão correta.
+- Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem e o consumidor. 
+	- Responsabilidade do provedor de nuvem: Segurança física, energia, resfriamento e conectividade de rede. 
+	- O consumidor: é responsável pelos dados e pelas informações armazenados na nuvem e pela segurança de acesso, o que significa que você só dá acesso àqueles que precisam.
 	- Então, para algumas coisas, a responsabilidade depende da situação. 
 		- A IaaS coloca a maior responsabilidade sobre o consumidor, com o provedor de nuvem sendo responsável pelas questões básicas de segurança física, energia e conectividade. 
 		- O SaaS coloca a maior parte da responsabilidade no provedor de nuvem. 
 		- A PaaS, sendo um meio termo entre IaaS e SaaS, distribui uniformemente a responsabilidade entre o provedor de nuvem e o consumidor.
 
-	- Você sempre será responsável por:
-		- Informações e dados armazenados na nuvem
-		- Dispositivos que têm permissão para se conectar à nuvem (telefones celulares, computadores e assim por diante)
-		- Contas e identidades das pessoas, serviços e dispositivos em sua organização
-	- O provedor de nuvem é sempre responsável por:
-		- Datacenter físico
-		- Rede física
-		- Hosts físicos
+- Você sempre será responsável por:
+	- Informações e dados armazenados na nuvem
+	- Dispositivos que têm permissão para se conectar à nuvem (telefones celulares, computadores e assim por diante)
+	- Contas e identidades das pessoas, serviços e dispositivos em sua organização
+- O provedor de nuvem é sempre responsável por:
+	- Datacenter físico
+	- Rede física
+	- Hosts físicos
 
 ### Define cloud models, including public, private, and hybrid
 
@@ -52,93 +51,106 @@
 
 ### Identify appropriate use cases for each cloud model
 
-- **Describe the consumption-based model**
-	- Na computação em nuvem, você não paga pela infraestrutura física, pela eletricidade, pela segurança nem por nada que esteja associado à manutenção de um datacenter. Você paga pelos recursos de TI que usa. 
-		- **Modelo baseado em consumo**. As organizações pagam apenas pelo que usam e operam em um modelo de OpEx (despesas operacionais).
-		- **OpEx** - é o gasto de capital em serviços ou produtos ao longo do tempo. O aluguel de um centro de convenções, o leasing de um veículo da empresa ou a assinatura de serviços de nuvem são exemplos de OpEx.
-		- **CapEx** - normalmente é uma despesa inicial única para comprar ou proteger recursos tangíveis. Um prédio novo, a repavimentação do estacionamento, a construção de um datacenter ou a compra de um veículo da empresa são exemplos de CapEx.
-	- Um modelo baseado em consumo oferece vários benefícios, como:
-		- Sem custos prévios.
-		- Não há necessidade de comprar nem gerenciar uma infraestrutura cara que os usuários talvez não usem na capacidade máxima.
-		- A capacidade de pagar para obter mais recursos quando necessário.
-		- A capacidade de parar de pagar por recursos que não são mais necessários.
 
-	- **Compare cloud pricing models**
-		- Avaliação gratuita - Uma assinatura de avaliação gratuita fornece 12 meses de serviços gratuitos populares, um crédito para explorar qualquer serviço do Azure por 30 dias e mais de 25 serviços que são sempre gratuitos. Os serviços do Azure são desabilitados quando a avaliação termina ou quando seu crédito expira para produtos pagos, a menos que você atualize para uma assinatura paga.
-		- Pago conforme o uso - Uma assinatura com Pagamento Conforme o Uso permite que você pague pelo que usar vinculando um cartão de crédito ou débito à sua conta. As organizações podem se candidatar a descontos por volume e a faturamento pré-pago.
-		- Ofertas de membro - Sua associação existente a determinados produtos e serviços da Microsoft pode fornecer créditos para sua conta do Azure e taxas reduzidas nos serviços do Azure. Por exemplo, ofertas de membros estão disponíveis para assinantes do Visual Studio, membros da Microsoft Partner Network, membros da Microsoft para Startups e membros do Microsoft Imagine.
 
-### Describe the benefits of using cloud services
+### Describe the consumption-based model
 
-- Alta disponibilidade, escalabilidade e distribuição geográfica. 
-- Describe the benefits of high availability and scalability in the cloud
-	- **Alta disponibilidade**: dependendo do SLA que você escolher, seus aplicativos poderão oferecer uma experiência de usuário contínua, sem tempo de inatividade aparente, mesmo quando as coisas derem errado.
-	
-	- **Escalabilidade**: os aplicativos na nuvem podem ser dimensionados verticalmente e horizontalmente:
-		- **Dimensione verticalmente** - aumentar a capacidade de computação adicionando RAM ou CPUs a uma máquina virtual.
-		- **Dimensionar horizontalmente** - aumentar a capacidade de computação adicionando instâncias de recursos.
+- Na computação em nuvem, você não paga pela infraestrutura física, pela eletricidade, pela segurança nem por nada que esteja associado à manutenção de um datacenter. Você paga pelos recursos de TI que usa. 
+	- **Modelo baseado em consumo**. As organizações pagam apenas pelo que usam e operam em um modelo de OpEx (despesas operacionais).
+	- **OpEx** - é o gasto de capital em serviços ou produtos ao longo do tempo. O aluguel de um centro de convenções, o leasing de um veículo da empresa ou a assinatura de serviços de nuvem são exemplos de OpEx.
+	- **CapEx** - normalmente é uma despesa inicial única para comprar ou proteger recursos tangíveis. Um prédio novo, a repavimentação do estacionamento, a construção de um datacenter ou a compra de um veículo da empresa são exemplos de CapEx.
+- Um modelo baseado em consumo oferece vários benefícios, como:
+	- Sem custos prévios.
+	- Não há necessidade de comprar nem gerenciar uma infraestrutura cara que os usuários talvez não usem na capacidade máxima.
+	- A capacidade de pagar para obter mais recursos quando necessário.
+	- A capacidade de parar de pagar por recursos que não são mais necessários.
 
-- Describe the benefits of reliability and predictability in the cloud
-	- **Confiabilidade** garante que seu aplicativo possa cumprir os compromissos que você assume com seus clientes.
-		- A confiabilidade é uma responsabilidade compartilhada
-		- Garante que suas cargas de trabalho fiquem disponíveis e possam se recuperar de falhas em qualquer escala.
-		- **Recuperação de desastre**: ao aproveitar os serviços de backup baseados em nuvem, a replicação de dados e a distribuição geográfica, você pode implantar os aplicativos com a confiança de saber que seus dados estarão seguros em caso de desastre.
-	
-	- **Previsibilidade** - uma solução com custo e desempenho previsíveis. A previsibilidade na nuvem permite que você avance com confiança.
-		- **Previsibilidade de Desempenho** - se concentra em prever os recursos necessários para oferecer uma experiência positiva aos clientes. O dimensionamento automático, o balanceamento de carga e a alta disponibilidade são apenas alguns dos conceitos de nuvem que dão suporte à previsibilidade de desempenho.
-        - **Previsibilidade de custos** - se concentra em prever o custo dos gastos com a nuvem. Operando na nuvem e usando a análise e as informações da nuvem, você pode prever custos futuros e ajustar os recursos conforme o necessário. Você pode até mesmo usar ferramentas como TCO (custo total de propriedade) ou a Calculadora de Preços para obter uma estimativa de possíveis gastos com a nuvem.
+### Compare cloud pricing models
 
-	- Describe the benefits of security and governance in the cloud
-		- Ao estabelecer uma presença de governança o mais cedo possível, você poderá manter sua presença de nuvem atualizada, protegida e bem gerenciada.
+- Avaliação gratuita - Uma assinatura de avaliação gratuita fornece 12 meses de serviços gratuitos populares, um crédito para explorar qualquer serviço do Azure por 30 dias e mais de 25 serviços que são sempre gratuitos. Os serviços do Azure são desabilitados quando a avaliação termina ou quando seu crédito expira para produtos pagos, a menos que você atualize para uma assinatura paga.
+- Pago conforme o uso - Uma assinatura com Pagamento Conforme o Uso permite que você pague pelo que usar vinculando um cartão de crédito ou débito à sua conta. As organizações podem se candidatar a descontos por volume e a faturamento pré-pago.
+- Ofertas de membro - Sua associação existente a determinados produtos e serviços da Microsoft pode fornecer créditos para sua conta do Azure e taxas reduzidas nos serviços do Azure. Por exemplo, ofertas de membros estão disponíveis para assinantes do Visual Studio, membros da Microsoft Partner Network, membros da Microsoft para Startups e membros do Microsoft Imagine.
 
-		- **Governança** - Se você estiver implantando IaaS ou SaaS, os recursos de nuvem vão dar suporte à governança e à conformidade. 
-			- Itens como modelos de conjunto ajudam a garantir que todos os seus recursos implantados atendam aos padrões corporativos e aos requisitos regulatórios governamentais. 
-			- atualização dos recursos implantados com os novos padrões à medida que são alterados. 
-			- Sinalização de qualquer recurso que esteja fora de conformidade e fornece estratégias de mitigação. 
-			- Dependendo do modelo operacional, patches de software e atualizações também podem ser aplicados automaticamente.
+## Describe the benefits of using cloud services
 
-		-  **Segurança** - Se você quiser o controle máximo da segurança, a IaaS fornecerá recursos físicos, mas permitirá que você gerencie os sistemas operacionais e o software instalado, incluindo aplicação de patches e manutenção.  Se você quiser que a aplicação de patches e a manutenção sejam tratadas automaticamente, as implantações de PaaS ou SaaS podem ser as melhores estratégias de nuvem para você.
+Alta disponibilidade, escalabilidade e distribuição geográfica. 
 
-	- Describe the benefits of manageability in the cloud
-		- Escalar automaticamente a implantação de recursos com base na necessidade.
-		- Implantar recursos com base em um modelo pré-configurado, removendo a necessidade de configuração manual.
-		- Monitorar a integridade dos recursos e substituir automaticamente os recursos com falha.
-		- Receber alertas automáticos com base em métricas configuradas, de modo a ficar ciente do desempenho em tempo real.
+### Describe the benefits of high availability and scalability in the cloud
 
-### Describe cloud service types
+- **Alta disponibilidade**: dependendo do SLA que você escolher, seus aplicativos poderão oferecer uma experiência de usuário contínua, sem tempo de inatividade aparente, mesmo quando as coisas derem errado.
 
-- **Describe infrastructure as a service (IaaS)**
-	- O IaaS (infraestrutura como serviço) é a categoria mais flexível de serviços de nuvem, pois oferece:
-	- O máximo de controle sobre os recursos de nuvem. 
-	- O provedor de nuvem é responsável por manter o hardware, a conectividade de rede (com a Internet) e a segurança física. 
-	- Você é responsável por todo o resto: 
-		- instalação, configuração e manutenção do sistema operacional
-		- configuração de rede
-		- configuração de banco de dados e armazenamento e assim por diante. 
+- **Escalabilidade**: os aplicativos na nuvem podem ser dimensionados verticalmente e horizontalmente:
+	- **Dimensione verticalmente** - aumentar a capacidade de computação adicionando RAM ou CPUs a uma máquina virtual.
+	- **Dimensionar horizontalmente** - aumentar a capacidade de computação adicionando instâncias de recursos.
 
-- Com o IaaS, basicamente o hardware é alugado em um datacenter de nuvem, mas cabe a você decidir o que fazer com ele.
+### Describe the benefits of reliability and predictability in the cloud
 
-- **Describe platform as a service (PaaS)**
-	- O PaaS é adequado para fornecer um ambiente de desenvolvimento completo sem a preocupação de manter toda a infraestrutura de desenvolvimento. Em um cenário de PaaS, você não precisa se preocupar com o licenciamento nem com a aplicação de patch em sistemas operacionais e bancos de dados.
-	- O provedor de nuvem é responsável por:
-		- manter a infraestrutura física e o acesso à Internet, como no IaaS. 
-		- o provedor de nuvem também mantém:
-			- os sistemas operacionais
-			- os bancos de dados 
-			- ferramentas de desenvolvimento. 
+- **Confiabilidade** garante que seu aplicativo possa cumprir os compromissos que você assume com seus clientes.
+	- A confiabilidade é uma responsabilidade compartilhada
+	- Garante que suas cargas de trabalho fiquem disponíveis e possam se recuperar de falhas em qualquer escala.
+	- **Recuperação de desastre**: ao aproveitar os serviços de backup baseados em nuvem, a replicação de dados e a distribuição geográfica, você pode implantar os aplicativos com a confiança de saber que seus dados estarão seguros em caso de desastre.
 
-- **Describe software as a service (SaaS)**
+- **Previsibilidade** - uma solução com custo e desempenho previsíveis. A previsibilidade na nuvem permite que você avance com confiança.
+	- **Previsibilidade de Desempenho** - se concentra em prever os recursos necessários para oferecer uma experiência positiva aos clientes. O dimensionamento automático, o balanceamento de carga e a alta disponibilidade são apenas alguns dos conceitos de nuvem que dão suporte à previsibilidade de desempenho.
+	- **Previsibilidade de custos** - se concentra em prever o custo dos gastos com a nuvem. Operando na nuvem e usando a análise e as informações da nuvem, você pode prever custos futuros e ajustar os recursos conforme o necessário. Você pode até mesmo usar ferramentas como TCO (custo total de propriedade) ou a Calculadora de Preços para obter uma estimativa de possíveis gastos com a nuvem.
 
-- O SaaS (software como serviço) é o modelo de serviço de nuvem mais completo do ponto de vista do produto. Com o SaaS, você está essencialmente alugando ou usando um aplicativo totalmente desenvolvido. Embora o modelo de SaaS possa ser o menos flexível, ele também é o mais fácil de colocar em funcionamento. Ele requer a menor quantidade de conhecimento técnico ou experiência para o emprego total.
+### Describe the benefits of security and governance in the cloud
+
+- Ao estabelecer uma presença de governança o mais cedo possível, você poderá manter sua presença de nuvem atualizada, protegida e bem gerenciada.
+
+- **Governança** - Se você estiver implantando IaaS ou SaaS, os recursos de nuvem vão dar suporte à governança e à conformidade. 
+	- Itens como modelos de conjunto ajudam a garantir que todos os seus recursos implantados atendam aos padrões corporativos e aos requisitos regulatórios governamentais. 
+	- atualização dos recursos implantados com os novos padrões à medida que são alterados. 
+	- Sinalização de qualquer recurso que esteja fora de conformidade e fornece estratégias de mitigação. 
+	- Dependendo do modelo operacional, patches de software e atualizações também podem ser aplicados automaticamente.
+
+-  **Segurança** - Se você quiser o controle máximo da segurança, a IaaS fornecerá recursos físicos, mas permitirá que você gerencie os sistemas operacionais e o software instalado, incluindo aplicação de patches e manutenção.  Se você quiser que a aplicação de patches e a manutenção sejam tratadas automaticamente, as implantações de PaaS ou SaaS podem ser as melhores estratégias de nuvem para você.
+
+### Describe the benefits of manageability in the cloud
+
+- Escalar automaticamente a implantação de recursos com base na necessidade.
+- Implantar recursos com base em um modelo pré-configurado, removendo a necessidade de configuração manual.
+- Monitorar a integridade dos recursos e substituir automaticamente os recursos com falha.
+- Receber alertas automáticos com base em métricas configuradas, de modo a ficar ciente do desempenho em tempo real.
+
+## Describe cloud service types
+
+### Describe infrastructure as a service (IaaS)
+
+O IaaS (infraestrutura como serviço) é a categoria mais flexível de serviços de nuvem, pois oferece:
+
+- O máximo de controle sobre os recursos de nuvem. 
+- O provedor de nuvem é responsável por manter o hardware, a conectividade de rede (com a Internet) e a segurança física. 
+- Você é responsável por todo o resto: 
+	- instalação, configuração e manutenção do sistema operacional
+	- configuração de rede
+	- configuração de banco de dados e armazenamento e assim por diante. 
+
+Com o IaaS, basicamente o hardware é alugado em um datacenter de nuvem, mas cabe a você decidir o que fazer com ele.
+
+### Describe platform as a service (PaaS)
+
+O PaaS é adequado para fornecer um ambiente de desenvolvimento completo sem a preocupação de manter toda a infraestrutura de desenvolvimento. Em um cenário de PaaS, você não precisa se preocupar com o licenciamento nem com a aplicação de patch em sistemas operacionais e bancos de dados.
+
+- O provedor de nuvem é responsável por:
+	- manter a infraestrutura física e o acesso à Internet, como no IaaS. 
+	- o provedor de nuvem também mantém:
+		- os sistemas operacionais
+		- os bancos de dados 
+		- ferramentas de desenvolvimento. 
+
+### Describe software as a service (SaaS)
+
+O SaaS (software como serviço) é o modelo de serviço de nuvem mais completo do ponto de vista do produto. Com o SaaS, você está essencialmente alugando ou usando um aplicativo totalmente desenvolvido. Embora o modelo de SaaS possa ser o menos flexível, ele também é o mais fácil de colocar em funcionamento. Ele requer a menor quantidade de conhecimento técnico ou experiência para o emprego total.
 
 - Em um ambiente de SaaS, você é responsável: 
 	- pelos dados que coloca no sistema
 	- pelos dispositivos que permite que se conectem ao sistema
 	- pelos usuários que têm acesso. 
 
-- O provedor de nuvem é responsável pela segurança física dos datacenters, pela energia, pela conectividade de rede e pelo desenvolvimento e aplicação de patch dos aplicativos.
+O provedor de nuvem é responsável pela segurança física dos datacenters, pela energia, pela conectividade de rede e pelo desenvolvimento e aplicação de patch dos aplicativos.
 
-- Identify appropriate use cases for each cloud service (IaaS, PaaS, SaaS)
+### Identify appropriate use cases for each cloud service (IaaS, PaaS, SaaS)
 
 - **IaaS**
 	- Migração lift-and-shift: você conta com recursos de nuvem semelhantes aos do datacenter local e apenas migra os elementos em execução local para execução na infraestrutura IaaS.
@@ -151,11 +163,11 @@
 	- Aplicativos de produtividade empresarial.
 	- Controle de finanças e despesas.
 
-## Describe Azure architecture and services (35-40%)
+# Describe Azure architecture and services (35-40%)
 
-### Describe the core architectural components of Azure
+## Describe the core architectural components of Azure
 
-- **Describe Azure regional, regional pairs, and sovereign regions**
+### Describe Azure regional, regional pairs, and sovereign regions
 
 Os recursos são criados em regiões, que são diferentes localizações geográficas no mundo inteiro que contêm datacenters do Azure.
 
@@ -167,6 +179,7 @@ Os recursos são criados em regiões, que são diferentes localizações geográ
 - **Regional pairs**
 	- Cada região do Azure é sempre emparelhada com outra região na mesma área geográfica a pelo menos 300 milhas (cerca de 480 km) de distância. Essa abordagem permite a replicação de recursos, como o armazenamento de VM, em uma geografia, o que ajuda a reduzir a probabilidade de interrupções devido a eventos como desastres naturais, conflitos civis, quedas de energia ou interrupções de rede física afetarem as duas regiões ao mesmo tempo.
 	- O Azure atribui e controla os recursos de modo inteligente dentro de cada região para garantir que as cargas de trabalho sejam balanceadas corretamente.
+
 - **Sovereign regions** - Regiões soberanas são instâncias do Azure isoladas da instância principal do Azure. Talvez seja necessário usar uma região soberana para fins legais ou de conformidade.
 	- essas regiões são instâncias lógicas e físicas do Azure isoladas da rede, destinadas a parceiros e órgãos do governo dos EUA. Esses datacenters são operados por cidadãos selecionados dos EUA e incluem certificações de conformidade adicionais.
 
@@ -264,13 +277,26 @@ Com o Resource Manager, você pode:
 	- Os Grupos de Recursos pertencem a exatamente uma Assinatura. 
 	- Os próprios recursos (os serviços de nuvem do Azure) podem ser agrupados em grupos de recursos.
 
-### Describe Azure compute and networking services
-	- Compare compute types, including container instances, virtual machines (VMs), and functions
-	- Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
-	- Describe resources required for virtual machines
-	- Describe application hosting options, including the Web Apps feature of Azure App Service, containers, and virtual machines
-	- Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
-	- Define public and private endpoints
+## Describe Azure compute and networking services
+
+### Compare compute types, including container instances, virtual machines (VMs), and functions
+
+- A computação do Azure é um serviço de computação sob demanda para execução de aplicativos baseados em nuvem.
+	- **Máquinas virtuais** são emulações de software de computadores físicos. Elas incluem um processador virtual, memória, armazenamento e recursos de rede. As VMs hospedam um sistema operacional, e você pode instalar e executar o software como se fosse um computador físico. 
+	- **Instâncias de Contêiner** e o Serviço de Kubernetes do Azure são recursos de Computação do Azure que você pode usar para implantar e gerenciar contêineres. Contêineres são ambientes de aplicativos leves e virtualizados. Eles foram projetados para serem criados rapidamente, escalados horizontalmente e interrompidos dinamicamente. Você pode executar várias instâncias de um aplicativo em contêineres em um computador host.
+	- **Funções** são ideais quando você está preocupado apenas com o código que executa o serviço, e não com a plataforma ou a infraestrutura subjacente. Elas costumam ser usadas quando você precisa executar um trabalho em resposta a um evento, um temporizador ou uma mensagem de outro serviço do Azure.
+		
+### Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
+
+
+
+
+### Describe resources required for virtual machines
+- Describe application hosting options, including the Web Apps feature of Azure App Service, containers, and virtual machines
+- Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
+
+
+### Define public and private endpoints
 - Describe Azure storage services
 	- Compare Azure storage services
 	- Describe storage tiers
