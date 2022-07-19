@@ -187,11 +187,11 @@ A infraestrutura física do Azure começa com datacenters. Conceitualmente, os d
 Como um provedor de nuvem global, o Azure tem datacenters em todo o mundo. No entanto, esses datacenters individuais não estão diretamente acessíveis. Os datacenters são agrupados em Regiões do Azure ou em Zonas de Disponibilidade do Azure projetadas para ajudá-lo a obter resiliência e confiabilidade para suas cargas de trabalho críticas para os negócios.
 
 ### - Describe Azure resources and resource groups
-	- Describe subscriptions
-	- Describe management groups
-	- Describe the hierarchy of resource groups, subscriptions, and management groups
+- Describe subscriptions
+- Describe management groups
+- Describe the hierarchy of resource groups, subscriptions, and management groups
 
-	
+
 - Describe Azure compute and networking services
 	- Compare compute types, including container instances, virtual machines (VMs), and functions
 	- Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
