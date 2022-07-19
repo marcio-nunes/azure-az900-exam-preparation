@@ -187,8 +187,40 @@ A infraestrutura física do Azure começa com datacenters. Conceitualmente, os d
 Como um provedor de nuvem global, o Azure tem datacenters em todo o mundo. No entanto, esses datacenters individuais não estão diretamente acessíveis. Os datacenters são agrupados em Regiões do Azure ou em Zonas de Disponibilidade do Azure projetadas para ajudá-lo a obter resiliência e confiabilidade para suas cargas de trabalho críticas para os negócios.
 
 ### - Describe Azure resources and resource groups
-- Describe subscriptions
-- Describe management groups
+
+- **Recurso**: um item gerenciável disponibilizado por meio do Azure. VMs (máquinas virtuais), contas de armazenamento, aplicativos Web, bancos de dados e redes virtuais são exemplos de recursos.
+- **Grupo de recursos**: um contêiner que armazena os recursos relacionados de uma solução do Azure. O grupo de recursos inclui os recursos que você deseja gerenciar como um grupo. Você decide quais recursos pertencem a um grupo de recursos com base no que faz mais sentido para sua organização.
+	- Os grupos de recursos existem para ajudar a gerenciar e organizar seus recursos do Azure. 
+	- Um grupo de recursos é um contêiner lógico para recursos implantados no Azure. Esses recursos são tudo o que você cria em uma assinatura do Azure, como VMs, instâncias do Gateway de Aplicativo do Azure e instâncias do Azure Cosmos DB. 
+	- Todos os recursos precisam estar em um grupo, e um recurso pode ser um membro de apenas um grupo de recursos. 
+	- Muitos recursos podem ser movidos entre grupos de recursos com alguns serviços que têm limitações ou requisitos específicos de movimentação. 
+	- Os grupos de recursos não podem ser aninhados. 
+	- Para que qualquer recurso possa ser provisionado, é necessário colocá-lo em um grupo de recursos.
+	- Grupos de recursos também são um escopo para a aplicação de permissões de RBAC (Role-based Access Control). Ao aplicar permissões de RBAC a um grupo de recursos, você pode facilitar a administração e limitar o acesso, a fim de permitir apenas o que é necessário.
+
+O Azure Resource Manager é o serviço de implantação e gerenciamento do Azure. Ele fornece uma camada de gerenciamento que lhe permite criar, atualizar e excluir recursos em sua conta do Azure. Você usa recursos de gerenciamento como controle de acesso, bloqueios e marcas para proteger e organizar seus recursos após a implantação.
+
+Se você excluir um grupo de recursos, todos os recursos contidos nele também serão excluídos.
+
+Com o Resource Manager, você pode:
+
+- Gerenciar sua infraestrutura por meio de modelos declarativos em vez de scripts. Um modelo do Resource Manager é um arquivo JSON que define o que você deseja implantar no Azure.
+- Implantar, gerenciar e monitorar todos os recursos da sua solução como um grupo em vez de tratá-los individualmente.
+- Reimplantar a solução durante o ciclo de vida de desenvolvimento e ter confiança de que os recursos serão implantados em um estado consistente.
+- Definir as dependências entre os recursos para que eles sejam implantados na ordem correta.
+- Aplicar o controle de acesso a todos os serviços porque o RBAC é integrado nativamente à plataforma de gerenciamento.
+- Aplicar marcas aos recursos para organizar de modo lógico todos os recursos em sua assinatura.
+- Esclarecer a cobrança da organização exibindo os custos de um grupo de recursos que compartilham a mesma marca.
+
+### Describe subscriptions
+
+
+### Describe management groups
+
+
+
+
+
 - Describe the hierarchy of resource groups, subscriptions, and management groups
 
 
