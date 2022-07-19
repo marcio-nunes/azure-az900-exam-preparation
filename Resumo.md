@@ -14,14 +14,16 @@
 
 ### Describe the shared responsibility model
 
-- Num datacenter corporativo tradicional a empresa é responsável por manter o espaço físico, garantir a segurança e manter ou substituir os servidores se algo acontecer. TI é responsável por manter toda a infraestrutura e o software necessários para manter o datacenter em funcionamento. É provável que eles também sejam responsáveis por manter todos os sistemas corrigidos e na versão correta.
-- Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem e o consumidor. 
-	- Responsabilidade do provedor de nuvem: Segurança física, energia, resfriamento e conectividade de rede. 
-	- O consumidor: é responsável pelos dados e pelas informações armazenados na nuvem e pela segurança de acesso, o que significa que você só dá acesso àqueles que precisam.
-	- Então, para algumas coisas, a responsabilidade depende da situação. 
-		- A IaaS coloca a maior responsabilidade sobre o consumidor, com o provedor de nuvem sendo responsável pelas questões básicas de segurança física, energia e conectividade. 
-		- O SaaS coloca a maior parte da responsabilidade no provedor de nuvem. 
-		- A PaaS, sendo um meio termo entre IaaS e SaaS, distribui uniformemente a responsabilidade entre o provedor de nuvem e o consumidor.
+Num datacenter corporativo tradicional a empresa é responsável por manter o espaço físico, garantir a segurança e manter ou substituir os servidores se algo acontecer. TI é responsável por manter toda a infraestrutura e o software necessários para manter o datacenter em funcionamento. É provável que eles também sejam responsáveis por manter todos os sistemas corrigidos e na versão correta.
+
+Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem e o consumidor. 
+
+- **Responsabilidade do provedor de nuvem**: Segurança física, energia, resfriamento e conectividade de rede. 
+- **Responsabilidades do consumidor**: é responsável pelos dados e pelas informações armazenados na nuvem e pela segurança de acesso, o que significa que você só dá acesso àqueles que precisam.
+- Então, para algumas coisas, a responsabilidade depende da situação. 
+	- A IaaS coloca a maior responsabilidade sobre o consumidor, com o provedor de nuvem sendo responsável pelas questões básicas de segurança física, energia e conectividade. 
+	- O SaaS coloca a maior parte da responsabilidade no provedor de nuvem. 
+	- A PaaS, sendo um meio termo entre IaaS e SaaS, distribui uniformemente a responsabilidade entre o provedor de nuvem e o consumidor.
 
 - Você sempre será responsável por:
 	- Informações e dados armazenados na nuvem
