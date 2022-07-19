@@ -483,9 +483,9 @@ Uma região é uma área geográfica do planeta que contém pelo menos um, mas p
 
 Essas regiões dão flexibilidade para aproximar os aplicativos dos usuários, não importa onde estejam. As regiões globais proporcionam maior escalabilidade e redundância. Elas também preservam a residência de dados de seus serviços.
 
-### Regiões especiais do Azure
+### Regiões especiais do Azure (Regiões soberanas)
 
-Para fins de conformidade ou jurídicos.
+Regiões soberanas são instâncias do Azure isoladas da instância principal do Azure. Talvez seja necessário usar uma região soberana para fins legais ou de conformidade.
 
 - **US DoD Central, US Gov – Virgínia, US Gov Iowa, entre outros**: essas regiões são instâncias lógicas e físicas do Azure isoladas da rede, destinadas a parceiros e órgãos do governo dos EUA. Esses datacenters são operados por cidadãos selecionados dos EUA e incluem certificações de conformidade adicionais.
 

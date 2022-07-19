@@ -153,14 +153,45 @@
 
 ## Describe Azure architecture and services (35-40%)
 
-- Describe the core architectural components of Azure
-	- Describe Azure regional, regional pairs, and sovereign regions
-	- Describe availability zones
-	- Describe Azure datacenters
-- Describe Azure resources and resource groups
+### Describe the core architectural components of Azure
+
+- **Describe Azure regional, regional pairs, and sovereign regions**
+
+Os recursos são criados em regiões, que são diferentes localizações geográficas no mundo inteiro que contêm datacenters do Azure.
+
+- **Azure regional**
+	- Uma região é uma área geográfica do planeta que contém pelo menos um, mas possivelmente vários data centers próximos e conectados a uma rede de baixa latência. 
+	- Essas regiões dão flexibilidade para aproximar os aplicativos dos usuários, não importa onde estejam. 
+	- As regiões globais proporcionam maior escalabilidade e redundância. Elas também preservam a residência a interrupções dos dados de seus serviços.
+
+- **Regional pairs**
+	- Cada região do Azure é sempre emparelhada com outra região na mesma área geográfica a pelo menos 300 milhas (cerca de 480 km) de distância. Essa abordagem permite a replicação de recursos, como o armazenamento de VM, em uma geografia, o que ajuda a reduzir a probabilidade de interrupções devido a eventos como desastres naturais, conflitos civis, quedas de energia ou interrupções de rede física afetarem as duas regiões ao mesmo tempo.
+	- O Azure atribui e controla os recursos de modo inteligente dentro de cada região para garantir que as cargas de trabalho sejam balanceadas corretamente.
+- **Sovereign regions** - Regiões soberanas são instâncias do Azure isoladas da instância principal do Azure. Talvez seja necessário usar uma região soberana para fins legais ou de conformidade.
+	- essas regiões são instâncias lógicas e físicas do Azure isoladas da rede, destinadas a parceiros e órgãos do governo dos EUA. Esses datacenters são operados por cidadãos selecionados dos EUA e incluem certificações de conformidade adicionais.
+
+### Describe availability zones
+
+Você pode usar as zonas de disponibilidade para executar aplicativos críticos e incorporar alta disponibilidade à arquitetura do aplicativo, colocalizando seus recursos de computação, armazenamento, rede e dados em uma zona de disponibilidade e replicando em outras zonas de disponibilidade.
+
+As zonas de disponibilidade são destinadas, principalmente, a VMs, discos gerenciados, balanceadores de carga e bancos de dados SQL.
+
+- **Serviços em zonas (Zonal services)**: você fixa o recurso a uma zona específica.
+- **Serviços com redundância de zona (Zone-redundant services)**: a plataforma replica automaticamente entre zonas (por exemplo, armazenamento com redundância de zona, Banco de Dados SQL).
+- **Serviços não regionais (Non-regional services)**: os serviços estão sempre disponíveis em geografias do Azure e são resilientes a interrupções em toda a zona, bem como a interrupções em toda a região.
+
+### Describe Azure datacenters
+
+A infraestrutura física do Azure começa com datacenters. Conceitualmente, os datacenters são iguais aos grandes datacenters corporativos. São instalações com recursos organizados em racks com energia, refrigeração e infraestrutura de rede dedicadas.
+
+Como um provedor de nuvem global, o Azure tem datacenters em todo o mundo. No entanto, esses datacenters individuais não estão diretamente acessíveis. Os datacenters são agrupados em Regiões do Azure ou em Zonas de Disponibilidade do Azure projetadas para ajudá-lo a obter resiliência e confiabilidade para suas cargas de trabalho críticas para os negócios.
+
+### - Describe Azure resources and resource groups
 	- Describe subscriptions
 	- Describe management groups
 	- Describe the hierarchy of resource groups, subscriptions, and management groups
+
+	
 - Describe Azure compute and networking services
 	- Compare compute types, including container instances, virtual machines (VMs), and functions
 	- Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
