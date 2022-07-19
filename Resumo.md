@@ -57,6 +57,11 @@
 		- **Modelo baseado em consumo**. As organizações pagam apenas pelo que usam e operam em um modelo de OpEx (despesas operacionais).
 		- **OpEx** - é o gasto de capital em serviços ou produtos ao longo do tempo. O aluguel de um centro de convenções, o leasing de um veículo da empresa ou a assinatura de serviços de nuvem são exemplos de OpEx.
 		- **CapEx** - normalmente é uma despesa inicial única para comprar ou proteger recursos tangíveis. Um prédio novo, a repavimentação do estacionamento, a construção de um datacenter ou a compra de um veículo da empresa são exemplos de CapEx.
+	- Um modelo baseado em consumo oferece vários benefícios, como:
+		- Sem custos prévios.
+		- Não há necessidade de comprar nem gerenciar uma infraestrutura cara que os usuários talvez não usem na capacidade máxima.
+		- A capacidade de pagar para obter mais recursos quando necessário.
+		- A capacidade de parar de pagar por recursos que não são mais necessários.
 
 	- **Compare cloud pricing models**
 		- Avaliação gratuita - Uma assinatura de avaliação gratuita fornece 12 meses de serviços gratuitos populares, um crédito para explorar qualquer serviço do Azure por 30 dias e mais de 25 serviços que são sempre gratuitos. Os serviços do Azure são desabilitados quando a avaliação termina ou quando seu crédito expira para produtos pagos, a menos que você atualize para uma assinatura paga.
@@ -68,6 +73,7 @@
 - Alta disponibilidade, escalabilidade e distribuição geográfica. 
 - Describe the benefits of high availability and scalability in the cloud
 	- **Alta disponibilidade**: dependendo do SLA que você escolher, seus aplicativos poderão oferecer uma experiência de usuário contínua, sem tempo de inatividade aparente, mesmo quando as coisas derem errado.
+	
 	- **Escalabilidade**: os aplicativos na nuvem podem ser dimensionados verticalmente e horizontalmente:
 		- **Dimensione verticalmente** - aumentar a capacidade de computação adicionando RAM ou CPUs a uma máquina virtual.
 		- **Dimensionar horizontalmente** - aumentar a capacidade de computação adicionando instâncias de recursos.
@@ -77,15 +83,73 @@
 		- A confiabilidade é uma responsabilidade compartilhada
 		- Garante que suas cargas de trabalho fiquem disponíveis e possam se recuperar de falhas em qualquer escala.
 		- **Recuperação de desastre**: ao aproveitar os serviços de backup baseados em nuvem, a replicação de dados e a distribuição geográfica, você pode implantar os aplicativos com a confiança de saber que seus dados estarão seguros em caso de desastre.
-	- 
+	
+	- **Previsibilidade** - uma solução com custo e desempenho previsíveis. A previsibilidade na nuvem permite que você avance com confiança.
+		- **Previsibilidade de Desempenho** - se concentra em prever os recursos necessários para oferecer uma experiência positiva aos clientes. O dimensionamento automático, o balanceamento de carga e a alta disponibilidade são apenas alguns dos conceitos de nuvem que dão suporte à previsibilidade de desempenho.
+        - **Previsibilidade de custos** - se concentra em prever o custo dos gastos com a nuvem. Operando na nuvem e usando a análise e as informações da nuvem, você pode prever custos futuros e ajustar os recursos conforme o necessário. Você pode até mesmo usar ferramentas como TCO (custo total de propriedade) ou a Calculadora de Preços para obter uma estimativa de possíveis gastos com a nuvem.
 
 	- Describe the benefits of security and governance in the cloud
+		- Ao estabelecer uma presença de governança o mais cedo possível, você poderá manter sua presença de nuvem atualizada, protegida e bem gerenciada.
+
+		- **Governança** - Se você estiver implantando IaaS ou SaaS, os recursos de nuvem vão dar suporte à governança e à conformidade. 
+			- Itens como modelos de conjunto ajudam a garantir que todos os seus recursos implantados atendam aos padrões corporativos e aos requisitos regulatórios governamentais. 
+			- atualização dos recursos implantados com os novos padrões à medida que são alterados. 
+			- Sinalização de qualquer recurso que esteja fora de conformidade e fornece estratégias de mitigação. 
+			- Dependendo do modelo operacional, patches de software e atualizações também podem ser aplicados automaticamente.
+
+		-  **Segurança** - Se você quiser o controle máximo da segurança, a IaaS fornecerá recursos físicos, mas permitirá que você gerencie os sistemas operacionais e o software instalado, incluindo aplicação de patches e manutenção.  Se você quiser que a aplicação de patches e a manutenção sejam tratadas automaticamente, as implantações de PaaS ou SaaS podem ser as melhores estratégias de nuvem para você.
+
 	- Describe the benefits of manageability in the cloud
-- Describe cloud service types
-	- Describe infrastructure as a service (IaaS)
-	- Describe platform as a service (PaaS)
-	- Describe software as a service (SaaS)
-	- Identify appropriate use cases for each cloud service (IaaS, PaaS, SaaS)
+		- Escalar automaticamente a implantação de recursos com base na necessidade.
+		- Implantar recursos com base em um modelo pré-configurado, removendo a necessidade de configuração manual.
+		- Monitorar a integridade dos recursos e substituir automaticamente os recursos com falha.
+		- Receber alertas automáticos com base em métricas configuradas, de modo a ficar ciente do desempenho em tempo real.
+
+### Describe cloud service types
+
+- **Describe infrastructure as a service (IaaS)**
+	- O IaaS (infraestrutura como serviço) é a categoria mais flexível de serviços de nuvem, pois oferece:
+	- O máximo de controle sobre os recursos de nuvem. 
+	- O provedor de nuvem é responsável por manter o hardware, a conectividade de rede (com a Internet) e a segurança física. 
+	- Você é responsável por todo o resto: 
+		- instalação, configuração e manutenção do sistema operacional
+		- configuração de rede
+		- configuração de banco de dados e armazenamento e assim por diante. 
+
+- Com o IaaS, basicamente o hardware é alugado em um datacenter de nuvem, mas cabe a você decidir o que fazer com ele.
+
+- **Describe platform as a service (PaaS)**
+	- O PaaS é adequado para fornecer um ambiente de desenvolvimento completo sem a preocupação de manter toda a infraestrutura de desenvolvimento. Em um cenário de PaaS, você não precisa se preocupar com o licenciamento nem com a aplicação de patch em sistemas operacionais e bancos de dados.
+	- O provedor de nuvem é responsável por:
+		- manter a infraestrutura física e o acesso à Internet, como no IaaS. 
+		- o provedor de nuvem também mantém:
+			- os sistemas operacionais
+			- os bancos de dados 
+			- ferramentas de desenvolvimento. 
+
+- **Describe software as a service (SaaS)**
+
+- O SaaS (software como serviço) é o modelo de serviço de nuvem mais completo do ponto de vista do produto. Com o SaaS, você está essencialmente alugando ou usando um aplicativo totalmente desenvolvido. Embora o modelo de SaaS possa ser o menos flexível, ele também é o mais fácil de colocar em funcionamento. Ele requer a menor quantidade de conhecimento técnico ou experiência para o emprego total.
+
+- Em um ambiente de SaaS, você é responsável: 
+	- pelos dados que coloca no sistema
+	- pelos dispositivos que permite que se conectem ao sistema
+	- pelos usuários que têm acesso. 
+
+- O provedor de nuvem é responsável pela segurança física dos datacenters, pela energia, pela conectividade de rede e pelo desenvolvimento e aplicação de patch dos aplicativos.
+
+- Identify appropriate use cases for each cloud service (IaaS, PaaS, SaaS)
+
+- **IaaS**
+	- Migração lift-and-shift: você conta com recursos de nuvem semelhantes aos do datacenter local e apenas migra os elementos em execução local para execução na infraestrutura IaaS.
+	- Teste e desenvolvimento: você estabeleceu configurações para ambientes de desenvolvimento e teste que precisa replicar rapidamente. Você pode ativar ou desativar os diferentes ambientes rapidamente com uma estrutura de IaaS, mantendo o controle completo.
+- **PaaS**
+	- Est1rutura de desenvolvimento: O PaaS fornece uma estrutura que os desenvolvedores podem usar como base para desenvolver ou personalizar aplicativos baseados em nuvem. O PaaS permite aos desenvolvedores criar aplicativos usando componentes de software internos. São incluídos recursos de nuvem, como escalabilidade, alta disponibilidade e a funcionalidade de multilocatário, reduzindo a quantidade de codificação que os desenvolvedores precisam realizar.
+	- Análise ou business intelligence: as ferramentas fornecidas como serviço com o PaaS permitem que as organizações analisem e minerem dados, encontrando insights e padrões e prevendo resultados para aprimorar a previsão, as decisões de design de produto, o retornos sobre investimentos e outras decisões de negócios.
+- **SaaS**
+	- Email e mensagens.
+	- Aplicativos de produtividade empresarial.
+	- Controle de finanças e despesas.
 
 ## Describe Azure architecture and services (35-40%)
 
