@@ -281,10 +281,11 @@ Com o Resource Manager, você pode:
 
 ### Compare compute types, including container instances, virtual machines (VMs), and functions
 
-- A computação do Azure é um serviço de computação sob demanda para execução de aplicativos baseados em nuvem.
-	- **Máquinas virtuais** são emulações de software de computadores físicos. Elas incluem um processador virtual, memória, armazenamento e recursos de rede. As VMs hospedam um sistema operacional, e você pode instalar e executar o software como se fosse um computador físico. 
-	- **Instâncias de Contêiner** e o Serviço de Kubernetes do Azure são recursos de Computação do Azure que você pode usar para implantar e gerenciar contêineres. Contêineres são ambientes de aplicativos leves e virtualizados. Eles foram projetados para serem criados rapidamente, escalados horizontalmente e interrompidos dinamicamente. Você pode executar várias instâncias de um aplicativo em contêineres em um computador host.
-	- **Funções** são ideais quando você está preocupado apenas com o código que executa o serviço, e não com a plataforma ou a infraestrutura subjacente. Elas costumam ser usadas quando você precisa executar um trabalho em resposta a um evento, um temporizador ou uma mensagem de outro serviço do Azure.
+A computação do Azure é um serviço de computação sob demanda para execução de aplicativos baseados em nuvem.
+
+- **Máquinas virtuais** são emulações de software de computadores físicos. Elas incluem um processador virtual, memória, armazenamento e recursos de rede. As VMs hospedam um sistema operacional, e você pode instalar e executar o software como se fosse um computador físico. 
+- **Instâncias de Contêiner** e o Serviço de Kubernetes do Azure são recursos de Computação do Azure que você pode usar para implantar e gerenciar contêineres. Contêineres são ambientes de aplicativos leves e virtualizados. Eles foram projetados para serem criados rapidamente, escalados horizontalmente e interrompidos dinamicamente. Você pode executar várias instâncias de um aplicativo em contêineres em um computador host.
+- **Funções (serverless)** são ideais quando você está preocupado apenas com o código que executa o serviço, e não com a plataforma ou a infraestrutura subjacente. Elas costumam ser usadas quando você precisa executar um trabalho em resposta a um evento, um temporizador ou uma mensagem de outro serviço do Azure.
 		
 ### Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
 
@@ -292,51 +293,59 @@ Com o Resource Manager, você pode:
 
 
 ### Describe resources required for virtual machines
-- Describe application hosting options, including the Web Apps feature of Azure App Service, containers, and virtual machines
-- Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
-
-
+### Describe application hosting options, including the Web Apps feature of Azure App Service, containers, and virtual machines
+### Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
 ### Define public and private endpoints
-- Describe Azure storage services
-	- Compare Azure storage services
-	- Describe storage tiers
-	- Describe redundancy options
-	- Describe storage account options and storage types
-	- Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync
-	- Describe migration options, including Azure Migrate and Azure Data Box
-- Describe Azure identity, access, and security
-	- Describe directory services in Azure, including Azure Active Directory (Azure AD) and Azure
-- Active Directory Domain Services (Azure AD DS)
-	- Describe authentication methods in Azure, including single sign-on (SSO), multifactor authentication, and passwordless
-	- Describe external identities and guest access in Azure
-	- Describe Azure AD Conditional Access
-	- Describe Azure role-based access control (RBAC)
-	- Describe the concept of Zero Trust
-	- Describe the purpose of the defense in depth model
-	- Describe the purpose of Microsoft Defender for Cloud
+
+## Describe Azure storage services
+
+### Compare Azure storage services
+### Describe storage tiers
+### Describe redundancy options
+### Describe storage account options and storage types
+### Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync
+### Describe migration options, including Azure Migrate and Azure Data Box
+
+## Describe Azure identity, access, and security
+
+### Describe directory services in Azure, including Azure Active Directory (Azure AD) and Azure Active Directory Domain Services (Azure AD DS)
+### Describe authentication methods in Azure, including single sign-on (SSO), multifactor authentication, and passwordless
+### Describe external identities and guest access in Azure
+### Describe Azure AD Conditional Access
+### Describe Azure role-based access control (RBAC)
+### Describe the concept of Zero Trust
+### Describe the purpose of the defense in depth model
+### Describe the purpose of Microsoft Defender for Cloud
 
 ## Describe Azure management and governance (30-35%)
 
-- Describe cost management in Azure
-	- Describe factors that can affect costs in Azure
-	- Compare the Pricing calculator and the Total Cost of Ownership (TCO) calculator Describe the Azure Cost Management and Billing tool
-	- Describe the purpose of tags
-- Describe features and tools in Azure for governance and compliance
-	- Describe the purpose of Azure Blueprints
-	- Describe the purpose of Azure Policy
-	- Describe the purpose of resource locks
-	- Describe the purpose of the Service Trust Portal
-- Describe features and tools for managing and deploying Azure resources
-	- Describe the Azure portal
-	- Describe Azure Cloud Shell, including Azure CLI and Azure PowerShell
-	- Describe the purpose of Azure Arc
-		- O Azure Arc é uma ponte que estende a plataforma do Azure para ajudar na criação de aplicativos e serviços com a flexibilidade de executar em datacenters, na borda e em ambientes multinuvem. Desenvolva aplicativos nativos de nuvem com um modelo consistente de desenvolvimento, operações e segurança. O Azure Arc é executado em hardware, virtualização e plataformas de Kubernetes, dispositivos IoT e sistemas integrados novos e existentes.
-		
-	- Describe Azure Resource Manager and Azure Resource Manager templates (ARM templates)
-- Describe monitoring tools in Azure
-	- Describe the purpose of Azure Advisor
-	- Describe Azure Service Health
-	- Describe Azure Monitor, including Log Analytics, Azure Monitor alerts, and Application Insights
+### Describe cost management in Azure
+### Describe factors that can affect costs in Azure
+### Compare the Pricing calculator and the Total Cost of Ownership (TCO) calculator Describe the Azure Cost Management and Billing tool
+### Describe the purpose of tags
+
+## Describe features and tools in Azure for governance and compliance
+
+### Describe the purpose of Azure Blueprints
+### Describe the purpose of Azure Policy
+### Describe the purpose of resource locks
+### Describe the purpose of the Service Trust Portal
+
+## Describe features and tools for managing and deploying Azure resources
+
+### Describe the Azure portal
+### Describe Azure Cloud Shell, including Azure CLI and Azure PowerShell
+### Describe the purpose of Azure Arc
+
+O Azure Arc é uma ponte que estende a plataforma do Azure para ajudar na criação de aplicativos e serviços com a flexibilidade de executar em datacenters, na borda e em ambientes multinuvem. Desenvolva aplicativos nativos de nuvem com um modelo consistente de desenvolvimento, operações e segurança. O Azure Arc é executado em hardware, virtualização e plataformas de Kubernetes, dispositivos IoT e sistemas integrados novos e existentes.
+
+### Describe Azure Resource Manager and Azure Resource Manager templates (ARM templates)
+
+## Describe monitoring tools in Azure
+
+### Describe the purpose of Azure Advisor
+### Describe Azure Service Health
+### Describe Azure Monitor, including Log Analytics, Azure Monitor alerts, and Application Insights
 
 
 
