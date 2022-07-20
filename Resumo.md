@@ -283,7 +283,7 @@ Com o Resource Manager, você pode:
 
 ### Compare compute types, including container instances, virtual machines (VMs), and functions
 
-A computação do Azure é um serviço de computação sob demanda para execução de aplicativos baseados em nuvem.
+A computação do Azure é um serviço de computação sob demanda para execução de aplicativos baseados em nuvem. Ela fornece recursos de computação, como discos, processadores, memória, rede e sistemas operacionais. Os recursos estão disponíveis sob demanda e normalmente podem ser disponibilizados em minutos ou até mesmo segundos. Você só paga pelos recursos utilizados e apenas pelo tempo que utilizar.
 
 - **Máquinas virtuais** são emulações de software de computadores físicos. Elas incluem um processador virtual, memória, armazenamento e recursos de rede. As VMs hospedam um sistema operacional, e você pode instalar e executar o software como se fosse um computador físico. 
 - **Instâncias de Contêiner** e o Serviço de Kubernetes do Azure são recursos de Computação do Azure que você pode usar para implantar e gerenciar contêineres. Contêineres são ambientes de aplicativos leves e virtualizados. Eles foram projetados para serem criados rapidamente, escalados horizontalmente e interrompidos dinamicamente. Você pode executar várias instâncias de um aplicativo em contêineres em um computador host.
@@ -291,10 +291,31 @@ A computação do Azure é um serviço de computação sob demanda para execuç�
 		
 ### Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
 
-
-
+- **Máquinas virtuais** são emulações de software de computadores físicos.
+- **Máquinas Virtuais de Spot** - permite aproveitar a capacidade não usada com uma economia de custos significativa. 
+	- A qualquer momento que o Azure precisar da capacidade de volta, a infraestrutura do Azure removerá as Máquinas Virtuais de Spot do Azure. 
+	- As Máquinas Virtuais de Spot do Azure são ótimas para cargas de trabalho que podem lidar com interrupções, como trabalhos de processamento em lotes, ambientes de desenvolvimento/teste, grandes cargas de trabalho de computação, entre outros.
+- **Virtual Machine Scale Sets**
+	- Permitem criar e gerenciar um grupo de VMs idênticas e com balanceamento de carga. 
+	- Permitem que você gerencie, configure e atualize centralmente um grande número de VMs em minutos para fornecer aplicativos de alta disponibilidade. O número de instâncias de VM pode aumentar ou diminuir automaticamente em resposta à demanda ou a um agendamento definido.
+	- Facilidade de criar e gerenciar várias VMs
+	- Fornece alta disponibilidade e resiliência de aplicativo, distribuindo as VMs por zonas de disponibilidade ou domínios de falha
+	- Permite que seu aplicativo dimensione automaticamente de acordo com as alterações de demanda de recursos
+	- Funciona em larga escala
+- **Availability sets** - Um conjunto de disponibilidade é um agrupamento lógico de VMs que permite que o Azure entenda como o seu aplicativo foi criado para fornecer redundância e disponibilidade. 
+	- Recomenda-se que duas ou mais VMs sejam criadas para fornecer um aplicativo altamente disponível e para atender o SLA de 99,95% do Azure. 
+	- Não há nenhum custo para o conjunto de disponibilidade em si, você paga apenas por cada instância de VM que criar.
+- **Virtual Desktop** - A Área de Trabalho Virtual do Azure é um serviço de virtualização de aplicativos executado na nuvem.
+	- Configurar uma implantação de várias sessões do Windows 10 ou 11 que forneça uma experiência completa do Windows com escalabilidade
+	- Apresentar os Aplicativos do Microsoft 365 para Empresas e otimizá-los para execução em cenários virtuais com vários usuários
+	- Fornecer áreas de trabalho virtuais do Windows 7 com Atualizações de Segurança Estendida gratuitas
+	- Trazer seu RDS (Remote Desktop Service) existente, além de aplicativos e áreas de trabalho do Windows Server para qualquer computador
+	- Virtualizar aplicativos e áreas de trabalho
+	- Gerenciar áreas de trabalho e aplicativos de diferentes sistemas operacionais Windows e Windows Server com uma experiência de gerenciamento unificada
 
 ### Describe resources required for virtual machines
+
+
 ### Describe application hosting options, including the Web Apps feature of Azure App Service, containers, and virtual machines
 ### Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
 ### Define public and private endpoints
