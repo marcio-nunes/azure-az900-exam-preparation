@@ -312,11 +312,35 @@ A computação do Azure é um serviço de computação sob demanda para execuç�
 	- Trazer seu RDS (Remote Desktop Service) existente, além de aplicativos e áreas de trabalho do Windows Server para qualquer computador
 	- Virtualizar aplicativos e áreas de trabalho
 	- Gerenciar áreas de trabalho e aplicativos de diferentes sistemas operacionais Windows e Windows Server com uma experiência de gerenciamento unificada
+- **Azure Batch** - trabalhos em lotes paralelos e de HPC (computação de alto desempenho) de grande escala com a capacidade de dimensionar dezenas, centenas ou milhares de VMs.
+	- Quando você estiver pronto para executar um trabalho, o Batch fará o seguinte:
+		- Iniciar um pool de VMs de computação para você.
+		- Instalar aplicativos e dados de preparo.
+		- Executar trabalhos com todas as tarefas que você tiver.
+		- Identificar falhas.
+		- Colocar o trabalho em filas.
+		- Reduzir verticalmente o pool conforme o trabalho for concluído.
+		- Pode haver situações em que você precise de potência de computação bruta ou de potência de computação no nível de supercomputador. O Azure fornece esses recursos.
 
 ### Describe resources required for virtual machines
 
+Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses recursos trabalham juntos para virtualizar um computador e executar o sistema operacional.
+
+- Uma máquina virtual que fornece recursos de CPU e memória
+- Uma conta de Armazenamento do Azure para armazenar os discos rígidos virtuais
+- Discos virtuais para armazenar o sistema operacional, os aplicativos e os dados
+- Uma VNET (rede virtual) para conectar a VM a outros serviços do Azure ou ao hardware local próprio
+- Um adaptador de rede (network interface) para se comunicar com a VNET
+- Um endereço IP público opcional para que seja possível acessar a VM
 
 ### Describe application hosting options, including the Web Apps feature of Azure App Service, containers, and virtual machines
+
+- **Web Apps**
+- **Azure App Service** - O Serviço de Aplicativo permite que você crie e hospede aplicativos Web, trabalhos em segundo plano, back-ends de dispositivos móveis e APIs RESTful na linguagem de programação de sua escolha sem gerenciar a infraestrutura. Ele oferece dimensionamento automático e alta disponibilidade. O Serviço de Aplicativo é compatível com Windows e Linux e permite implantações automatizadas do GitHub, Azure DevOps ou qualquer repositório Git para dar suporte a um modelo de deploy contínuo.
+	- Esse ambiente de PaaS (plataforma como serviço) permite que você se concentre no site e na lógica da API, enquanto o Azure manipula a infraestrutura para executar e dimensionar seus aplicativos Web.
+- **Containers**
+- **Virtual machines**
+
 ### Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
 ### Define public and private endpoints
 
