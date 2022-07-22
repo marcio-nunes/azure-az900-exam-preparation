@@ -5,6 +5,7 @@
 - [Exame AZ-900: Fundamentos do Microsoft Azure](https://docs.microsoft.com/pt-br/learn/certifications/exams/az-900)
 - [Study Guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY)
 - [Agendamento do exame](https://esi.microsoft.com/landing)
+- [itexams](https://www.itexams.com/exam/AZ-900)
 
 - [emoji icons](https://emojipedia.org/symbols/)
 
