@@ -394,9 +394,91 @@ O acesso condicional é útil quando você precisa:
 - Bloquear o acesso de fontes não confiáveis, como o acesso de locais desconhecidos ou inesperados.
 
 ### Describe Azure role-based access control (RBAC)
+
+O princípio de privilégios mínimos diz que você só deve conceder acesso até o nível necessário para concluir uma tarefa.
+
+O gerenciamento de permissões para uma equipe inteira se tornaria tedioso. Em vez de definir os requisitos de acesso detalhados para cada indivíduo e atualizar os requisitos de acesso quando outros recursos forem criados ou novas pessoas entrarem na equipe, o Azure permite controlar o acesso por meio do RBAC do Azure (controle de acesso baseado em função do Azure).
+
+O controle de acesso baseado em função é aplicado a um escopo, que é um recurso ou um conjunto de recursos ao qual esse acesso se aplica.
+
+- Um grupo de gerenciamento (uma coleção de várias assinaturas).
+- Uma assinatura única.
+- Um grupo de recursos.
+- Um recurso individual.
+
+O RBAC do Azure é imposto em qualquer ação iniciada em um recurso do Azure que passa pelo Azure Resource Manager. O Resource Manager é um serviço de gerenciamento que fornece um modo de organizar e proteger seus recursos de nuvem.
+
+O RBAC do Azure não impõe permissões de acesso no nível do aplicativo nem dos dados.
+
 ### Describe the concept of Zero Trust
+
+A Confiança Zero é um modelo de segurança que pressupõe o pior cenário e protege os recursos com essa expectativa. A Confiança Zero pressupõe uma violação desde o início e verifica cada solicitação como se ela tivesse sido originada em uma rede não controlada.
+
+- Verificar de modo explícito – sempre autentique e autorize com base em todos os pontos de dados disponíveis.
+- Usar o acesso com o mínimo de privilégios – limite o acesso do usuário com JIT/JEA (Just-In-Time e Just-Enough-Access), políticas adaptáveis baseadas em risco e proteção de dados.
+- Pressupor a violação – minimize o raio de alcance e segmente o acesso. Verifique a criptografia de ponta a ponta. Use a análise para obter visibilidade, promover a detecção de ameaças e aprimorar as defesas.
+
+Em vez de supor que um dispositivo é seguro porque está dentro da rede corporativa, ele requer que todos se autentiquem. Em seguida, concede acesso com base na autenticação e não na localização.
+
 ### Describe the purpose of the defense in depth model
+
+O objetivo da defesa em profundidade é proteger as informações e impedir que elas sejam roubadas por pessoas que não estejam autorizadas a acessá-las.
+
+Uma estratégia de defesa em profundidade usa uma série de mecanismos para reduzir o avanço de um ataque que busca obter acesso não autorizado aos dados.
+
+- **Camadas da defesa em profundidade** - Cada camada fornece proteção, de modo que se uma camada for violada, uma camada seguinte já estará em vigor para impedir a exposição adicional. Essa abordagem elimina a dependência de qualquer camada única de proteção. Ela desacelera um ataque e fornece informações de alerta sobre as quais as equipes de segurança podem agir, automática ou manualmente.
+
+- A camada de segurança física é a primeira linha de defesa para proteger o hardware de computação no datacenter.
+- A camada de identidade e acesso controla o acesso à infraestrutura e ao controle de alterações.
+- A camada de perímetro usa a proteção contra DDoS (ataque de negação de serviço distribuído) para filtrar ataques em grande escala antes que eles possam causar uma negação de serviço para os usuários.
+- A camada de rede limita a comunicação entre recursos por meio de controles de acesso e segmentação.
+- A camada de computação protege o acesso a máquinas virtuais.
+- A camada de aplicativo ajuda a garantir que os aplicativos estejam seguros e livres de vulnerabilidades de segurança.
+- A camada de dados controla o acesso aos dados corporativos e do cliente que você precisa proteger.
+
+O Azure fornece ferramentas e recursos de segurança em todos os níveis do conceito de defesa em profundidade. Vamos examinar cada camada em mais detalhes:
+
+- **Segurança física** - Proteger fisicamente o acesso a edifícios e controlar o acesso ao hardware de computação no datacenter é a primeira linha de defesa.
+- **Identidade e acesso** - A camada de identidade e acesso refere-se a garantir que as identidades estejam seguras, que o acesso seja concedido apenas ao que é necessário e que os eventos de entrada e as alterações sejam registradas.
+	- Controle o acesso à infraestrutura e o controle de alterações.
+	- Usar o SSO (logon único) e a autenticação multifator.
+	- Faça a auditoria de eventos e alterações.
+- **Perímetro** - O perímetro da rede protege seus recursos contra ataques baseados na rede. Identificar esses ataques, eliminar o impacto e alertar quando eles ocorrem são maneiras importantes de manter a rede segura.
+	- Usar a Proteção contra DDoS para filtrar ataques em grande escala antes que eles possam afetar a disponibilidade de um sistema para os usuários.
+	- Use firewalls de perímetro para identificar e alertar sobre ataques maliciosos contra a rede. 
+- **Rede** - Essa camada concentra-se em limitar a conectividade de rede entre todos os recursos para permitir apenas o necessário. Ao limitar essa comunicação, você reduz o risco de uma disseminação de ataques para outros sistemas na rede.
+	- Limite a comunicação entre os recursos.
+	- Negue por padrão.
+	- Restringir o acesso à Internet de entrada e limitar o acesso de saída quando apropriado.
+	- Implemente a conectividade segura com as redes locais.
+- **Computação** - Malware, sistemas sem patches e sistemas sem proteção adequada abrem o ambiente para ataques. 
+	- Proteger o acesso às máquinas virtuais.
+	- Implementar o Endpoint Protection em dispositivos e manter os sistemas atualizados e com patches.
+- **Aplicativo** - A integração da segurança no ciclo de vida de desenvolvimento do aplicativo ajuda a reduzir o número de vulnerabilidades introduzidas no código. 
+	- Verificar se os aplicativos estão seguros e livres de vulnerabilidades.
+	- Armazene os segredos de aplicativos confidenciais em uma mídia de armazenamento seguro.
+	- Faça com que a segurança seja um requisito de design em todo o desenvolvimento do aplicativo.
+- **Dados** - Quem armazena dados e controla o acesso a eles é responsável por garantir que estejam protegidos adequadamente. É comum que requisitos regulatórios determinem os controles e os processos que precisam estar em vigor para garantir a confidencialidade, a integridade e a disponibilidade dos dados. Em quase todos os casos, os invasores estão em busca de dados:
+	- Armazenados em um banco de dados.
+	- Armazenados em disco em máquinas virtuais.
+	- Armazenados em aplicativos SaaS (software como serviço), como o Office 365.
+	- Gerenciados por meio do armazenamento em nuvem.
+
 ### Describe the purpose of Microsoft Defender for Cloud
+
+O Defender para Nuvem é uma ferramenta de monitoramento para gerenciamento da postura de segurança e proteção contra ameaças. Ele monitora seus ambientes de nuvem, locais, híbridos e de várias nuvens para fornecer diretrizes e notificações com o objetivo de fortalecer sua postura de segurança.
+
+O Defender para Nuvem fornece as ferramentas necessárias para proteger seus recursos, acompanhar sua postura de segurança, proteger contra ataques cibernéticos e simplificar o gerenciamento de segurança. A implantação do Defender para Nuvem é fácil e já está integrada nativamente ao Azure
+
+Se você também tiver um datacenter local ou estiver operando em outro ambiente de nuvem, o monitoramento dos serviços do Azure poderá não fornecer uma visão completa da sua situação de segurança.
+
+Quando necessário, o Defender para Nuvem pode implantar automaticamente um agente do Log Analytics para coletar dados relacionados à segurança. Para computadores do Azure, a implantação é tratada diretamente. Em ambientes híbridos e de várias nuvens, os planos do Microsoft Defender são estendidos para computadores que não são Azure com a ajuda do Azure Arc. Os recursos do GPSN (gerenciamento da postura de segurança na nuvem) são estendidos para computadores de várias nuvens sem a necessidade de agentes.
+
+O Defender para Nuvem preenche três necessidades vitais à medida que você gerencia a segurança de seus recursos e cargas de trabalho locais e na nuvem:
+
+Avaliação contínua – Conheça sua postura de segurança. Identifique e rastreie vulnerabilidades.
+Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
+Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
 
 ## Describe Azure management and governance (30-35%)
 
