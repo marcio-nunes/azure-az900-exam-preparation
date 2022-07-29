@@ -356,7 +356,17 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 ## Describe Azure identity, access, and security
 
 ### Describe directory services in Azure, including Azure Active Directory (Azure AD) and Azure Active Directory Domain Services (Azure AD DS)
+
 ### Describe authentication methods in Azure, including single sign-on (SSO), multifactor authentication, and passwordless
+
+Autenticação é o processo de estabelecer a identidade de uma pessoa ou serviço que deseja acessar um recurso.
+
+A autorização é o processo de estabelecer o nível de acesso que uma pessoa ou um serviço autenticado tem. Especifica quais dados podem ser acessados e que a pessoa ou serviço pode fazer com eles.
+
+- **Single sign-on (SSO)** - O SSO permite que você se lembre de apenas um nome de usuário e uma senha para acessar vários aplicativos. Uma única identidade é vinculada a um usuário, o que simplifica o modelo de segurança. À medida que os usuários trocam de funções ou saem de uma organização, as modificações de acesso são vinculadas àquela identidade, o que reduz consideravelmente o esforço necessário para alterar ou desabilitar contas.
+- Multifactor authentication - é um processo em que o usuário deve fornecer uma forma adicional de identificação durante o processo de entrada. Exemplos incluem um código no telefone celular ou uma verificação de impressão digital.
+- Passwordless
+
 ### Describe external identities and guest access in Azure
 ### Describe Azure AD Conditional Access
 ### Describe Azure role-based access control (RBAC)
@@ -408,7 +418,11 @@ Azure Blueprints fornece uma maneira de definir um conjunto repetitivo de recurs
 
 ### Describe the purpose of the Service Trust Portal
 
+O Service Trust Portal da Microsoft é um local que oferece acesso a vários conteúdos, ferramentas e outros recursos sobre práticas de segurança, privacidade e conformidade da Microsoft.Contém detalhes sobre a implementação de controles e processos da Microsoft que protegem nossos serviços na nuvem e os dados do cliente encontrados neles. 
 
+Fornecem uma grande quantidade de informações de design e implementação de segurança. 
+
+Setores & Regiões fornecem informações de conformidade específicas do setor e da região sobre os serviços do Microsoft Cloud.
 
 ## Describe features and tools for managing and deploying Azure resources
 
