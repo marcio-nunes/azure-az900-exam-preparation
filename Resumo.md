@@ -335,11 +335,11 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 
 ### Describe application hosting options, including the Web Apps feature of Azure App Service, containers, and virtual machines
 
-- **Web Apps**
 - **Azure App Service** - O Serviço de Aplicativo permite que você crie e hospede aplicativos Web, trabalhos em segundo plano, back-ends de dispositivos móveis e APIs RESTful na linguagem de programação de sua escolha sem gerenciar a infraestrutura. Ele oferece dimensionamento automático e alta disponibilidade. O Serviço de Aplicativo é compatível com Windows e Linux e permite implantações automatizadas do GitHub, Azure DevOps ou qualquer repositório Git para dar suporte a um modelo de deploy contínuo.
 	- Esse ambiente de PaaS (plataforma como serviço) permite que você se concentre no site e na lógica da API, enquanto o Azure manipula a infraestrutura para executar e dimensionar seus aplicativos Web.
-- **Containers**
-- **Virtual machines**
+- **Containers** 
+	- Azure Container Instances - Aplicativos em contêineres executados no Azure sem o provisionamento de servidores ou de VMs.
+- **Virtual machines** - 
 
 ### Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
 ### Define public and private endpoints
@@ -375,6 +375,26 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 
 ### Describe the purpose of Azure Blueprints
 ### Describe the purpose of Azure Policy
+
+- **Azure Policy** - O Azure Policy foi projetado para ajudar a reforçar os padrões e avaliar a conformidade em toda a sua organização.
+	-  Casos de uso comuns do Azure Policy incluem implementar a governança para consistência de recursos, conformidade regulatória, segurança, custo e gerenciamento.
+	- O Azure Policy avalia se as propriedades de recursos correspondem às regras de negócio. Essas regras de negócio são descritas usando o formato JSON e são chamadas de definições de política. 
+	- Para um gerenciamento simplificado, você pode agrupar várias regras de negócio para formar uma única iniciativa de política.
+	- Usado para monitorar continuamente os recursos e garantir uma continuação com os requisitos de conformidade.
+	- O Azure Policy avalia recursos em momentos específicos durante o ciclo de vida do recurso, o ciclo de vida de atribuição de política e para avaliação regular de conformidade contínua.
+	- Diferença entre as funções do Azure Policy e o controle de acesso baseado em função do Azure (RBAC)?
+		-  Você usa o Azure Policy para garantir que o estado do recurso seja compatível com as regras de negócio de sua organização, independentemente de quem fez a alteração ou quem tem permissão para fazer alterações. O Azure Policy avaliará o estado de um recurso e agirá para garantir que o recurso permaneça em conformidade.
+		- O RBAC do Azure gerencia quem tem acesso aos recursos do Azure, o que eles podem fazer com esses recursos e quais áreas eles podem acessar. Se as ações precisarem ser controladas, você usará o RBAC do Azure. 
+		- Se um indivíduo tiver acesso para concluir uma ação, mas o resultado for um recurso que não está em conformidade, o Azure Policy ainda bloqueará a ação. 
+- **Azure Blueprints** - fornece uma maneira de definir um conjunto repetitivo de recursos do Azure. O Azure Blueprints permite que equipes de desenvolvimento provisionem e executem novos recursos rapidamente, com o conhecimento de que estão alinhados com os requisitos de conformidade da organização.
+	- ajuda a garantir que os recursos do Azure sejam implantados de uma maneira que esteja de acordo com os requisitos de conformidade. 
+	- é uma forma declarativa de orquestrar a implantação de vários modelos de recursos e outros artefatos, tais como:
+		- Atribuições de Funções
+		- Atribuições de Políticas
+		- Modelos do ARM (modelos do Azure Resource Manager)
+		- Grupos de recursos
+	- Objetos de blueprint são replicados para várias regiões do Azure. Essa replicação oferece baixa latência, alta disponibilidade e acesso consistente a seus objetos de blueprint.
+	
 ### Describe the purpose of resource locks
 ### Describe the purpose of the Service Trust Portal
 
