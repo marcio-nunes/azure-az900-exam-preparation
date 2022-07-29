@@ -374,6 +374,16 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 ## Describe features and tools in Azure for governance and compliance
 
 ### Describe the purpose of Azure Blueprints
+
+Azure Blueprints fornece uma maneira de definir um conjunto repetitivo de recursos do Azure. O Azure Blueprints permite que equipes de desenvolvimento provisionem e executem novos recursos rapidamente, com o conhecimento de que estão alinhados com os requisitos de conformidade da organização.
+- ajuda a garantir que os recursos do Azure sejam implantados de uma maneira que esteja de acordo com os requisitos de conformidade. 
+- é uma forma declarativa de orquestrar a implantação de vários modelos de recursos e outros artefatos, tais como:
+	- Atribuições de Funções
+	- Atribuições de Políticas
+	- Modelos do ARM (modelos do Azure Resource Manager)
+	- Grupos de recursos
+- Objetos de blueprint são replicados para várias regiões do Azure. Essa replicação oferece baixa latência, alta disponibilidade e acesso consistente a seus objetos de blueprint.
+
 ### Describe the purpose of Azure Policy
 
 - **Azure Policy** - O Azure Policy foi projetado para ajudar a reforçar os padrões e avaliar a conformidade em toda a sua organização.
@@ -386,17 +396,19 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 		-  Você usa o Azure Policy para garantir que o estado do recurso seja compatível com as regras de negócio de sua organização, independentemente de quem fez a alteração ou quem tem permissão para fazer alterações. O Azure Policy avaliará o estado de um recurso e agirá para garantir que o recurso permaneça em conformidade.
 		- O RBAC do Azure gerencia quem tem acesso aos recursos do Azure, o que eles podem fazer com esses recursos e quais áreas eles podem acessar. Se as ações precisarem ser controladas, você usará o RBAC do Azure. 
 		- Se um indivíduo tiver acesso para concluir uma ação, mas o resultado for um recurso que não está em conformidade, o Azure Policy ainda bloqueará a ação. 
-- **Azure Blueprints** - fornece uma maneira de definir um conjunto repetitivo de recursos do Azure. O Azure Blueprints permite que equipes de desenvolvimento provisionem e executem novos recursos rapidamente, com o conhecimento de que estão alinhados com os requisitos de conformidade da organização.
-	- ajuda a garantir que os recursos do Azure sejam implantados de uma maneira que esteja de acordo com os requisitos de conformidade. 
-	- é uma forma declarativa de orquestrar a implantação de vários modelos de recursos e outros artefatos, tais como:
-		- Atribuições de Funções
-		- Atribuições de Políticas
-		- Modelos do ARM (modelos do Azure Resource Manager)
-		- Grupos de recursos
-	- Objetos de blueprint são replicados para várias regiões do Azure. Essa replicação oferece baixa latência, alta disponibilidade e acesso consistente a seus objetos de blueprint.
-	
+
 ### Describe the purpose of resource locks
+
+- Um bloqueio de recurso impede que os recursos sejam excluídos ou alterados acidentalmente.
+- Mesmo com as políticas do controle de acesso baseado em função do Azure (RBAC do Azure) em vigor, ainda há um risco de que as pessoas com o nível correto de acesso possam excluir recursos de nuvem críticos.
+- Gerencie os bloqueios de recursos no portal do Azure, no PowerShell, na CLI do Azure ou em um modelo do Azure Resource Manager.
+- Você pode aplicar bloqueios a uma assinatura, a um grupo de recursos ou a um recurso individual. É possível definir o nível de bloqueio como CanNotDelete ou ReadOnly.
+	- CanNotDelete significa que as pessoas autorizadas ainda podem ler e modificar um recurso, mas não podem excluir o recurso sem antes remover o bloqueio.
+	- ReadOnly significa que pessoas autorizadas podem ler um recurso, mas não podem excluir nem alterar o recurso. 
+
 ### Describe the purpose of the Service Trust Portal
+
+
 
 ## Describe features and tools for managing and deploying Azure resources
 
