@@ -430,18 +430,67 @@ O Privileged Identity Management fornece ativação de função baseada em tempo
 
 O Azure AD gerencia diferentes tipos de identidades: usuários, entidades de serviço, identidades gerenciadas (managed identities) e dispositivos (devices).
 
-- **Identidade de usuário (users)** é uma representação de algo gerenciado pelo Azure AD. Os funcionários e convidados são representados como usuários no Azure AD. Se você tiver vários usuários com as mesmas necessidades de acesso, pode criar um grupo. Use os grupos para conceder permissões de acesso a todos os membros do grupo, em vez de atribuir direitos de acesso individualmente.
-	- A colaboração do Azure AD B2B, um recurso dentro de identidades externas, inclui a capacidade de adicionar usuários convidados. Com a colaboração B2B, uma organização pode compartilhar de maneira segura aplicativos e serviços com usuários convidados de outra organização.
-- **Entidade de serviço (service principals)** é, essencialmente, uma identidade para um aplicativo. O aplicativo deve primeiro ser registrado no Azure AD para habilitar sua integração. Depois de registrada, uma entidade de serviço é criada em cada locatário do Azure AD em que o aplicativo é usado. A entidade de serviço habilita recursos principais, como autenticação e autorização do aplicativo, para recursos protegidos pelo locatário do Azure AD. Os desenvolvedores de aplicativos devem gerenciar e proteger as credenciais.
-- As identidades gerenciadas são um tipo de entidade de serviço gerenciada automaticamente no Azure AD que eliminam a necessidade de os desenvolvedores gerenciarem credenciais. As identidades gerenciadas fornecem uma identidade para os aplicativos usarem ao se conectar a recursos do Azure que dão suporte à autenticação do Azure AD e podem ser usadas sem nenhum custo extra. Há dois tipos de identidades gerenciadas: atribuída pelo sistema e atribuída pelo usuário.
-	- **Atribuída pelo sistema (System-assigned)**. Alguns serviços do Azure permitem que você habilite uma identidade gerenciada diretamente em uma instância de serviço. Quando você habilita uma identidade gerenciada atribuída pelo sistema, uma identidade é criada no Azure AD que está vinculada ao ciclo de vida dessa instância de serviço. Quando o recurso é excluído, o Azure exclui automaticamente a identidade para você. Por design, somente o recurso do Azure pode usar essa identidade para solicitar tokens do Azure AD.
-	- **Atribuída pelo usuário (User-assigned)**. Você também pode criar uma identidade gerenciada como um recurso autônomo do Azure. Depois de criar uma identidade gerenciada atribuída pelo usuário, é possível atribuí-la a uma ou mais instâncias de um serviço do Azure. Com as identidades gerenciadas atribuídas pelo usuário, a identidade é gerenciada separadamente dos recursos que a usam.
+**Identidade de usuário (users)** é uma representação de algo gerenciado pelo Azure AD. Os funcionários e convidados são representados como usuários no Azure AD. Se você tiver vários usuários com as mesmas necessidades de acesso, pode criar um grupo. Use os grupos para conceder permissões de acesso a todos os membros do grupo, em vez de atribuir direitos de acesso individualmente.
+- A colaboração do Azure AD B2B, um recurso dentro de identidades externas, inclui a capacidade de adicionar usuários convidados. Com a colaboração B2B, uma organização pode compartilhar de maneira segura aplicativos e serviços com usuários convidados de outra organização.
 
+**Entidade de serviço (service principals)** é, essencialmente, uma identidade para um aplicativo. O aplicativo deve primeiro ser registrado no Azure AD para habilitar sua integração. Depois de registrada, uma entidade de serviço é criada em cada locatário do Azure AD em que o aplicativo é usado. A entidade de serviço habilita recursos principais, como autenticação e autorização do aplicativo, para recursos protegidos pelo locatário do Azure AD. Os desenvolvedores de aplicativos devem gerenciar e proteger as credenciais.
 
+**Identidades gerenciadas** são um tipo de entidade de serviço gerenciada automaticamente no Azure AD que eliminam a necessidade de os desenvolvedores gerenciarem credenciais. As identidades gerenciadas fornecem uma identidade para os aplicativos usarem ao se conectar a recursos do Azure que dão suporte à autenticação do Azure AD e podem ser usadas sem nenhum custo extra. Há dois tipos de identidades gerenciadas: atribuída pelo sistema e atribuída pelo usuário.
 
-- **External identities** - 
+- **Atribuída pelo sistema (System-assigned)**. Alguns serviços do Azure permitem que você habilite uma identidade gerenciada diretamente em uma instância de serviço. Quando você habilita uma identidade gerenciada atribuída pelo sistema, uma identidade é criada no Azure AD que está vinculada ao ciclo de vida dessa instância de serviço. Quando o recurso é excluído, o Azure exclui automaticamente a identidade para você. Por design, somente o recurso do Azure pode usar essa identidade para solicitar tokens do Azure AD.
+	- Criada como parte de um recurso do Azure, como uma máquina virtual do Azure ou o Serviço de Aplicativo do Azure.
+	- Ciclo de vida compartilhado com o recurso do Azure. Quando o recurso pai é excluído, a identidade gerenciada também é excluída.
+	- Não pode ser compartilhada. Associada a um único recurso do Azure.
+	- Casos de uso: Cargas de trabalho que estão contidas em um único recurso do Azure. Cargas de trabalho para as quais você precisa de identidades independentes, como um aplicativo executado em uma única máquina virtual.
 
-- **Guest access** - Os usuários convidados do Azure Active Directory (Azure AD) fazem parte das funcionalidades de colaboração B2B (entre empresas) no Azure AD para que você possa gerenciar usuários e fornecedores convidados externos como convidados no Azure AD.
+- **Atribuída pelo usuário (User-assigned)**. Você também pode criar uma identidade gerenciada como um recurso autônomo do Azure. Depois de criar uma identidade gerenciada atribuída pelo usuário, é possível atribuí-la a uma ou mais instâncias de um serviço do Azure. Com as identidades gerenciadas atribuídas pelo usuário, a identidade é gerenciada separadamente dos recursos que a usam.
+	- Criada como recurso autônomo do Azure.
+	- Ciclo de vida independente. Precisa ser explicitamente excluída.
+	- Pode ser compartilhada. Uma identidade gerenciada atribuída pelo usuário pode ser associada a mais de um recurso do Azure.
+	- Casos de uso: Cargas de trabalho que são executadas em vários recursos e que podem compartilhar uma única identidade. Cargas de trabalho que precisam de pré-autorização para um recurso seguro como parte de um fluxo de provisionamento. Cargas de trabalho em que os recursos são reciclados com frequência, mas as permissões devem permanecer consistentes. Por exemplo, uma carga de trabalho em que várias máquinas virtuais precisam acessar o mesmo recurso.
+
+**Identidade do dispositivo**. Fornece aos administradores informações que eles podem usar ao tomar decisões de acesso ou configuração. As identidades de dispositivo podem ser configuradas de diferentes modos no Azure AD.
+- **Dispositivos registrados no Azure AD** - fornecer aos usuários suporte para cenários BYOD (Traga seu próprio dispositivo) ou de dispositivo móvel. Nesses cenários, o usuário pode acessar os recursos da organização usando um dispositivo pessoal. 
+- **Ingressado no Azure AD**. Um dispositivo é ingressado no Azure AD por meio de uma conta organizacional, que é usada para entrar no dispositivo.
+- **Dispositivos ingressados no Azure AD híbrido**. As organizações com implementações do Active Directory local podem se beneficiar da funcionalidade oferecida pelo Azure AD implementando dispositivos ingressados no Azure AD híbrido.
+
+Registrar e ingressar dispositivos no Azure AD oferece aos usuários o SSO (Logon Único) para recursos baseados em nuvem. Além disso, os dispositivos ingressados no Azure AD se beneficiam da experiência de SSO para recursos e aplicativos que dependem do Active Directory local.
+
+Os administradores de TI podem usar ferramentas como Microsoft Intune, um serviço baseado em nuvem que se concentra no MDM (mobile device management) e no MAM (mobile application management), para controlar como os dispositivos de uma organização são usados.
+
+**External identities** - As Identidades Externas do Azure AD consistem em um conjunto de recursos que possibilitam que as organizações permitam o acesso a usuários externos, como clientes ou parceiros. Essa capacidade para usuários externos é habilitada por meio do suporte do Azure AD de provedores de identidade externos, como outros locatários do Azure AD, Facebook, Google ou provedores de identidade empresariais. Pode ser configurado para que os usuários externos possam entrar com suas contas sociais ou corporativas existentes.
+
+Há duas Identidades Externas do Azure AD diferentes: B2B e B2C.
+
+- **Colaboração B2B** permite que você compartilhe os aplicativos e recursos com usuários externos.
+	- A colaboração B2B permite que você compartilhe os aplicativos e serviços da sua organização com usuários convidados de outras organizações, mantendo o controle sobre seus próprios dados.
+	- A colaboração B2B usa um processo de convite e resgate.
+	- Você também pode habilitar fluxos dos usuários de inscrição por autoatendimento para permitir que os usuários externos se inscrevam em aplicativos ou recursos. 
+	- Depois que o usuário externo resgatar o convite ou concluir a inscrição, ele será representado no mesmo diretório que os funcionários, mas com um usuário do tipo convidado. 
+	- Com o B2B, há suporte para SSO (logon único) em todos os aplicativos conectados ao Azure AD.
+
+- **Gerenciamento de acesso B2C** é uma solução de gerenciamento de identidade para aplicativos voltados para o consumidor e para o cliente.
+	- O Azure AD B2C é uma solução de CIAM (customer identity access management). O Azure AD B2C permite que usuários externos entrem com suas identidades preferenciais de conta social, corporativa ou local para obter o logon único para os aplicativos.
+	- Ele cuida do dimensionamento e da segurança da plataforma de autenticação, do monitoramento e do tratamento automático de ameaças, como denial-of-service (DDoS), password spray ou ataques de força bruta.
+	- Os usuários externos são gerenciados no diretório Azure AD B2C, separadamente do diretório de funcionários e parceiros da organização.
+	- Também há suporte para SSO para os aplicativos de clientes nos locatário do Azure AD B2C.
+
+> As Identidades Externas do Azure AD são um recurso das edições Premium P1 e P2 do Azure AD e os preços se baseiam em usuários ativos mensais. 
+
+**Identidade híbrida** - Muitas organizações são uma mistura de aplicativos locais e em nuvem. Independentemente de um aplicativo ser hospedado localmente ou na nuvem, os usuários esperam e exigem acesso fácil. Essas soluções criam uma identidade de usuário comum para autenticação e autorização para todos os recursos, independentemente da localização. A Microsoft oferece várias maneiras de autenticar.
+
+- **Azure AD Password hash synchronization**. Os usuários podem entrar nos serviços do Azure AD usando o mesmo nome de usuário e senha usados para entrar na instância do Active Directory local. O Azure AD lida com o processo de conexão dos usuários. Um benefício dessa abordagem é que a sincronização de hash de senha fornece autenticação de nuvem altamente disponível. 
+
+- **Azure AD Pass-through authentication**. A autenticação de passagem do Azure AD permite que os usuários entrem em aplicativos locais e baseados em nuvem usando as mesmas senhas, como sincronização de hash de senha. Uma diferença importante é que a validação de senha não ocorre na nuvem. Isso pode ser um fator importante para as organizações que desejam impor suas políticas de segurança e senha do Active Directory local. A autenticação de passagem do Azure AD também usa o Azure AD Connect, mas tem o requisito adicional de executar um ou mais agentes de autenticação. Esses agentes servem como intermediários entre o Azure AD e o Active Directory local no processo de autenticação de usuários.
+	- Quando um usuário tenta acessar um aplicativo ao qual ainda não está conectado, ele é redirecionado para inserir seu nome de usuário e senha. O Azure AD criptografará a senha do usuário com a chave pública do Agente de Autenticação. O Agente de Autenticação local valida o nome de usuário e a senha no Active Directory que avalia a solicitação e fornece uma resposta (sucesso, falha, senha expirada ou usuário bloqueado) de volta ao agente, que notifica o Azure AD. 
+	- Dependência de agentes de autenticação em execução em servidores, é preciso considerar software e hardware distribuídos e redundantes para fornecer alta disponibilidade de solicitações de conexão.
+
+- **Federated authentication**.  A federação é recomendada como uma autenticação para organizações que têm recursos avançados atualmente incompatíveis com o Azure AD, incluindo logon usando cartões inteligentes ou certificados, logon usando o servidor de MFA (autenticação multifator) local e logon usando uma solução de autenticação de terceiros.
+	- O Azure AD entrega o processo de autenticação para um sistema de autenticação confiável separado, como os Serviços de Federação do Active Directory (AD FS) locais, para validar a senha do usuário. Esse método de entrada garante que toda a autenticação do usuário ocorra localmente.
+	- A autenticação federada usa o Azure AD Connect, mas também requer servidores adicionais para dar suporte à federação, resultando em um volume de infraestrutura maior.
+	- Organizações podem configurar a sincronização de hash de senha como um backup em caso de falha na infraestrutura do AD FS.
+
+> Essas opções de autenticação híbrida exigem um Active Directory local. Além disso, o Azure AD Connect, um aplicativo da Microsoft local executado em um servidor, é necessário e serve como uma ponte entre o Azure AD e o Active Directory local.
 
 ### Describe Azure AD Conditional Access
 
