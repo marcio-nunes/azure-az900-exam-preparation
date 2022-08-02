@@ -564,7 +564,12 @@ Uma função personalizada pode ser atribuída no escopo de toda a organização
 
 - **Usuários em funções específicas do Azure AD (Azure AD-specific roles)**: Essas funções concedem permissões para gerenciar recursos somente no Azure AD. Por exemplo, Administrador de Usuários, Administrador de Aplicativos, Administrador de Grupos concedem permissões para gerenciar recursos que residem no Azure AD.
 - **Funções específicas do serviço (Service-specific roles)**: para os principais serviços do Microsoft 365, o Azure AD inclui funções específicas de serviço integradas que concedem permissões para gerenciar os recursos no serviço. Por exemplo, as funções internas do Azure AD para Administradores do Exchange, do Intune, do SharePoint e do Teams podem gerenciar recursos em seus respectivos serviços.
-- 
+- **Funções entre serviços (Cross-service roles)**: há algumas funções no Azure AD que abrangem vários serviços. Por exemplo, o Azure AD tem funções relacionadas à segurança, como o Administrador de Segurança, que concedem acesso em vários serviços de segurança em Microsoft 365. Da mesma forma, na função Administrador de Conformidade, você pode gerenciar configurações relacionadas à Conformidade no Centro de Conformidade do Microsoft 365, no Exchange e assim por diante.
+
+**Diferença entre o RBAC do Azure AD e o RBAC do Azure**
+
+- RBAC do Azure AD – as funções do Azure AD controlam o acesso a recursos do Azure AD como usuários, grupos e aplicativos.
+- RBAC do Azure: as funções do Azure controlam o acesso a recursos do Azure como máquinas virtuais ou armazenamento usando o Gerenciamento de Recursos do Azure.
 
 ### Describe the concept of Zero Trust
 
@@ -650,6 +655,7 @@ Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviç
 ### Describe the purpose of Azure Blueprints
 
 Azure Blueprints fornece uma maneira de definir um conjunto repetitivo de recursos do Azure. O Azure Blueprints permite que equipes de desenvolvimento provisionem e executem novos recursos rapidamente, com o conhecimento de que estão alinhados com os requisitos de conformidade da organização.
+
 - ajuda a garantir que os recursos do Azure sejam implantados de uma maneira que esteja de acordo com os requisitos de conformidade. 
 - é uma forma declarativa de orquestrar a implantação de vários modelos de recursos e outros artefatos, tais como:
 	- Atribuições de Funções
@@ -660,20 +666,20 @@ Azure Blueprints fornece uma maneira de definir um conjunto repetitivo de recurs
 
 ### Describe the purpose of Azure Policy
 
-- **Azure Policy** - O Azure Policy foi projetado para ajudar a reforçar os padrões e avaliar a conformidade em toda a sua organização.
-	-  Casos de uso comuns do Azure Policy incluem implementar a governança para consistência de recursos, conformidade regulatória, segurança, custo e gerenciamento.
-	- O Azure Policy avalia se as propriedades de recursos correspondem às regras de negócio. Essas regras de negócio são descritas usando o formato JSON e são chamadas de definições de política. 
-	- Para um gerenciamento simplificado, você pode agrupar várias regras de negócio para formar uma única iniciativa de política.
-	- Usado para monitorar continuamente os recursos e garantir uma continuação com os requisitos de conformidade.
-	- O Azure Policy avalia recursos em momentos específicos durante o ciclo de vida do recurso, o ciclo de vida de atribuição de política e para avaliação regular de conformidade contínua.
-	- Diferença entre as funções do Azure Policy e o controle de acesso baseado em função do Azure (RBAC)?
-		-  Você usa o Azure Policy para garantir que o estado do recurso seja compatível com as regras de negócio de sua organização, independentemente de quem fez a alteração ou quem tem permissão para fazer alterações. O Azure Policy avaliará o estado de um recurso e agirá para garantir que o recurso permaneça em conformidade.
-		- O RBAC do Azure gerencia quem tem acesso aos recursos do Azure, o que eles podem fazer com esses recursos e quais áreas eles podem acessar. Se as ações precisarem ser controladas, você usará o RBAC do Azure. 
-		- Se um indivíduo tiver acesso para concluir uma ação, mas o resultado for um recurso que não está em conformidade, o Azure Policy ainda bloqueará a ação. 
+**Azure Policy** - O Azure Policy foi projetado para ajudar a reforçar os padrões e avaliar a conformidade em toda a sua organização.
+-  Casos de uso comuns do Azure Policy incluem implementar a governança para consistência de recursos, conformidade regulatória, segurança, custo e gerenciamento.
+- O Azure Policy avalia se as propriedades de recursos correspondem às regras de negócio. Essas regras de negócio são descritas usando o formato JSON e são chamadas de definições de política. 
+- Para um gerenciamento simplificado, você pode agrupar várias regras de negócio para formar uma única iniciativa de política.
+- Usado para monitorar continuamente os recursos e garantir uma continuação com os requisitos de conformidade.
+- O Azure Policy avalia recursos em momentos específicos durante o ciclo de vida do recurso, o ciclo de vida de atribuição de política e para avaliação regular de conformidade contínua.
+- Diferença entre as funções do Azure Policy e o controle de acesso baseado em função do Azure (RBAC)?
+	-  Você usa o Azure Policy para garantir que o estado do recurso seja compatível com as regras de negócio de sua organização, independentemente de quem fez a alteração ou quem tem permissão para fazer alterações. O Azure Policy avaliará o estado de um recurso e agirá para garantir que o recurso permaneça em conformidade.
+	- O RBAC do Azure gerencia quem tem acesso aos recursos do Azure, o que eles podem fazer com esses recursos e quais áreas eles podem acessar. Se as ações precisarem ser controladas, você usará o RBAC do Azure. 
+	- Se um indivíduo tiver acesso para concluir uma ação, mas o resultado for um recurso que não está em conformidade, o Azure Policy ainda bloqueará a ação. 
 
 ### Describe the purpose of resource locks
 
-- Um bloqueio de recurso impede que os recursos sejam excluídos ou alterados acidentalmente.
+- Um bloqueio de recurso (resource locks) impede que os recursos sejam excluídos ou alterados acidentalmente.
 - Mesmo com as políticas do controle de acesso baseado em função do Azure (RBAC do Azure) em vigor, ainda há um risco de que as pessoas com o nível correto de acesso possam excluir recursos de nuvem críticos.
 - Gerencie os bloqueios de recursos no portal do Azure, no PowerShell, na CLI do Azure ou em um modelo do Azure Resource Manager.
 - Você pode aplicar bloqueios a uma assinatura, a um grupo de recursos ou a um recurso individual. É possível definir o nível de bloqueio como CanNotDelete ou ReadOnly.
