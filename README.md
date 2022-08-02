@@ -1,12 +1,16 @@
 # <a name="topo"></a>Preparação para o exame Azure AZ-900
 
-- [Study Guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY)
-- [Path de estudo para a certificação AZ-900](https://docs.microsoft.com/pt-br/users/marcio-nunes-silva/collections/ew7zi52118116y)
-- [Agendamento do exame](https://esi.microsoft.com/landing)
+## Considerações
+
+1. Todo conteúdo foi retirado dos módulos e paths do site [Microsoft Learn](https://docs.microsoft.com/pt-br/learn/) para fins de estudo.
+2. Esse resumo não substitui os módulos completos. Recomendo fortemente estudar através dos módulos do MS Learn.
+3. Resumo baseado no [Study Guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY) oficial da Microsoft.
+4. Criei o [Path de estudo para a certificação AZ-900](https://docs.microsoft.com/pt-br/users/marcio-nunes-silva/collections/ew7zi52118116y) e vou atualizando conforme necessidade. 
+5. [Agendamento do exame](https://esi.microsoft.com/landing) de certificação.
 
 Icons: ☁️🔸
 
-# Skills measured
+# Study Guide - Skills measured
 
 - Describe cloud concepts (25-30%)
 - Describe Azure architecture and services (35-40%)
