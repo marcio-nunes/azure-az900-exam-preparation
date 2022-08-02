@@ -173,7 +173,7 @@ O provedor de nuvem é responsável pela segurança física dos datacenters, pel
 	- Aplicativos de produtividade empresarial.
 	- Controle de finanças e despesas.
 
-# Describe Azure architecture and services (35-40%)
+# ☁️ Describe Azure architecture and services (35-40%)
 
 ## 🔸 Describe the core architectural components of Azure
 
@@ -532,11 +532,13 @@ Avaliação contínua – Conheça sua postura de segurança. Identifique e rast
 Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
 Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
 
-## 🔸 Describe Azure management and governance (30-35%)
+# ☁️ Describe Azure management and governance (30-35%)
 
-### Describe cost management in Azure
+## Describe cost management in Azure
+
 ### Describe factors that can affect costs in Azure
-### Compare the Pricing calculator and the Total Cost of Ownership (TCO) calculator Describe the Azure Cost Management and Billing tool
+### Compare the Pricing calculator and the Total Cost of Ownership (TCO) calculator 
+### Describe the Azure Cost Management and Billing tool
 ### Describe the purpose of tags
 
 ## 🔸 Describe features and tools in Azure for governance and compliance
