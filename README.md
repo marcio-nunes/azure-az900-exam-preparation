@@ -722,3 +722,5 @@ Os Termos dos Serviços Online são um contrato legal entre a Microsoft e o clie
 
 A documentação de conformidade do Azure inclui informações detalhadas sobre a conformidade e os padrões legais e regulatórios no Azure.
 A documentação de conformidade fornece blueprints de referência, ou definições de política, para padrões comuns que podem ser aplicados à sua assinatura do Azure.
+
+<span style="color:blue">some *blue* text</span>.
