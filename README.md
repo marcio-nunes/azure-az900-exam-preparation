@@ -1,4 +1,4 @@
-# <a name="topo"></a>Preparação para o exame Azure AZ-900
+# <a name="topo"></a>Preparação para o exame Azure AZ-900 (WIP)
 
 ## Considerações
 
@@ -7,6 +7,7 @@
 3. Resumo baseado no [Study Guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY) oficial da Microsoft.
 4. Criei o [Path de estudo para a certificação AZ-900](https://docs.microsoft.com/pt-br/users/marcio-nunes-silva/collections/ew7zi52118116y) e vou atualizando conforme necessidade. 
 5. [Agendamento do exame](https://esi.microsoft.com/landing) de certificação.
+6. Resumo ainda em andamento. Fiquem a vontade para ajudar a melhorar o conteúdo.
 
 Icons: ☁️🔸
 
