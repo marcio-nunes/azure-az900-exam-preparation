@@ -397,6 +397,7 @@ O Azure AD está disponível em quatro edições: Gratuito, Aplicativos do Offic
 **Azure AD DS (Azure Active Directory Domain Services)** é um serviço que fornece serviços de domínio gerenciado, como ingresso no domínio, política de grupo, protocolo LDAP e autenticação Kerberos/NTLM. Assim como o Azure AD permite que você use serviços de diretório sem precisar manter uma infraestrutura de suporte, com Azure AD DS você obtém o benefício dos serviços de domínio sem a necessidade de implantar, gerenciar e corrigir DCs (controladores de domínio) na nuvem.
 
 - Um domínio gerenciado do Azure AD DS permite que você execute aplicativos herdados na nuvem que não podem usar métodos de autenticação modernos ou nos quais você não deseja que as pesquisas de diretório sempre voltem para um ambiente de AD DS local. 
+- Todas as identidades de usuário são gerenciadas no diretório AD DS (Active Directory Domain Services) local e as alterações são sincronizadas no Azure AD.
 	
 ### Describe authentication methods in Azure, including single sign-on (SSO), multifactor authentication, and passwordless
 
