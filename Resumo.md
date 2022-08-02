@@ -477,7 +477,9 @@ Há duas Identidades Externas do Azure AD diferentes: B2B e B2C.
 
 > As Identidades Externas do Azure AD são um recurso das edições Premium P1 e P2 do Azure AD e os preços se baseiam em usuários ativos mensais. 
 
-**Identidade híbrida** - Muitas organizações são uma mistura de aplicativos locais e em nuvem. Independentemente de um aplicativo ser hospedado localmente ou na nuvem, os usuários esperam e exigem acesso fácil. Essas soluções criam uma identidade de usuário comum para autenticação e autorização para todos os recursos, independentemente da localização. A Microsoft oferece várias maneiras de autenticar.
+**Identidade híbrida** - Muitas organizações são uma mistura de aplicativos locais e em nuvem. Independentemente de um aplicativo ser hospedado localmente ou na nuvem, os usuários esperam e exigem acesso fácil. Essas soluções criam uma identidade de usuário comum para autenticação e autorização para todos os recursos, independentemente da localização. A Microsoft oferece várias maneiras de autenticar. 
+
+Todas as identidades de usuário são gerenciadas no diretório AD DS (Active Directory Domain Services) local e as alterações são sincronizadas no Azure AD.
 
 - **Azure AD Password hash synchronization**. Os usuários podem entrar nos serviços do Azure AD usando o mesmo nome de usuário e senha usados para entrar na instância do Active Directory local. O Azure AD lida com o processo de conexão dos usuários. Um benefício dessa abordagem é que a sincronização de hash de senha fornece autenticação de nuvem altamente disponível. 
 
@@ -490,7 +492,7 @@ Há duas Identidades Externas do Azure AD diferentes: B2B e B2C.
 	- A autenticação federada usa o Azure AD Connect, mas também requer servidores adicionais para dar suporte à federação, resultando em um volume de infraestrutura maior.
 	- Organizações podem configurar a sincronização de hash de senha como um backup em caso de falha na infraestrutura do AD FS.
 
-> Essas opções de autenticação híbrida exigem um Active Directory local. Além disso, o Azure AD Connect, um aplicativo da Microsoft local executado em um servidor, é necessário e serve como uma ponte entre o Azure AD e o Active Directory local.
+> Essas opções de autenticação híbrida exigem um Active Directory local. Além disso, o Azure AD Connect, um aplicativo da Microsoft local executado em um servidor, é necessário e serve como uma ponte entre o Azure AD e o Active Directory local. 
 
 ### Describe Azure AD Conditional Access
 
