@@ -4,15 +4,17 @@
 - [Path de estudo para a certificação AZ-900](https://docs.microsoft.com/pt-br/users/marcio-nunes-silva/collections/ew7zi52118116y)
 - [Agendamento do exame](https://esi.microsoft.com/landing)
 
+Icons: ☁️🔸
+
 # Skills measured
 
 - Describe cloud concepts (25-30%)
 - Describe Azure architecture and services (35-40%)
 - Describe Azure management and governance (30-35%)
 
-# Describe cloud concepts (25-30%)
+# ☁️ Describe cloud concepts (25-30%)
 
-## Describe cloud computing
+## 🔸 Describe cloud computing
 
 ### Define cloud computing
 
@@ -79,7 +81,7 @@ Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem
 - Pago conforme o uso - Uma assinatura com Pagamento Conforme o Uso permite que você pague pelo que usar vinculando um cartão de crédito ou débito à sua conta. As organizações podem se candidatar a descontos por volume e a faturamento pré-pago.
 - Ofertas de membro - Sua associação existente a determinados produtos e serviços da Microsoft pode fornecer créditos para sua conta do Azure e taxas reduzidas nos serviços do Azure. Por exemplo, ofertas de membros estão disponíveis para assinantes do Visual Studio, membros da Microsoft Partner Network, membros da Microsoft para Startups e membros do Microsoft Imagine.
 
-## Describe the benefits of using cloud services
+## 🔸 Describe the benefits of using cloud services
 
 Alta disponibilidade, escalabilidade e distribuição geográfica. 
 
@@ -121,7 +123,7 @@ Alta disponibilidade, escalabilidade e distribuição geográfica.
 - Monitorar a integridade dos recursos e substituir automaticamente os recursos com falha.
 - Receber alertas automáticos com base em métricas configuradas, de modo a ficar ciente do desempenho em tempo real.
 
-## Describe cloud service types
+## 🔸 Describe cloud service types
 
 ### Describe infrastructure as a service (IaaS)
 
@@ -173,7 +175,7 @@ O provedor de nuvem é responsável pela segurança física dos datacenters, pel
 
 # Describe Azure architecture and services (35-40%)
 
-## Describe the core architectural components of Azure
+## 🔸 Describe the core architectural components of Azure
 
 ### Describe Azure regional, regional pairs and sovereign regions
 
@@ -285,7 +287,7 @@ Com o Resource Manager, você pode:
 	- Os Grupos de Recursos pertencem a exatamente uma Assinatura. 
 	- Os próprios recursos (os serviços de nuvem do Azure) podem ser agrupados em grupos de recursos.
 
-## Describe Azure compute and networking services
+## 🔸 Describe Azure compute and networking services
 
 ### Compare compute types, including container instances, virtual machines (VMs), and functions
 
@@ -350,7 +352,7 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 ### Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
 ### Define public and private endpoints
 
-## Describe Azure storage services
+## 🔸 Describe Azure storage services
 
 ### Compare Azure storage services
 ### Describe storage tiers
@@ -359,7 +361,7 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 ### Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync
 ### Describe migration options, including Azure Migrate and Azure Data Box
 
-## Describe Azure identity, access, and security
+## 🔸 Describe Azure identity, access, and security
 
 
 
@@ -382,6 +384,15 @@ O Azure AD simplifica a maneira como as organizações gerenciam a autorização
 - Ajudar a protegê-lo detectando tentativas de conexão suspeitas sem custo adicional. Por exemplo, o Azure AD pode detectar tentativas de conexão de locais inesperados ou dispositivos desconhecidos.
 	- **Gerenciamento de dispositivo**: além das contas de pessoas individuais, o Azure AD dá suporte ao registro de dispositivos. Também permite que políticas de Acesso Condicional baseadas no dispositivo restrinjam tentativas de acesso somente às provenientes de dispositivos conhecidos, independentemente da conta de usuário solicitante.
 - Também inclui fornecer funcionalidades como redefinição de senha por autoatendimento, autenticação multifator, uma lista personalizada de senhas banidas e serviços de bloqueio inteligente.
+
+O Azure AD está disponível em quatro edições: Gratuito, Aplicativos do Office 365, Premium P1 e Premium P2.
+
+- **Azure Active Directory Gratuito**. Permite que você administre usuários e crie grupos, sincronize com o Active Directory local, crie relatórios básicos, configure a alteração de senha self-service para usuários na nuvem e habilite o logon único no Azure, no Microsoft 365 e em muitos aplicativos de SaaS populares. A edição gratuita está incluída nas assinaturas do Office 365, Azure, Dynamics 365, Intune e Power Platform.
+- **Aplicativos do Office 365**. Permite que você faça tudo o que está incluído na versão gratuita, além da redefinição de senha self-service para usuários na nuvem e write-back de dispositivo, o que oferece sincronização bidirecional entre os diretórios locais e o Azure AD. Está incluída nas assinaturas do Office 365 E1, E3, E5, F1 e F3.
+- **Azure Active Directory Premium P1**. Inclui todos os recursos da edição gratuita e de Aplicativos do Office 365. Ele também dá suporte à administração avançada, como grupos dinâmicos, gerenciamento de grupo de autoatendimento, Microsoft Identity Manager (um conjunto de gerenciamento de acesso e identidade local) e recursos de write-back de nuvem, que permitem a redefinição de senha por autoatendimento para os usuários locais.
+- **Azure Active Directory Premium P2**. O P2 oferece todos os recursos do Premium P1 e o Azure Active Directory Identity Protection para fornecer acesso condicional baseado em risco aos aplicativos e dados críticos da empresa. O P2 também oferece o Azure Active Directory Privileged Identity Management para descobrir, restringir e monitorar os administradores e o acesso aos recursos, bem como fornecer acesso just-in-time, quando necessário.
+
+> Também existe uma opção para licenças de recurso de “Pagamento conforme o uso”. Você pode obter licenças de outros recursos separadamente, como o Azure Active Directory B2C. O B2C pode ajudar você a fornecer soluções de gerenciamento de acesso e identidade para seus aplicativos voltados ao cliente.
 
 **Azure AD DS (Azure Active Directory Domain Services)** é um serviço que fornece serviços de domínio gerenciado, como ingresso no domínio, política de grupo, protocolo LDAP e autenticação Kerberos/NTLM. Assim como o Azure AD permite que você use serviços de diretório sem precisar manter uma infraestrutura de suporte, com Azure AD DS você obtém o benefício dos serviços de domínio sem a necessidade de implantar, gerenciar e corrigir DCs (controladores de domínio) na nuvem.
 
@@ -521,14 +532,14 @@ Avaliação contínua – Conheça sua postura de segurança. Identifique e rast
 Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
 Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
 
-## Describe Azure management and governance (30-35%)
+## 🔸 Describe Azure management and governance (30-35%)
 
 ### Describe cost management in Azure
 ### Describe factors that can affect costs in Azure
 ### Compare the Pricing calculator and the Total Cost of Ownership (TCO) calculator Describe the Azure Cost Management and Billing tool
 ### Describe the purpose of tags
 
-## Describe features and tools in Azure for governance and compliance
+## 🔸 Describe features and tools in Azure for governance and compliance
 
 ### Describe the purpose of Azure Blueprints
 
@@ -571,7 +582,7 @@ Fornecem uma grande quantidade de informações de design e implementação de s
 
 Setores & Regiões fornecem informações de conformidade específicas do setor e da região sobre os serviços do Microsoft Cloud.
 
-## Describe features and tools for managing and deploying Azure resources
+## 🔸 Describe features and tools for managing and deploying Azure resources
 
 ### Describe the Azure portal
 ### Describe Azure Cloud Shell, including Azure CLI and Azure PowerShell
@@ -581,7 +592,7 @@ O Azure Arc é uma ponte que estende a plataforma do Azure para ajudar na criaç
 
 ### Describe Azure Resource Manager and Azure Resource Manager templates (ARM templates)
 
-## Describe monitoring tools in Azure
+## 🔸 Describe monitoring tools in Azure
 
 ### Describe the purpose of Azure Advisor
 ### Describe Azure Service Health
