@@ -1,3 +1,9 @@
+# <a name="topo"></a>Preparação para o exame Azure AZ-900
+
+- [Study Guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY)
+- [Path de estudo para a certificação AZ-900](https://docs.microsoft.com/pt-br/users/marcio-nunes-silva/collections/ew7zi52118116y)
+- [Agendamento do exame](https://esi.microsoft.com/landing)
+
 # Skills measured
 
 - Describe cloud concepts (25-30%)
@@ -169,7 +175,7 @@ O provedor de nuvem é responsável pela segurança física dos datacenters, pel
 
 ## Describe the core architectural components of Azure
 
-### Describe Azure regional, regional pairs, and sovereign regions
+### Describe Azure regional, regional pairs and sovereign regions
 
 Os recursos são criados em regiões, que são diferentes localizações geográficas no mundo inteiro que contêm datacenters do Azure.
 
@@ -355,16 +361,31 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 
 ## Describe Azure identity, access, and security
 
+
+
 ### Describe directory services in Azure, including Azure Active Directory (Azure AD) and Azure Active Directory Domain Services (Azure AD DS)
 
-- **Azure AD** é o serviço de gerenciamento de acesso e identidade baseado em nuvem da Microsoft. Com o Azure AD, você controla as contas de identidade, mas a Microsoft garante que o serviço esteja disponível globalmente. 
-	- ajudar a protegê-lo detectando tentativas de conexão suspeitas sem custo adicional. Por exemplo, o Azure AD pode detectar tentativas de conexão de locais inesperados ou dispositivos desconhecidos.
-	- **Autenticação**: inclui verificar a identidade para acessar aplicativos e recursos. Também inclui fornecer funcionalidades como redefinição de senha por autoatendimento, autenticação multifator, uma lista personalizada de senhas banidas e serviços de bloqueio inteligente.
-	- **Logon único**: o SSO (logon único) permite que você se lembre apenas de um nome de usuário e uma senha para acessar vários aplicativos. Uma única identidade é vinculada a um usuário, o que simplifica o modelo de segurança.
+O Azure AD (Azure Active Directory) é o serviço de gerenciamento de acesso e identidade baseado em nuvem da Microsoft. As organizações usam o Azure AD para permitir que os funcionários, convidados e outras pessoas façam logon e acessem os recursos.
+
+O Azure AD simplifica a maneira como as organizações gerenciam a autorização e o acesso, fornecendo um único sistema de identidade para os aplicativos no local e na nuvem. 
+
+- Pode ser sincronizado com o Active Directory local existente, sincronizado com outros serviços de diretório ou usado como serviço autônomo.
+- O Azure AD também permite que as organizações habilitem com segurança o uso de dispositivos pessoais, como celulares e tablets, e habilitem a colaboração com parceiros de negócios e clientes.
+- Pode ser configurado para exigir a autenticação multifator ao acessar recursos organizacionais importantes.
+- Pode ser usado para automatizar o provisionamento de usuários entre o Windows Server AD existente e os aplicativos na nuvem
+- Os desenvolvedores usam o Azure AD como abordagem baseada em padrões para adicionar o SSO (logon único) aos aplicativos, para que os usuários possam entrar com as credenciais preexistentes. 
+	- **Single Sign-on**: o SSO (logon único) permite que você se lembre apenas de um nome de usuário e uma senha para acessar vários aplicativos. Uma única identidade é vinculada a um usuário, o que simplifica o modelo de segurança.
 	- **Gerenciamento de aplicativo**: você pode gerenciar seus aplicativos de nuvem e locais usando o Azure AD. Recursos como Proxy de Aplicativo, aplicativos SaaS, o portal Meus Aplicativos e o logon único proporcionam uma experiência do usuário aprimorada.
+
+- O Azure AD também fornece APIs que permitem que os desenvolvedores criem experiências de aplicativo personalizadas usando os dados organizacionais existentes.
+- A Microsoft garante que o serviço esteja disponível globalmente. 
+- Ajudar a protegê-lo detectando tentativas de conexão suspeitas sem custo adicional. Por exemplo, o Azure AD pode detectar tentativas de conexão de locais inesperados ou dispositivos desconhecidos.
 	- **Gerenciamento de dispositivo**: além das contas de pessoas individuais, o Azure AD dá suporte ao registro de dispositivos. Também permite que políticas de Acesso Condicional baseadas no dispositivo restrinjam tentativas de acesso somente às provenientes de dispositivos conhecidos, independentemente da conta de usuário solicitante.
-- **Azure AD DS (Azure Active Directory Domain Services)** é um serviço que fornece serviços de domínio gerenciado, como ingresso no domínio, política de grupo, protocolo LDAP e autenticação Kerberos/NTLM. Assim como o Azure AD permite que você use serviços de diretório sem precisar manter uma infraestrutura de suporte, com Azure AD DS você obtém o benefício dos serviços de domínio sem a necessidade de implantar, gerenciar e corrigir DCs (controladores de domínio) na nuvem.
-	- Um domínio gerenciado do Azure AD DS permite que você execute aplicativos herdados na nuvem que não podem usar métodos de autenticação modernos ou nos quais você não deseja que as pesquisas de diretório sempre voltem para um ambiente de AD DS local. 
+- Também inclui fornecer funcionalidades como redefinição de senha por autoatendimento, autenticação multifator, uma lista personalizada de senhas banidas e serviços de bloqueio inteligente.
+
+**Azure AD DS (Azure Active Directory Domain Services)** é um serviço que fornece serviços de domínio gerenciado, como ingresso no domínio, política de grupo, protocolo LDAP e autenticação Kerberos/NTLM. Assim como o Azure AD permite que você use serviços de diretório sem precisar manter uma infraestrutura de suporte, com Azure AD DS você obtém o benefício dos serviços de domínio sem a necessidade de implantar, gerenciar e corrigir DCs (controladores de domínio) na nuvem.
+
+- Um domínio gerenciado do Azure AD DS permite que você execute aplicativos herdados na nuvem que não podem usar métodos de autenticação modernos ou nos quais você não deseja que as pesquisas de diretório sempre voltem para um ambiente de AD DS local. 
 	
 ### Describe authentication methods in Azure, including single sign-on (SSO), multifactor authentication, and passwordless
 
@@ -373,13 +394,33 @@ Autenticação é o processo de estabelecer a identidade de uma pessoa ou servi�
 A autorização é o processo de estabelecer o nível de acesso que uma pessoa ou um serviço autenticado tem. Especifica quais dados podem ser acessados e que a pessoa ou serviço pode fazer com eles.
 
 - **Single sign-on (SSO)** - O SSO permite que você se lembre de apenas um nome de usuário e uma senha para acessar vários aplicativos. Uma única identidade é vinculada a um usuário, o que simplifica o modelo de segurança. À medida que os usuários trocam de funções ou saem de uma organização, as modificações de acesso são vinculadas àquela identidade, o que reduz consideravelmente o esforço necessário para alterar ou desabilitar contas.
-- Multifactor authentication - é um processo em que o usuário deve fornecer uma forma adicional de identificação durante o processo de entrada. Exemplos incluem um código no telefone celular ou uma verificação de impressão digital.
-- Passwordless - A autenticação sem senha precisa ser configurada em um dispositivo para poder funcionar. Por exemplo, seu computador é algo que você tem. Depois de registrado ou inscrito, o Azure agora sabe que ele está associado a você. Agora que o computador é conhecido, uma vez que você forneça algo que você saiba ou seja (como um PIN ou uma impressão digital), você poderá ser autenticado sem usar uma senha. 3 Tipos são oferecidos:
+- **Multifactor authentication** - é um processo em que o usuário deve fornecer uma forma adicional de identificação durante o processo de entrada. Exemplos incluem um código no telefone celular ou uma verificação de impressão digital.
+- **Passwordless** - A autenticação sem senha precisa ser configurada em um dispositivo para poder funcionar. Por exemplo, seu computador é algo que você tem. Depois de registrado ou inscrito, o Azure agora sabe que ele está associado a você. Agora que o computador é conhecido, uma vez que você forneça algo que você saiba ou seja (como um PIN ou uma impressão digital), você poderá ser autenticado sem usar uma senha. 3 Tipos são oferecidos:
 	- Windows Hello para Empresas - Credenciais biométricas e de PIN estão diretamente ligadas ao computador do usuário, o que impede o acesso de quem não seja o proprietário. 
 	- Aplicativo Microsoft Authenticator - permitir que o telefone do funcionário se torne um método de autenticação sem senha.
 	- Chaves de segurança FIDO2 - A FIDO (Fast Identity online) Alliance ajuda a promover padrões de autenticação aberta e a reduzir o uso de senhas como forma de autenticação. A FIDO permite que usuários e organizações aproveitem o padrão para entrar nos recursos sem usar nome de usuário nem senha, usando uma chave de segurança externa ou uma chave de plataforma incorporada a um dispositivo.
 
+O **PIM (Privileged Identity Management)** é um serviço no Azure AD (Azure Active Directory) que permite gerenciar, controlar e monitorar o acesso a importantes recursos na sua organização. Esses recursos incluem os recursos no Azure AD, no Azure e em outros Microsoft Online Services, como o Microsoft 365 ou o Microsoft Intune.
+
+O Privileged Identity Management fornece ativação de função baseada em tempo e aprovação para atenuar os riscos de permissões de acesso excessivas, desnecessárias ou que foram indevidamente utilizadas em recursos importantes. 
+
+- Fornecer acesso privilegiado just-in-time ao Azure AD e aos recursos do Azure
+- Atribua acesso com limite de tempo aos recursos usando as datas de início e término
+- Exigir aprovação para ativar funções com privilégios
+- Impor autenticação multifator para ativar qualquer função
+- Usar justificativa para entender por que os usuários ativam
+- Obter notificações quando as funções privilegiadas forem ativadas
+- Realizar revisões de acesso para garantir que os usuários ainda precisem de funções
+- Baixar o histórico de auditoria para auditoria interna ou externa
+- Impede a remoção do último Administrador Global ativo e das atribuições de função do Administrador de Função com Privilégios
+- Para usar esse recurso, é necessária uma licença do Azure AD Premium P2.
+
 ### Describe external identities and guest access in Azure
+
+- **External identities** - 
+
+- **Guest access** - Os usuários convidados do Azure Active Directory (Azure AD) fazem parte das funcionalidades de colaboração B2B (entre empresas) no Azure AD para que você possa gerenciar usuários e fornecedores convidados externos como convidados no Azure AD.
+
 ### Describe Azure AD Conditional Access
 
 O Acesso Condicional é uma ferramenta que o Azure Active Directory usa para permitir (ou negar) o acesso a recursos com base em sinais de identidade. Esses sinais incluem quem é o usuário, onde ele está e de qual dispositivo está solicitando acesso.
