@@ -428,6 +428,17 @@ O Privileged Identity Management fornece ativação de função baseada em tempo
 
 ### Describe external identities and guest access in Azure
 
+O Azure AD gerencia diferentes tipos de identidades: usuários, entidades de serviço, identidades gerenciadas (managed identities) e dispositivos (devices).
+
+- **Identidade de usuário (users)** é uma representação de algo gerenciado pelo Azure AD. Os funcionários e convidados são representados como usuários no Azure AD. Se você tiver vários usuários com as mesmas necessidades de acesso, pode criar um grupo. Use os grupos para conceder permissões de acesso a todos os membros do grupo, em vez de atribuir direitos de acesso individualmente.
+	- A colaboração do Azure AD B2B, um recurso dentro de identidades externas, inclui a capacidade de adicionar usuários convidados. Com a colaboração B2B, uma organização pode compartilhar de maneira segura aplicativos e serviços com usuários convidados de outra organização.
+- **Entidade de serviço (service principals)** é, essencialmente, uma identidade para um aplicativo. O aplicativo deve primeiro ser registrado no Azure AD para habilitar sua integração. Depois de registrada, uma entidade de serviço é criada em cada locatário do Azure AD em que o aplicativo é usado. A entidade de serviço habilita recursos principais, como autenticação e autorização do aplicativo, para recursos protegidos pelo locatário do Azure AD. Os desenvolvedores de aplicativos devem gerenciar e proteger as credenciais.
+- As identidades gerenciadas são um tipo de entidade de serviço gerenciada automaticamente no Azure AD que eliminam a necessidade de os desenvolvedores gerenciarem credenciais. As identidades gerenciadas fornecem uma identidade para os aplicativos usarem ao se conectar a recursos do Azure que dão suporte à autenticação do Azure AD e podem ser usadas sem nenhum custo extra. Há dois tipos de identidades gerenciadas: atribuída pelo sistema e atribuída pelo usuário.
+	- **Atribuída pelo sistema (System-assigned)**. Alguns serviços do Azure permitem que você habilite uma identidade gerenciada diretamente em uma instância de serviço. Quando você habilita uma identidade gerenciada atribuída pelo sistema, uma identidade é criada no Azure AD que está vinculada ao ciclo de vida dessa instância de serviço. Quando o recurso é excluído, o Azure exclui automaticamente a identidade para você. Por design, somente o recurso do Azure pode usar essa identidade para solicitar tokens do Azure AD.
+	- **Atribuída pelo usuário (User-assigned)**. Você também pode criar uma identidade gerenciada como um recurso autônomo do Azure. Depois de criar uma identidade gerenciada atribuída pelo usuário, é possível atribuí-la a uma ou mais instâncias de um serviço do Azure. Com as identidades gerenciadas atribuídas pelo usuário, a identidade é gerenciada separadamente dos recursos que a usam.
+
+
+
 - **External identities** - 
 
 - **Guest access** - Os usuários convidados do Azure Active Directory (Azure AD) fazem parte das funcionalidades de colaboração B2B (entre empresas) no Azure AD para que você possa gerenciar usuários e fornecedores convidados externos como convidados no Azure AD.
