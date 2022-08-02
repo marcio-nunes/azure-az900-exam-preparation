@@ -501,6 +501,22 @@ O Acesso Condicional é uma ferramenta que o Azure Active Directory usa para per
 
 O Acesso Condicional também proporciona uma experiência de autenticação multifator mais granular para os usuários. Por exemplo, um segundo fator de autenticação poderá não ser solicitado se o usuário estiver em uma localização conhecida. No entanto, ele poderá ser solicitado se os sinais de conexão do usuário forem incomuns ou se o usuário estiver em uma localização inesperada.
 
+- **Associação de usuário ou grupo**. As políticas podem ser direcionadas a todos os usuários, grupos específicos de usuários, funções de diretório ou usuários convidados externos
+- **Informações de localização nomeada**. Podem ser criadas usando intervalos de endereços IP e usadas ao tomar decisões sobre a política.
+- **Dispositivo**. Os usuários com dispositivos de plataformas específicas ou marcados com um estado específico podem ser usados.
+- **Aplicativo**. Os usuários que tentam acessar aplicativos específicos podem disparar diferentes políticas de acesso condicional.
+- **Detecção de risco de entrada em tempo real**. A integração dos sinais ao Azure AD Identity Protection permite que as políticas de acesso condicional identifiquem comportamentos de entrada suspeita
+- **Aplicativos de nuvem ou ações**. Os aplicativos de nuvem ou as ações podem incluir ou excluir aplicativos de nuvem ou ações do usuário que estarão sujeitas à política.
+- Risco do usuário. O risco do usuário representa a probabilidade de que determinada identidade ou conta seja comprometida. O risco do usuário pode ser configurado para uma probabilidade alta, média ou baixa.
+
+**Atribuições da política** controla o quem, o quê, e o onde da política de Acesso Condicional. Todas as atribuições são avaliadas com AND lógicos. Se você tiver mais de uma atribuição configurada, todas as atribuições deverão ser atendidas para disparar uma política.
+
+**Decisão** é conhecida como a parte de controles de acesso da política de Acesso Condicional e define como uma política é imposta.
+
+Quando a política de acesso condicional tiver sido aplicada, uma decisão informada será atingida para conceder acesso, bloquear acesso ou exigir verificação adicional. 
+
+As políticas de acesso condicional podem ser direcionadas a membros de grupos ou convidados específicos. Por exemplo, você pode criar uma política para excluir todas as contas de convidado do acesso a recursos confidenciais. O acesso condicional é um recurso das edições pagas do Azure AD.
+
 O acesso condicional é útil quando você precisa:
 
 - Exija a MFA (autenticação multifator) para acessar um aplicativo, dependendo da função, da localização ou da rede do solicitante. Por exemplo, você pode exigir a MFA para administradores, mas não para usuários regulares ou pessoas que se conectam de fora da rede corporativa.
@@ -514,6 +530,8 @@ O princípio de privilégios mínimos diz que você só deve conceder acesso at�
 
 O gerenciamento de permissões para uma equipe inteira se tornaria tedioso. Em vez de definir os requisitos de acesso detalhados para cada indivíduo e atualizar os requisitos de acesso quando outros recursos forem criados ou novas pessoas entrarem na equipe, o Azure permite controlar o acesso por meio do RBAC do Azure (controle de acesso baseado em função do Azure).
 
+As funções do Azure AD controlam permissões para gerenciar recursos do Azure AD. Por exemplo, permitir que contas de usuário sejam criadas ou informações de cobrança sejam exibidas. 
+
 O controle de acesso baseado em função é aplicado a um escopo, que é um recurso ou um conjunto de recursos ao qual esse acesso se aplica.
 
 - Um grupo de gerenciamento (uma coleção de várias assinaturas).
@@ -524,6 +542,29 @@ O controle de acesso baseado em função é aplicado a um escopo, que é um recu
 O RBAC do Azure é imposto em qualquer ação iniciada em um recurso do Azure que passa pelo Azure Resource Manager. O Resource Manager é um serviço de gerenciamento que fornece um modo de organizar e proteger seus recursos de nuvem.
 
 O RBAC do Azure não impõe permissões de acesso no nível do aplicativo nem dos dados.
+
+- **Funções internas (Built-in roles)** - Há muitas funções internas do Azure AD, que são funções com um conjunto fixo de permissões.
+	- **Administrador global**: têm acesso a todos os recursos administrativos no Azure Active Directory. 
+	- **Administrador do usuário**: podem criar e gerenciar todos os aspectos de usuários e grupos. Também inclui a capacidade de gerenciar tíquetes de suporte e monitorar a integridade do serviço.
+	- **Administrador de cobrança**: podem fazer compras, gerenciar assinaturas e tíquetes de suporte e monitorar a integridade do serviço.
+	- O conjunto fixo de permissões incluídas nas funções internas (Built-in roles) não pode ser modificado.
+
+- **Funções personalizadas (Custom roles)** - é uma coleção de permissões que podem ser escolhidas de uma lista predefinida. A lista de permissões para escolher são as mesmas permissões usadas pelas funções internas (Built-in roles). A diferença é que você pode escolher quais permissões deseja incluir em uma função personalizada (Custom roles).
+	- É um processo de duas etapas. A primeira etapa envolve a criação de uma definição de função personalizada (Custom roles), uma coleção de permissões que você adiciona de uma lista predefinida. A segunda etapa é atribuir (assign) essa função (role) a usuários ou grupos criando uma atribuição de função (role assignment).
+
+Uma atribuição de função (role assignment) concede ao usuário as permissões em uma definição de função, em um escopo especificado. 
+
+Um escopo define o conjunto de recursos do Azure AD ao qual o membro da função tem acesso.
+
+Uma função personalizada pode ser atribuída no escopo de toda a organização ou em um escopo de objeto (um único aplicativo). 
+
+> As funções personalizadas exigem uma licença Azure AD Premium P1 ou P2.
+
+**Categorias do Azure AD roles** - alguns serviços de Microsoft 365, como Exchange e Intune, desenvolveram sistemas de controle de acesso baseados em função próprios. As funções internas (Built-in roles) do Azure AD podem ser usadas para fins diferentes. Há três categorias amplas.
+
+- **Usuários em funções específicas do Azure AD (Azure AD-specific roles)**: Essas funções concedem permissões para gerenciar recursos somente no Azure AD. Por exemplo, Administrador de Usuários, Administrador de Aplicativos, Administrador de Grupos concedem permissões para gerenciar recursos que residem no Azure AD.
+- **Funções específicas do serviço (Service-specific roles)**: para os principais serviços do Microsoft 365, o Azure AD inclui funções específicas de serviço integradas que concedem permissões para gerenciar os recursos no serviço. Por exemplo, as funções internas do Azure AD para Administradores do Exchange, do Intune, do SharePoint e do Teams podem gerenciar recursos em seus respectivos serviços.
+- 
 
 ### Describe the concept of Zero Trust
 
