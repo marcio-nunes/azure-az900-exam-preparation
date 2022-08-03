@@ -434,8 +434,6 @@ Você pode usar Endpoint services para se conectar a outros tipos de recursos do
 
 ## 🔸 Describe Azure identity, access, and security
 
-
-
 ### Describe directory services in Azure, including Azure Active Directory (Azure AD) and Azure Active Directory Domain Services (Azure AD DS)
 
 O Azure AD (Azure Active Directory) é o serviço de gerenciamento de acesso e identidade baseado em nuvem da Microsoft. As organizações usam o Azure AD para permitir que os funcionários, convidados e outras pessoas façam logon e acessem os recursos.
