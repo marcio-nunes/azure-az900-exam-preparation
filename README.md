@@ -425,8 +425,28 @@ Você pode usar Endpoint services para se conectar a outros tipos de recursos do
 
 ## 🔸 Describe Azure storage services
 
+Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armazenamento do Microsoft Azure, que podem ser acessados de qualquer lugar do mundo por HTTP ou HTTPS. Os dados nesta conta são seguros, altamente disponíveis, duráveis e maciçamente escalonáveis.
+
 ### Compare Azure storage services
+
+- **Azure Blob storage** - Serviço de armazenamento para objetos muito grandes, como arquivos de vídeo ou bitmaps. O Armazenamento de Blobs é ideal para:
+	- Fornecimento de imagens ou de documentos diretamente a um navegador.
+	- Armazenamento de arquivos para acesso distribuído.
+	- Transmissão por streaming de áudio e vídeo.
+	- Armazenamento de dados de backup e restauração, recuperação de desastres e arquivamento.
+	- Armazenamento de dados para análise por um serviço local ou hospedado no Azure.
+	- Armazenamento de até 8 TB de dados para máquinas virtuais.
+
+- **Azure File storage** - Compartilhamentos de arquivos que podem ser acessados e gerenciados como um servidor de arquivos.
+- **Azure Queue storage** - Um armazenamento de dados para o enfileiramento de mensagens e a entrega confiável delas entre aplicativos.
+- **Azure Table storage** - O armazenamento de tabela é um serviço que armazena dados estruturados não relacionais (também conhecidos como dados NoSQL estruturados) na nuvem, fornecendo um repositório de chave/atributo com um design sem esquema. 
+
 ### Describe storage tiers
+
+- **Hot access tier**: otimizada para armazenar dados que são acessados com frequência (por exemplo, imagens de seu site).
+- **Cool access tier**: otimizada para dados acessados com menos frequência e armazenados por pelo menos 30 dias (por exemplo, faturas de seus clientes).
+- **Archive access tier**: adequada para dados acessados raramente e armazenados por pelo menos 180 dias, com requisitos de latência flexíveis (por exemplo, backups de longo prazo).
+
 ### Describe redundancy options
 ### Describe storage account options and storage types
 ### Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync
