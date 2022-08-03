@@ -70,7 +70,24 @@ Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem
 
 ### Identify appropriate use cases for each cloud model
 
+**Nuvem pública**
+- As implantações de nuvem pública são frequentemente usadas para fornecer e-mail baseado na Web, aplicativos de escritório online, armazenamento e ambientes de teste e desenvolvimento.
+	- Custos mais baixos - não há necessidade de comprar hardware ou software e você paga apenas pelo serviço que usa. 
+	- Sem manutenção - seu provedor de serviços fornece a manutenção. 
+	- Escalabilidade quase ilimitada - recursos sob demanda estão disponíveis para atender às suas necessidades de negócios. 
+	- Alta confiabilidade - uma vasta rede de servidores garante proteção contra falhas.
 
+**Nuvem privada**
+- Muitas organizações escolhem uma abordagem de nuvem pricada devido a imperativos de negócios, como atender aos requisitos regulatórios e de soberania de dados, aproveitar ao máximo o investimento em tecnologia local ou resolver problemas de baixa latência.
+- Nuvens privadas são frequentemente usadas por agências governamentais, instituições financeiras e quaisquer outras organizações de médio a grande porte com operações críticas para os negócios que buscam maior controle sobre seu ambiente.
+	- Mais flexibilidade - sua organização pode personalizar seu ambiente de nuvem para atender a necessidades comerciais específicas. 
+	- Mais controle - os recursos não são compartilhados com outros, portanto, níveis mais altos de controle e privacidade são possíveis. 
+	- Mais escalabilidade - as nuvens privadas geralmente oferecem mais escalabilidade em comparação com a infraestrutura local.
+
+**Nuvem híbrida**
+- A computação de borda traz o poder de computação da nuvem para dispositivos IoT – mais perto de onde os dados residem. Ao mover as cargas de trabalho para a borda, os dispositivos gastam menos tempo se comunicando com a nuvem, reduzindo a latência e podem até operar de forma confiável em longos períodos offline.
+- Muitos clientes aproveitam a nuvem híbrida para alcançar escala global, maior confiabilidade, segurança habilitada por IA e economia de custos oferecida pela nuvem pública. Em setores altamente regulamentados, os requisitos de residência de dados podem exigir que determinados conjuntos de dados sejam mantidos no local, enquanto outras cargas de trabalho podem residir na nuvem pública.
+- Se um aplicativo reside no local ou em uma nuvem privada, picos repentinos de demanda podem sobrecarregar a capacidade, como eventos sazonais, como compras on-line ou declaração de impostos. Quando a demanda aumenta, as organizações podem acessar recursos de computação adicionais na nuvem pública, às vezes chamados de “cloud bursting” – onde o ambiente de nuvem híbrida permite que a infraestrutura local “exploda” para a nuvem pública.
 
 ### Describe the consumption-based model
 
