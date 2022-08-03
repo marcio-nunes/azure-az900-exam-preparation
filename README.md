@@ -324,7 +324,12 @@ A computação do Azure é um serviço de computação sob demanda para execuç�
 - **Funções (serverless)** são ideais quando você está preocupado apenas com o código que executa o serviço, e não com a plataforma ou a infraestrutura subjacente. Elas costumam ser usadas quando você precisa executar um trabalho em resposta a um evento, um temporizador ou uma mensagem de outro serviço do Azure. O Azure tem duas implementações de computação sem servidor:
 	- **Azure Functions**: o Functions pode executar o código praticamente em qualquer linguagem de programação moderna.
 	- **Azure Logic Apps**: os aplicativos lógicos foram desenvolvidos em um designer baseado na Web e podem executar a lógica disparada pelos serviços do Azure sem escrever nenhum código.
-		
+		- Cada vez que um gatilho é acionado, o mecanismo de Aplicativos Lógicos cria uma instância de aplicativo lógico que executa as ações no fluxo de trabalho. Essas ações também podem incluir 
+    	- conversões de dados
+    	- controles de fluxo, como instruções condicionais
+    	- instruções de comutação
+    	- loops e ramificações.
+
 ### Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
 
 - **Máquinas virtuais** são emulações de software de computadores físicos.
@@ -373,27 +378,50 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 
 - **Azure App Service** - O Serviço de Aplicativo permite que você crie e hospede aplicativos Web, trabalhos em segundo plano, back-ends de dispositivos móveis e APIs RESTful na linguagem de programação de sua escolha sem gerenciar a infraestrutura. Ele oferece dimensionamento automático e alta disponibilidade. O Serviço de Aplicativo é compatível com Windows e Linux e permite implantações automatizadas do GitHub, Azure DevOps ou qualquer repositório Git para dar suporte a um modelo de deploy contínuo.
 	- Esse ambiente de PaaS (plataforma como serviço) permite que você se concentre no site e na lógica da API, enquanto o Azure manipula a infraestrutura para executar e dimensionar seus aplicativos Web.
+
 - **Containers** - As Instâncias de Contêiner do Azure oferecem a maneira mais rápida e simples de executar um contêiner no Azure, sem a necessidade de gerenciar máquinas virtuais nem adotar serviços adicionais. Trata-se de uma oferta de PaaS (plataforma como serviço) que permite que você carregue contêineres, que ela executará para você.
 	- Azure Container Instances - Aplicativos em contêineres executados no Azure sem o provisionamento de servidores ou de VMs.
+
 - **Virtual machines** - Se os requisitos de hospedagem na Web não forem diretamente compatíveis com a plataforma de aplicativo Web do Azure, aproveite as máquinas virtuais para personalizar e controlar todos os aspectos do servidor Web. 
 
 ### Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
 
-Virtual networking
+**Azure Virtual Networks** - As VNets (Redes Virtuais) do Azure são o bloco de construção fundamental da sua rede privada no Azure. Com as VNets, você pode criar redes virtuais complexas semelhantes a uma rede local, com benefícios adicionais da infraestrutura do Azure, como escala, disponibilidade e isolamento. As VNets do Azure permitem que os recursos do Azure se comuniquem com segurança entre si, com a Internet e com as redes locais.
 
-**Azure Virtual Networks**
+As redes virtuais do Azure oferecem as seguintes funcionalidades de rede essenciais:
 
-**Azure virtual subnets**
+- Isolamento e segmentação
+- Comunicação pela Internet
+- Comunicação entre recursos do Azure
+- Comunicação com os recursos locais
+- Rotear tráfego de rede
+- Filtrar tráfego de rede
+- Conectar redes virtuais
 
-**Peering**
+**Azure virtual subnets** - Uma sub-rede é um intervalo de endereços IP na VNet. Você pode segmentar VNets em sub-redes de tamanhos diferentes, criando quantas sub-redes você precisar para organização e segurança dentro do limite de assinatura.
 
-**Azure DNS**
+**Peering** - O network peering permite que os recursos em cada rede virtual se comuniquem entre si. Essas redes virtuais podem estar em regiões separadas, o que permite criar uma rede global interconectada por meio do Azure.
 
-**Azure VPN Gateway**
+**Azure DNS** - Embora a comunicação possa ser habilitada usando endereços IP, é muito mais simples usar nomes que possam ser facilmente lembrados e que não sejam alterados.
+- Serviços DNS públicos - resolvem nomes e endereços IP para recursos e serviços acessíveis pela Internet, como servidores Web.
+- Serviços DNS privados - É um serviço de hospedagem para domínios de DNS que fornece resolução de nomes usando a infraestrutura do Microsoft Azure. 
 
-**Azure ExpressRoute**
+**Azure VPN Gateway** - Acessa as Redes Virtuais do Azure por meio de gateways de VPN de alto desempenho. Um gateway de VPN é um tipo de gateway de rede virtual. Gateways de VPN são implantados em redes virtuais do Azure e habilitam a conectividade:
+- Conecte datacenters on-premises a redes virtuais por meio de uma conexão site-to-site.
+- Conecte dispositivos individuais a redes virtuais por meio de uma conexão point-to-site.
+- Conecte redes virtuais a outras redes virtuais por meio de uma conexão network-to-network.
+
+**Azure ExpressRoute** - No caso de ambientes em que você precisa de maior largura de banda e níveis de segurança ainda mais altos, o ExpressRoute fornece uma conectividade privada dedicada para o Azure que não passa pela Internet. 
 
 ### Define public and private endpoints
+
+Convém habilitar recursos do Azure para que se comuniquem entre si com segurança. 
+
+Você pode usar Endpoint services para se conectar a outros tipos de recursos do Azure, como bancos de dados SQL do Azure e contas de armazenamento. Essa abordagem permite vincular vários recursos do Azure às redes virtuais para melhorar a segurança e fornecer o encaminhamento ideal entre recursos.
+
+- Private endpoints - Um endpoint privado é uma adaptador de rede que usa um endereço IP privado de sua rede virtual. Essa interface de rede conecta você de forma privada e segura a um serviço da plataforma do Link Privado do Azure. Ao habilitar um endpoint privado, você está trazendo o serviço para sua rede virtual.
+
+- Public endpoint - 
 
 ## 🔸 Describe Azure storage services
 
