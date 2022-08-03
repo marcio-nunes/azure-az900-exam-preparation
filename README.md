@@ -109,7 +109,7 @@ Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem
 
 ## 🔸 Describe the benefits of using cloud services
 
-Alta disponibilidade, escalabilidade e distribuição geográfica. 
+Alta disponibilidade, escalabilidade, confiabilidade e previsibilidade
 
 ### Describe the benefits of high availability and scalability in the cloud
 
@@ -321,7 +321,9 @@ A computação do Azure é um serviço de computação sob demanda para execuç�
 
 - **Máquinas virtuais** são emulações de software de computadores físicos. Elas incluem um processador virtual, memória, armazenamento e recursos de rede. As VMs hospedam um sistema operacional, e você pode instalar e executar o software como se fosse um computador físico. 
 - **Instâncias de Contêiner** e o Serviço de Kubernetes do Azure são recursos de Computação do Azure que você pode usar para implantar e gerenciar contêineres. Contêineres são ambientes de aplicativos leves e virtualizados. Eles foram projetados para serem criados rapidamente, escalados horizontalmente e interrompidos dinamicamente. Você pode executar várias instâncias de um aplicativo em contêineres em um computador host.
-- **Funções (serverless)** são ideais quando você está preocupado apenas com o código que executa o serviço, e não com a plataforma ou a infraestrutura subjacente. Elas costumam ser usadas quando você precisa executar um trabalho em resposta a um evento, um temporizador ou uma mensagem de outro serviço do Azure.
+- **Funções (serverless)** são ideais quando você está preocupado apenas com o código que executa o serviço, e não com a plataforma ou a infraestrutura subjacente. Elas costumam ser usadas quando você precisa executar um trabalho em resposta a um evento, um temporizador ou uma mensagem de outro serviço do Azure. O Azure tem duas implementações de computação sem servidor:
+	- **Azure Functions**: o Functions pode executar o código praticamente em qualquer linguagem de programação moderna.
+	- **Azure Logic Apps**: os aplicativos lógicos foram desenvolvidos em um designer baseado na Web e podem executar a lógica disparada pelos serviços do Azure sem escrever nenhum código.
 		
 ### Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
 
@@ -371,11 +373,26 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 
 - **Azure App Service** - O Serviço de Aplicativo permite que você crie e hospede aplicativos Web, trabalhos em segundo plano, back-ends de dispositivos móveis e APIs RESTful na linguagem de programação de sua escolha sem gerenciar a infraestrutura. Ele oferece dimensionamento automático e alta disponibilidade. O Serviço de Aplicativo é compatível com Windows e Linux e permite implantações automatizadas do GitHub, Azure DevOps ou qualquer repositório Git para dar suporte a um modelo de deploy contínuo.
 	- Esse ambiente de PaaS (plataforma como serviço) permite que você se concentre no site e na lógica da API, enquanto o Azure manipula a infraestrutura para executar e dimensionar seus aplicativos Web.
-- **Containers** 
+- **Containers** - As Instâncias de Contêiner do Azure oferecem a maneira mais rápida e simples de executar um contêiner no Azure, sem a necessidade de gerenciar máquinas virtuais nem adotar serviços adicionais. Trata-se de uma oferta de PaaS (plataforma como serviço) que permite que você carregue contêineres, que ela executará para você.
 	- Azure Container Instances - Aplicativos em contêineres executados no Azure sem o provisionamento de servidores ou de VMs.
-- **Virtual machines** - 
+- **Virtual machines** - Se os requisitos de hospedagem na Web não forem diretamente compatíveis com a plataforma de aplicativo Web do Azure, aproveite as máquinas virtuais para personalizar e controlar todos os aspectos do servidor Web. 
 
 ### Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
+
+Virtual networking
+
+**Azure Virtual Networks**
+
+**Azure virtual subnets**
+
+**Peering**
+
+**Azure DNS**
+
+**Azure VPN Gateway**
+
+**Azure ExpressRoute**
+
 ### Define public and private endpoints
 
 ## 🔸 Describe Azure storage services
