@@ -1,4 +1,4 @@
-# <a name="topo"></a>Preparação para o exame Azure AZ-900 (WIP)
+# <a name="topo"></a>Preparação para o exame Azure AZ-900
 
 ## Considerações
 
