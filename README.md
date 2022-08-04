@@ -891,6 +891,7 @@ O portal do Azure fornece uma interface gráfica do usuário amigável para exib
 - **Azure Cloud Shell** - é um shell interativo, autenticado e acessível pelo navegador para o gerenciamento de recursos do Azure. Ele dá a você a flexibilidade de escolher a experiência de shell que melhor se adequa ao modo como você trabalha, seja com o Bash ou o PowerShell.
 	- Bash
 	- PowerShell
+- **Azure CLI** - A CLI do Azure (interface de linha de comando do Azure) é um conjunto de comandos usado para criar e gerenciar recursos do Azure. Foi criada para ajudar você a trabalhar de maneira rápida com ênfase na automação.
 
 **Conceitos**
 
@@ -901,6 +902,8 @@ O portal do Azure fornece uma interface gráfica do usuário amigável para exib
 - É atribuído ao Cloud Shell um computador por conta de usuário
 - O Cloud Shell persiste o $HOME usando uma imagem de 5 GB mantida no compartilhamento de arquivos
 - As permissões são definidas da mesma forma que para um usuário normal do Linux em Bash
+
+> O computador que hospeda o Cloud Shell é gratuito, com um pré-requisito de um compartilhamento de Arquivos do Azure montado. Custos de armazenamento regulares se aplicam.
 
 ### Describe the purpose of Azure Arc
 
