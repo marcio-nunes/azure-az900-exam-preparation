@@ -500,7 +500,6 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 - **Azure Storage Explorer** - O Gerenciador de Armazenamento do Azure é um aplicativo autônomo que fornece uma interface gráfica para gerenciar arquivos e blobs em sua Conta do Armazenamento do Azure. Ele funciona em sistemas operacionais Windows, macOS e Linux e usa o AzCopy no back-end para executar todas as tarefas de gerenciamento de arquivos e blobs. 
 - **Azure File Sync** - é uma ferramenta que permite centralizar seus compartilhamentos de arquivos no serviço Azure Files e manter a flexibilidade, o desempenho e a compatibilidade de um servidor de arquivos do Windows. É quase como transformar o servidor de arquivos do Windows em uma rede de distribuição de conteúdo em miniatura.
 
-
 ### Describe migration options, including Azure Migrate and Azure Data Box
 
 O Azure dá suporte à migração em tempo real de infraestrutura, aplicativos e dados usando o serviço Migrações para Azure, bem como a migração assíncrona de dados usando o Azure Data Box.
@@ -798,7 +797,22 @@ Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviç
 ## Describe cost management in Azure
 
 ### Describe factors that can affect costs in Azure
+
+É importante saber como os custos são gerados no Azure para que você possa entender como suas decisões de compra e design da solução podem afetar o custo final. 
+
+- Tipos de assinaturas
+	- Avaliação gratuita (Free trial)
+	- Pago conforme o uso (Pay-as-you-go)
+	- Ofertas de membro
+- A maneira como comprar os serviços do Azure
+- O local ou o tráfego de rede
+
+
 ### Compare the Pricing calculator and the Total Cost of Ownership (TCO) calculator 
+
+- **Pricing calculator**
+- **Total Cost of Ownership (TCO) calculator** - ajuda a estimar a economia de custos de operar sua solução no Azure ao longo do tempo em comparação com a operação no datacenter local.
+
 ### Describe the Azure Cost Management and Billing tool
 ### Describe the purpose of tags
 
