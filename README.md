@@ -496,11 +496,9 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 
 ### Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync
 
-**AzCopy**
-
-**Azure Storage Explorer**
-
-**Azure File Sync**
+- **AzCopy** - O AzCopy é um utilitário de linha de comando que você pode usar para copiar blobs ou arquivos de/para uma conta de armazenamento. Com o AzCopy, você pode carregar arquivos, baixar arquivos, copiar arquivos entre contas de armazenamento e até mesmo sincronizar arquivos. A sincronização de blobs ou arquivos com o AzCopy é uma sincronização de apenas uma direção. Ao sincronizar, você designa a origem e o destino e o AzCopy copiará arquivos ou blobs nessa direção. 
+- **Azure Storage Explorer** - O Gerenciador de Armazenamento do Azure é um aplicativo autônomo que fornece uma interface gráfica para gerenciar arquivos e blobs em sua Conta do Armazenamento do Azure. Ele funciona em sistemas operacionais Windows, macOS e Linux e usa o AzCopy no back-end para executar todas as tarefas de gerenciamento de arquivos e blobs. 
+- **Azure File Sync** - é uma ferramenta que permite centralizar seus compartilhamentos de arquivos no serviço Azure Files e manter a flexibilidade, o desempenho e a compatibilidade de um servidor de arquivos do Windows. É quase como transformar o servidor de arquivos do Windows em uma rede de distribuição de conteúdo em miniatura.
 
 
 ### Describe migration options, including Azure Migrate and Azure Data Box
@@ -513,6 +511,9 @@ O Azure dá suporte à migração em tempo real de infraestrutura, aplicativos e
 - **Azure Database Migration Service**. Migre bancos de dados locais para VMs do Azure executando SQL Server, Banco de Dados SQL do Azure ou Instâncias Gerenciadas de SQL.
 - **Web app migration assistant**. É uma ferramenta autônoma para avaliar sites locais para migração para o Serviço de Aplicativo do Azure. 
 - **Azure Data Box**. Use os produtos Azure Data Box offline para mover grandes quantidades de dados offline para o Azure.
+	- O Azure Data Box é um serviço de migração física que ajuda a transferir grandes quantidades de dados de maneira rápida, barata e confiável. Um dispositivo de armazenamento Data Box proprietário que tem uma capacidade máxima de armazenamento de 80 terabytes. 
+	- O Data Box é transportado entre o datacenter por meio de uma empresa regional. Uma caixa robusta protege o Data Box contra danos durante o transporte.
+	- É ideal para transferir os tamanhos de dados maiores do que 40 TB em cenários com conectividade de rede limitada a inexistente.
 
 ## 🔸 Describe Azure identity, access, and security
 
