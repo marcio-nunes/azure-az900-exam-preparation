@@ -816,6 +816,20 @@ O Azure Key Vault pode ajudar você a:
 - **Gerenciar certificados SSL/TLS** - O Key Vault permite provisionar, gerenciar e implantar certificados SSL/TLS públicos e privados para recursos do Azure e recursos internos.
 - **Armazenar segredos com o suporte de HSMs (hardware security modules)** - Esses segredos e chaves podem ser protegidos por software ou por HSMs validados pelo FIPS 140-2 Nível 2.
 
+### Host Dedicado
+
+O Host Dedicado do Azure fornece servidores físicos dedicados para hospedar as VMs do Azure para Windows e Linux.
+
+O Host Dedicado do Azure:
+
+- Fornece visibilidade e controle sobre a infraestrutura de servidor que está executando as VMs do Azure.
+- Ajuda a endereçar os requisitos de conformidade implantando as cargas de trabalho em um servidor isolado.
+- Permite que você escolha o número de processadores, as funcionalidades do servidor, a série de VMs e os tamanhos de VM dentro do mesmo host.
+
+Você é cobrado pelo host dedicado, independentemente do número de VMs implantadas. O preço do host é baseado na família, no tipo (tamanho do hardware) e na região da VM.
+
+O licenciamento de software, o armazenamento e o uso de rede são cobrados separadamente do host e das VMs. Para obter mais informações.
+
 🔝 [Voltar ao topo](#topo)
 
 # <a name="Describe_Azure_management_and_governance"></a> ☁️ Describe Azure management and governance (30-35%)
