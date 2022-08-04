@@ -436,8 +436,7 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 	- Armazenamento de dados de backup e restauração, recuperação de desastres e arquivamento.
 	- Armazenamento de dados para análise por um serviço local ou hospedado no Azure.
 	- Armazenamento de até 8 TB de dados para máquinas virtuais.
-
-- **Azure File storage** - Compartilhamentos de arquivos que podem ser acessados e gerenciados como um servidor de arquivos.
+- **Azure Files storage** - Compartilhamentos de arquivos que podem ser acessados e gerenciados como um servidor de arquivos.
 - **Azure Queue storage** - Um armazenamento de dados para o enfileiramento de mensagens e a entrega confiável delas entre aplicativos.
 - **Azure Table storage** - O armazenamento de tabela é um serviço que armazena dados estruturados não relacionais (também conhecidos como dados NoSQL estruturados) na nuvem, fornecendo um repositório de chave/atributo com um design sem esquema. 
 
@@ -448,9 +447,63 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 - **Archive access tier**: adequada para dados acessados raramente e armazenados por pelo menos 180 dias, com requisitos de latência flexíveis (por exemplo, backups de longo prazo).
 
 ### Describe redundancy options
+
+O Armazenamento do Azure sempre armazena várias cópias dos seus dados para que eles fique protegidos contra eventos planejados e não planejados, como falhas de hardware transitórias, interrupções de energia ou rede e desastres naturais.
+
+Os fatores que ajudam a determinar qual opção de redundância você deve escolher incluem:
+
+- Como os dados são replicados na região primária.
+- Se os dados são replicados em uma segunda região que está geograficamente distante da região primária, para protegê-los contra desastres regionais.
+- Se o aplicativo requer acesso de leitura aos dados replicados na região secundária, caso a região primária não esteja disponível.
+
+Os dados em uma conta de Armazenamento do Azure são sempre replicados três vezes na região primária.
+
+**Redundância na região primária**
+
+- **Armazenamento com redundância local** - O LRS replica seus dados três vezes em um único data center na região primária. O LRS oferece pelo menos 11 noves de durabilidade (99,999999999%) dos objetos em um determinado ano.
+	- O LRS é a opção de redundância de menor custo e oferece a menor durabilidade em comparação com outras opções. 
+	- Protege seus dados contra falhas de unidade e rack do servidor.
+- **Armazenamento com redundância de zona** - o ZRS (armazenamento com redundância de zona) replica os dados do Armazenamento do Azure de maneira síncrona em três zonas de disponibilidade do Azure na região primária. O ZRS oferece durabilidade para objetos de dados do Armazenamento do Azure de, pelo menos, 12 noves (99,9999999999%) em um dado ano.
+	- Seus dados ainda podem ser acessados por operações de leitura e de gravação, mesmo em caso de não disponibilidade de uma zona.
+	- A Microsoft recomenda usar o ZRS na região primária para cenários que exigem alta disponibilidade. 
+	- O ZRS também é recomendado para restringir a replicação de dados em um país ou uma região para atender aos requisitos de governança de dados.
+
+**Redundância em uma região secundária** 
+
+Para aplicativos que exigem alta durabilidade, você pode optar por também copiar os dados em sua conta de armazenamento para uma região secundária que esteja a centenas de quilômetros de distância da região primária. Seus dados serão duráveis mesmo que haja uma interrupção regional completa ou um desastre no qual a região primária não possa ser recuperada.
+
+A região secundária emparelhada é baseada nos Pares de Região do Azure e não pode ser alterada.
+
+Por padrão, os dados na região secundária não ficam disponíveis para acesso de leitura ou gravação. Se a região primária ficar indisponível, você poderá optar por fazer failover para a região secundária. Após a conclusão do failover, a região secundária se tornará a região primária e você poderá ler e gravar os dados novamente.
+
+- **Armazenamento com redundância geográfica** - O GRS copia seus dados de maneira síncrona três vezes em um único local físico na região primária usando LRS. Em seguida, ele copia os dados de maneira assíncrona em um único local físico na região secundária (o par da região) usando LRS. O GRS oferece durabilidade para objetos de dados do Armazenamento do Azure de, pelo menos, 16 noves (99,99999999999999%) em um dado ano.
+- **Armazenamento com redundância de zona geográfica** - O GZRS combina a alta disponibilidade fornecida pela redundância entre zonas de disponibilidade com a proteção contra interrupções regionais fornecidas pela replicação geográfica. Os dados em uma conta de armazenamento GZRS são copiados entre três zonas de disponibilidade do Azure na região primária (semelhante ao ZRS) e são replicados em uma região geográfica secundária usando LRS para proteção contra desastres regionais. A Microsoft recomenda o uso do GZRS para aplicativos que exigem consistência, durabilidade e disponibilidade máximas, excelente desempenho e resiliência para recuperação de desastres. O GZRS foi projetado para fornecer pelo menos 16 noves (99,99999999999999%) de durabilidade dos objetos durante um determinado ano.
+
+Esses dados estarão disponíveis para serem lidos somente se o cliente ou a Microsoft iniciar um failover da região primária para a secundária. Você habilitar o acesso de leitura à região secundária, seus dados estarão sempre disponíveis, mesmo que a região primária esteja sendo executada de maneira ideal. 
+- Habilite o armazenamento com redundância geográfica com acesso de leitura (RA-GRS)
+- Ou o armazenamento com redundância de zona com acesso de leitura (RA-GZRS).
+
 ### Describe storage account options and storage types
+
+Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armazenamento do Azure que podem ser acessados de qualquer lugar do mundo por HTTP ou HTTPS. Os dados nesta conta são seguros, altamente disponíveis, duráveis e maciçamente escalonáveis.
+
+- **Uso geral v2 Standard** - Tipo de conta de armazenamento básico para blobs, compartilhamento de arquivos, filas e tabelas. Recomendado para a maioria dos cenários que usam o Armazenamento do Azure.  Armazenamento de Blobs (incluindo Data Lake Storage), Queue Storage, Table Storage e Azure Files.
+- **Premium block blobs** - Tipo de conta de armazenamento Premium para blobs de blocos e blobs de acréscimo. Recomendado para cenários com altas taxas de transação ou que usam objetos menores ou exigem uma latência de armazenamento sempre baixa. Armazenamento de Blobs (incluindo Data Lake Storage)
+- **Premium file shares** - Tipo de conta de armazenamento Premium somente para compartilhamentos de arquivos. Recomendadas para aplicações de escala empresarial ou de alto desempenho. Use esse tipo de conta caso deseje ter uma conta de armazenamento que dê suporte a compartilhamentos de arquivos SMB e NFS. Azure Files.
+- **Premium page blobs** - Tipo de conta de armazenamento Premium somente para blobs de páginas.
+
+**Storage account endpoints** -  ter um namespace exclusivo no Azure para seus dados.
+
 ### Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync
+
+
+
 ### Describe migration options, including Azure Migrate and Azure Data Box
+
+O Azure dá suporte à migração em tempo real de infraestrutura, aplicativos e dados usando o serviço Migrações para Azure, bem como a migração assíncrona de dados usando o Azure Data Box.
+
+- **Migrações para Azure: Descoberta e avaliação**. Descubra e avalie servidores locais em execução em VMware, Hyper-V servidores físicos para se preparar para a migração para o Azure.
+- **Migrações para Azure: Migração de Servidor**. Migre VMs do VMware, VMs do Hyper-V, servidores físicos, outros servidores virtualizados e VMs da nuvem pública para o Azure.
 
 ## 🔸 Describe Azure identity, access, and security
 
