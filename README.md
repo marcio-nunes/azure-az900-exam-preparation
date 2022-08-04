@@ -794,6 +794,28 @@ O Defender para Nuvem preenche três necessidades vitais à medida que você ger
 - Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
 - Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
 
+### Sentinel
+
+O Azure Sentinel é o sistema de SIEM (security information and event management) baseado em nuvem da Microsoft. Ele usa análise de segurança e análise de ameaças inteligentes. O sistema de SIEM agrega dados de segurança de várias fontes diferentes (contanto que essas fontes sejam compatíveis com um formato padrão aberto de registro em log).
+
+O Azure Sentinel permite que você:
+
+- **Coletar dados de nuvem em escala** - Colete dados de todos os usuários, dispositivos, aplicativos e infraestrutura, tanto locais quanto de várias nuvens.
+- **Detectar ameaças não detectadas anteriormente** - Minimize falsos positivos usando a análise abrangente e a inteligência contra ameaças da Microsoft.
+- **Investigar ameaças com inteligência artificial** - Examine atividades suspeitas em escala, aproveitando a longa experiência em segurança cibernética da Microsoft.
+- **Responder a incidentes rapidamente** - Use a orquestração e a automação internas para tarefas comuns.
+
+### Azure Key Vault
+
+O Azure Key Vault é um serviço de nuvem centralizado para armazenar secrets de aplicativo em um só local centralizado. Ele oferece acesso seguro a informações confidenciais fornecendo controle de acesso e funcionalidades de registro em log.
+
+O Azure Key Vault pode ajudar você a:
+
+- **Gerenciar secrets** - Você pode usar o Key Vault para armazenar tokens, senhas, certificados, chaves de API e outros segredos e controlar com segurança o acesso a eles.
+- **Gerenciar chaves de criptografia** - Você pode usar o Key Vault como uma solução de gerenciamento de chaves. O Key Vault facilita a criação e o controle das chaves de criptografia usadas para criptografar os dados.
+- **Gerenciar certificados SSL/TLS** - O Key Vault permite provisionar, gerenciar e implantar certificados SSL/TLS públicos e privados para recursos do Azure e recursos internos.
+- **Armazenar segredos com o suporte de HSMs (hardware security modules)** - Esses segredos e chaves podem ser protegidos por software ou por HSMs validados pelo FIPS 140-2 Nível 2.
+
 🔝 [Voltar ao topo](#topo)
 
 # <a name="Describe_Azure_management_and_governance"></a> ☁️ Describe Azure management and governance (30-35%)
