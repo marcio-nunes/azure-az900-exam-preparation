@@ -911,12 +911,82 @@ O Azure Arc é uma ponte que estende a plataforma do Azure para ajudar na criaç
 
 ### Describe Azure Resource Manager and Azure Resource Manager templates (ARM templates)
 
+- **Azure Resource Manager** é o serviço de implantação e gerenciamento do Azure. Ele fornece uma camada de gerenciamento que lhe permite criar, atualizar e excluir recursos em sua conta do Azure. Você usa recursos de gerenciamento como controle de acesso, bloqueios e tags para proteger e organizar seus recursos após a implantação. Quando um usuário envia uma solicitação de ferramentas, APIs ou SDKs do Azure, o Resource Manager recebe a solicitação. Ele autentica e autoriza a solicitação. O Resource Manager envia a solicitação para o serviço do Azure, que executa a ação solicitada. Como todas as solicitações são manipuladas por meio da mesma API, você verá funcionalidades e resultados uniformes em todas as diferentes ferramentas. Com o Resource Manager, você pode:
+
+	- Gerenciar sua infraestrutura por meio de modelos declarativos em vez de scripts. Um modelo do Resource Manager é um arquivo JSON que define o que você deseja implantar no Azure.
+	- Implantar, gerenciar e monitorar todos os recursos da sua solução como um grupo em vez de tratá-los individualmente.
+	- Reimplantar a solução durante o ciclo de vida de desenvolvimento e ter confiança de que os recursos serão implantados em um estado consistente.
+	- Definir as dependências entre os recursos para que eles sejam implantados na ordem correta.
+	- Aplicar o controle de acesso a todos os serviços porque o RBAC é integrado nativamente à plataforma de gerenciamento.
+	- Aplicar tags aos recursos para organizar de modo lógico todos os recursos em sua assinatura.
+	- Esclarecer a cobrança da organização exibindo os custos de um grupo de recursos que compartilham a mesma tag.
+
+- **Azure Resource Manager templates** - Embora seja possível escrever um código imperativo no Azure PowerShell ou na CLI do Azure para configurar e remover um recurso do Azure ou orquestrar uma infraestrutura contendo centenas de recursos, há um modo mais adequado de implementar essa funcionalidade. Ao usar os templates do ARM (Azure Resource Manager), você pode descrever os recursos que deseja usar em um formato JSON declarativo. O benefício é que todo o modelo do ARM é verificado antes de algum código ser executado para fazer com que os recursos sejam criados e conectados corretamente. Em seguida, o modelo orquestra a criação desses recursos em paralelo.
+
+Os modelos podem até mesmo executar scripts do PowerShell e Bash antes ou depois da configuração de um recurso.
+
 ## 🔸 Describe monitoring tools in Azure
 
 ### Describe the purpose of Azure Advisor
+
+O Azure Advisor avalia seus recursos do Azure e faz recomendações para ajudar a melhorar a confiabilidade, a segurança e o desempenho, alcançar a excelência operacional e reduzir os custos. O Assistente foi projetado para ajudar você a poupar tempo na otimização da nuvem. O serviço de recomendação inclui ações sugeridas que você pode adotar imediatamente, adiar ou ignorar.
+
+As recomendações são divididas em cinco categorias:
+
+- **Confiabilidade**: usada para garantir e aprimorar a continuidade dos seus aplicativos comercialmente críticos.
+- **Segurança**: usada para detectar ameaças e vulnerabilidades que podem levar a violações de segurança.
+- **Desempenho**: usado para aprimorar a velocidade de seus aplicativos.
+- **Custo**: usado para otimizar e reduzir seus gastos gerais com o Azure.
+- **Excelência operacional**: usada para ajudar você a obter eficiência de processo e fluxo de trabalho, gerenciamento de recursos e melhores práticas de implantação.
+
+Você pode exibir o desempenho histórico e em tempo real em cada camada da arquitetura ou informações agregadas e detalhadas. 
+ - Os dados são exibidos em diferentes níveis para públicos-alvo diferentes. 
+ - É possível exibir relatórios de alto nível no painel do Azure Monitor ou criar modos de exibição personalizados usando consultas do Power BI e do Kusto.
+
+Além disso, os dados podem ser usados para ajudar você a reagir a eventos críticos em tempo real, por meio de alertas entregues às equipes por SMS, email etc.
+
+Outra opção é usar limites a fim de disparar a funcionalidade de dimensionamento automático para aumentar ou reduzir conforme a demanda.
+
+Alguns produtos populares, como o **Application Insights** do Azure, um serviço para envio de informações de telemetria do código-fonte do aplicativo para o Azure, usam o Azure Monitor nos bastidores. Com o Application Insights, os desenvolvedores de aplicativos podem aproveitar a poderosa plataforma de análise de dados no Azure Monitor para ter insights aprofundados sobre as operações de um aplicativo e diagnosticar erros sem ter que esperar que um usuário os relate.
+
 ### Describe Azure Service Health
+
+A Azure Service Health fornece uma exibição personalizada da integridade dos serviços, regiões e recursos do Azure dos quais você depende.
+
+Você pode configurar alertas que ajudam a fazer a triagem de interrupções e manutenção planejada. Após uma interrupção, fornece relatórios oficiais de incidentes, chamados de RCAs (root cause analyses), que podem ser compartilhados.
+
+O Service Health ajuda você a ficar atento a vários tipos de evento:
+
+- **Problemas de serviço** são problemas no Azure, como interrupções, que afetam você no momento. 
+- **Eventos de manutenção planejada** podem afetar sua disponibilidade. O Service Health permite que você escolha quando realizar a manutenção para minimizar o tempo de inatividade.
+- **Health advisories** são problemas que exigem que você aja para evitar a interrupção do serviço, incluindo descontinuações de serviço e alterações significativas. Os comunicados de integridade são anunciados com antecedência para permitir que você se planeje.
+
 ### Describe Azure Monitor, including Log Analytics, Azure Monitor alerts, and Application Insights
 
+- **Azure Monitor** - é uma plataforma para coleta, análise, visualização e potencial execução de ações com base dos dados de registro em log e de métrica de todo o ambiente do Azure e local.
+
+- **Log Analytics** - O Azure Monitor armazena dados de log em um workspace do Log Analytics, que é um recurso e um contêiner do Azure no qual os dados são coletados, agregados e servem como um limite administrativo.
+
+- **Azure Monitor alerts** - Cada alerta ou notificação disponível no Azure Monitor é o produto de uma regra. Algumas dessas regras são internas da plataforma Azure. Use regras de alerta para criar notificações e alertas personalizados. 
+	- **Alertas de métricas** permitem que você tenha um gatilho de alerta quando um limite especificado é excedido. 
+	- **Alertas de log de atividades (Activity log)** notificam você quando os recursos do Azure mudam de estado. Por exemplo, um alerta de log de atividades pode notificar você quando um recurso é excluído.
+	- **Alertas de log** são baseados nos itens gravados nos arquivos de log. Por exemplo, um alerta de log pode notificar você quando um servidor Web retorna um número de respostas 404 ou 500.
+
+- **Application Insights** - O Application Insights, um recurso do Azure Monitor, é um serviço de APM (gerenciamento de desempenho de aplicativos) extensível para desenvolvedores e profissionais de DevOps. Use-o para monitorar seus aplicativos ativos. Ele detecta automaticamente anomalias de desempenho e inclui ferramentas de análise avançadas para ajudar a diagnosticar problemas e entender o que os usuários realmente fazem com seu aplicativo. 
+	- Instale um pacote de instrumentação pequeno (SDK) no seu aplicativo ou habilite o Application Insights usando o Agente do Application Insights quando essa opção for compatível. A instrumentação monitora seu aplicativo e direciona os dados de telemetria para um recurso do Azure Application Insights usando um GUID exclusivo ao qual nos referimos como uma chave de instrumentação.
+	- Você pode instrumentar não apenas o aplicativo de serviço web, mas também todos os componentes em segundo plano e o JavaScript nas próprias páginas da web.
+
+Ele monitora:
+- **Request rates, response times e failure rates** - descubra quais páginas estão mais populares, em que momentos do dia, e onde os usuários estão. Confira as páginas que têm melhor desempenho. Se as taxas de falha e os tempos de resposta ficam altos quando há mais solicitações, possivelmente você tem um problema de alocação de recursos.
+- **Dependency rates,  response times e failure rates** - descubra se os serviços externos estão atrasando você.
+- **Exceptions** – analise as estatísticas agregadas ou escolha instâncias específicas e faça uma busca detalhada no rastreamento de pilha e nas solicitações relacionadas. A maioria das exceções de navegador e servidor são relatadas.
+- Page views e load performance - relatados por navegadores dos usuários.
+- Chamadas AJAX de páginas da web - rates, response times e failure rates.
+- Contagens de seção e usuários.
+- Contadores de desempenho de suas máquinas de servidor Linux ou Windows server, como CPU, memória e uso da rede.
+- Diagnósticos de host do Docker ou do Azure.
+- Logs de rastreamento de diagnóstico do seu aplicativo - para que você possa correlacionar eventos de rastreamento com solicitações.
+- Métricas e eventos personalizados que você escreve em código de cliente ou servidor, para acompanhar os eventos de negócios, como itens vendidos ou vitórias.
 
 
 A Política de Privacidade da Microsoft fornece informações relevantes sobre serviços específicos, incluindo a Cortana.
