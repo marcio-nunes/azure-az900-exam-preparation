@@ -199,6 +199,8 @@ O provedor de nuvem é responsável pela segurança física dos datacenters, pel
 	- Aplicativos de produtividade empresarial.
 	- Controle de finanças e despesas.
 
+🔝 [Voltar ao topo](#topo)
+
 # <a name="Describe_Azure_architecture_and_services"></a> ☁️ Describe Azure architecture and services (35-40%)
 
 ## 🔸 Describe the core architectural components of Azure
@@ -792,6 +794,8 @@ O Defender para Nuvem preenche três necessidades vitais à medida que você ger
 - Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
 - Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
 
+🔝 [Voltar ao topo](#topo)
+
 # <a name="Describe_Azure_management_and_governance"></a> ☁️ Describe Azure management and governance (30-35%)
 
 ## Describe cost management in Azure
@@ -1000,3 +1004,5 @@ Ele monitora:
 
 - A documentação de conformidade do Azure inclui informações detalhadas sobre a conformidade e os padrões legais e regulatórios no Azure.
 - A documentação de conformidade fornece blueprints de referência, ou definições de política, para padrões comuns que podem ser aplicados à sua assinatura do Azure.
+
+🔝 [Voltar ao topo](#topo)
