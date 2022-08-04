@@ -17,11 +17,11 @@ Icons: ☁️🔸
 
 # Study Guide - Skills measured
 
-- Describe cloud concepts (25-30%)
-- Describe Azure architecture and services (35-40%)
-- Describe Azure management and governance (30-35%)
+- [Describe cloud concepts (25-30%)](#Describe_cloud_concepts)
+- [Describe Azure architecture and services (35-40%)](#Describe_Azure_architecture_and_services)
+- [Describe Azure management and governance (30-35%)](#Describe_Azure_management_and_governance)
 
-# ☁️ Describe cloud concepts (25-30%)
+# <a name="Describe_cloud_concepts"></a> ☁️ Describe cloud concepts (25-30%)
 
 ## 🔸 Describe cloud computing
 
@@ -199,7 +199,7 @@ O provedor de nuvem é responsável pela segurança física dos datacenters, pel
 	- Aplicativos de produtividade empresarial.
 	- Controle de finanças e despesas.
 
-# ☁️ Describe Azure architecture and services (35-40%)
+# <a name="Describe_Azure_architecture_and_services"></a> ☁️ Describe Azure architecture and services (35-40%)
 
 ## 🔸 Describe the core architectural components of Azure
 
@@ -792,7 +792,7 @@ O Defender para Nuvem preenche três necessidades vitais à medida que você ger
 - Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
 - Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
 
-# ☁️ Describe Azure management and governance (30-35%)
+# <a name="Describe_Azure_management_and_governance"></a> ☁️ Describe Azure management and governance (30-35%)
 
 ## Describe cost management in Azure
 
