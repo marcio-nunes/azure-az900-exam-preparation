@@ -496,14 +496,23 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 
 ### Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync
 
+**AzCopy**
+
+**Azure Storage Explorer**
+
+**Azure File Sync**
 
 
 ### Describe migration options, including Azure Migrate and Azure Data Box
 
 O Azure dá suporte à migração em tempo real de infraestrutura, aplicativos e dados usando o serviço Migrações para Azure, bem como a migração assíncrona de dados usando o Azure Data Box.
 
-- **Migrações para Azure: Descoberta e avaliação**. Descubra e avalie servidores locais em execução em VMware, Hyper-V servidores físicos para se preparar para a migração para o Azure.
-- **Migrações para Azure: Migração de Servidor**. Migre VMs do VMware, VMs do Hyper-V, servidores físicos, outros servidores virtualizados e VMs da nuvem pública para o Azure.
+- **Azure Migrate:: Descoberta e avaliação**. Descubra e avalie servidores locais em execução em VMware, Hyper-V servidores físicos para se preparar para a migração para o Azure.
+- **Azure Migrate: Migração de Servidor**. Migre VMs do VMware, VMs do Hyper-V, servidores físicos, outros servidores virtualizados e VMs da nuvem pública para o Azure.
+- **Assistente de Migração de Dados**. O Assistente de Migração de Dados é uma ferramenta autônoma criada para avaliar SQL Servers. Ele ajuda a identificar possíveis problemas que bloqueiam a migração.
+- **Azure Database Migration Service**. Migre bancos de dados locais para VMs do Azure executando SQL Server, Banco de Dados SQL do Azure ou Instâncias Gerenciadas de SQL.
+- **Web app migration assistant**. É uma ferramenta autônoma para avaliar sites locais para migração para o Serviço de Aplicativo do Azure. 
+- **Azure Data Box**. Use os produtos Azure Data Box offline para mover grandes quantidades de dados offline para o Azure.
 
 ## 🔸 Describe Azure identity, access, and security
 
