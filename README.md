@@ -788,9 +788,9 @@ Quando necessário, o Defender para Nuvem pode implantar automaticamente um agen
 
 O Defender para Nuvem preenche três necessidades vitais à medida que você gerencia a segurança de seus recursos e cargas de trabalho locais e na nuvem:
 
-Avaliação contínua – Conheça sua postura de segurança. Identifique e rastreie vulnerabilidades.
-Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
-Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
+- Avaliação contínua – Conheça sua postura de segurança. Identifique e rastreie vulnerabilidades.
+- Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
+- Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
 
 # ☁️ Describe Azure management and governance (30-35%)
 
@@ -800,21 +800,41 @@ Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviç
 
 É importante saber como os custos são gerados no Azure para que você possa entender como suas decisões de compra e design da solução podem afetar o custo final. 
 
-- Tipos de assinaturas
+- **Tipos de assinaturas**
 	- Avaliação gratuita (Free trial)
-	- Pago conforme o uso (Pay-as-you-go)
-	- Ofertas de membro
-- A maneira como comprar os serviços do Azure
-- O local ou o tráfego de rede
-
+	- Pago conforme o uso (Pay-as-you-go) - As organizações também podem se candidatar a descontos por volume e a faturamento pré-pago.
+	- Ofertas de membro - Sua associação existente a determinados produtos e serviços da Microsoft pode fornecer créditos para sua conta do Azure e taxas reduzidas nos serviços do Azure.
+- **A maneira como comprar os serviços do Azure**
+	- Contrato Enterprise (Enterprise Agreement) - Esse contrato os obriga a gastar um valor predeterminado nos serviços do Azure durante um período de três anos. O valor de serviço geralmente é pago anualmente. 
+	- Diretamente da Web - comprar os serviços do Azure diretamente do site do portal do Azure e pagar os preços padrão.
+	- Por meio de um Provedor de Soluções na Nuvem - Um CSP (Cloud Solution Provider) é um parceiro da Microsoft que ajuda você a criar soluções com base no Azure. 
+- **Tipo de recurso** - dependem do tipo de recurso ou de como você o personaliza.
+- **Uso de recursos** - você sempre será cobrado conforme o que usa.
+- **Azure Marketplace** - Você também pode comprar soluções e serviços baseados no Azure de fornecedores terceirizados por meio do Azure Marketplace. As estruturas de cobrança são definidas pelo fornecedor.
+- **O local ou o tráfego de rede**
+	- Location - Regiões diferentes podem ter preços associados diferentes. 
+	- Zonas para cobrança de tráfego de rede - A largura de banda refere-se aos dados que entram e saem dos datacenters do Azure. Algumas transferências de dados de entrada (dados que entram em datacenters do Azure) são gratuitas. Para transferências de dados de saída (dados que saem de data centers do Azure), o preço de transferência de dados é baseado em zonas.
 
 ### Compare the Pricing calculator and the Total Cost of Ownership (TCO) calculator 
 
-- **Pricing calculator**
+- **Pricing calculator** - calculadora de preços fornece estimativas, não cotações de preços reais. Os preços reais podem variar conforme a data de compra, a moeda de pagamento que você está usando e o tipo de cliente do Azure que é.
 - **Total Cost of Ownership (TCO) calculator** - ajuda a estimar a economia de custos de operar sua solução no Azure ao longo do tempo em comparação com a operação no datacenter local.
 
 ### Describe the Azure Cost Management and Billing tool
+
+O Gerenciamento de Custos é um serviço gratuito que ajuda você a entender sua fatura do Azure, gerenciar sua conta e assinaturas, monitorar e controlar os gastos do Azure e otimizar o uso de recursos.
+
+Os recursos de Gerenciamento de Custos incluem:
+
+- **Relatórios** - Use dados históricos para gerar relatórios e prever o uso e as despesas futuras.
+- **Enriquecimento de dados** - Melhore a responsabilidade classificando os recursos com tags que correspondam a unidades organizacionais e de negócios do mundo real.
+- **Orçamentos** - Crie e gerencie orçamentos de custo e uso monitorando tendências de demanda de recursos, taxas de consumo e padrões de custo.
+- **Alertas** - Obtenha alertas conforme seus orçamentos de custo e uso.
+- **Recomendações** - Receba recomendações para eliminar recursos ociosos e otimizar os recursos do Azure que você provisiona.
+
 ### Describe the purpose of tags
+
+As tags ajudam a gerenciar os custos associados aos diferentes grupos de produtos e recursos do Azure. Você pode aplicar tags a grupos de recursos do Azure para organizar dados de cobrança.
 
 ## 🔸 Describe features and tools in Azure for governance and compliance
 
@@ -863,7 +883,25 @@ Setores & Regiões fornecem informações de conformidade específicas do setor 
 ## 🔸 Describe features and tools for managing and deploying Azure resources
 
 ### Describe the Azure portal
+
+O portal do Azure fornece uma interface gráfica do usuário amigável para exibir todos os serviços que você está usando, criar serviços, configurar seus serviços e exibir relatórios. A portal do Azure é como a maioria dos usuários experimenta o Azure primeiro. 
+
 ### Describe Azure Cloud Shell, including Azure CLI and Azure PowerShell
+
+- **Azure Cloud Shell** - é um shell interativo, autenticado e acessível pelo navegador para o gerenciamento de recursos do Azure. Ele dá a você a flexibilidade de escolher a experiência de shell que melhor se adequa ao modo como você trabalha, seja com o Bash ou o PowerShell.
+	- Bash
+	- PowerShell
+
+**Conceitos**
+
+- O Cloud Shell é executado em um host temporário fornecido por sessão e por usuário
+- O Cloud Shell atinge o tempo limite após 20 minutos sem atividade interativa
+- O Cloud Shell exige que um compartilhamento de arquivos do Azure seja montado
+- O Cloud Shell usa o mesmo compartilhamento de arquivos para o Bash e o PowerShell
+- É atribuído ao Cloud Shell um computador por conta de usuário
+- O Cloud Shell persiste o $HOME usando uma imagem de 5 GB mantida no compartilhamento de arquivos
+- As permissões são definidas da mesma forma que para um usuário normal do Linux em Bash
+
 ### Describe the purpose of Azure Arc
 
 O Azure Arc é uma ponte que estende a plataforma do Azure para ajudar na criação de aplicativos e serviços com a flexibilidade de executar em datacenters, na borda e em ambientes multinuvem. Desenvolva aplicativos nativos de nuvem com um modelo consistente de desenvolvimento, operações e segurança. O Azure Arc é executado em hardware, virtualização e plataformas de Kubernetes, dispositivos IoT e sistemas integrados novos e existentes.
