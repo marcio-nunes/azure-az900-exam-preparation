@@ -11,7 +11,7 @@
 	- Na Udemy você também encontra alguns. [Udemy Practice Test](https://www.udemy.com/course/az-900-microsoft-azure-fundamentals-practice-tests-2022-k)
 	- [itexams](https://www.itexams.com/exam/AZ-900)
 6. [Agendamento do exame](https://esi.microsoft.com/getcertification) de certificação.
-7. Resumo ainda em andamento. Fiquem a vontade para ajudar a melhorar o conteúdo.
+7. Fiquem a vontade para ajudar a melhorar o conteúdo.
 
 Icons: ☁️🔸
 
