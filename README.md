@@ -149,6 +149,20 @@ Alta disponibilidade, escalabilidade, confiabilidade e previsibilidade
 - Monitorar a integridade dos recursos e substituir automaticamente os recursos com falha.
 - Receber alertas automáticos com base em métricas configuradas, de modo a ficar ciente do desempenho em tempo real.
 
+### Microsoft Cloud Adoption Framework (CAF)
+
+O Microsoft Cloud Adoption Framework para Azure é uma estrutura completa de ciclo de vida que permite que arquitetos de nuvem, profissionais de TI e tomadores de decisão de negócios alcancem suas metas de adoção de nuvem. Ele fornece práticas recomendadas, documentação e ferramentas que ajudam você a criar e implementar estratégias de negócios e tecnologia para a nuvem.
+
+- **Strategy** - você define a justificativa do negócio e os resultados esperados da adoção. Você deve definir e documentar suas motivações por trás da adoção da nuvem, acordar resultados de negócios específicos com as partes interessadas e executivos, desenvolver um caso de negócios para validar modelos financeiros relevantes e escolher o primeiro projeto certo que pode ajudar a alinhar as motivações com os esforços técnicos necessários.
+
+- **Plan** - você alinha planos de adoção acionáveis ​​com resultados de negócios. Você cria um inventário de seu patrimônio digital, estabelece planos para o alinhamento organizacional inicial e as formas de abordar as lacunas de prontidão de habilidades. Eventualmente, você desenvolve um plano de adoção da nuvem para gerenciar as mudanças planejadas em todo o estado digital, organização e habilidades.
+
+- **Ready** - você prepara o ambiente em nuvem para as mudanças planejadas. Como parte da preparação da preparação, você revisa os guias de configuração do Azure, escolhe a opção mais apropriada para hospedar sua carga de trabalho na nuvem, expande-a para atender aos requisitos de plataforma do seu plano de adoção da nuvem e valida suas modificações em relação às práticas recomendadas do Azure.
+
+- **Inovate** - você desenvolve novas soluções nativas da nuvem ou híbridas. A inovação pode fornecer o maior valor comercial ao desbloquear novas habilidades técnicas e expandir os recursos de negócios. Você deve chegar a um consenso sobre o valor comercial hipotético, considerar várias ferramentas do guia de inovação do Azure, adotar as práticas recomendadas como parte da arquitetura de nuvem e habilitar um ciclo de feedback eficaz em todo o processo de desenvolvimento de sua solução de nuvem.
+
+O Azure CAF reúne as melhores práticas de adoção da nuvem e fornece um conjunto de ferramentas, orientações e narrativas para gerar os resultados de negócios desejados durante o processo de adoção da nuvem. Além das metodologias Estratégia, Planejar, Preparar e Inovação descritas acima, o CAF também inclui Migrar, Governar, Gerenciar e Organizar.
+
 ## 🔸 Describe cloud service types
 
 ### Describe infrastructure as a service (IaaS)
@@ -421,7 +435,7 @@ Convém habilitar recursos do Azure para que se comuniquem entre si com seguran�
 
 Você pode usar Endpoint services para se conectar a outros tipos de recursos do Azure, como bancos de dados SQL do Azure e contas de armazenamento. Essa abordagem permite vincular vários recursos do Azure às redes virtuais para melhorar a segurança e fornecer o encaminhamento ideal entre recursos.
 
-- Private endpoints - Um endpoint privado é uma adaptador de rede que usa um endereço IP privado de sua rede virtual. Essa interface de rede conecta você de forma privada e segura a um serviço da plataforma do Link Privado do Azure. Ao habilitar um endpoint privado, você está trazendo o serviço para sua rede virtual.
+- Private endpoints - Um endpoint privado é uma adaptador de rede que usa um endereço IP privado de sua rede virtual. Essa interface de rede conecta você de forma privada e segura a um serviço da plataforma do Azure Private Link . Ao habilitar um endpoint privado, você está trazendo o serviço para sua rede virtual. O tráfego de um ponto de extremidade privado para o serviço passa pela rede de backbone da Microsoft, eliminando a exposição da Internet pública.
 
 - Public endpoint - 
 
@@ -928,10 +942,9 @@ O portal do Azure fornece uma interface gráfica do usuário amigável para exib
 
 ### Describe Azure Cloud Shell, including Azure CLI and Azure PowerShell
 
-- **Azure Cloud Shell** - é um shell interativo, autenticado e acessível pelo navegador para o gerenciamento de recursos do Azure. Ele dá a você a flexibilidade de escolher a experiência de shell que melhor se adequa ao modo como você trabalha, seja com o Bash ou o PowerShell.
-	- Bash
-	- PowerShell
-- **Azure CLI** - A CLI do Azure (interface de linha de comando do Azure) é um conjunto de comandos usado para criar e gerenciar recursos do Azure. Foi criada para ajudar você a trabalhar de maneira rápida com ênfase na automação.
+- **Azure Cloud Shell** - é um shell interativo, autenticado e acessível pelo navegador para o gerenciamento de recursos do Azure. Ele dá a você a flexibilidade de escolher a experiência de shell que melhor se adequa ao modo como você trabalha, seja com o Bash ou o PowerShell. É uma ferramenta baseada na Web que permite executar cmdlets do PowerShell ou comandos da CLI do Azure depois de fazer logon no portal do Azure.
+- **Azure PowerShell** - é um módulo que você pode instalar em seu computador para Windows, Linux ou macOS. Ele permite que você use cmdlets do PowerShell localmente para administrar recursos do Azure.
+- **Azure CLI** - A CLI do Azure (interface de linha de comando do Azure) é um conjunto de comandos usado para criar e gerenciar recursos do Azure em seu computador. Foi criada para ajudar você a trabalhar de maneira rápida com ênfase na automação.
 
 **Conceitos**
 
@@ -1004,10 +1017,12 @@ O Service Health ajuda você a ficar atento a vários tipos de evento:
 ### Describe Azure Monitor, including Log Analytics, Azure Monitor alerts, and Application Insights
 
 - **Azure Monitor** - é uma plataforma para coleta, análise, visualização e potencial execução de ações com base dos dados de registro em log e de métrica de todo o ambiente do Azure e local.
+	- Pode usar o dimensionamento automático para adicionar ou remover recursos conforme apropriado para minimizar os custos e garantir o desempenho. 
 
 - **Log Analytics** - O Azure Monitor armazena dados de log em um workspace do Log Analytics, que é um recurso e um contêiner do Azure no qual os dados são coletados, agregados e servem como um limite administrativo.
 
-- **Azure Monitor alerts** - Cada alerta ou notificação disponível no Azure Monitor é o produto de uma regra. Algumas dessas regras são internas da plataforma Azure. Use regras de alerta para criar notificações e alertas personalizados. 
+- **Azure Monitor alerts** - Cada alerta ou notificação disponível no Azure Monitor é o produto de uma regra. Algumas dessas regras são internas da plataforma Azure. Use regras de alerta para criar notificações e alertas personalizados. O Azure Advisor integra-se à Central de Segurança do Azure para fornecer uma visão consolidada das recomendações para todos os recursos do Azure para ajudar a melhorar a relação custo-benefício, desempenho, alta disponibilidade e segurança dos recursos do Azure. Ele não permite que você monitore e avalie a conformidade com os padrões da empresa.
+
 	- **Alertas de métricas** permitem que você tenha um gatilho de alerta quando um limite especificado é excedido. 
 	- **Alertas de log de atividades (Activity log)** notificam você quando os recursos do Azure mudam de estado. Por exemplo, um alerta de log de atividades pode notificar você quando um recurso é excluído.
 	- **Alertas de log** são baseados nos itens gravados nos arquivos de log. Por exemplo, um alerta de log pode notificar você quando um servidor Web retorna um número de respostas 404 ou 500.
