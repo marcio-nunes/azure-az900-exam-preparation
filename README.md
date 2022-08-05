@@ -6,12 +6,13 @@
 2. Criei o [Path de estudo para a certificação AZ-900](https://docs.microsoft.com/pt-br/users/marcio-nunes-silva/collections/ew7zi52118116y) e vou atualizando conforme necessidade. 
 3. Esse resumo não substitui os módulos completos. Recomendo fortemente estudar através dos módulos do MS Learn.
 4. Resumo baseado no [Study Guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY) oficial da Microsoft.
-5. Façam simulados. 
+5. [Microsoft Azure training and certifications](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4J5ea)
+6. Façam simulados. 
 	- [Microsoft AZ-900 practice test](https://esi.microsoft.com/getcertification)
 	- Na Udemy você também encontra alguns. [Udemy Practice Test](https://www.udemy.com/course/az-900-microsoft-azure-fundamentals-practice-tests-2022-k)
 	- [itexams](https://www.itexams.com/exam/AZ-900)
-6. [Agendamento do exame](https://esi.microsoft.com/getcertification) de certificação.
-7. Fiquem a vontade para ajudar a melhorar o conteúdo.
+7. [Agendamento do exame](https://esi.microsoft.com/getcertification) de certificação.
+8. Fiquem a vontade para ajudar a melhorar o conteúdo.
 
 Icons: ☁️🔸
 
