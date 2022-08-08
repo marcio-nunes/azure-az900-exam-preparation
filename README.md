@@ -417,7 +417,7 @@ As redes virtuais do Azure oferecem as seguintes funcionalidades de rede essenci
 
 **Azure virtual subnets** - Uma sub-rede é um intervalo de endereços IP na VNet. Você pode segmentar VNets em sub-redes de tamanhos diferentes, criando quantas sub-redes você precisar para organização e segurança dentro do limite de assinatura.
 
-**Peering** - O network peering permite que os recursos em cada rede virtual se comuniquem entre si. Essas redes virtuais podem estar em regiões separadas, o que permite criar uma rede global interconectada por meio do Azure.
+**Peering** - O network peering permite que os recursos em cada rede virtual se comuniquem entre si. Essas redes virtuais podem estar em regiões separadas, o que permite criar uma rede global interconectada por meio do Azure. O peering cria uma conexão de alta largura de banda e baixa latência entre redes virtuais. Há suporte para a transferência de dados entre locatários (tenants), subscriptions e deployment models.
 
 **Azure DNS** - Embora a comunicação possa ser habilitada usando endereços IP, é muito mais simples usar nomes que possam ser facilmente lembrados e que não sejam alterados.
 - Serviços DNS públicos - resolvem nomes e endereços IP para recursos e serviços acessíveis pela Internet, como servidores Web.
@@ -1046,6 +1046,7 @@ Ele monitora:
 
 ## Outros
 
+- O MSDN é um plano de suporte gratuito e não tem vínculo com a assinatura. [Support plans](https://azure.microsoft.com/pt-br/support/plans/)
 - A Política de Privacidade da Microsoft fornece informações relevantes sobre serviços específicos, incluindo a Cortana.
 - A Política de Privacidade da Microsoft proporciona confiança na forma como a Microsoft coleta, protege e usa dados do cliente.
 
