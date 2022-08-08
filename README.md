@@ -530,6 +530,7 @@ O Azure dá suporte à migração em tempo real de infraestrutura, aplicativos e
 	- O Azure Data Box é um serviço de migração física que ajuda a transferir grandes quantidades de dados de maneira rápida, barata e confiável. Um dispositivo de armazenamento Data Box proprietário que tem uma capacidade máxima de armazenamento de 80 terabytes. 
 	- O Data Box é transportado entre o datacenter por meio de uma empresa regional. Uma caixa robusta protege o Data Box contra danos durante o transporte.
 	- É ideal para transferir os tamanhos de dados maiores do que 40 TB em cenários com conectividade de rede limitada a inexistente.
+	- Você deve usar o Azure Data Box Gateway para migrar dados periodicamente para o Azure usando o Server Message Block (SMB). O Azure Data Box Gateway é um serviço que permite transferir com segurança grandes quantidades de dados de e para o Azure Data Box.
 
 ## 🔸 Describe Azure identity, access, and security
 
@@ -557,7 +558,7 @@ O Azure AD está disponível em quatro edições: Gratuito, Aplicativos do Offic
 
 - **Azure Active Directory Gratuito**. Permite que você administre usuários e crie grupos, sincronize com o Active Directory local, crie relatórios básicos, configure a alteração de senha self-service para usuários na nuvem e habilite o logon único no Azure, no Microsoft 365 e em muitos aplicativos de SaaS populares. A edição gratuita está incluída nas assinaturas do Office 365, Azure, Dynamics 365, Intune e Power Platform.
 - **Aplicativos do Office 365**. Permite que você faça tudo o que está incluído na versão gratuita, além da redefinição de senha self-service (SSPR - Self-service password reset) para usuários na nuvem e write-back de dispositivo, o que oferece sincronização bidirecional entre os diretórios locais e o Azure AD. Está incluída nas assinaturas do Office 365 E1, E3, E5, F1 e F3.
-- **Azure Active Directory Premium P1**. Inclui todos os recursos da edição gratuita e de Aplicativos do Office 365. Ele também dá suporte à administração avançada, como grupos dinâmicos, gerenciamento de grupo de autoatendimento, Microsoft Identity Manager (um conjunto de gerenciamento de acesso e identidade local) e recursos de write-back de nuvem, que permitem a redefinição de senha por autoatendimento (SSPR - Self-service password reset) para os usuários locais.
+- **Azure Active Directory Premium P1**. Inclui todos os recursos da edição gratuita e de Aplicativos do Office 365. Ele também dá suporte à administração avançada, como grupos dinâmicos, gerenciamento de grupo de autoatendimento, Microsoft Identity Manager (um conjunto de gerenciamento de acesso e identidade local), RBAC e recursos de write-back de nuvem, que permitem a redefinição de senha por autoatendimento (SSPR - Self-service password reset) para os usuários locais.
 - **Azure Active Directory Premium P2**. O P2 oferece todos os recursos do Premium P1 e o Azure Active Directory Identity Protection para fornecer acesso condicional baseado em risco aos aplicativos e dados críticos da empresa. O P2 também oferece o Azure Active Directory Privileged Identity Management para descobrir, restringir e monitorar os administradores e o acesso aos recursos, bem como fornecer acesso just-in-time, quando necessário.
 
 > Também existe uma opção para licenças de recurso de “Pagamento conforme o uso”. Você pode obter licenças de outros recursos separadamente, como o Azure Active Directory B2C. O B2C pode ajudar você a fornecer soluções de gerenciamento de acesso e identidade para seus aplicativos voltados ao cliente.
@@ -904,6 +905,10 @@ Azure Blueprints fornece uma maneira de definir um conjunto repetitivo de recurs
 	- Modelos do ARM (modelos do Azure Resource Manager)
 	- Grupos de recursos
 - Objetos de blueprint são replicados para várias regiões do Azure. Essa replicação oferece baixa latência, alta disponibilidade e acesso consistente a seus objetos de blueprint.
+
+Quando um blueprint é atualizado e a versão atualizada é publicada, quaisquer atribuições do blueprint não são atualizadas automaticamente. Você deve atualizar a atribuição do blueprint com a nova versão atualizada da atribuição.
+
+Quando um blueprint é desatribuído, todos os recursos atribuídos pelo blueprint permanecem no lugar, mas o bloqueio de recursos do blueprint é removido. Isso também resulta na exclusão do objeto de atribuição do blueprint. O blueprint deve ser desatribuído antes de poder ser excluído.
 
 ### Describe the purpose of Azure Policy
 
