@@ -377,7 +377,7 @@ O DevOps é um conceito que combina filosofias e práticas para auxiliar as equi
 - **Availability sets** - Um conjunto de disponibilidade é um agrupamento lógico de VMs que permite que o Azure entenda como o seu aplicativo foi criado para fornecer redundância e disponibilidade. 
 	- Recomenda-se que duas ou mais VMs sejam criadas para fornecer um aplicativo altamente disponível e para atender o SLA de 99,95% do Azure. 
 	- Não há nenhum custo para o conjunto de disponibilidade em si, você paga apenas por cada instância de VM que criar.
-- **Virtual Desktop** - A Área de Trabalho Virtual do Azure é um serviço de virtualização de aplicativos executado na nuvem.
+- **Virtual Desktop** - A Área de Trabalho Virtual do Azure é um serviço de virtualização de aplicativos executado na nuvem. Dá suporte a Remote Desktop clients no MacOS, iOS, Windows Desktop, Web, Android e Microsoft Store Client. É um serviço que não requer licenças adicionais. Você pode usá-lo com sua licença por usuário existente do Microsoft 365 ou do Windows. No entanto, você é cobrado pelas máquinas virtuais em que o AVD é executado. Os usuários de VD devem existir no mesmo Windows Server AD vinculado ao Azure AD. O VD não oferece suporte ao uso de contas da Microsoft ou Azure AD B2B quando os usuários são originados de um locatário separado do Azure AD.
 	- Configurar uma implantação de várias sessões do Windows 10 ou 11 que forneça uma experiência completa do Windows com escalabilidade
 	- Apresentar os Aplicativos do Microsoft 365 para Empresas e otimizá-los para execução em cenários virtuais com vários usuários
 	- Fornecer áreas de trabalho virtuais do Windows 7 com Atualizações de Segurança Estendida gratuitas
@@ -557,11 +557,9 @@ O Azure Cosmos DB dá suporte a dados sem esquema, o que permite criar aplicativ
 
 O Azure Cosmos DB é flexível. No nível mais baixo, o Azure Cosmos DB armazena dados no formato ARS (atom-record-sequence). Os dados são então abstraídos e projetados como uma API, que você especifica ao criar o seu banco de dados. Suas opções incluem SQL, MongoDB, Cassandra, Tables e Gremlin. 
 
-**Azure SQL Database** é um banco de dados relacional baseado na última versão estável do mecanismo de banco de dados do Microsoft SQL Server. É um mecanismo de banco de dados de PaaS (plataforma como serviço). Ele lida com a maioria das funções de gerenciamento de banco de dados – como atualização, aplicação de patches, backups e monitoramento – sem envolvimento do usuário.
+**Azure SQL Managed Instance** - lift-and-shift do SQL Server local com alterações mínimas em uma solução de PaaS do Azure. A Instância Gerenciada de SQL do Azure tem quase 100% de compatibilidade com a versão mais recente do SQL Server Enterprise Edition, permitindo uma migração sem atritos para o Azure com o mínimo de alterações no aplicativo e no banco de dados. Ao mesmo tempo, é uma oferta de PaaS, eliminando a sobrecarga para o gerenciamento da infraestrutura subjacente. Tem quase 100% de compatibilidade com a versão mais recente do SQL Server Enterprise Edition, permitindo uma migração sem atritos para o Azure com o mínimo de alterações no aplicativo e no banco de dados. Ao mesmo tempo, é uma oferta de PaaS, eliminando a sobrecarga para o gerenciamento da infraestrutura subjacente.
 
-A Microsoft administra todas as atualizações para o código do sistema operacional e do SQL. Não é preciso gerenciar a infraestrutura subjacente.
-
-O Banco de Dados SQL pode ser a escolha certa para diversos aplicativos de nuvem modernos, pois permite processar dados relacionais e estruturas não relacionais, como grafos, JSON, espaciais e XML.
+**Azure SQL Database** um banco de dados sem servidor econômico com um padrão de uso intermitente e baixa utilização de computação ao longo do tempo. A camada de serviço sem servidor do Banco de Dados SQL do Azure é otimizada para cenários com padrões de uso intermitentes ou imprevisíveis. Ele pausa automaticamente o banco de dados durante períodos de inatividade e o retoma quando a atividade retorna, permitindo o faturamento por segundo para a quantidade real de computação consumida.
 
 **Migration** - Você pode migrar os seus bancos de dados existentes do SQL Server com o tempo de inatividade mínimo usando o Serviço de Migração de Banco de Dados do Azure. O Assistente de Migração de Dados da Microsoft pode gerar relatórios de avaliação que fornecem recomendações para orientar você quanto às alterações necessárias antes de executar uma migração. Após avaliar e resolver qualquer correção necessária, você estará pronto para iniciar o processo de migração. 
 
@@ -571,7 +569,7 @@ Com cada servidor do Banco de Dados do Azure para MySQL, você tira proveito dos
 
 A escalabilidade dinâmica permite que o banco de dados responda de forma transparente a mudanças rápidas nos requisitos de recursos. Você paga apenas pelos recursos de que precisa, e somente quando precisa deles.
 
-**Azure Database for PostgreSQL** -  é um serviço de banco de dados relacional na nuvem. O software para servidores se baseia na versão da comunidade do mecanismo de banco de dados PostgreSQL de software livre. Backups automáticos ajustáveis e restauração pontual por até 35 dias. O Banco de Dados do Azure para PostgreSQL está disponível em duas opções de implantação: Servidor Único e Hiperescala (Citus).
+**Azure Database for PostgreSQL** - é um serviço de banco de dados relacional na nuvem. O software para servidores se baseia na versão da comunidade do mecanismo de banco de dados PostgreSQL de software livre. Backups automáticos ajustáveis e restauração pontual por até 35 dias. O Banco de Dados do Azure para PostgreSQL está disponível em duas opções de implantação: Servidor Único e Hiperescala (Citus). No entanto, como uma oferta de PaaS, ela não fornece acesso ao sistema operacional, não é compatível com o SQL Server para fornecer uma experiência lift-and-shift suave e não possui camadas sem servidor para a hospedagem econômica de um banco de dados com um padrão de uso intermitente.
 
 - **Single Server** oferece três tipos de preço: Básico, Uso Geral e Otimizado para Memória. Cada tipo oferece recursos diferentes para dar suporte a suas cargas de trabalho do banco de dados
 - **Hiperescala (Citus)** escala horizontalmente as consultas em vários computadores usando a fragmentação. Seu mecanismo de consulta faz a correspondência entre consultas SQL recebidas nesses servidores para obter respostas mais rápidas em grandes conjuntos de dados. Ele serve para aplicativos que exigem maior escala e desempenho, que geralmente são as cargas de trabalho que estão se aproximando ou já excederam 100 GB de dados.
@@ -595,6 +593,8 @@ A escalabilidade dinâmica permite que o banco de dados responda de forma transp
 O Azure AD (Azure Active Directory) é o serviço de gerenciamento de acesso e identidade baseado em nuvem da Microsoft. As organizações usam o Azure AD para permitir que os funcionários, convidados e outras pessoas façam logon e acessem os recursos.
 
 O Azure AD simplifica a maneira como as organizações gerenciam a autorização e o acesso, fornecendo um único sistema de identidade para os aplicativos no local e na nuvem. 
+
+O Azure AD dá suporte à autorização por meio do uso de RBAC. O RBAC é necessário para configurar permissões de acesso ao usar o Azure AD para autenticação e autorização.
 
 - Pode ser sincronizado com o Active Directory local existente, sincronizado com outros serviços de diretório ou usado como serviço autônomo.
 - O Azure AD também permite que as organizações habilitem com segurança o uso de dispositivos pessoais, como celulares e tablets, e habilitem a colaboração com parceiros de negócios e clientes.
@@ -892,6 +892,8 @@ Fornece integração nativa com o Microsoft Defender Antivirus no Windows.
 
 O Azure Sentinel é o sistema de SIEM (security information and event management) baseado em nuvem da Microsoft. Ele usa análise de segurança e análise de ameaças inteligentes. O sistema de SIEM agrega dados de segurança de várias fontes diferentes (contanto que essas fontes sejam compatíveis com um formato padrão aberto de registro em log).
 
+Você deve usar o Microsoft Sentinel para criar um perfil comportamental básico de entidades organizacionais para identificar atividades anômalas. O Microsoft Sentinel é uma plataforma de gerenciador de eventos e informações de segurança (SIEM) que pode analisar dados em toda a empresa para identificar ameaças potenciais, incluindo atividades anômalas de usuários ou aplicativos, e ajudar com uma resposta mais rápida e inteligente.
+
 O Azure Sentinel permite que você:
 
 - **Coletar dados de nuvem em escala** - Colete dados de todos os usuários, dispositivos, aplicativos e infraestrutura, tanto locais quanto de várias nuvens.
@@ -922,7 +924,7 @@ O Host Dedicado do Azure:
 
 Você é cobrado pelo host dedicado, independentemente do número de VMs implantadas. O preço do host é baseado na família, no tipo (tamanho do hardware) e na região da VM.
 
-O licenciamento de software, o armazenamento e o uso de rede são cobrados separadamente do host e das VMs. Para obter mais informações.
+O licenciamento de software, o armazenamento e o uso de rede são cobrados separadamente do host e das VMs.
 
 🔝 [Voltar ao topo](#topo)
 
