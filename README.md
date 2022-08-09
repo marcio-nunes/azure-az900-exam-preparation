@@ -290,6 +290,7 @@ Com o Resource Manager, você pode:
 	- **Limite de cobrança**: Esse tipo de assinatura determina como uma conta do Azure é cobrada pelo uso do Azure. Você pode criar várias assinaturas para atender a diferentes tipos de requisitos de cobrança. O Azure gera relatórios de cobrança e faturas separados para cada assinatura, para que você possa organizar e gerenciar os custos.
 	- **Limite de controle de acesso**: O Azure aplica políticas de gerenciamento de acesso no nível da assinatura, e você pode criar assinaturas separadas para refletir diferentes estruturas organizacionais. Um exemplo disso é que, em um negócio, você tem diferentes departamentos aos quais aplica políticas de assinatura do Azure distintas. Esse modelo de cobrança permite gerenciar e controlar o acesso aos recursos que os usuários provisionam com assinaturas específicas.
 - Se você tiver várias assinaturas, poderá organizá-las em seções de fatura. Cada seção de fatura é um item de linha na fatura que mostra os encargos incorridos nesse mês. Por exemplo, você pode precisar de uma única fatura para sua organização, mas deseja organizar os encargos por departamento, equipe ou projeto.
+- Você pode transferir uma assinatura existente para um novo locatário do Azure AD. Quando você transfere uma assinatura, todas as atribuições de função de controle de acesso baseado em função (RBAC) são excluídas do locatário de origem. As atribuições de função RBAC não são migradas para o locatário de destino.
 
 ### Describe management groups
 
@@ -477,8 +478,8 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 ### Describe storage tiers
 
 - **Hot access tier**: otimizada para armazenar dados que são acessados com frequência (por exemplo, imagens de seu site).
-- **Cool access tier**: otimizada para dados acessados com menos frequência e armazenados por pelo menos 30 dias (por exemplo, faturas de seus clientes).
-- **Archive access tier**: adequada para dados acessados raramente e armazenados por pelo menos 180 dias, com requisitos de latência flexíveis (por exemplo, backups de longo prazo).
+- **Cool access tier**: otimizada para dados acessados com menos frequência e armazenados por pelo menos 30 dias (por exemplo, faturas de seus clientes). Incorre em penalidades para dados excluídos em 30 dias.
+- **Archive access tier**: adequada para dados acessados raramente e armazenados por pelo menos 180 dias, com requisitos de latência flexíveis (por exemplo, backups de longo prazo). Não está disponível no nível da conta.
 
 ### Describe redundancy options
 
@@ -534,6 +535,8 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 - **Azure Storage Explorer** - O Gerenciador de Armazenamento do Azure é um aplicativo autônomo que fornece uma interface gráfica para gerenciar arquivos e blobs em sua Conta do Armazenamento do Azure. Ele funciona em sistemas operacionais Windows, macOS e Linux e usa o AzCopy no back-end para executar todas as tarefas de gerenciamento de arquivos e blobs. 
 - **Azure File Sync** - é uma ferramenta que permite centralizar seus compartilhamentos de arquivos no serviço Azure Files e manter a flexibilidade, o desempenho e a compatibilidade de um servidor de arquivos do Windows. É quase como transformar o servidor de arquivos do Windows em uma rede de distribuição de conteúdo em miniatura.
 
+Você deve usar o AzCopy ou o Storage Explorer do Azure para transferir um VHD local para o Azure.
+
 ### Describe migration options, including Azure Migrate and Azure Data Box
 
 O Azure dá suporte à migração em tempo real de infraestrutura, aplicativos e dados usando o serviço Migrações para Azure, bem como a migração assíncrona de dados usando o Azure Data Box.
@@ -572,7 +575,11 @@ A escalabilidade dinâmica permite que o banco de dados responda de forma transp
 **Azure Database for PostgreSQL** - é um serviço de banco de dados relacional na nuvem. O software para servidores se baseia na versão da comunidade do mecanismo de banco de dados PostgreSQL de software livre. Backups automáticos ajustáveis e restauração pontual por até 35 dias. O Banco de Dados do Azure para PostgreSQL está disponível em duas opções de implantação: Servidor Único e Hiperescala (Citus). No entanto, como uma oferta de PaaS, ela não fornece acesso ao sistema operacional, não é compatível com o SQL Server para fornecer uma experiência lift-and-shift suave e não possui camadas sem servidor para a hospedagem econômica de um banco de dados com um padrão de uso intermitente.
 
 - **Single Server** oferece três tipos de preço: Básico, Uso Geral e Otimizado para Memória. Cada tipo oferece recursos diferentes para dar suporte a suas cargas de trabalho do banco de dados
+	 - **Azure Database for PostgreSQL Single Server Basic tier** - O armazenamento é limitado a 1 TB e é limitado ao Azure Standard Storage.
+	- **Azure Database for PostgreSQL Single Server General Purpose tier** - dá suporte ao armazenamento de dados de até 16 TB e usa o armazenamento Premium do Azure.
 - **Hiperescala (Citus)** escala horizontalmente as consultas em vários computadores usando a fragmentação. Seu mecanismo de consulta faz a correspondência entre consultas SQL recebidas nesses servidores para obter respostas mais rápidas em grandes conjuntos de dados. Ele serve para aplicativos que exigem maior escala e desempenho, que geralmente são as cargas de trabalho que estão se aproximando ou já excederam 100 GB de dados.
+
+
 
 **Azure SQL Managed Instance** - é um serviço de dados de nuvem escalonável que fornece a mais ampla compatibilidade do mecanismo de banco de dados do SQL Server com todos os benefícios de uma plataforma como serviço (PaaS) totalmente gerenciada.
 
@@ -857,6 +864,8 @@ O Azure fornece ferramentas e recursos de segurança em todos os níveis do conc
 - Regras de filtragem de entrada e saída.
 - Suporte a DNAT (conversão de endereços de rede de destino) de entrada.
 - O registro em log do Azure Monitor.
+- O Firewall do Azure fornece filtragem de tráfego, semelhante aos Network Securuty Groups. Ambos os serviços não são mutuamente exclusivos; eles podem se complementar. Usar o Firewall do Azure com NSGs pode fornecer melhor segurança de rede com defesa em profundidade. 
+- A implementação do Firewall do Azure resultará em custos e esforços adicionais para configuração e manutenção.
 
 **WAF (firewall do aplicativo Web)** é um recurso do Gateway de Aplicativo do Azure que fornece aos seus aplicativos Web proteção de entrada centralizada contra explorações e vulnerabilidades comuns.
 
@@ -868,6 +877,10 @@ A Proteção contra DDoS Standard ajuda a garantir que a carga de rede que você
 - **Standard** fornece monitoramento de tráfego sempre ativo e mitigação em tempo real de ataques comuns no nível de rede. Ela oferece as mesmas defesas que os serviços online da Microsoft usam.
 
 **network security group (NSG)** permite filtrar o tráfego de rede proveniente dos recursos do Azure e destinado a eles em uma rede virtual do Azure. Considere os NSGs como um firewall interno. Um NSG pode conter várias regras de segurança de entrada e saída que permitem a filtragem do tráfego para e de recursos por endereço IP de origem e de destino, porta e protocolo.
+
+**Azure Traffic Manager** - O Gerenciador de Tráfego do Azure é um balanceador de carga de tráfego baseado em DNS que permite distribuir o tráfego entre regiões globais do Azure. Ele não fornece a capacidade de filtrar o tráfego por conexão.
+
+**Application Security Group** @@@
 
 ### Describe the purpose of Microsoft Defender for Cloud
 
