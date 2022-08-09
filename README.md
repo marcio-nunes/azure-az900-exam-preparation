@@ -453,7 +453,7 @@ Você pode usar Endpoint services para se conectar a outros tipos de recursos do
 
 - Private endpoints - Um endpoint privado é uma adaptador de rede que usa um endereço IP privado de sua rede virtual. Essa interface de rede conecta você de forma privada e segura a um serviço da plataforma do Azure Private Link . Ao habilitar um endpoint privado, você está trazendo o serviço para sua rede virtual. O tráfego de um ponto de extremidade privado para o serviço passa pela rede de backbone da Microsoft, eliminando a exposição da Internet pública.
 
-- Public endpoint - 
+- Public endpoint - permite o acesso a dados para sua instância gerenciada de fora da rede virtual. Você pode acessar sua instância gerenciada de serviços multilocatários do Azure, como Power BI, Serviço de Aplicativo do Azure ou uma rede local. Usando o endpoint público em uma instância gerenciada, você não precisa usar uma VPN, o que pode ajudar a evitar problemas de taxa de transferência de VPN.
 
 ## 🔸 Describe Azure storage services
 
@@ -576,9 +576,9 @@ A escalabilidade dinâmica permite que o banco de dados responda de forma transp
 **Azure Database for PostgreSQL** - é um serviço de banco de dados relacional na nuvem. O software para servidores se baseia na versão da comunidade do mecanismo de banco de dados PostgreSQL de software livre. Backups automáticos ajustáveis e restauração pontual por até 35 dias. O Banco de Dados do Azure para PostgreSQL está disponível em duas opções de implantação: Servidor Único e Hiperescala (Citus). No entanto, como uma oferta de PaaS, ela não fornece acesso ao sistema operacional, não é compatível com o SQL Server para fornecer uma experiência lift-and-shift suave e não possui camadas sem servidor para a hospedagem econômica de um banco de dados com um padrão de uso intermitente.
 
 - **Single Server** oferece três tipos de preço: Básico, Uso Geral e Otimizado para Memória. Cada tipo oferece recursos diferentes para dar suporte a suas cargas de trabalho do banco de dados
-	- **Azure Database for PostgreSQL Single Server Basic tier** - O armazenamento é limitado a 1 TB e é limitado ao Azure Standard Storage.
-	- **Azure Database for PostgreSQL Single Server Memory Optimized tier** - @@@
-	- **Azure Database for PostgreSQL Single Server General Purpose tier** - dá suporte ao armazenamento de dados de até 16 TB e usa o armazenamento Premium do Azure.
+	- **Azure Database for PostgreSQL Single Server Basic tier** - Cargas de trabalho que exigem desempenho de E/S e computação leve. Os exemplos incluem servidores usados para desenvolvimento ou teste ou aplicativos de pequena escala usados com pouca frequência. O armazenamento é limitado a 1 TB e é limitado ao Azure Standard Storage.
+	- **Azure Database for PostgreSQL Single Server Memory Optimized tier** - Cargas de trabalho de banco de dados de alto desempenho que exigem desempenho na memória para o processamento de transações mais rápido e com simultaneidade mais alta. Os exemplos incluem servidores para o processamento de dados em tempo real e aplicativos analíticos ou transacionais de alto desempenho.
+	- **Azure Database for PostgreSQL Single Server General Purpose tier** - A maioria das cargas de trabalho que exigem a computação e a memória balanceadas com a taxa de transferência de E/S escalonável. Os exemplos incluem servidores para hospedar aplicativos Web e móveis e outros aplicativos empresariais. Dá suporte ao armazenamento de dados de até 16 TB e usa o armazenamento Premium do Azure.
 - **Hiperescala (Citus)** escala horizontalmente as consultas em vários computadores usando a fragmentação. Seu mecanismo de consulta faz a correspondência entre consultas SQL recebidas nesses servidores para obter respostas mais rápidas em grandes conjuntos de dados. Ele serve para aplicativos que exigem maior escala e desempenho, que geralmente são as cargas de trabalho que estão se aproximando ou já excederam 100 GB de dados.
 
 **Azure SQL Managed Instance** - é um serviço de dados de nuvem escalonável que fornece a mais ampla compatibilidade do mecanismo de banco de dados do SQL Server com todos os benefícios de uma plataforma como serviço (PaaS) totalmente gerenciada.
@@ -883,11 +883,11 @@ A Proteção contra DDoS Standard ajuda a garantir que a carga de rede que você
 		- A proteção é fornecida para instâncias do Azure Load Balancer, Azure Application Gateway e Azure Service Fabric com endereços IP públicos associados. A proteção não é fornecida para ambientes de serviço de aplicativo.
 
 
-**network security group (NSG)** permite filtrar o tráfego de rede proveniente dos recursos do Azure e destinado a eles em uma rede virtual do Azure. Considere os NSGs como um firewall interno. Um NSG pode conter várias regras de segurança de entrada e saída que permitem a filtragem do tráfego para e de recursos por endereço IP de origem e de destino, porta e protocolo.
+**network security group (NSG)** - permite filtrar o tráfego de rede proveniente dos recursos do Azure e destinado a eles em uma rede virtual do Azure. Considere os NSGs como um firewall interno. Um NSG pode conter várias regras de segurança de entrada e saída que permitem a filtragem do tráfego para e de recursos por endereço IP de origem e de destino, porta e protocolo.
 
 **Azure Traffic Manager** - O Gerenciador de Tráfego do Azure é um balanceador de carga de tráfego baseado em DNS que permite distribuir o tráfego entre regiões globais do Azure. Ele não fornece a capacidade de filtrar o tráfego por conexão.
 
-**Application Security Group** @@@
+**Application Security Group** - permitem a você configurar a segurança de rede como uma extensão natural da estrutura de um aplicativo, permitindo o agrupamento de máquinas virtuais e a definição de políticas de segurança de rede com base nesses grupos. A plataforma lida com a complexidade de endereços IP explícitos e vários conjuntos de regras, permitindo que você se concentre na sua lógica de negócios.
 
 ### Describe the purpose of Microsoft Defender for Cloud
 
@@ -1182,7 +1182,7 @@ A IoT habilita os dispositivos para coletar e retransmitir informações a fim d
 A IA é uma classificação de computação ampla que permite a um sistema de software perceber seu ambiente e tomar medidas que maximizem sua chance de atingir as metas. Umas das metas da IA é criar um sistema de software capaz de adaptar-se ou de aprender algo por conta própria sem ser explicitamente programado para isso.
 
 - **Deep Learning** - aprendizado profundo modelado na rede neural da mente humana, permitindo que ele descubra, aprenda e cresça com a experiência.
-- **Machine Learning** -  uma técnica de ciência de dados que usa dados existentes para treinar um modelo, testá-lo e, em seguida, aplicar esse modelo a novos dados para prever comportamentos, resultados e tendências futuros.
+- **Machine Learning** - é uma técnica de ciência de dados que usa dados existentes para treinar um modelo, testá-lo e, em seguida, aplicar esse modelo a novos dados para prever comportamentos, resultados e tendências futuros.
 
 **Azure Machine Learning** - é uma plataforma para fazer previsões. Ele consiste em ferramentas e serviços que permitem que você se conecte a dados para treinar e testar modelos para encontrar um que preveja com mais precisão um resultado futuro. Escolha o Azure Machine Learning quando os cientistas de dados precisarem de controle total sobre o design e o treinamento de um algoritmo usando os próprios dados. 
 
