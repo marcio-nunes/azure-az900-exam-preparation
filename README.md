@@ -432,7 +432,7 @@ As redes virtuais do Azure oferecem as seguintes funcionalidades de rede essenci
 
 **Azure virtual subnets** - Uma sub-rede é um intervalo de endereços IP na VNet. Você pode segmentar VNets em sub-redes de tamanhos diferentes, criando quantas sub-redes você precisar para organização e segurança dentro do limite de assinatura.
 
-**Peering** - O network peering permite que os recursos em cada rede virtual se comuniquem entre si. Essas redes virtuais podem estar em regiões separadas, o que permite criar uma rede global interconectada por meio do Azure. O peering cria uma conexão de alta largura de banda e baixa latência entre redes virtuais. Há suporte para a transferência de dados entre locatários (tenants), subscriptions e deployment models.
+**Peering** - O network peering permite que os recursos em cada rede virtual se comuniquem entre si. Essas redes virtuais podem estar em regiões separadas, o que permite criar uma rede global interconectada por meio do Azure. O peering cria uma conexão de alta largura de banda e baixa latência entre redes virtuais. Há suporte para a transferência de dados entre locatários (tenants), subscriptions e deployment models. Pode ser usado para transferir dados entre locatários do Azure AD. A configuração do emparelhamento não requer tempo de inatividade para as redes virtuais emparelhadas. Os recursos podem continuar a oferecer suporte a conexões de entrada e saída durante o processo de emparelhamento.
 
 **Azure DNS** - Embora a comunicação possa ser habilitada usando endereços IP, é muito mais simples usar nomes que possam ser facilmente lembrados e que não sejam alterados.
 - Serviços DNS públicos - resolvem nomes e endereços IP para recursos e serviços acessíveis pela Internet, como servidores Web.
@@ -472,6 +472,7 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 	- Você deve usar Azure Files para migrar dados periodicamente para o Azure usando SMB. 
 	- SMB é um protocolo de compartilhamento de arquivos usado em sistemas operacionais Windows. 
 	- Windows e outros clientes compatíveis com SMB podem acessar arquivos compartilhados localizados na nuvem.
+	- É a única opção de armazenamento que oferece suporte ao armazenamento persistente para ACI (Azure Container Instances). Você precisaria criar o compartilhamento e, em seguida, criar um contêiner especificando o compartilhamento e o ponto de montagem do volume.
 - **Azure Queue storage** - Um armazenamento de dados para o enfileiramento de mensagens e a entrega confiável delas entre aplicativos.
 - **Azure Table storage** - O armazenamento de tabela é um serviço que armazena dados estruturados não relacionais (também conhecidos como dados NoSQL estruturados) na nuvem, fornecendo um repositório de chave/atributo com um design sem esquema. 
 
@@ -575,11 +576,10 @@ A escalabilidade dinâmica permite que o banco de dados responda de forma transp
 **Azure Database for PostgreSQL** - é um serviço de banco de dados relacional na nuvem. O software para servidores se baseia na versão da comunidade do mecanismo de banco de dados PostgreSQL de software livre. Backups automáticos ajustáveis e restauração pontual por até 35 dias. O Banco de Dados do Azure para PostgreSQL está disponível em duas opções de implantação: Servidor Único e Hiperescala (Citus). No entanto, como uma oferta de PaaS, ela não fornece acesso ao sistema operacional, não é compatível com o SQL Server para fornecer uma experiência lift-and-shift suave e não possui camadas sem servidor para a hospedagem econômica de um banco de dados com um padrão de uso intermitente.
 
 - **Single Server** oferece três tipos de preço: Básico, Uso Geral e Otimizado para Memória. Cada tipo oferece recursos diferentes para dar suporte a suas cargas de trabalho do banco de dados
-	 - **Azure Database for PostgreSQL Single Server Basic tier** - O armazenamento é limitado a 1 TB e é limitado ao Azure Standard Storage.
+	- **Azure Database for PostgreSQL Single Server Basic tier** - O armazenamento é limitado a 1 TB e é limitado ao Azure Standard Storage.
+	- **Azure Database for PostgreSQL Single Server Memory Optimized tier** - @@@
 	- **Azure Database for PostgreSQL Single Server General Purpose tier** - dá suporte ao armazenamento de dados de até 16 TB e usa o armazenamento Premium do Azure.
 - **Hiperescala (Citus)** escala horizontalmente as consultas em vários computadores usando a fragmentação. Seu mecanismo de consulta faz a correspondência entre consultas SQL recebidas nesses servidores para obter respostas mais rápidas em grandes conjuntos de dados. Ele serve para aplicativos que exigem maior escala e desempenho, que geralmente são as cargas de trabalho que estão se aproximando ou já excederam 100 GB de dados.
-
-
 
 **Azure SQL Managed Instance** - é um serviço de dados de nuvem escalonável que fornece a mais ampla compatibilidade do mecanismo de banco de dados do SQL Server com todos os benefícios de uma plataforma como serviço (PaaS) totalmente gerenciada.
 
@@ -866,6 +866,7 @@ O Azure fornece ferramentas e recursos de segurança em todos os níveis do conc
 - O registro em log do Azure Monitor.
 - O Firewall do Azure fornece filtragem de tráfego, semelhante aos Network Securuty Groups. Ambos os serviços não são mutuamente exclusivos; eles podem se complementar. Usar o Firewall do Azure com NSGs pode fornecer melhor segurança de rede com defesa em profundidade. 
 - A implementação do Firewall do Azure resultará em custos e esforços adicionais para configuração e manutenção.
+- Você deve usar o Firewall do Azure quando quiser criar uma regra que restrinja o tráfego de rede entre assinaturas.
 
 **WAF (firewall do aplicativo Web)** é um recurso do Gateway de Aplicativo do Azure que fornece aos seus aplicativos Web proteção de entrada centralizada contra explorações e vulnerabilidades comuns.
 
@@ -875,6 +876,12 @@ A Proteção contra DDoS Standard ajuda a garantir que a carga de rede que você
 
 - **Basic** é automaticamente habilitada de modo gratuito como parte da sua assinatura do Azure.
 - **Standard** fornece monitoramento de tráfego sempre ativo e mitigação em tempo real de ataques comuns no nível de rede. Ela oferece as mesmas defesas que os serviços online da Microsoft usam.
+	- oferece proteção contra ataques volumétricos, de protocolo e de camada de aplicativo. 
+		- Um ataque volumétrico refere-se a uma tentativa de inundar uma rede com o que parece ser tráfego legítimo, mas em níveis muito altos. 
+		- Os ataques de protocolo funcionam explorando pontos fracos na pilha de protocolos da camada 3 e da camada 4. 
+		- Os ataques da camada de aplicativo (camada de recurso) visam pacotes de aplicativos da Web. 
+		- A proteção é fornecida para instâncias do Azure Load Balancer, Azure Application Gateway e Azure Service Fabric com endereços IP públicos associados. A proteção não é fornecida para ambientes de serviço de aplicativo.
+
 
 **network security group (NSG)** permite filtrar o tráfego de rede proveniente dos recursos do Azure e destinado a eles em uma rede virtual do Azure. Considere os NSGs como um firewall interno. Um NSG pode conter várias regras de segurança de entrada e saída que permitem a filtragem do tráfego para e de recursos por endereço IP de origem e de destino, porta e protocolo.
 
@@ -1024,6 +1031,8 @@ Quando um blueprint é desatribuído, todos os recursos atribuídos pelo bluepri
 - Você pode aplicar bloqueios a uma assinatura, a um grupo de recursos ou a um recurso individual. É possível definir o nível de bloqueio como CanNotDelete ou ReadOnly.
 	- CanNotDelete significa que as pessoas autorizadas ainda podem ler e modificar um recurso, mas não podem excluir o recurso sem antes remover o bloqueio.
 	- ReadOnly significa que pessoas autorizadas podem ler um recurso, mas não podem excluir nem alterar o recurso. 
+
+Bloquear um grupo de recursos como somente leitura bloqueia todos os recursos contidos no grupo. Você pode aplicar bloqueios a um grupo de recursos ou assinatura para impedir a exclusão ou tornar os recursos contidos somente leitura. Você também pode aplicar bloqueios diretamente a um recurso.
 
 ### Describe the purpose of the Service Trust Portal
 
