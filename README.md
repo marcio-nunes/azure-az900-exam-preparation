@@ -468,6 +468,9 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 	- Armazenamento de dados para análise por um serviço local ou hospedado no Azure.
 	- Armazenamento de até 8 TB de dados para máquinas virtuais.
 - **Azure Files storage** - Compartilhamentos de arquivos que podem ser acessados e gerenciados como um servidor de arquivos.
+	- Você deve usar Azure Files para migrar dados periodicamente para o Azure usando SMB. 
+	- SMB é um protocolo de compartilhamento de arquivos usado em sistemas operacionais Windows. 
+	- Windows e outros clientes compatíveis com SMB podem acessar arquivos compartilhados localizados na nuvem.
 - **Azure Queue storage** - Um armazenamento de dados para o enfileiramento de mensagens e a entrega confiável delas entre aplicativos.
 - **Azure Table storage** - O armazenamento de tabela é um serviço que armazena dados estruturados não relacionais (também conhecidos como dados NoSQL estruturados) na nuvem, fornecendo um repositório de chave/atributo com um design sem esquema. 
 
@@ -541,8 +544,8 @@ O Azure dá suporte à migração em tempo real de infraestrutura, aplicativos e
 - **Azure Database Migration Service**. Migre bancos de dados locais para VMs do Azure executando SQL Server, Banco de Dados SQL do Azure ou Instâncias Gerenciadas de SQL.
 - **Web app migration assistant**. É uma ferramenta autônoma para avaliar sites locais para migração para o Serviço de Aplicativo do Azure. 
 - **Azure Data Box**. Use os produtos Azure Data Box offline para mover grandes quantidades de dados offline para o Azure.
-	- O Azure Data Box é um serviço de migração física que ajuda a transferir grandes quantidades de dados de maneira rápida, barata e confiável. Um dispositivo de armazenamento Data Box proprietário que tem uma capacidade máxima de armazenamento de 80 terabytes. 
-	- O Data Box é transportado entre o datacenter por meio de uma empresa regional. Uma caixa robusta protege o Data Box contra danos durante o transporte.
+	- O Azure Data Box Heavy é um serviço de migração física que ajuda a transferir grandes quantidades de dados de maneira rápida, barata e confiável. Um dispositivo de armazenamento Data Box proprietário que tem uma capacidade máxima de armazenamento de 80 terabytes. 
+	- O Data Box Heavy é transportado entre o datacenter por meio de uma empresa regional. Uma caixa robusta protege o Data Box contra danos durante o transporte.
 	- É ideal para transferir os tamanhos de dados maiores do que 40 TB em cenários com conectividade de rede limitada a inexistente.
 	- Você deve usar o Azure Data Box Gateway para migrar dados periodicamente para o Azure usando o Server Message Block (SMB). O Azure Data Box Gateway é um serviço que permite transferir com segurança grandes quantidades de dados de e para o Azure Data Box.
 
