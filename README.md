@@ -585,8 +585,6 @@ A escalabilidade dinâmica permite que o banco de dados responda de forma transp
 
 **Azure Data Lake Analytics** é um serviço de trabalho de análise sob demanda que simplifica Big Data. Em vez de implantar, configurar e ajustar o hardware, você cria consultas para transformar os dados e extrair insights importantes. O serviço de análise pode manipular trabalhos de qualquer escala de maneira instantânea, simplesmente configurando o controle para a quantidade de potência necessária. Você pagará pelo trabalho somente quando ele estiver em execução, tornando-o mais econômico.
 
-
-
 ## 🔸 Describe Azure identity, access, and security
 
 ### Describe directory services in Azure, including Azure Active Directory (Azure AD) and Azure Active Directory Domain Services (Azure AD DS)
@@ -849,21 +847,43 @@ O Azure fornece ferramentas e recursos de segurança em todos os níveis do conc
 	- Armazenados em aplicativos SaaS (software como serviço), como o Office 365.
 	- Gerenciados por meio do armazenamento em nuvem.
 
+**Firewall do Azure** é um firewall com estado (stateful). Um firewall com estado analisa o contexto completo de uma conexão de rede, não apenas um pacote individual de tráfego de rede. O Firewall do Azure apresenta alta disponibilidade e escalabilidade de nuvem irrestrita. Fornece um local central para criar, impor e registrar políticas de conectividade de aplicativo e rede em assinaturas e redes virtuais.
+
+- Alta disponibilidade interna.
+- Escalabilidade de nuvem irrestrita.
+- Regras de filtragem de entrada e saída.
+- Suporte a DNAT (conversão de endereços de rede de destino) de entrada.
+- O registro em log do Azure Monitor.
+
+**WAF (firewall do aplicativo Web)** é um recurso do Gateway de Aplicativo do Azure que fornece aos seus aplicativos Web proteção de entrada centralizada contra explorações e vulnerabilidades comuns.
+
+**Proteção contra DDoS do Azure (Standard)** ajuda a proteger seus recursos do Azure contra ataques de DDoS. Ajuda a proteger seus aplicativos do Azure analisando e descartando o tráfego de DDoS na borda da rede do Azure, antes que ele possa afetar a disponibilidade do serviço.
+
+A Proteção contra DDoS Standard ajuda a garantir que a carga de rede que você processa reflita o uso do cliente. Você também pode receber crédito por qualquer custo acumulado para recursos escalados horizontalmente durante um ataque de DDoS. A Proteção contra DDoS oferece estas camadas de serviço:
+
+- **Basic** é automaticamente habilitada de modo gratuito como parte da sua assinatura do Azure.
+- **Standard** fornece monitoramento de tráfego sempre ativo e mitigação em tempo real de ataques comuns no nível de rede. Ela oferece as mesmas defesas que os serviços online da Microsoft usam.
+
+**network security group (NSG)** permite filtrar o tráfego de rede proveniente dos recursos do Azure e destinado a eles em uma rede virtual do Azure. Considere os NSGs como um firewall interno. Um NSG pode conter várias regras de segurança de entrada e saída que permitem a filtragem do tráfego para e de recursos por endereço IP de origem e de destino, porta e protocolo.
+
 ### Describe the purpose of Microsoft Defender for Cloud
 
-O Defender para Nuvem é uma ferramenta de monitoramento para gerenciamento da postura de segurança e proteção contra ameaças. Ele monitora seus ambientes de nuvem, locais, híbridos e de várias nuvens para fornecer diretrizes e notificações com o objetivo de fortalecer sua postura de segurança.
+O Defender para Nuvem é uma ferramenta de monitoramento para gerenciamento da postura de segurança e proteção contra ameaças. Ele monitora seus ambientes de nuvem, locais, híbridos e de várias nuvens para fornecer diretrizes e notificações com o objetivo de fortalecer sua postura de segurança. A implantação do Defender para Nuvem é fácil e já está integrada nativamente ao Azure.
 
-O Defender para Nuvem fornece as ferramentas necessárias para proteger seus recursos, acompanhar sua postura de segurança, proteger contra ataques cibernéticos e simplificar o gerenciamento de segurança. A implantação do Defender para Nuvem é fácil e já está integrada nativamente ao Azure
+Oferece suporte ao monitoramento, recomendações de segurança e proteção avançada contra ameaças para recursos de VM na nuvem e locais. Isso significa que os recursos e as cargas de trabalho são protegidos em um ambiente híbrido, implantados ou não no Azure.
 
-Se você também tiver um datacenter local ou estiver operando em outro ambiente de nuvem, o monitoramento dos serviços do Azure poderá não fornecer uma visão completa da sua situação de segurança.
+Fornece integração nativa com o Microsoft Defender Antivirus no Windows. 
 
-Quando necessário, o Defender para Nuvem pode implantar automaticamente um agente do Log Analytics para coletar dados relacionados à segurança. Para computadores do Azure, a implantação é tratada diretamente. Em ambientes híbridos e de várias nuvens, os planos do Microsoft Defender são estendidos para computadores que não são Azure com a ajuda do Azure Arc. Os recursos do GPSN (gerenciamento da postura de segurança na nuvem) são estendidos para computadores de várias nuvens sem a necessidade de agentes.
+- O suporte do Microsoft Defender for Cloud não se limita apenas aos sistemas operacionais Windows. Ele suporta o Windows Server 2008 e versões posteriores e várias versões de oito distribuições do sistema operacional Linux.
 
-O Defender para Nuvem preenche três necessidades vitais à medida que você gerencia a segurança de seus recursos e cargas de trabalho locais e na nuvem:
+- Quando necessário, o Defender para Nuvem pode implantar automaticamente um agente do Log Analytics para coletar dados relacionados à segurança. Para computadores do Azure, a implantação é tratada diretamente. Em ambientes híbridos e de várias nuvens, os planos do Microsoft Defender são estendidos para computadores que não são Azure com a ajuda do Azure Arc. Os recursos do GPSN (gerenciamento da postura de segurança na nuvem) são estendidos para computadores de várias nuvens sem a necessidade de agentes.
 
-- Avaliação contínua – Conheça sua postura de segurança. Identifique e rastreie vulnerabilidades.
-- Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
-- Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
+- Pode descobrir e avaliar automaticamente a segurança de novos recursos do Azure à medida que são implantados.
+
+- O Defender para Nuvem preenche três necessidades vitais à medida que você gerencia a segurança de seus recursos e cargas de trabalho locais e na nuvem:
+	- Avaliação contínua – Conheça sua postura de segurança. Identifique e rastreie vulnerabilidades.
+	- Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
+	- Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
 
 ### Sentinel
 
