@@ -347,6 +347,20 @@ A computação do Azure é um serviço de computação sob demanda para execuç�
     	- instruções de comutação
     	- loops e ramificações.
 
+### DevOps
+
+O DevOps é um conceito que combina filosofias e práticas para auxiliar as equipes técnicas nos esforço para alcançar metas comuns. Para chegar a esse alinhamento, as organizações empregam práticas e processos que automatizam o desenvolvimento, a manutenção e a implantação contínuos dos sistemas de software. O objetivo é agilizar o lançamento de alterações de software, garantir a implantabilidade contínua do sistema e assegurar que todas as alterações atendam a um elevado padrão de qualidade.
+
+**Azure DevOps Services** - O Azure DevOps Services é um conjunto de serviços que lidam com cada fase do ciclo de vida do desenvolvimento de software.
+
+- **Azure Repos** é um repositório de código-fonte centralizado no qual profissionais de desenvolvimento de software, engenharia de DevOps e documentação podem publicar código para revisão e colaboração.
+- **Azure Boards** é um pacote de gerenciamento de projetos ágil que inclui quadros Kanban, relatórios e acompanhamento de ideias e trabalho, de epics de alto nível a itens de trabalho e problemas.
+- **Azure Pipelines** é uma ferramenta de automação do pipeline de CI/CD.
+- **Azure Artifacts** é um repositório para hospedagem de artefatos, como o código-fonte compilado, que podem ser inseridos nas etapas dos pipelines de teste ou de implantação.
+- **Azure Test Plans** é uma ferramenta de teste automatizado que pode ser usada em um pipeline de CI/CD para garantir a qualidade antes da liberação de um software.
+
+**Azure DevTest Labs** - O Azure DevTest Labs fornece um meio automatizado de gerenciar o processo de criação, configuração e remoção de VMs (máquinas virtuais) que contêm builds de seus projetos de software. Dessa maneira, desenvolvedores e testadores podem executar testes em uma variedade de ambientes e builds. E isso não fica limitado às VMs. Tudo o que você pode implantar no Azure por meio de um modelo do ARM pode ser provisionado pelo DevTest Labs. O provisionamento de ambientes de laboratório pré-criados com as ferramentas e as configurações necessárias já instaladas economiza muito tempo para desenvolvedores e profissionais de garantia de qualidade.
+
 ### Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
 
 - **Máquinas virtuais** são emulações de software de computadores físicos.
@@ -531,6 +545,47 @@ O Azure dá suporte à migração em tempo real de infraestrutura, aplicativos e
 	- O Data Box é transportado entre o datacenter por meio de uma empresa regional. Uma caixa robusta protege o Data Box contra danos durante o transporte.
 	- É ideal para transferir os tamanhos de dados maiores do que 40 TB em cenários com conectividade de rede limitada a inexistente.
 	- Você deve usar o Azure Data Box Gateway para migrar dados periodicamente para o Azure usando o Server Message Block (SMB). O Azure Data Box Gateway é um serviço que permite transferir com segurança grandes quantidades de dados de e para o Azure Data Box.
+
+### Database
+
+**Azure Cosmos DB** é um serviço de multimodelo de banco de dados distribuído globalmente. Você pode aproveitar o acesso a dados rápido e em poucos milissegundos usando uma das várias APIs populares. O Azure Cosmos DB fornece SLAs abrangentes para taxa de transferência, latência, disponibilidade e garantias de consistência.
+
+O Azure Cosmos DB dá suporte a dados sem esquema, o que permite criar aplicativos "Always On" altamente responsivos para dar suporte a dados em constante mudança. 
+
+O Azure Cosmos DB é flexível. No nível mais baixo, o Azure Cosmos DB armazena dados no formato ARS (atom-record-sequence). Os dados são então abstraídos e projetados como uma API, que você especifica ao criar o seu banco de dados. Suas opções incluem SQL, MongoDB, Cassandra, Tables e Gremlin. 
+
+**Azure SQL Database** é um banco de dados relacional baseado na última versão estável do mecanismo de banco de dados do Microsoft SQL Server. É um mecanismo de banco de dados de PaaS (plataforma como serviço). Ele lida com a maioria das funções de gerenciamento de banco de dados – como atualização, aplicação de patches, backups e monitoramento – sem envolvimento do usuário.
+
+A Microsoft administra todas as atualizações para o código do sistema operacional e do SQL. Não é preciso gerenciar a infraestrutura subjacente.
+
+O Banco de Dados SQL pode ser a escolha certa para diversos aplicativos de nuvem modernos, pois permite processar dados relacionais e estruturas não relacionais, como grafos, JSON, espaciais e XML.
+
+**Migration** - Você pode migrar os seus bancos de dados existentes do SQL Server com o tempo de inatividade mínimo usando o Serviço de Migração de Banco de Dados do Azure. O Assistente de Migração de Dados da Microsoft pode gerar relatórios de avaliação que fornecem recomendações para orientar você quanto às alterações necessárias antes de executar uma migração. Após avaliar e resolver qualquer correção necessária, você estará pronto para iniciar o processo de migração. 
+
+**Azure database for MySQL** - O Banco de Dados do Azure para MySQL é um serviço de banco de dados relacional na nuvem que se baseia no mecanismo de banco de dados MySQL Community Edition.
+
+Com cada servidor do Banco de Dados do Azure para MySQL, você tira proveito dos recursos internos de segurança, tolerância a falhas e proteção de dados que, em outras situações, seria necessário comprar ou projetar, criar e gerenciar. Com o Banco de Dados do Azure para MySQL, você pode usar a restauração pontual para recuperar um servidor para um estado anterior, com alcance de até 35 dias.
+
+A escalabilidade dinâmica permite que o banco de dados responda de forma transparente a mudanças rápidas nos requisitos de recursos. Você paga apenas pelos recursos de que precisa, e somente quando precisa deles.
+
+**Azure Database for PostgreSQL** -  é um serviço de banco de dados relacional na nuvem. O software para servidores se baseia na versão da comunidade do mecanismo de banco de dados PostgreSQL de software livre. Backups automáticos ajustáveis e restauração pontual por até 35 dias. O Banco de Dados do Azure para PostgreSQL está disponível em duas opções de implantação: Servidor Único e Hiperescala (Citus).
+
+- **Single Server** oferece três tipos de preço: Básico, Uso Geral e Otimizado para Memória. Cada tipo oferece recursos diferentes para dar suporte a suas cargas de trabalho do banco de dados
+- **Hiperescala (Citus)** escala horizontalmente as consultas em vários computadores usando a fragmentação. Seu mecanismo de consulta faz a correspondência entre consultas SQL recebidas nesses servidores para obter respostas mais rápidas em grandes conjuntos de dados. Ele serve para aplicativos que exigem maior escala e desempenho, que geralmente são as cargas de trabalho que estão se aproximando ou já excederam 100 GB de dados.
+
+**Azure SQL Managed Instance** - é um serviço de dados de nuvem escalonável que fornece a mais ampla compatibilidade do mecanismo de banco de dados do SQL Server com todos os benefícios de uma plataforma como serviço (PaaS) totalmente gerenciada.
+
+### Big data and analytics
+
+**Azure Synapse Analytics** - é um serviço de análise ilimitado que reúne data warehouse corporativo e análise de Big Data. Você pode consultar dados da maneira que preferir, usando recursos sem servidor ou provisionados em escala. Você tem uma experiência unificada para ingerir, preparar, gerenciar e fornecer dados para atender às necessidades imediatas de business intelligence e de aprendizado de máquina.
+
+**Azure HDInsight** - é um serviço de análise de software livre totalmente gerenciado para empresas. Trata-se de um serviço de nuvem que torna mais fácil, mais rápido e mais econômico o processamento de grandes quantidades de dados. Você pode executar estruturas de software livre populares e criar tipos de cluster como Apache Spark, Apache Hadoop, Apache Kafka, Apache HBase, Apache Storm e Serviços de Machine Learning. O HDInsight também dá suporte a uma ampla gama de cenários, como ETL (extração, transformação e carregamento), data warehousing, machine learning e IoT.
+
+**Azure Databricks** - ajuda a descobrir insights dos seus dados e a criar soluções de inteligência artificial. Você pode configurar seu ambiente do Apache Spark em minutos, dimensioná-lo automaticamente e colaborar em projetos compartilhados em um workspace interativo. O Azure Databricks dá suporte a Python, Scala, R, Java e SQL, bem como a bibliotecas e estruturas de ciência de dados, incluindo TensorFlow, PyTorch e scikit-learn.
+
+**Azure Data Lake Analytics** é um serviço de trabalho de análise sob demanda que simplifica Big Data. Em vez de implantar, configurar e ajustar o hardware, você cria consultas para transformar os dados e extrair insights importantes. O serviço de análise pode manipular trabalhos de qualquer escala de maneira instantânea, simplesmente configurando o controle para a quantidade de potência necessária. Você pagará pelo trabalho somente quando ele estiver em execução, tornando-o mais econômico.
+
+
 
 ## 🔸 Describe Azure identity, access, and security
 
@@ -1051,16 +1106,49 @@ Ele monitora:
 
 ## Outros
 
+### IoT
+
+A IoT habilita os dispositivos para coletar e retransmitir informações a fim de obter uma análise dos dados. Os dispositivos inteligentes são equipados com sensores que coletam dados.
+
+- Sensores ambientais que capturam a temperatura e os níveis de umidade.
+- Códigos de barras, códigos QR ou scanners de OCR (reconhecimento óptico de caracteres).
+- Sensores de proximidade e localização geográfica.
+- Sensores infravermelhos, de luz e cor.
+- Sensores ultrassônicos e de som.
+- Sensores de movimento e toque.
+- Sensores de acelerômetro e inclinação.
+- Sensores de fumaça, gás e álcool.
+- Sensores de erro para detectar quando há um problema com o dispositivo.
+- Sensores mecânicos que detectam anomalias ou deformações.
+- Sensores de fluxo, nível e pressão para medir gases e líquidos.
+
+**Azure Hub IoT** - O Hub IoT do Azure é um serviço gerenciado e hospedado na nuvem que atua como um hub central de mensagens para obter uma comunicação bidirecional entre o seu aplicativo de IoT e os dispositivos que ele gerencia. 
+
+**Azure IoT Central** - painel que permite que você conecte, monitore e gerencie os seus dispositivos IoT.
+
+**Azure Sphere** - O Azure Sphere cria uma solução de IoT de ponta a ponta e altamente segura para os clientes. Essa solução abrange tudo, do hardware e sistema operacional no dispositivo a um método seguro de envio de mensagens do dispositivo para o hub de mensagens. 
+
+**Azure IoT Edge** - estende o Hub IoT. Analise os dados do dispositivo localmente em vez de na nuvem para enviar menos dados para a nuvem, reagir a eventos rapidamente e operar offline. Analisar dados em dispositivos de usuários finais.
+
+### IA
+
+A IA é uma classificação de computação ampla que permite a um sistema de software perceber seu ambiente e tomar medidas que maximizem sua chance de atingir as metas. Umas das metas da IA é criar um sistema de software capaz de adaptar-se ou de aprender algo por conta própria sem ser explicitamente programado para isso.
+
+- **Deep Learning** - aprendizado profundo modelado na rede neural da mente humana, permitindo que ele descubra, aprenda e cresça com a experiência.
+- **Machine Learning** -  uma técnica de ciência de dados que usa dados existentes para treinar um modelo, testá-lo e, em seguida, aplicar esse modelo a novos dados para prever comportamentos, resultados e tendências futuros.
+
+**Azure Machine Learning** - é uma plataforma para fazer previsões. Ele consiste em ferramentas e serviços que permitem que você se conecte a dados para treinar e testar modelos para encontrar um que preveja com mais precisão um resultado futuro. Escolha o Azure Machine Learning quando os cientistas de dados precisarem de controle total sobre o design e o treinamento de um algoritmo usando os próprios dados. 
+
+**Azure Cognitive Services** - fornecem modelos de machine learning pré-criados que permitem que os aplicativos vejam, ouçam, falem, entendam e até mesmo comecem a raciocinar. Use os Serviços Cognitivos do Azure para resolver problemas gerais, como análise de texto quanto a sentimentos emocionais ou análise de imagens para reconhecer objetos ou rostos.
+- **Language services**: permita que seus aplicativos processem linguagem natural com scripts pré-criados, avalie sentimentos e aprenda a reconhecer o que os usuários desejam.
+- **Speech services**: converta fala em texto e texto em fala natural. Traduza de um idioma para outro e habilite o reconhecimento e a verificação do locutor.
+- **Vision services**: adicione funcionalidades de reconhecimento e identificação ao analisar imagens, vídeos e outros conteúdos visuais.
+- **Decision services**: adicione recomendações personalizadas para cada usuário que melhorem automaticamente a cada vez que forem usadas, conteúdo moderado para monitorar e remover conteúdo ofensivo ou arriscado e detectar anormalidades nos dados de série temporal.
+
+**Azure Bot Service** - O Serviço de Bot do Azure e o Bot Framework são plataformas para a criação de agentes virtuais que compreendem e respondem a perguntas como um ser humano. Nos bastidores, o bot que você cria usa outros serviços do Azure, como os Serviços Cognitivos do Azure, para entender o que as suas contrapartes humanas estão solicitando.
+
+
+### Support
 - O MSDN é um plano de suporte gratuito e não tem vínculo com a assinatura. [Support plans](https://azure.microsoft.com/pt-br/support/plans/)
-- A Política de Privacidade da Microsoft fornece informações relevantes sobre serviços específicos, incluindo a Cortana.
-- A Política de Privacidade da Microsoft proporciona confiança na forma como a Microsoft coleta, protege e usa dados do cliente.
-
-- A Central de Confiabilidade fornece documentação sobre padrões de conformidade e sobre como o Azure pode dar suporte à sua empresa.
-- A Central de Confiabilidade é um excelente recurso para as pessoas de sua organização que podem desempenhar funções de segurança, privacidade e conformidade- .
-
-- Os Termos dos Serviços Online são um contrato legal entre a Microsoft e o cliente que detalha as obrigações das duas partes em relação ao processamento e à segurança de dados do cliente e dados pessoais.
-
-- A documentação de conformidade do Azure inclui informações detalhadas sobre a conformidade e os padrões legais e regulatórios no Azure.
-- A documentação de conformidade fornece blueprints de referência, ou definições de política, para padrões comuns que podem ser aplicados à sua assinatura do Azure.
 
 🔝 [Voltar ao topo](#topo)
