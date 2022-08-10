@@ -775,6 +775,13 @@ O RBAC do Azure é imposto em qualquer ação iniciada em um recurso do Azure qu
 
 O RBAC do Azure não impõe permissões de acesso no nível do aplicativo nem dos dados.
 
+|Built-in role|	Description|
+|-|-|
+|Contributor|Concede acesso total para gerenciar todos os recursos, mas não permite que você atribua funções no Azure RBAC, gerencie atribuições em Azure Blueprints ou compartilhe galerias de imagens.|
+|Owner|Concede acesso total para gerenciar todos os recursos, incluindo a capacidade de atribuir funções no Azure RBAC.|
+|Reader|Visualize todos os recursos, mas não permite fazer alterações.|
+|User Access Administrator|Permite gerenciar o acesso do usuário aos recursos do Azure.|
+
 - **Funções internas (Built-in roles)** - Há muitas funções internas do Azure AD, que são funções com um conjunto fixo de permissões.
 	- **Administrador global**: têm acesso a todos os recursos administrativos no Azure Active Directory. 
 	- **Administrador do usuário**: podem criar e gerenciar todos os aspectos de usuários e grupos. Também inclui a capacidade de gerenciar tíquetes de suporte e monitorar a integridade do serviço.
