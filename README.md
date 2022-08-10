@@ -451,7 +451,7 @@ Convém habilitar recursos do Azure para que se comuniquem entre si com seguran�
 
 Você pode usar Endpoint services para se conectar a outros tipos de recursos do Azure, como bancos de dados SQL do Azure e contas de armazenamento. Essa abordagem permite vincular vários recursos do Azure às redes virtuais para melhorar a segurança e fornecer o encaminhamento ideal entre recursos.
 
-- Private endpoints - Um endpoint privado é uma adaptador de rede que usa um endereço IP privado de sua rede virtual. Essa interface de rede conecta você de forma privada e segura a um serviço da plataforma do Azure Private Link . Ao habilitar um endpoint privado, você está trazendo o serviço para sua rede virtual. O tráfego de um ponto de extremidade privado para o serviço passa pela rede de backbone da Microsoft, eliminando a exposição da Internet pública.
+- Private endpoints - Um endpoint privado é uma adaptador de rede que usa um endereço IP privado de sua rede virtual. Essa interface de rede conecta você de forma privada e segura a um serviço da plataforma do Azure Private Link . Ao habilitar um endpoint privado, você está trazendo o serviço para sua rede virtual. O tráfego de um endpoint privado para o serviço passa pela rede de backbone da Microsoft, eliminando a exposição da Internet pública.
 
 - Public endpoint - permite o acesso a dados para sua instância gerenciada de fora da rede virtual. Você pode acessar sua instância gerenciada de serviços multilocatários do Azure, como Power BI, Serviço de Aplicativo do Azure ou uma rede local. Usando o endpoint público em uma instância gerenciada, você não precisa usar uma VPN, o que pode ajudar a evitar problemas de taxa de transferência de VPN.
 
@@ -1015,7 +1015,7 @@ Quando um blueprint é desatribuído, todos os recursos atribuídos pelo bluepri
 **Azure Policy** - O Azure Policy foi projetado para ajudar a reforçar os padrões e avaliar a conformidade em toda a sua organização.
 -  Casos de uso comuns do Azure Policy incluem implementar a governança para consistência de recursos, conformidade regulatória, segurança, custo e gerenciamento.
 - O Azure Policy avalia se as propriedades de recursos correspondem às regras de negócio. Essas regras de negócio são descritas usando o formato JSON e são chamadas de definições de política. 
-- Para um gerenciamento simplificado, você pode agrupar várias regras de negócio para formar uma única iniciativa de política.
+- **Initiative** - permite que você gerencie uma coleção de políticas. Para um gerenciamento simplificado, você pode agrupar várias regras de negócio para formar uma única iniciativa de política.
 - Usado para monitorar continuamente os recursos e garantir uma continuação com os requisitos de conformidade.
 - O Azure Policy avalia recursos em momentos específicos durante o ciclo de vida do recurso, o ciclo de vida de atribuição de política e para avaliação regular de conformidade contínua.
 - Diferença entre as funções do Azure Policy e o controle de acesso baseado em função do Azure (RBAC)?
@@ -1031,8 +1031,10 @@ Quando um blueprint é desatribuído, todos os recursos atribuídos pelo bluepri
 - Você pode aplicar bloqueios a uma assinatura, a um grupo de recursos ou a um recurso individual. É possível definir o nível de bloqueio como CanNotDelete ou ReadOnly.
 	- CanNotDelete significa que as pessoas autorizadas ainda podem ler e modificar um recurso, mas não podem excluir o recurso sem antes remover o bloqueio.
 	- ReadOnly significa que pessoas autorizadas podem ler um recurso, mas não podem excluir nem alterar o recurso. 
-
+	
 Bloquear um grupo de recursos como somente leitura bloqueia todos os recursos contidos no grupo. Você pode aplicar bloqueios a um grupo de recursos ou assinatura para impedir a exclusão ou tornar os recursos contidos somente leitura. Você também pode aplicar bloqueios diretamente a um recurso.
+
+Locks tem precedência ao RBAC.
 
 ### Describe the purpose of the Service Trust Portal
 
@@ -1118,14 +1120,17 @@ Você pode configurar alertas que ajudam a fazer a triagem de interrupções e m
 
 O Service Health ajuda você a ficar atento a vários tipos de evento:
 
-- **Problemas de serviço** são problemas no Azure, como interrupções, que afetam você no momento. 
-- **Eventos de manutenção planejada** podem afetar sua disponibilidade. O Service Health permite que você escolha quando realizar a manutenção para minimizar o tempo de inatividade.
+- **Service issues** são problemas no Azure, como interrupções, que afetam você no momento. 
+- **Planning Maintenance** podem afetar sua disponibilidade. O Service Health permite que você escolha quando realizar a manutenção para minimizar o tempo de inatividade.
 - **Health advisories** são problemas que exigem que você aja para evitar a interrupção do serviço, incluindo descontinuações de serviço e alterações significativas. Os comunicados de integridade são anunciados com antecedência para permitir que você se planeje.
+- **Health History** - para saber quantas vezes seu aplicativo da web ficou indisponível durante os últimos 90 dias. O Health History acompanha os eventos inativos por 90 dias.
+- **Health Alerts** - quando quiser que você e os membros de sua equipe recebam uma mensagem de texto quando a manutenção do Azure estiver planejada. 
 
 ### Describe Azure Monitor, including Log Analytics, Azure Monitor alerts, and Application Insights
 
 - **Azure Monitor** - é uma plataforma para coleta, análise, visualização e potencial execução de ações com base dos dados de registro em log e de métrica de todo o ambiente do Azure e local.
 	- Pode usar o dimensionamento automático para adicionar ou remover recursos conforme apropriado para minimizar os custos e garantir o desempenho. 
+	- Começa a coletar dados assim que o recurso é adicionado a uma assinatura.
 
 - **Log Analytics** - O Azure Monitor armazena dados de log em um workspace do Log Analytics, que é um recurso e um contêiner do Azure no qual os dados são coletados, agregados e servem como um limite administrativo.
 
