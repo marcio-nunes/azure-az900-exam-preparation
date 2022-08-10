@@ -104,10 +104,10 @@ Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem
 
 ### Compare cloud pricing models
 
-- Avaliação gratuita - Uma assinatura de avaliação gratuita fornece 12 meses de serviços gratuitos populares, um crédito para explorar qualquer serviço do Azure por 30 dias e mais de 25 serviços que são sempre gratuitos. Os serviços do Azure são desabilitados quando a avaliação termina ou quando seu crédito expira para produtos pagos, a menos que você atualize para uma assinatura paga.
-- Pago conforme o uso - Uma assinatura com Pagamento Conforme o Uso permite que você pague pelo que usar vinculando um cartão de crédito ou débito à sua conta. As organizações podem se candidatar a descontos por volume e a faturamento pré-pago.
-- Ofertas de membro - Sua associação existente a determinados produtos e serviços da Microsoft pode fornecer créditos para sua conta do Azure e taxas reduzidas nos serviços do Azure. Por exemplo, ofertas de membros estão disponíveis para assinantes do Visual Studio, membros da Microsoft Partner Network, membros da Microsoft para Startups e membros do Microsoft Imagine.
-- Azure Reservation - Sua empresa planeja se comprometer com um plano de três anos para VMs e recursos de armazenamento para receber uma redução nos preços de pagamento conforme o uso. Este é um exemplo de uso de Reservas do Azure para reduzir custos. A economia de custos pode ser significativa para recursos que usam capacidade ou taxa de transferência significativa ou são executados por longos períodos de tempo. As Reservas do Azure podem ser aplicadas a VMs, dados de armazenamento de Blobs, Azure Cosmos DB ou bancos de dados SQL.
+- **Avaliação gratuita** - Uma assinatura de avaliação gratuita fornece 12 meses de serviços gratuitos populares, um crédito para explorar qualquer serviço do Azure por 30 dias e mais de 25 serviços que são sempre gratuitos. Os serviços do Azure são desabilitados quando a avaliação termina ou quando seu crédito expira para produtos pagos, a menos que você atualize para uma assinatura paga.
+- **Pago conforme o uso** - Uma assinatura com Pagamento Conforme o Uso permite que você pague pelo que usar vinculando um cartão de crédito ou débito à sua conta. As organizações podem se candidatar a descontos por volume e a faturamento pré-pago.
+- **Ofertas de membro** - Sua associação existente a determinados produtos e serviços da Microsoft pode fornecer créditos para sua conta do Azure e taxas reduzidas nos serviços do Azure. Por exemplo, ofertas de membros estão disponíveis para assinantes do Visual Studio, membros da Microsoft Partner Network, membros da Microsoft para Startups e membros do Microsoft Imagine.
+- **Azure Reservation** - Sua empresa planeja se comprometer com um plano de três anos para VMs e recursos de armazenamento para receber uma redução nos preços de pagamento conforme o uso. Este é um exemplo de uso de Reservas do Azure para reduzir custos. A economia de custos pode ser significativa para recursos que usam capacidade ou taxa de transferência significativa ou são executados por longos períodos de tempo. As Reservas do Azure podem ser aplicadas a VMs, dados de armazenamento de Blobs, Azure Cosmos DB ou bancos de dados SQL.
 
 ## 🔸 Describe the benefits of using cloud services
 
@@ -339,6 +339,7 @@ Com o Resource Manager, você pode:
 A computação do Azure é um serviço de computação sob demanda para execução de aplicativos baseados em nuvem. Ela fornece recursos de computação, como discos, processadores, memória, rede e sistemas operacionais. Os recursos estão disponíveis sob demanda e normalmente podem ser disponibilizados em minutos ou até mesmo segundos. Você só paga pelos recursos utilizados e apenas pelo tempo que utilizar.
 
 - **Máquinas virtuais** são emulações de software de computadores físicos. Elas incluem um processador virtual, memória, armazenamento e recursos de rede. As VMs hospedam um sistema operacional, e você pode instalar e executar o software como se fosse um computador físico. 
+	- Você deve habilitar a configuração do **Azure Hybrid Benefit**. A ativação dessa opção de licenciamento nas configurações de VM permite que você use licenças existentes do Windows Server, que são cobertas pelo contrato ativo do Microsoft Software Assurance, para executar VMs do Windows no Azure. Você paga apenas pelo custo de infraestrutura das VMs, que pode chegar a 40% do custo normal.
 - **Instâncias de Contêiner** e o Serviço de Kubernetes do Azure são recursos de Computação do Azure que você pode usar para implantar e gerenciar contêineres. Contêineres são ambientes de aplicativos leves e virtualizados. Eles foram projetados para serem criados rapidamente, escalados horizontalmente e interrompidos dinamicamente. Você pode executar várias instâncias de um aplicativo em contêineres em um computador host.
 - **Funções (serverless)** são ideais quando você está preocupado apenas com o código que executa o serviço, e não com a plataforma ou a infraestrutura subjacente. Elas costumam ser usadas quando você precisa executar um trabalho em resposta a um evento, um temporizador ou uma mensagem de outro serviço do Azure. O Azure tem duas implementações de computação sem servidor:
 	- **Azure Functions**: o Functions pode executar o código praticamente em qualquer linguagem de programação moderna.
@@ -365,10 +366,12 @@ O DevOps é um conceito que combina filosofias e práticas para auxiliar as equi
 
 ### Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
 
-- **Máquinas virtuais** são emulações de software de computadores físicos.
+- **Máquinas virtuais** são emulações de software de computadores físicos. Você deve habilitar a configuração do **Azure Hybrid Benefit**. A ativação dessa opção de licenciamento nas configurações de VM permite que você use licenças existentes do Windows Server, que são cobertas pelo contrato ativo do Microsoft Software Assurance, para executar VMs do Windows no Azure. Você paga apenas pelo custo de infraestrutura das VMs, que pode chegar a 40% do custo normal.
 - **Máquinas Virtuais de Spot** - permite aproveitar a capacidade não usada com uma economia de custos significativa. 
 	- A qualquer momento que o Azure precisar da capacidade de volta, a infraestrutura do Azure removerá as Máquinas Virtuais de Spot do Azure. 
 	- As Máquinas Virtuais de Spot do Azure são ótimas para cargas de trabalho que podem lidar com interrupções, como trabalhos de processamento em lotes, ambientes de desenvolvimento/teste, grandes cargas de trabalho de computação, entre outros.
+	- As VMs spot não usam o SLA padrão para VMs do Azure. Não há SLA para VMs spot porque o Azure aloca VMs spot somente se houver uma capacidade não utilizada disponível. Se o Azure precisar da capacidade de volta, as VMs spot poderão ser despejadas com um aviso de 30 segundos.
+	- Você pode definir o preço máximo que você concorda em pagar. Como os preços de VM spot variam com base na capacidade disponível, você pode definir o preço limitado. Suas VMs são despejadas automaticamente quando o preço à vista atual for maior que o preço máximo que você concorda em pagar ou se o Azure não tiver mais capacidade de computação disponível.
 - **Virtual Machine Scale Sets**
 	- Permitem criar e gerenciar um grupo de VMs idênticas e com balanceamento de carga. 
 	- Permitem que você gerencie, configure e atualize centralmente um grande número de VMs em minutos para fornecer aplicativos de alta disponibilidade. O número de instâncias de VM pode aumentar ou diminuir automaticamente em resposta à demanda ou a um agendamento definido.
@@ -973,11 +976,13 @@ O licenciamento de software, o armazenamento e o uso de rede são cobrados separ
 	- Diretamente da Web - comprar os serviços do Azure diretamente do site do portal do Azure e pagar os preços padrão.
 	- Por meio de um Provedor de Soluções na Nuvem - Um CSP (Cloud Solution Provider) é um parceiro da Microsoft que ajuda você a criar soluções com base no Azure. 
 - **Tipo de recurso** - dependem do tipo de recurso ou de como você o personaliza.
+	- Você deve habilitar a configuração do **Azure Hybrid Benefit** nas VMs. A ativação dessa opção de licenciamento nas configurações de VM permite que você use licenças existentes do Windows Server, que são cobertas pelo contrato ativo do Microsoft Software Assurance, para executar VMs do Windows no Azure. Você paga apenas pelo custo de infraestrutura das VMs, que pode chegar a 40% do custo normal.
 - **Uso de recursos** - você sempre será cobrado conforme o que usa.
 - **Azure Marketplace** - Você também pode comprar soluções e serviços baseados no Azure de fornecedores terceirizados por meio do Azure Marketplace. As estruturas de cobrança são definidas pelo fornecedor.
 - **O local ou o tráfego de rede**
 	- Location - Regiões diferentes podem ter preços associados diferentes. 
-	- Zonas para cobrança de tráfego de rede - A largura de banda refere-se aos dados que entram e saem dos datacenters do Azure. Algumas transferências de dados de entrada (dados que entram em datacenters do Azure) são gratuitas. Para transferências de dados de saída (dados que saem de data centers do Azure), o preço de transferência de dados é baseado em zonas.
+	- **Billing Zones**- Zonas para cobrança de tráfego de rede - A largura de banda refere-se aos dados que entram e saem dos datacenters do Azure. Algumas transferências de dados de entrada (dados que entram em datacenters do Azure) são gratuitas. Para transferências de dados de saída (dados que saem de data centers do Azure), o preço de transferência de dados é baseado em zonas.
+		- Uma zona de cobrança é um agrupamento geográfico de regiões do Azure usado para determinar a cobrança com base em transferências de dados. A cobrança se aplica a dados de entrada e saída e varia de acordo com a zona de cobrança. As transferências de dados entre zonas de cobrança e regiões em uma zona são cobradas. 
 
 ### Compare the Pricing calculator and the Total Cost of Ownership (TCO) calculator 
 
@@ -1010,13 +1015,13 @@ Azure Blueprints fornece uma maneira de definir um conjunto repetitivo de recurs
 - é uma forma declarativa de orquestrar a implantação de vários modelos de recursos e outros artefatos, tais como:
 	- Atribuições de Funções
 	- Atribuições de Políticas
-	- Modelos do ARM (modelos do Azure Resource Manager)
+	- Templates do ARM (templates do Azure Resource Manager)
 	- Grupos de recursos
 - Objetos de blueprint são replicados para várias regiões do Azure. Essa replicação oferece baixa latência, alta disponibilidade e acesso consistente a seus objetos de blueprint.
 
 Quando um blueprint é atualizado e a versão atualizada é publicada, quaisquer atribuições do blueprint não são atualizadas automaticamente. Você deve atualizar a atribuição do blueprint com a nova versão atualizada da atribuição.
 
-Quando um blueprint é desatribuído, todos os recursos atribuídos pelo blueprint permanecem no lugar, mas o bloqueio de recursos do blueprint é removido. Isso também resulta na exclusão do objeto de atribuição do blueprint. O blueprint deve ser desatribuído antes de poder ser excluído.
+Quando um blueprint é desatribuído, todos os recursos atribuídos pelo blueprint permanecem no lugar, mas o bloqueio de recursos do blueprint é removido. Isso também resulta na exclusão do objeto de atribuição (assignments) do blueprint. O blueprint deve ser desatribuído antes de poder ser excluído.
 
 ### Describe the purpose of Azure Policy
 
@@ -1024,12 +1029,25 @@ Quando um blueprint é desatribuído, todos os recursos atribuídos pelo bluepri
 -  Casos de uso comuns do Azure Policy incluem implementar a governança para consistência de recursos, conformidade regulatória, segurança, custo e gerenciamento.
 - O Azure Policy avalia se as propriedades de recursos correspondem às regras de negócio. Essas regras de negócio são descritas usando o formato JSON e são chamadas de definições de política. 
 - **Initiative** - permite que você gerencie uma coleção de políticas. Para um gerenciamento simplificado, você pode agrupar várias regras de negócio para formar uma única iniciativa de política.
+	- É uma coleção de definições de política do Azure, que geralmente são agrupadas com o objetivo de atingir um único objetivo. As iniciativas são usadas para simplificar o gerenciamento e a atribuição de políticas. A mesma iniciativa pode ser atribuída a vários escopos para incluir recursos, grupos de recursos, assinaturas ou grupos de gerenciamento.
+	- Quando uma atribuição de iniciativa é avaliada, todas as políticas dessa iniciativa são avaliadas. Se você quiser avaliar uma política por si só, não atribua a política a uma iniciativa ou crie uma iniciativa que contenha apenas essa política.
+	- Uma iniciativa só pode conter políticas localizadas na mesma assinatura. Você pode atribuir uma única iniciativa a escopos em várias assinaturas ou grupos de gerenciamento.
 - Usado para monitorar continuamente os recursos e garantir uma continuação com os requisitos de conformidade.
 - O Azure Policy avalia recursos em momentos específicos durante o ciclo de vida do recurso, o ciclo de vida de atribuição de política e para avaliação regular de conformidade contínua.
 - Diferença entre as funções do Azure Policy e o controle de acesso baseado em função do Azure (RBAC)?
 	-  Você usa o Azure Policy para garantir que o estado do recurso seja compatível com as regras de negócio de sua organização, independentemente de quem fez a alteração ou quem tem permissão para fazer alterações. O Azure Policy avaliará o estado de um recurso e agirá para garantir que o recurso permaneça em conformidade.
 	- O RBAC do Azure gerencia quem tem acesso aos recursos do Azure, o que eles podem fazer com esses recursos e quais áreas eles podem acessar. Se as ações precisarem ser controladas, você usará o RBAC do Azure. 
 	- Se um indivíduo tiver acesso para concluir uma ação, mas o resultado for um recurso que não está em conformidade, o Azure Policy ainda bloqueará a ação. 
+
+
+**Policy vs. RBAC vs. Initiatives**
+As políticas não permitem que você atribua permissões a usuários. As políticas permitem especificar que tipo de recursos podem ser criados.
+
+O RBAC permite atribuir permissões aos usuários para que eles possam criar recursos no Azure. Isso permite controlar quais usuários têm permissão para criar recursos.
+
+As Initiatives não permitem atribuir permissões aos usuários. As Initiatives permitem agrupar políticas.
+
+
 
 ### Describe the purpose of resource locks
 
@@ -1060,7 +1078,7 @@ O portal do Azure fornece uma interface gráfica do usuário amigável para exib
 
 ### Describe Azure Cloud Shell, including Azure CLI and Azure PowerShell
 
-- **Azure Cloud Shell** - é um shell interativo, autenticado e acessível pelo navegador para o gerenciamento de recursos do Azure. Ele dá a você a flexibilidade de escolher a experiência de shell que melhor se adequa ao modo como você trabalha, seja com o Bash ou o PowerShell. É uma ferramenta baseada na Web que permite executar cmdlets do PowerShell ou comandos da CLI do Azure depois de fazer logon no portal do Azure.
+- **Azure Cloud Shell** - é um shell interativo, autenticado e acessível pelo navegador para o gerenciamento de recursos do Azure. Ele dá a você a flexibilidade de escolher a experiência de shell que melhor se adequa ao modo como você trabalha, seja com o Bash ou o PowerShell. É uma ferramenta baseada na Web que permite executar cmdlets do PowerShell ou comandos da CLI do Azure depois de fazer logon no portal do Azure. O Cloud Shell expira após 20 minutos de inatividade.
 - **Azure PowerShell** - é um módulo que você pode instalar em seu computador para Windows, Linux ou macOS. Ele permite que você use cmdlets do PowerShell localmente para administrar recursos do Azure.
 - **Azure CLI** - A CLI do Azure (interface de linha de comando do Azure) é um conjunto de comandos usado para criar e gerenciar recursos do Azure em seu computador. Foi criada para ajudar você a trabalhar de maneira rápida com ênfase na automação.
 
@@ -1102,6 +1120,8 @@ Os modelos podem até mesmo executar scripts do PowerShell e Bash antes ou depoi
 
 O Azure Advisor avalia seus recursos do Azure e faz recomendações para ajudar a melhorar a confiabilidade, a segurança e o desempenho, alcançar a excelência operacional e reduzir os custos. O Assistente foi projetado para ajudar você a poupar tempo na otimização da nuvem. O serviço de recomendação inclui ações sugeridas que você pode adotar imediatamente, adiar ou ignorar.
 
+O Azure Advisor é um serviço de nuvem que ajuda você a otimizar seus recursos do Azure para custo, desempenho e disponibilidade. Ele analisa sua configuração de recursos e telemetria de uso para identificar problemas e recomendar soluções que podem ajudá-lo a melhorar a eficiência e economizar dinheiro.
+
 As recomendações são divididas em cinco categorias:
 
 - **Confiabilidade**: usada para garantir e aprimorar a continuidade dos seus aplicativos comercialmente críticos.
@@ -1120,6 +1140,8 @@ Outra opção é usar limites a fim de disparar a funcionalidade de dimensioname
 
 Alguns produtos populares, como o **Application Insights** do Azure, um serviço para envio de informações de telemetria do código-fonte do aplicativo para o Azure, usam o Azure Monitor nos bastidores. Com o Application Insights, os desenvolvedores de aplicativos podem aproveitar a poderosa plataforma de análise de dados no Azure Monitor para ter insights aprofundados sobre as operações de um aplicativo e diagnosticar erros sem ter que esperar que um usuário os relate.
 
+O Azure Advisor não faz recomendações de desligamento com base na CPU e na utilização de memória e sim faz recomendações de desligamento com base na utilização da CPU e de outbound network.
+
 ### Describe Azure Service Health
 
 A Azure Service Health fornece uma exibição personalizada da integridade dos serviços, regiões e recursos do Azure dos quais você depende.
@@ -1130,9 +1152,11 @@ O Service Health ajuda você a ficar atento a vários tipos de evento:
 
 - **Service issues** são problemas no Azure, como interrupções, que afetam você no momento. 
 - **Planning Maintenance** podem afetar sua disponibilidade. O Service Health permite que você escolha quando realizar a manutenção para minimizar o tempo de inatividade.
-- **Health advisories** são problemas que exigem que você aja para evitar a interrupção do serviço, incluindo descontinuações de serviço e alterações significativas. Os comunicados de integridade são anunciados com antecedência para permitir que você se planeje.
+- **Health advisories** são problemas que exigem que você aja para evitar a interrupção do serviço, incluindo descontinuações de serviço e alterações significativas. Os comunicados de integridade são anunciados com antecedência para permitir que você se planeje. Também notifica se o uso do serviço de aplicativo exceder a cota de uso. 
 - **Health History** - para saber quantas vezes seu aplicativo da web ficou indisponível durante os últimos 90 dias. O Health History acompanha os eventos inativos por 90 dias.
 - **Health Alerts** - quando quiser que você e os membros de sua equipe recebam uma mensagem de texto quando a manutenção do Azure estiver planejada. 
+
+O Service Health permite que você implemente um webhook em seu site para exibir incidentes de saúde. A carga útil é um documento JSON. Você sabe se a carga é um incidente de Service Health inspecionando a propriedade context.eventSource e garantindo que seu valor seja ServiceHealth.
 
 ### Describe Azure Monitor, including Log Analytics, Azure Monitor alerts, and Application Insights
 
@@ -1140,7 +1164,7 @@ O Service Health ajuda você a ficar atento a vários tipos de evento:
 	- Pode usar o dimensionamento automático para adicionar ou remover recursos conforme apropriado para minimizar os custos e garantir o desempenho. 
 	- Começa a coletar dados assim que o recurso é adicionado a uma assinatura.
 
-- **Log Analytics** - O Azure Monitor armazena dados de log em um workspace do Log Analytics, que é um recurso e um contêiner do Azure no qual os dados são coletados, agregados e servem como um limite administrativo.
+- **Log Analytics** - O Azure Monitor armazena dados de log em um workspace do Log Analytics, que é um recurso e um contêiner do Azure no qual os dados são coletados, agregados e servem como um limite administrativo. Também pode ser armazendao em um Storage Account.
 
 - **Azure Monitor alerts** - Cada alerta ou notificação disponível no Azure Monitor é o produto de uma regra. Algumas dessas regras são internas da plataforma Azure. Use regras de alerta para criar notificações e alertas personalizados. O Azure Advisor integra-se à Central de Segurança do Azure para fornecer uma visão consolidada das recomendações para todos os recursos do Azure para ajudar a melhorar a relação custo-benefício, desempenho, alta disponibilidade e segurança dos recursos do Azure. Ele não permite que você monitore e avalie a conformidade com os padrões da empresa.
 
@@ -1163,6 +1187,8 @@ Ele monitora:
 - Diagnósticos de host do Docker ou do Azure.
 - Logs de rastreamento de diagnóstico do seu aplicativo - para que você possa correlacionar eventos de rastreamento com solicitações.
 - Métricas e eventos personalizados que você escreve em código de cliente ou servidor, para acompanhar os eventos de negócios, como itens vendidos ou vitórias.
+
+O Azure Monitor pode usar o dimensionamento automático (autoscale) para adicionar ou remover recursos conforme apropriado para minimizar os custos e garantir o desempenho. Você pode criar regras com base nas métricas coletadas pelo Azure Monitor para corresponder recursos a uma carga de aplicativo.
 
 ## Outros
 
