@@ -419,6 +419,8 @@ Ao criar uma VM no Azure, você também cria recursos para hospedar a VM. Esses 
 	- Azure Container Instances - Aplicativos em contêineres executados no Azure sem o provisionamento de servidores ou de VMs.
 
 - **Virtual machines** - Se os requisitos de hospedagem na Web não forem diretamente compatíveis com a plataforma de aplicativo Web do Azure, aproveite as máquinas virtuais para personalizar e controlar todos os aspectos do servidor Web. 
+	- A camada (tier) permite que você escolha se deseja uma Shared VM ou uma Isolated VM. Para usar uma VM compartilhada, você deve escolher a camada Gratuita ou Compartilhada. O nível Gratuito não tem preço.
+
 
 ### Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
 
@@ -1009,6 +1011,8 @@ Nem todos os recursos do Azure dão suporte a tags. Eles não podem ser aplicado
 
 Tags são pares nome/valor. 
 
+As tags aplicadas a um grupo de recursos não são herdadas por seus recursos. Eles também não são herdados se forem aplicados no nível de assinatura do Azure. Para garantir que todos os recursos necessários sejam marcados, você precisa aplicá-los manualmente ou criar uma política do Azure que aplique automaticamente as marcas necessárias de grupos de recursos ou a assinatura de recursos durante sua implantação.
+
 ## 🔸 Describe features and tools in Azure for governance and compliance
 
 ### Describe the purpose of Azure Blueprints
@@ -1023,9 +1027,16 @@ Azure Blueprints fornece uma maneira de definir um conjunto repetitivo de recurs
 	- Grupos de recursos
 - Objetos de blueprint são replicados para várias regiões do Azure. Essa replicação oferece baixa latência, alta disponibilidade e acesso consistente a seus objetos de blueprint.
 
-Quando um blueprint é atualizado e a versão atualizada é publicada, quaisquer atribuições do blueprint não são atualizadas automaticamente. Você deve atualizar a atribuição do blueprint com a nova versão atualizada da atribuição.
+Quando um blueprint é atualizado e a versão atualizada é publicada, quaisquer **atribuições** (assignments) do blueprint não são atualizadas automaticamente. Você deve atualizar a **atribuição** (assignments) do blueprint com a nova versão atualizada da atribuição.
 
 Quando um blueprint é desatribuído, todos os recursos atribuídos pelo blueprint permanecem no lugar, mas o bloqueio de recursos do blueprint é removido. Isso também resulta na exclusão do objeto de atribuição (assignments) do blueprint. O blueprint deve ser desatribuído antes de poder ser excluído.
+
+|Função do Azure|Descrição|
+|-|-|
+|Owner| Além de outras permissões, inclui todas as permissões relacionadas ao Azure Blueprints.|
+|Contributor|Além de outras permissões, pode criar e excluir definições de blueprint, mas não tem permissões de atribuição de blueprint.|
+|Blueprint Contributor|Pode gerenciar definições de blueprint, mas não as atribuir.|
+|Blueprint Operator|Pode atribuir blueprints publicados existentes, mas não pode criar definições de blueprint. A atribuição de blueprint só funcionará se a atribuição for concluída com uma identidade gerenciada atribuída pelo usuário.|
 
 ### Describe the purpose of Azure Policy
 
