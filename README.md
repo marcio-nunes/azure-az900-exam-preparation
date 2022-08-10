@@ -1005,6 +1005,10 @@ Os recursos de Gerenciamento de Custos incluem:
 
 As tags ajudam a gerenciar os custos associados aos diferentes grupos de produtos e recursos do Azure. Você pode aplicar tags a grupos de recursos do Azure para organizar dados de cobrança.
 
+Nem todos os recursos do Azure dão suporte a tags. Eles não podem ser aplicados a recursos clássicos que existiam antes da Microsoft apresentar o Azure Resource Manager (ARM) e outros.
+
+Tags são pares nome/valor. 
+
 ## 🔸 Describe features and tools in Azure for governance and compliance
 
 ### Describe the purpose of Azure Blueprints
