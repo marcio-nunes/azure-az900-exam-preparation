@@ -107,6 +107,7 @@ Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem
 - Avaliação gratuita - Uma assinatura de avaliação gratuita fornece 12 meses de serviços gratuitos populares, um crédito para explorar qualquer serviço do Azure por 30 dias e mais de 25 serviços que são sempre gratuitos. Os serviços do Azure são desabilitados quando a avaliação termina ou quando seu crédito expira para produtos pagos, a menos que você atualize para uma assinatura paga.
 - Pago conforme o uso - Uma assinatura com Pagamento Conforme o Uso permite que você pague pelo que usar vinculando um cartão de crédito ou débito à sua conta. As organizações podem se candidatar a descontos por volume e a faturamento pré-pago.
 - Ofertas de membro - Sua associação existente a determinados produtos e serviços da Microsoft pode fornecer créditos para sua conta do Azure e taxas reduzidas nos serviços do Azure. Por exemplo, ofertas de membros estão disponíveis para assinantes do Visual Studio, membros da Microsoft Partner Network, membros da Microsoft para Startups e membros do Microsoft Imagine.
+- Azure Reservation - Sua empresa planeja se comprometer com um plano de três anos para VMs e recursos de armazenamento para receber uma redução nos preços de pagamento conforme o uso. Este é um exemplo de uso de Reservas do Azure para reduzir custos. A economia de custos pode ser significativa para recursos que usam capacidade ou taxa de transferência significativa ou são executados por longos períodos de tempo. As Reservas do Azure podem ser aplicadas a VMs, dados de armazenamento de Blobs, Azure Cosmos DB ou bancos de dados SQL.
 
 ## 🔸 Describe the benefits of using cloud services
 
@@ -775,7 +776,7 @@ O RBAC do Azure é imposto em qualquer ação iniciada em um recurso do Azure qu
 
 O RBAC do Azure não impõe permissões de acesso no nível do aplicativo nem dos dados.
 
-|Built-in role|	Description|
+| General Built-in role|	Description|
 |-|-|
 |Contributor|Concede acesso total para gerenciar todos os recursos, mas não permite que você atribua funções no Azure RBAC, gerencie atribuições em Azure Blueprints ou compartilhe galerias de imagens.|
 |Owner|Concede acesso total para gerenciar todos os recursos, incluindo a capacidade de atribuir funções no Azure RBAC.|
@@ -985,7 +986,7 @@ O licenciamento de software, o armazenamento e o uso de rede são cobrados separ
 
 ### Describe the Azure Cost Management and Billing tool
 
-O Gerenciamento de Custos é um serviço gratuito que ajuda você a entender sua fatura do Azure, gerenciar sua conta e assinaturas, monitorar e controlar os gastos do Azure e otimizar o uso de recursos.
+**Azure Cost Manager** é um serviço gratuito que ajuda você a entender sua fatura do Azure, gerenciar sua conta e assinaturas, monitorar e controlar os gastos do Azure e otimizar o uso de recursos. Uma solução SaaS gratuita que permite monitorar, alocar e otimizar os gastos com nuvem em um ambiente multinuvem. Ele oferece suporte multinuvem para incluir Azure, AWS e Google Cloud Platform.
 
 Os recursos de Gerenciamento de Custos incluem:
 
