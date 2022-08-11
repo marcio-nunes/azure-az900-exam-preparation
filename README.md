@@ -159,7 +159,7 @@ O Microsoft Cloud Adoption Framework para Azure é uma estrutura completa de cic
 
 - **Plan** - você alinha planos de adoção acionáveis ​​com resultados de negócios. Você cria um inventário de seu patrimônio digital, estabelece planos para o alinhamento organizacional inicial e as formas de abordar as lacunas de prontidão de habilidades. Eventualmente, você desenvolve um plano de adoção da nuvem para gerenciar as mudanças planejadas em todo o estado digital, organização e habilidades.
 
-- **Ready** - você prepara o ambiente em nuvem para as mudanças planejadas. Como parte da preparação da preparação, você revisa os guias de configuração do Azure, escolhe a opção mais apropriada para hospedar sua carga de trabalho na nuvem, expande-a para atender aos requisitos de plataforma do seu plano de adoção da nuvem e valida suas modificações em relação às práticas recomendadas do Azure.
+- **Ready** - você prepara o ambiente em nuvem para as mudanças planejadas. Como parte da preparação, você revisa os guias de configuração do Azure, escolhe a opção mais apropriada para hospedar sua carga de trabalho na nuvem, expande-a para atender aos requisitos de plataforma do seu plano de adoção da nuvem e valida suas modificações em relação às práticas recomendadas do Azure.
 
 - **Inovate** - você desenvolve novas soluções nativas da nuvem ou híbridas. A inovação pode fornecer o maior valor comercial ao desbloquear novas habilidades técnicas e expandir os recursos de negócios. Você deve chegar a um consenso sobre o valor comercial hipotético, considerar várias ferramentas do guia de inovação do Azure, adotar as práticas recomendadas como parte da arquitetura de nuvem e habilitar um ciclo de feedback eficaz em todo o processo de desenvolvimento de sua solução de nuvem.
 
@@ -995,7 +995,7 @@ O licenciamento de software, o armazenamento e o uso de rede são cobrados separ
 
 **Azure Cost Manager** é um serviço gratuito que ajuda você a entender sua fatura do Azure, gerenciar sua conta e assinaturas, monitorar e controlar os gastos do Azure e otimizar o uso de recursos. Uma solução SaaS gratuita que permite monitorar, alocar e otimizar os gastos com nuvem em um ambiente multinuvem. Ele oferece suporte multinuvem para incluir Azure, AWS e Google Cloud Platform.
 
-Os recursos de Gerenciamento de Custos incluem:
+Os recursos de Cost Management incluem:
 
 - **Relatórios** - Use dados históricos para gerar relatórios e prever o uso e as despesas futuras.
 - **Enriquecimento de dados** - Melhore a responsabilidade classificando os recursos com tags que correspondam a unidades organizacionais e de negócios do mundo real.
