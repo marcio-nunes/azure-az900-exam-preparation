@@ -1179,7 +1179,7 @@ O Service Health permite que você implemente um webhook em seu site para exibir
 	- Pode usar o dimensionamento automático para adicionar ou remover recursos conforme apropriado para minimizar os custos e garantir o desempenho. 
 	- Começa a coletar dados assim que o recurso é adicionado a uma assinatura.
 
-- **Log Analytics** - O Azure Monitor armazena dados de log em um workspace do Log Analytics, que é um recurso e um contêiner do Azure no qual os dados são coletados, agregados e servem como um limite administrativo. Também pode ser armazendao em um Storage Account.
+- **Log Analytics** - O Azure Monitor armazena dados de log em um workspace do Log Analytics, que é um recurso e um contêiner do Azure no qual os dados são coletados, agregados e servem como um limite administrativo. Também pode ser armazendo em um Storage Account.
 
 - **Azure Monitor alerts** - Cada alerta ou notificação disponível no Azure Monitor é o produto de uma regra. Algumas dessas regras são internas da plataforma Azure. Use regras de alerta para criar notificações e alertas personalizados. O Azure Advisor integra-se à Central de Segurança do Azure para fornecer uma visão consolidada das recomendações para todos os recursos do Azure para ajudar a melhorar a relação custo-benefício, desempenho, alta disponibilidade e segurança dos recursos do Azure. Ele não permite que você monitore e avalie a conformidade com os padrões da empresa.
 
@@ -1195,13 +1195,13 @@ Ele monitora:
 - **Request rates, response times e failure rates** - descubra quais páginas estão mais populares, em que momentos do dia, e onde os usuários estão. Confira as páginas que têm melhor desempenho. Se as taxas de falha e os tempos de resposta ficam altos quando há mais solicitações, possivelmente você tem um problema de alocação de recursos.
 - **Dependency rates,  response times e failure rates** - descubra se os serviços externos estão atrasando você.
 - **Exceptions** – analise as estatísticas agregadas ou escolha instâncias específicas e faça uma busca detalhada no rastreamento de pilha e nas solicitações relacionadas. A maioria das exceções de navegador e servidor são relatadas.
-- Page views e load performance - relatados por navegadores dos usuários.
-- Chamadas AJAX de páginas da web - rates, response times e failure rates.
+- **Page views e load performance** - relatados por navegadores dos usuários.
+- **Chamadas AJAX de páginas da web** - rates, response times e failure rates.
 - Contagens de seção e usuários.
 - Contadores de desempenho de suas máquinas de servidor Linux ou Windows server, como CPU, memória e uso da rede.
 - Diagnósticos de host do Docker ou do Azure.
-- Logs de rastreamento de diagnóstico do seu aplicativo - para que você possa correlacionar eventos de rastreamento com solicitações.
-- Métricas e eventos personalizados que você escreve em código de cliente ou servidor, para acompanhar os eventos de negócios, como itens vendidos ou vitórias.
+- **Logs de rastreamento de diagnóstico do seu aplicativo** - para que você possa correlacionar eventos de rastreamento com solicitações.
+- **Métricas e eventos personalizados** que você escreve em código de cliente ou servidor, para acompanhar os eventos de negócios, como itens vendidos ou vitórias.
 
 O Azure Monitor pode usar o dimensionamento automático (autoscale) para adicionar ou remover recursos conforme apropriado para minimizar os custos e garantir o desempenho. Você pode criar regras com base nas métricas coletadas pelo Azure Monitor para corresponder recursos a uma carga de aplicativo.
 
