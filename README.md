@@ -625,7 +625,9 @@ O Azure AD dá suporte à autorização por meio do uso de RBAC. O RBAC é neces
 	- **Gerenciamento de dispositivo**: além das contas de pessoas individuais, o Azure AD dá suporte ao registro de dispositivos. Também permite que políticas de Acesso Condicional baseadas no dispositivo restrinjam tentativas de acesso somente às provenientes de dispositivos conhecidos, independentemente da conta de usuário solicitante.
 - Também inclui fornecer funcionalidades como redefinição de senha por autoatendimento (SSPR - Self-service password reset), autenticação multifator, uma lista personalizada de senhas banidas e serviços de bloqueio inteligente.
 
-O Azure AD está disponível em quatro edições: Gratuito, Aplicativos do Office 365, Premium P1 e Premium P2.
+O Azure AD está disponível em quatro edições: Gratuito, Aplicativos do Office 365, Premium P1 e Premium P2. 
+
+O Azure garante 99,99% de disponibilidade dos serviços Azure Active Directory Basic e Premium.
 
 - **Azure Active Directory Gratuito**. Permite que você administre usuários e crie grupos, sincronize com o Active Directory local, crie relatórios básicos, configure a alteração de senha self-service para usuários na nuvem e habilite o logon único no Azure, no Microsoft 365 e em muitos aplicativos de SaaS populares. A edição gratuita está incluída nas assinaturas do Office 365, Azure, Dynamics 365, Intune e Power Platform.
 - **Aplicativos do Office 365**. Permite que você faça tudo o que está incluído na versão gratuita, além da redefinição de senha self-service (SSPR - Self-service password reset) para usuários na nuvem e write-back de dispositivo, o que oferece sincronização bidirecional entre os diretórios locais e o Azure AD. Está incluída nas assinaturas do Office 365 E1, E3, E5, F1 e F3.
