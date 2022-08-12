@@ -1255,5 +1255,6 @@ A IA é uma classificação de computação ampla que permite a um sistema de so
 
 ### Support
 - O MSDN é um plano de suporte gratuito e não tem vínculo com a assinatura. [Support plans](https://azure.microsoft.com/pt-br/support/plans/)
+- O plano de suporte Basic é o padrão, que está associado a todas as contas do Azure. O Plano de Suporte Standard deve ser adquirido separadamente.
 
 🔝 [Voltar ao topo](#topo)
