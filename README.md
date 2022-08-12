@@ -243,6 +243,8 @@ Os recursos são criados em regiões, que são diferentes localizações geográ
 
 Você pode usar as zonas de disponibilidade para executar aplicativos críticos e incorporar alta disponibilidade à arquitetura do aplicativo, colocalizando seus recursos de computação, armazenamento, rede e dados em uma zona de disponibilidade e replicando em outras zonas de disponibilidade.
 
+Cada zona de disponibilidade é um data center. E as falhas do datacenter afetarão a disponibilidade se o recurso não estiver configurado para multi-AZ.
+
 As zonas de disponibilidade são destinadas, principalmente, a VMs, discos gerenciados, balanceadores de carga e bancos de dados SQL.
 
 - **Serviços em zonas (Zonal services)**: você fixa o recurso a uma zona específica.
