@@ -109,7 +109,7 @@ Na núvem, essas responsabilidades são compartilhadas entre o provedor de nuvem
 - **Ofertas de membro** - Sua associação existente a determinados produtos e serviços da Microsoft pode fornecer créditos para sua conta do Azure e taxas reduzidas nos serviços do Azure. Por exemplo, ofertas de membros estão disponíveis para assinantes do Visual Studio, membros da Microsoft Partner Network, membros da Microsoft para Startups e membros do Microsoft Imagine.
 - **Azure Reservation** - Sua empresa planeja se comprometer com um plano de três anos para VMs e recursos de armazenamento para receber uma redução nos preços de pagamento conforme o uso. Este é um exemplo de uso de Reservas do Azure para reduzir custos. A economia de custos pode ser significativa para recursos que usam capacidade ou taxa de transferência significativa ou são executados por longos períodos de tempo. As Reservas do Azure podem ser aplicadas a VMs, dados de armazenamento de Blobs, Azure Cosmos DB ou bancos de dados SQL.
 
-**Public Review** - a Microsoft permite que qualquer cliente com a licença adequada dos Serviços de Comunicação do Azure avalie o novo recurso. A Microsoft fornecerá serviços de suporte durante esta fase, mas os SLAs normais não se aplicam.
+**Public Preview** - a Microsoft permite que qualquer cliente com a licença adequada dos Serviços de Comunicação do Azure avalie o novo recurso. A Microsoft fornecerá serviços de suporte durante esta fase, mas os SLAs normais não se aplicam. Você pode ver todas os Previews do Azure em um portal separado. http://preview.portal.azure.com
 
 ## 🔸 Describe the benefits of using cloud services
 
