@@ -551,6 +551,7 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 
 **Storage account endpoints** -  ter um namespace exclusivo no Azure para seus dados.
 
+
 ### Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync
 
 - **AzCopy** - O AzCopy é um utilitário de linha de comando que você pode usar para copiar blobs ou arquivos de/para uma conta de armazenamento. Com o AzCopy, você pode carregar arquivos, baixar arquivos, copiar arquivos entre contas de armazenamento e até mesmo sincronizar arquivos. A sincronização de blobs ou arquivos com o AzCopy é uma sincronização de apenas uma direção. Ao sincronizar, você designa a origem e o destino e o AzCopy copiará arquivos ou blobs nessa direção. 
@@ -615,6 +616,8 @@ A escalabilidade dinâmica permite que o banco de dados responda de forma transp
 **Azure HDInsight** - é um serviço de análise de software livre totalmente gerenciado para empresas. Trata-se de um serviço de nuvem que torna mais fácil, mais rápido e mais econômico o processamento de grandes quantidades de dados. Você pode executar estruturas de software livre populares e criar tipos de cluster como Apache Spark, Apache Hadoop, Apache Kafka, Apache HBase, Apache Storm e Serviços de Machine Learning. O HDInsight também dá suporte a uma ampla gama de cenários, como ETL (extração, transformação e carregamento), data warehousing, machine learning e IoT.
 
 **Azure Databricks** - ajuda a descobrir insights dos seus dados e a criar soluções de inteligência artificial. Você pode configurar seu ambiente do Apache Spark em minutos, dimensioná-lo automaticamente e colaborar em projetos compartilhados em um workspace interativo. O Azure Databricks dá suporte a Python, Scala, R, Java e SQL, bem como a bibliotecas e estruturas de ciência de dados, incluindo TensorFlow, PyTorch e scikit-learn.
+
+O Azure Databricks oferece três ambientes para desenvolver aplicativos com uso intensivo de dados: Databricks SQL, Databricks Data Science & Engineering e Databricks Machine Learning.
 
 **Azure Data Lake Analytics** é um serviço de trabalho de análise sob demanda que simplifica Big Data. Em vez de implantar, configurar e ajustar o hardware, você cria consultas para transformar os dados e extrair insights importantes. O serviço de análise pode manipular trabalhos de qualquer escala de maneira instantânea, simplesmente configurando o controle para a quantidade de potência necessária. Você pagará pelo trabalho somente quando ele estiver em execução, tornando-o mais econômico.
 	- **Azure Data Lake Storage** é uma plataforma de nuvem projetada para dar suporte à análise de big data. Ele fornece armazenamento ilimitado para dados estruturados, semiestruturados ou não estruturados. Ele pode ser usado para armazenar qualquer tipo de dados de qualquer tamanho.
@@ -924,13 +927,15 @@ A Proteção contra DDoS Standard ajuda a garantir que a carga de rede que você
 
 
 
-**network security group (NSG)** - permite filtrar o tráfego de rede proveniente dos recursos do Azure e destinado a eles em uma rede virtual do Azure. Considere os NSGs como um firewall interno. Um NSG pode conter várias regras de segurança de entrada e saída que permitem a filtragem do tráfego para e de recursos por endereço IP de origem e de destino, porta e protocolo.
+**Network security group (NSG)** - permite filtrar o tráfego de rede proveniente dos recursos do Azure e destinado a eles em uma rede virtual do Azure. Considere os NSGs como um firewall interno. Um NSG pode conter várias regras de segurança de entrada e saída que permitem a filtragem do tráfego para e de recursos por endereço IP de origem e de destino, porta e protocolo.
 
 **Azure Traffic Manager** - O Gerenciador de Tráfego do Azure é um balanceador de carga de tráfego baseado em DNS que permite distribuir o tráfego entre regiões globais do Azure. Ele não fornece a capacidade de filtrar o tráfego por conexão.
 
 Traffic Manager usa o DNS para direcionar as solicitações do cliente para o endpoint de serviço apropriado com base em um método de roteamento de tráfego. Também fornece health monitoring para cada endpoint. O endpoint pode ser qualquer serviço voltado para a Internet hospedado dentro ou fora do Azure.
 
 **Application Security Group** - permitem a você configurar a segurança de rede como uma extensão natural da estrutura de um aplicativo, permitindo o agrupamento de máquinas virtuais e a definição de políticas de segurança de rede com base nesses grupos. A plataforma lida com a complexidade de endereços IP explícitos e vários conjuntos de regras, permitindo que você se concentre na sua lógica de negócios.
+
+**Microsoft Azure Security Center** - é um conjunto de ferramentas para monitorar e gerenciar a segurança de máquinas virtuais e outros recursos de computação em nuvem na nuvem pública do Microsoft Azure.
 
 ### Describe the purpose of Microsoft Defender for Cloud
 
@@ -956,6 +961,8 @@ Fornece integração nativa com o Microsoft Defender Antivirus no Windows.
 - Proteja as identidades e credenciais do usuário armazenadas no Active Directory. 
 - Identifique e investigue atividades suspeitas de usuários e ataques avançados em toda a cadeia de eliminação.
 - Forneça informações claras sobre incidentes em uma linha do tempo simples para uma triagem rápida.
+
+Os sensores proprietários do Defender for Identity monitoram os controladores de domínio organizacionais, fornecendo uma visão abrangente de todas as atividades do usuário em todos os dispositivos.
 
 ### Sentinel
 
@@ -1062,7 +1069,7 @@ Azure Blueprints fornece uma maneira de definir um conjunto repetitivo de recurs
 
 - ajuda a garantir que os recursos do Azure sejam implantados de uma maneira que esteja de acordo com os requisitos de conformidade. 
 - é uma forma declarativa de orquestrar a implantação de vários modelos de recursos e outros artefatos, tais como:
-	- Atribuições de Funções
+	- Atribuições de Roles
 	- Atribuições de Políticas
 	- Templates do ARM (templates do Azure Resource Manager)
 	- Grupos de recursos
@@ -1078,6 +1085,8 @@ Quando um blueprint é desatribuído, todos os recursos atribuídos pelo bluepri
 |Contributor|Além de outras permissões, pode criar e excluir definições de blueprint, mas não tem permissões de atribuição de blueprint.|
 |Blueprint Contributor|Pode gerenciar definições de blueprint, mas não as atribuir.|
 |Blueprint Operator|Pode atribuir blueprints publicados existentes, mas não pode criar definições de blueprint. A atribuição de blueprint só funcionará se a atribuição for concluída com uma identidade gerenciada atribuída pelo usuário.|
+
+Embora os templates do Resource Manager sejam usados ​​apenas durante o deploy e não preservam as relações com os resources implantados, os Blueprints do Azure preservam essas relações, dando suporte a rastreamento e auditoria aprimorados de deployments e a capacidade de atualizar assinaturas regidas pelo mesmo blueprint.
 
 ### Describe the purpose of Azure Policy
 
@@ -1125,6 +1134,8 @@ O Service Trust Portal da Microsoft é um local que oferece acesso a vários con
 Fornecem uma grande quantidade de informações de design e implementação de segurança. 
 
 Setores & Regiões fornecem informações de conformidade específicas do setor e da região sobre os serviços do Microsoft Cloud.
+
+**Trust Center** é uma parte importante da Microsoft Trusted Cloud Initiative e fornece suporte e recursos para a comunidade jurídica e de conformidade. Trust Center fornece informações detalhadas sobre segurança, privacidade, ofertas de conformidade, políticas, recursos e práticas nos produtos de nuvem da Microsoft.
 
 ## 🔸 Describe features and tools for managing and deploying Azure resources
 
@@ -1271,6 +1282,8 @@ A IoT habilita os dispositivos para coletar e retransmitir informações a fim d
 **Azure Sphere** - O Azure Sphere cria uma solução de IoT de ponta a ponta e altamente segura para os clientes. Essa solução abrange tudo, do hardware e sistema operacional no dispositivo a um método seguro de envio de mensagens do dispositivo para o hub de mensagens. 
 
 **Azure IoT Edge** - estende o Hub IoT. Analise os dados do dispositivo localmente em vez de na nuvem para enviar menos dados para a nuvem, reagir a eventos rapidamente e operar offline. Analisar dados em dispositivos de usuários finais.
+
+**Azure Time Series Insights** - foi desenvolvido para armazenar, visualizar e consultar grandes quantidades de dados de séries temporais, como os gerados por dispositivos IoT. Para garantir que os dados estejam sempre acessíveis, ele armazena seus dados na memória e em SSDs por até 400 dias. Você pode consultar bilhões de eventos interativamente em segundos – sob demanda.
 
 ### IA
 
