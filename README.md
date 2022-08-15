@@ -454,7 +454,12 @@ As redes virtuais do Azure oferecem as seguintes funcionalidades de rede essenci
 - Conecte dispositivos individuais a redes virtuais por meio de uma conexão point-to-site.
 - Conecte redes virtuais a outras redes virtuais por meio de uma conexão network-to-network.
 
-**Azure ExpressRoute** - No caso de ambientes em que você precisa de maior largura de banda e níveis de segurança ainda mais altos, o ExpressRoute fornece uma conectividade privada dedicada para o Azure que não passa pela Internet. 
+**Azure ExpressRoute** - No caso de ambientes em que você precisa de maior largura de banda e níveis de segurança ainda mais altos, o ExpressRoute fornece uma conectividade privada dedicada para o Azure que não passa pela Internet. Isso permite que as conexões do ExpressRoute ofereçam mais confiabilidade, velocidades mais rápidas, latências consistentes e maior segurança do que as conexões típicas pela Internet.
+
+Os três modelos suportados pelo ExpressRoute são: 
+- CloudExchange colocation
+- Conexão Ethernet point-to-point
+- Any-to-any conexão
 
 ### Define public and private endpoints
 
