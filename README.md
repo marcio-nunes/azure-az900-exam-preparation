@@ -348,6 +348,7 @@ A computação do Azure é um serviço de computação sob demanda para execuç�
 - **Instâncias de Contêiner** e o Serviço de Kubernetes do Azure são recursos de Computação do Azure que você pode usar para implantar e gerenciar contêineres. Contêineres são ambientes de aplicativos leves e virtualizados. Eles foram projetados para serem criados rapidamente, escalados horizontalmente e interrompidos dinamicamente. Você pode executar várias instâncias de um aplicativo em contêineres em um computador host.
 - **Funções (serverless)** são ideais quando você está preocupado apenas com o código que executa o serviço, e não com a plataforma ou a infraestrutura subjacente. Elas costumam ser usadas quando você precisa executar um trabalho em resposta a um evento, um temporizador ou uma mensagem de outro serviço do Azure. O Azure tem duas implementações de computação sem servidor:
 	- **Azure Functions**: o Functions pode executar o código praticamente em qualquer linguagem de programação moderna.
+		- **Event Grid** permite que você crie aplicativos facilmente com arquiteturas baseadas em eventos. O Event Grid tem suporte interno para eventos provenientes de serviços do Azure, como blobs de armazenamento e grupos de recursos. O Event Grid também tem suporte para seus próprios eventos, usando tópicos personalizados.
 	- **Azure Logic Apps**: os aplicativos lógicos foram desenvolvidos em um designer baseado na Web e podem executar a lógica disparada pelos serviços do Azure sem escrever nenhum código.
 		- Cada vez que um gatilho é acionado, o mecanismo de Aplicativos Lógicos cria uma instância de aplicativo lógico que executa as ações no fluxo de trabalho. Essas ações também podem incluir 
     	- conversões de dados
@@ -579,6 +580,8 @@ O Azure Cosmos DB é flexível. No nível mais baixo, o Azure Cosmos DB armazena
 
 O serviço Azure Cosmos é um serviço totalmente gerenciado e também fornece acesso de baixa latência aos dados. Ele também possui uma API de tabela para trabalhar com dados do tipo Table.
 
+Você será cobrado com base na quantidade de taxa de transferência (Throughput) atribuída à conta Cosmos DB e também no armazenamento.
+
 **Azure SQL Managed Instance** - lift-and-shift do SQL Server local com alterações mínimas em uma solução de PaaS do Azure. A Instância Gerenciada de SQL do Azure tem quase 100% de compatibilidade com a versão mais recente do SQL Server Enterprise Edition, permitindo uma migração sem atritos para o Azure com o mínimo de alterações no aplicativo e no banco de dados. Ao mesmo tempo, é uma oferta de PaaS, eliminando a sobrecarga para o gerenciamento da infraestrutura subjacente. Tem quase 100% de compatibilidade com a versão mais recente do SQL Server Enterprise Edition, permitindo uma migração sem atritos para o Azure com o mínimo de alterações no aplicativo e no banco de dados. Ao mesmo tempo, é uma oferta de PaaS, eliminando a sobrecarga para o gerenciamento da infraestrutura subjacente.
 
 **Azure SQL Database** um banco de dados sem servidor econômico com um padrão de uso intermitente e baixa utilização de computação ao longo do tempo. A camada de serviço sem servidor do Banco de Dados SQL do Azure é otimizada para cenários com padrões de uso intermitentes ou imprevisíveis. Ele pausa automaticamente o banco de dados durante períodos de inatividade e o retoma quando a atividade retorna, permitindo o faturamento por segundo para a quantidade real de computação consumida.
@@ -610,6 +613,7 @@ A escalabilidade dinâmica permite que o banco de dados responda de forma transp
 **Azure Databricks** - ajuda a descobrir insights dos seus dados e a criar soluções de inteligência artificial. Você pode configurar seu ambiente do Apache Spark em minutos, dimensioná-lo automaticamente e colaborar em projetos compartilhados em um workspace interativo. O Azure Databricks dá suporte a Python, Scala, R, Java e SQL, bem como a bibliotecas e estruturas de ciência de dados, incluindo TensorFlow, PyTorch e scikit-learn.
 
 **Azure Data Lake Analytics** é um serviço de trabalho de análise sob demanda que simplifica Big Data. Em vez de implantar, configurar e ajustar o hardware, você cria consultas para transformar os dados e extrair insights importantes. O serviço de análise pode manipular trabalhos de qualquer escala de maneira instantânea, simplesmente configurando o controle para a quantidade de potência necessária. Você pagará pelo trabalho somente quando ele estiver em execução, tornando-o mais econômico.
+	- **Azure Data Lake Storage** é uma plataforma de nuvem projetada para dar suporte à análise de big data. Ele fornece armazenamento ilimitado para dados estruturados, semiestruturados ou não estruturados. Ele pode ser usado para armazenar qualquer tipo de dados de qualquer tamanho.
 
 ## 🔸 Describe Azure identity, access, and security
 
@@ -908,6 +912,8 @@ A Proteção contra DDoS Standard ajuda a garantir que a carga de rede que você
 		- Os ataques de protocolo funcionam explorando pontos fracos na pilha de protocolos da camada 3 e da camada 4. 
 		- Os ataques da camada de aplicativo (camada de recurso) visam pacotes de aplicativos da Web. 
 		- A proteção é fornecida para instâncias do Azure Load Balancer, Azure Application Gateway e Azure Service Fabric com endereços IP públicos associados. A proteção não é fornecida para ambientes de serviço de aplicativo.
+		- O Plano Padrão de Proteção DDoS oferece suporte até 100 recursos.
+
 
 
 **network security group (NSG)** - permite filtrar o tráfego de rede proveniente dos recursos do Azure e destinado a eles em uma rede virtual do Azure. Considere os NSGs como um firewall interno. Um NSG pode conter várias regras de segurança de entrada e saída que permitem a filtragem do tráfego para e de recursos por endereço IP de origem e de destino, porta e protocolo.
@@ -934,6 +940,12 @@ Fornece integração nativa com o Microsoft Defender Antivirus no Windows.
 	- Avaliação contínua – Conheça sua postura de segurança. Identifique e rastreie vulnerabilidades.
 	- Proteger – Proteja recursos e serviços com o Azure Security Benchmark.
 	- Defender – Detecte e resolva ameaças a recursos, cargas de trabalho e serviços.
+
+**Microsoft Defender for Identity** é uma solução de segurança baseada em nuvem que aproveita os sinais do Active Directory local para identificar, detectar e investigar ameaças avançadas, identidades comprometidas e ações internas mal-intencionadas direcionadas à sua organização. O Defender for Identity permite que analistas de SecOp e profissionais de segurança que lutam para detectar ataques avançados em ambientes híbridos: 
+- Monitore usuários, comportamento de entidades e atividades com análises baseadas em aprendizado.
+- Proteja as identidades e credenciais do usuário armazenadas no Active Directory. 
+- Identifique e investigue atividades suspeitas de usuários e ataques avançados em toda a cadeia de eliminação.
+- Forneça informações claras sobre incidentes em uma linha do tempo simples para uma triagem rápida.
 
 ### Sentinel
 
