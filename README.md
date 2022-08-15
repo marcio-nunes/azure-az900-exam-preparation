@@ -370,6 +370,8 @@ O DevOps é um conceito que combina filosofias e práticas para auxiliar as equi
 
 **Azure DevTest Labs** - O Azure DevTest Labs fornece um meio automatizado de gerenciar o processo de criação, configuração e remoção de VMs (máquinas virtuais) que contêm builds de seus projetos de software. Dessa maneira, desenvolvedores e testadores podem executar testes em uma variedade de ambientes e builds. E isso não fica limitado às VMs. Tudo o que você pode implantar no Azure por meio de um modelo do ARM pode ser provisionado pelo DevTest Labs. O provisionamento de ambientes de laboratório pré-criados com as ferramentas e as configurações necessárias já instaladas economiza muito tempo para desenvolvedores e profissionais de garantia de qualidade.
 
+O Azure DevTest Labs é um serviço que permite aos desenvolvedores autogerenciar com eficiência os recursos de máquinas virtuais (VMs) e plataforma como serviço (PaaS) sem esperar por aprovações. O DevTest Labs cria laboratórios que consistem em bases pré-configuradas ou templates do Azure Resource Manager.
+
 ### Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
 
 - **Máquinas virtuais** são emulações de software de computadores físicos. Você deve habilitar a configuração do **Azure Hybrid Benefit**. A ativação dessa opção de licenciamento nas configurações de VM permite que você use licenças existentes do Windows Server, que são cobertas pelo contrato ativo do Microsoft Software Assurance, para executar VMs do Windows no Azure. Você paga apenas pelo custo de infraestrutura das VMs, que pode chegar a 40% do custo normal.
@@ -461,6 +463,8 @@ Os três modelos suportados pelo ExpressRoute são:
 - CloudExchange colocation
 - Conexão Ethernet point-to-point
 - Any-to-any conexão
+
+**User-defined Routes** - O Azure cria automaticamente uma tabela de rotas para cada sub-rede em uma rede virtual do Azure e adiciona rotas padrão do sistema à tabela. Você pode substituir algumas das rotas do sistema do Azure por rotas personalizadas e adicionar outras rotas personalizadas às route tables. O UDR pode ser criado antes da criação da Sub-rede. Mas seria eficaz apenas quando a rota estivesse associada à sub-rede.
 
 ### Define public and private endpoints
 
@@ -647,6 +651,10 @@ O Azure garante 99,99% de disponibilidade dos serviços Azure Active Directory B
 - **Aplicativos do Office 365**. Permite que você faça tudo o que está incluído na versão gratuita, além da redefinição de senha self-service (SSPR - Self-service password reset) para usuários na nuvem e write-back de dispositivo, o que oferece sincronização bidirecional entre os diretórios locais e o Azure AD. Está incluída nas assinaturas do Office 365 E1, E3, E5, F1 e F3.
 - **Azure Active Directory Premium P1**. Inclui todos os recursos da edição gratuita e de Aplicativos do Office 365. Ele também dá suporte à administração avançada, como grupos dinâmicos, gerenciamento de grupo de autoatendimento, Microsoft Identity Manager (um conjunto de gerenciamento de acesso e identidade local), RBAC e recursos de write-back de nuvem, que permitem a redefinição de senha por autoatendimento (SSPR - Self-service password reset) para os usuários locais.
 - **Azure Active Directory Premium P2**. O P2 oferece todos os recursos do Premium P1 e o Azure Active Directory Identity Protection para fornecer acesso condicional baseado em risco aos aplicativos e dados críticos da empresa. O P2 também oferece o Azure Active Directory Privileged Identity Management para descobrir, restringir e monitorar os administradores e o acesso aos recursos, bem como fornecer acesso just-in-time, quando necessário.
+
+**Azure AD Identity Protection** ajuda a identificar as vulnerabilidades relacionadas à identidade.
+
+**Azure AD Identity Secure Score** - ajuda a identificar a **identity secure score** para fornecer as recomendações. A pontuação de segurança de identidade é uma porcentagem que funciona como um indicador de quão alinhado você está com as práticas de segurança recomendadas da Microsoft.
 
 > Também existe uma opção para licenças de recurso de “Pagamento conforme o uso”. Você pode obter licenças de outros recursos separadamente, como o Azure Active Directory B2C. O B2C pode ajudar você a fornecer soluções de gerenciamento de acesso e identidade para seus aplicativos voltados ao cliente.
 
@@ -920,6 +928,8 @@ A Proteção contra DDoS Standard ajuda a garantir que a carga de rede que você
 
 **Azure Traffic Manager** - O Gerenciador de Tráfego do Azure é um balanceador de carga de tráfego baseado em DNS que permite distribuir o tráfego entre regiões globais do Azure. Ele não fornece a capacidade de filtrar o tráfego por conexão.
 
+Traffic Manager usa o DNS para direcionar as solicitações do cliente para o endpoint de serviço apropriado com base em um método de roteamento de tráfego. Também fornece health monitoring para cada endpoint. O endpoint pode ser qualquer serviço voltado para a Internet hospedado dentro ou fora do Azure.
+
 **Application Security Group** - permitem a você configurar a segurança de rede como uma extensão natural da estrutura de um aplicativo, permitindo o agrupamento de máquinas virtuais e a definição de políticas de segurança de rede com base nesses grupos. A plataforma lida com a complexidade de endereços IP explícitos e vários conjuntos de regras, permitindo que você se concentre na sua lógica de negócios.
 
 ### Describe the purpose of Microsoft Defender for Cloud
@@ -1030,6 +1040,8 @@ Os recursos de Cost Management incluem:
 - **Alertas** - Obtenha alertas conforme seus orçamentos de custo e uso.
 - **Recomendações** - Receba recomendações para eliminar recursos ociosos e otimizar os recursos do Azure que você provisiona.
 
+O faturamento do SLA é feito em um período mensal.
+
 ### Describe the purpose of tags
 
 As tags ajudam a gerenciar os custos associados aos diferentes grupos de produtos e recursos do Azure. Você pode aplicar tags a grupos de recursos do Azure para organizar dados de cobrança.
@@ -1039,6 +1051,8 @@ Nem todos os recursos do Azure dão suporte a tags. Eles não podem ser aplicado
 Tags são pares nome/valor. 
 
 As tags aplicadas a um grupo de recursos não são herdadas por seus recursos. Eles também não são herdados se forem aplicados no nível de assinatura do Azure. Para garantir que todos os recursos necessários sejam marcados, você precisa aplicá-los manualmente ou criar uma política do Azure que aplique automaticamente as marcas necessárias de grupos de recursos ou a assinatura de recursos durante sua implantação.
+
+Você aplica tags a seus resources, resources group e subscriptions para organizá-los logicamente em uma taxonomia.
 
 ## 🔸 Describe features and tools in Azure for governance and compliance
 
