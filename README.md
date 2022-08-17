@@ -454,7 +454,7 @@ As redes virtuais do Azure oferecem as seguintes funcionalidades de rede essenci
 
 **Azure VPN Gateway** - Acessa as Redes Virtuais do Azure por meio de gateways de VPN de alto desempenho. Um gateway de VPN é um tipo de gateway de rede virtual. Gateways de VPN são implantados em redes virtuais do Azure e habilitam a conectividade:
 - Conecte datacenters on-premises a redes virtuais por meio de uma conexão site-to-site.
-- Conecte dispositivos individuais a redes virtuais por meio de uma conexão point-to-site.
+- Conecte dispositivos individuais a redes virtuais por meio de uma conexão point-to-site.f
 - Conecte redes virtuais a outras redes virtuais por meio de uma conexão network-to-network.
 
 **Azure ExpressRoute** - No caso de ambientes em que você precisa de maior largura de banda e níveis de segurança ainda mais altos, o ExpressRoute fornece uma conectividade privada dedicada para o Azure que não passa pela Internet. Isso permite que as conexões do ExpressRoute ofereçam mais confiabilidade, velocidades mais rápidas, latências consistentes e maior segurança do que as conexões típicas pela Internet.
@@ -472,7 +472,7 @@ Convém habilitar recursos do Azure para que se comuniquem entre si com seguran�
 
 Você pode usar Endpoint services para se conectar a outros tipos de recursos do Azure, como bancos de dados SQL do Azure e contas de armazenamento. Essa abordagem permite vincular vários recursos do Azure às redes virtuais para melhorar a segurança e fornecer o encaminhamento ideal entre recursos.
 
-- Private endpoints - Um endpoint privado é uma adaptador de rede que usa um endereço IP privado de sua rede virtual. Essa interface de rede conecta você de forma privada e segura a um serviço da plataforma do Azure Private Link . Ao habilitar um endpoint privado, você está trazendo o serviço para sua rede virtual. O tráfego de um endpoint privado para o serviço passa pela rede de backbone da Microsoft, eliminando a exposição da Internet pública.
+- **Private endpoints** - Um endpoint privado é uma adaptador de rede que usa um endereço IP privado de sua rede virtual. Essa interface de rede conecta você de forma privada e segura a um serviço da plataforma do Azure Private Link . Ao habilitar um endpoint privado, você está trazendo o serviço para sua rede virtual. O tráfego de um endpoint privado para o serviço passa pela rede de backbone da Microsoft, eliminando a exposição da Internet pública.
 
 - Public endpoint - permite o acesso a dados para sua instância gerenciada de fora da rede virtual. Você pode acessar sua instância gerenciada de serviços multilocatários do Azure, como Power BI, Serviço de Aplicativo do Azure ou uma rede local. Usando o endpoint público em uma instância gerenciada, você não precisa usar uma VPN, o que pode ajudar a evitar problemas de taxa de transferência de VPN.
 
@@ -573,7 +573,7 @@ O Azure dá suporte à migração em tempo real de infraestrutura, aplicativos e
 	- O Azure Data Box Heavy é um serviço de migração física que ajuda a transferir grandes quantidades de dados de maneira rápida, barata e confiável. Um dispositivo de armazenamento Data Box proprietário que tem uma capacidade máxima de armazenamento de 80 terabytes. 
 	- O Data Box Heavy é transportado entre o datacenter por meio de uma empresa regional. Uma caixa robusta protege o Data Box contra danos durante o transporte.
 	- É ideal para transferir os tamanhos de dados maiores do que 40 TB em cenários com conectividade de rede limitada a inexistente.
-	- Você deve usar o Azure Data Box Gateway para migrar dados periodicamente para o Azure usando o Server Message Block (SMB). O Azure Data Box Gateway é um serviço que permite transferir com segurança grandes quantidades de dados de e para o Azure Data Box.
+	- **Data Box Gateway** - Você deve usar o Azure Data Box Gateway para migrar dados periodicamente para o Azure usando o Server Message Block (SMB). O Azure Data Box Gateway é um serviço que permite transferir com segurança grandes quantidades de dados de e para o Azure Data Box.
 
 ### Database
 
@@ -676,7 +676,7 @@ Autenticação é o processo de estabelecer a identidade de uma pessoa ou servi�
 A autorização é o processo de estabelecer o nível de acesso que uma pessoa ou um serviço autenticado tem. Especifica quais dados podem ser acessados e que a pessoa ou serviço pode fazer com eles.
 
 - **Single sign-on (SSO)** - O SSO permite que você se lembre de apenas um nome de usuário e uma senha para acessar vários aplicativos. Uma única identidade é vinculada a um usuário, o que simplifica o modelo de segurança. À medida que os usuários trocam de funções ou saem de uma organização, as modificações de acesso são vinculadas àquela identidade, o que reduz consideravelmente o esforço necessário para alterar ou desabilitar contas.
-- **Multifactor authentication** - é um processo em que o usuário deve fornecer uma forma adicional de identificação durante o processo de entrada. Exemplos incluem um código no telefone celular ou uma verificação de impressão digital.
+- **Multifactor authentication** - é um processo em que o usuário deve fornecer uma forma adicional de identificação durante o processo de entrada. Exemplos incluem um código no telefone celular ou uma verificação de impressão digital. 
 - **Passwordless** - A autenticação sem senha precisa ser configurada em um dispositivo para poder funcionar. Por exemplo, seu computador é algo que você tem. Depois de registrado ou inscrito, o Azure agora sabe que ele está associado a você. Agora que o computador é conhecido, uma vez que você forneça algo que você saiba ou seja (como um PIN ou uma impressão digital), você poderá ser autenticado sem usar uma senha. 3 Tipos são oferecidos:
 	- Windows Hello para Empresas - Credenciais biométricas e de PIN estão diretamente ligadas ao computador do usuário, o que impede o acesso de quem não seja o proprietário. 
 	- Aplicativo Microsoft Authenticator - permitir que o telefone do funcionário se torne um método de autenticação sem senha.
@@ -936,7 +936,9 @@ A Proteção contra DDoS Standard ajuda a garantir que a carga de rede que você
 
 Traffic Manager usa o DNS para direcionar as solicitações do cliente para o endpoint de serviço apropriado com base em um método de roteamento de tráfego. Também fornece health monitoring para cada endpoint. O endpoint pode ser qualquer serviço voltado para a Internet hospedado dentro ou fora do Azure.
 
-**Application Security Group** - permitem a você configurar a segurança de rede como uma extensão natural da estrutura de um aplicativo, permitindo o agrupamento de máquinas virtuais e a definição de políticas de segurança de rede com base nesses grupos. A plataforma lida com a complexidade de endereços IP explícitos e vários conjuntos de regras, permitindo que você se concentre na sua lógica de negócios.
+**Application Security Group** - permitem a você configurar a segurança de rede como uma extensão natural da estrutura de um aplicativo, permitindo o agrupamento de máquinas virtuais e a definição de políticas de segurança de rede com base nesses grupos. A plataforma lida com a complexidade de endereços IP explícitos e vários conjuntos de regras, permitindo que você se concentre na sua lógica de negócios. 
+- Permitem que você organize servidores semelhantes para que você possa definir e implementar facilmente políticas de segurança com base nesses grupos.
+- Não permitem que você permita ou bloqueie diretamente conexões. Os ASGs podem ser usados ​​como parte da solução, mas isso não é configurado por meio de ASGs. Você pode, por exemplo, criar um ASG e, em seguida, criar um Grupo de Segurança de Rede (NSG), definindo filtros de conexão e aplicá-lo ao ASG.
 
 **Microsoft Azure Security Center** - é um conjunto de ferramentas para monitorar e gerenciar a segurança de máquinas virtuais e outros recursos de computação em nuvem na nuvem pública do Microsoft Azure.
 
