@@ -911,7 +911,7 @@ O Azure fornece ferramentas e recursos de segurança em todos os níveis do conc
 - Regras de filtragem de entrada e saída.
 - Suporte a DNAT (conversão de endereços de rede de destino) de entrada.
 - O registro em log do Azure Monitor.
-- O Firewall do Azure fornece filtragem de tráfego, semelhante aos Network Securuty Groups. Ambos os serviços não são mutuamente exclusivos; eles podem se complementar. Usar o Firewall do Azure com NSGs pode fornecer melhor segurança de rede com defesa em profundidade. 
+- O Firewall do Azure fornece filtragem de tráfego, semelhante aos Network Security Groups. Ambos os serviços não são mutuamente exclusivos; eles podem se complementar. Usar o Firewall do Azure com NSGs pode fornecer melhor segurança de rede com defesa em profundidade. 
 - A implementação do Firewall do Azure resultará em custos e esforços adicionais para configuração e manutenção.
 - Você deve usar o Firewall do Azure quando quiser criar uma regra que restrinja o tráfego de rede entre assinaturas.
 
