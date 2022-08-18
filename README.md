@@ -462,7 +462,7 @@ As redes virtuais do Azure oferecem as seguintes funcionalidades de rede essenci
 Os três modelos suportados pelo ExpressRoute são: 
 - CloudExchange colocation
 - Conexão Ethernet point-to-point
-- Any-to-any conexão
+- Conexão Any-to-any 
 
 **User-defined Routes** - O Azure cria automaticamente uma tabela de rotas para cada sub-rede em uma rede virtual do Azure e adiciona rotas padrão do sistema à tabela. Você pode substituir algumas das rotas do sistema do Azure por rotas personalizadas e adicionar outras rotas personalizadas às route tables. O UDR pode ser criado antes da criação da Sub-rede. Mas seria eficaz apenas quando a rota estivesse associada à sub-rede.
 
