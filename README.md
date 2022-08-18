@@ -746,7 +746,7 @@ Há duas Identidades Externas do Azure AD diferentes: B2B e B2C.
 	- O Azure AD B2C é uma solução de CIAM (customer identity access management). O Azure AD B2C permite que usuários externos entrem com suas identidades preferenciais de conta social, corporativa ou local para obter o logon único para os aplicativos.
 	- Ele cuida do dimensionamento e da segurança da plataforma de autenticação, do monitoramento e do tratamento automático de ameaças, como denial-of-service (DDoS), password spray ou ataques de força bruta.
 	- Os usuários externos são gerenciados no diretório Azure AD B2C, separadamente do diretório de funcionários e parceiros da organização.
-	- Também há suporte para SSO para os aplicativos de clientes nos locatário do Azure AD B2C.
+	- Também há suporte para SSO para os aplicativos de clientes nos locatários do Azure AD B2C.
 
 > As Identidades Externas do Azure AD são um recurso das edições Premium P1 e P2 do Azure AD e os preços se baseiam em usuários ativos mensais. 
 
