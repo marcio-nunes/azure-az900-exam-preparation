@@ -474,7 +474,7 @@ Você pode usar Endpoint services para se conectar a outros tipos de recursos do
 
 - **Private endpoints** - Um endpoint privado é uma adaptador de rede que usa um endereço IP privado de sua rede virtual. Essa interface de rede conecta você de forma privada e segura a um serviço da plataforma do Azure Private Link . Ao habilitar um endpoint privado, você está trazendo o serviço para sua rede virtual. O tráfego de um endpoint privado para o serviço passa pela rede de backbone da Microsoft, eliminando a exposição da Internet pública.
 
-- Public endpoint - permite o acesso a dados para sua instância gerenciada de fora da rede virtual. Você pode acessar sua instância gerenciada de serviços multilocatários do Azure, como Power BI, Serviço de Aplicativo do Azure ou uma rede local. Usando o endpoint público em uma instância gerenciada, você não precisa usar uma VPN, o que pode ajudar a evitar problemas de taxa de transferência de VPN.
+- **Public endpoint** - permite o acesso a dados para sua instância gerenciada de fora da rede virtual. Você pode acessar sua instância gerenciada de serviços multilocatários do Azure, como Power BI, Serviço de Aplicativo do Azure ou uma rede local. Usando o endpoint público em uma instância gerenciada, você não precisa usar uma VPN, o que pode ajudar a evitar problemas de taxa de transferência de VPN.
 
 ## 🔸 Describe Azure storage services
 
