@@ -454,7 +454,7 @@ As redes virtuais do Azure oferecem as seguintes funcionalidades de rede essenci
 
 **Azure VPN Gateway** - Acessa as Redes Virtuais do Azure por meio de gateways de VPN de alto desempenho. Um gateway de VPN é um tipo de gateway de rede virtual. Gateways de VPN são implantados em redes virtuais do Azure e habilitam a conectividade:
 - Conecte datacenters on-premises a redes virtuais por meio de uma conexão site-to-site.
-- Conecte dispositivos individuais a redes virtuais por meio de uma conexão point-to-site.f
+- Conecte dispositivos individuais a redes virtuais por meio de uma conexão point-to-site.
 - Conecte redes virtuais a outras redes virtuais por meio de uma conexão network-to-network.
 
 **Azure ExpressRoute** - No caso de ambientes em que você precisa de maior largura de banda e níveis de segurança ainda mais altos, o ExpressRoute fornece uma conectividade privada dedicada para o Azure que não passa pela Internet. Isso permite que as conexões do ExpressRoute ofereçam mais confiabilidade, velocidades mais rápidas, latências consistentes e maior segurança do que as conexões típicas pela Internet.
