@@ -230,7 +230,7 @@ Os recursos são criados em regiões, que são diferentes localizações geográ
 - **Azure regional**
 	- Uma região é uma área geográfica do planeta que contém pelo menos um, mas possivelmente vários data centers próximos e conectados a uma rede de baixa latência. 
 	- Essas regiões dão flexibilidade para aproximar os aplicativos dos usuários, não importa onde estejam. 
-	- As regiões globais proporcionam maior escalabilidade e redundância. Elas também preservam a residência a interrupções dos dados de seus serviços.
+	- As regiões globais proporcionam maior escalabilidade e redundância. Elas também preservam a resiliência a interrupções dos dados de seus serviços.
 
 - **Regional pairs**
 	- Cada região do Azure é sempre emparelhada com outra região na mesma área geográfica a pelo menos 300 milhas (cerca de 480 km) de distância. Essa abordagem permite a replicação de recursos, como o armazenamento de VM, em uma geografia, o que ajuda a reduzir a probabilidade de interrupções devido a eventos como desastres naturais, conflitos civis, quedas de energia ou interrupções de rede física afetarem as duas regiões ao mesmo tempo.
