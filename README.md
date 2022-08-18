@@ -622,7 +622,8 @@ A escalabilidade dinâmica permite que o banco de dados responda de forma transp
 O Azure Databricks oferece três ambientes para desenvolver aplicativos com uso intensivo de dados: Databricks SQL, Databricks Data Science & Engineering e Databricks Machine Learning.
 
 **Azure Data Lake Analytics** é um serviço de trabalho de análise sob demanda que simplifica Big Data. Em vez de implantar, configurar e ajustar o hardware, você cria consultas para transformar os dados e extrair insights importantes. O serviço de análise pode manipular trabalhos de qualquer escala de maneira instantânea, simplesmente configurando o controle para a quantidade de potência necessária. Você pagará pelo trabalho somente quando ele estiver em execução, tornando-o mais econômico.
-	- **Azure Data Lake Storage** é uma plataforma de nuvem projetada para dar suporte à análise de big data. Ele fornece armazenamento ilimitado para dados estruturados, semiestruturados ou não estruturados. Ele pode ser usado para armazenar qualquer tipo de dados de qualquer tamanho.
+
+- **Azure Data Lake Storage** é uma plataforma de nuvem projetada para dar suporte à análise de big data. Ele fornece armazenamento ilimitado para dados estruturados, semiestruturados ou não estruturados. Ele pode ser usado para armazenar qualquer tipo de dados de qualquer tamanho.
 
 **Azure Data Factory** - é um serviço ETL (extrair, transformar e carregar) totalmente gerenciado.
 
