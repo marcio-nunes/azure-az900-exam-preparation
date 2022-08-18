@@ -210,7 +210,7 @@ O provedor de nuvem é responsável pela segurança física dos datacenters, pel
 	- Migração lift-and-shift: você conta com recursos de nuvem semelhantes aos do datacenter local e apenas migra os elementos em execução local para execução na infraestrutura IaaS.
 	- Teste e desenvolvimento: você estabeleceu configurações para ambientes de desenvolvimento e teste que precisa replicar rapidamente. Você pode ativar ou desativar os diferentes ambientes rapidamente com uma estrutura de IaaS, mantendo o controle completo.
 - **PaaS**
-	- Est1rutura de desenvolvimento: O PaaS fornece uma estrutura que os desenvolvedores podem usar como base para desenvolver ou personalizar aplicativos baseados em nuvem. O PaaS permite aos desenvolvedores criar aplicativos usando componentes de software internos. São incluídos recursos de nuvem, como escalabilidade, alta disponibilidade e a funcionalidade de multilocatário, reduzindo a quantidade de codificação que os desenvolvedores precisam realizar.
+	- Estrutura de desenvolvimento: O PaaS fornece uma estrutura que os desenvolvedores podem usar como base para desenvolver ou personalizar aplicativos baseados em nuvem. O PaaS permite aos desenvolvedores criar aplicativos usando componentes de software internos. São incluídos recursos de nuvem, como escalabilidade, alta disponibilidade e a funcionalidade de multilocatário, reduzindo a quantidade de codificação que os desenvolvedores precisam realizar.
 	- Análise ou business intelligence: as ferramentas fornecidas como serviço com o PaaS permitem que as organizações analisem e minerem dados, encontrando insights e padrões e prevendo resultados para aprimorar a previsão, as decisões de design de produto, o retornos sobre investimentos e outras decisões de negócios.
 - **SaaS**
 	- Email e mensagens.
@@ -926,7 +926,7 @@ A Proteção contra DDoS Standard ajuda a garantir que a carga de rede que você
 		- Os ataques de protocolo funcionam explorando pontos fracos na pilha de protocolos da camada 3 e da camada 4. 
 		- Os ataques da camada de aplicativo (camada de recurso) visam pacotes de aplicativos da Web. 
 		- A proteção é fornecida para instâncias do Azure Load Balancer, Azure Application Gateway e Azure Service Fabric com endereços IP públicos associados. A proteção não é fornecida para ambientes de serviço de aplicativo.
-		- O Plano Padrão de Proteção DDoS oferece suporte até 100 recursos.
+		- O Plano Standard de Proteção DDoS oferece suporte até 100 recursos.
 
 
 
