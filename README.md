@@ -501,7 +501,7 @@ Uma conta de armazenamento fornece um namespace exclusivo para os dados do Armaz
 
 - **Hot access tier**: otimizada para armazenar dados que são acessados com frequência (por exemplo, imagens de seu site).
 - **Cool access tier**: otimizada para dados acessados com menos frequência e armazenados por pelo menos 30 dias (por exemplo, faturas de seus clientes). Incorre em penalidades para dados excluídos em 30 dias.
-- **Archive access tier**: adequada para dados acessados raramente e armazenados por pelo menos 180 dias, com requisitos de latência flexíveis (por exemplo, backups de longo prazo). Não está disponível no nível da conta.
+- **Archive access tier**: adequada para dados acessados raramente e armazenados por pelo menos 180 dias, com requisitos de latência flexíveis (por exemplo, backups de longo prazo). Configuração não  disponível no nível da conta, somente no nível de objeto.
 
 ### Describe redundancy options
 
