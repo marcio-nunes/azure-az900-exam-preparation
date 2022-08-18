@@ -590,7 +590,8 @@ Você será cobrado com base na quantidade de taxa de transferência (Throughput
 **Azure SQL Managed Instance** - lift-and-shift do SQL Server local com alterações mínimas em uma solução de PaaS do Azure. A Instância Gerenciada de SQL do Azure tem quase 100% de compatibilidade com a versão mais recente do SQL Server Enterprise Edition, permitindo uma migração sem atritos para o Azure com o mínimo de alterações no aplicativo e no banco de dados. Ao mesmo tempo, é uma oferta de PaaS, eliminando a sobrecarga para o gerenciamento da infraestrutura subjacente.
 
 **Azure SQL Database** um banco de dados sem servidor econômico com um padrão de uso intermitente e baixa utilização de computação ao longo do tempo. A camada de serviço sem servidor do Banco de Dados SQL do Azure é otimizada para cenários com padrões de uso intermitentes ou imprevisíveis. Ele pausa automaticamente o banco de dados durante períodos de inatividade e o retoma quando a atividade retorna, permitindo o faturamento por segundo para a quantidade real de computação consumida.
-	- **Azure SQL Database elastic pools** - são uma solução simples e econômica para gerenciar e dimensionar vários bancos de dados com demandas de uso variáveis ​​e imprevisíveis.
+
+- **Azure SQL Database elastic pools** - são uma solução simples e econômica para gerenciar e dimensionar vários bancos de dados com demandas de uso variáveis ​​e imprevisíveis.
 
 **Migration** - Você pode migrar os seus bancos de dados existentes do SQL Server com o tempo de inatividade mínimo usando o Serviço de Migração de Banco de Dados do Azure. O Assistente de Migração de Dados da Microsoft pode gerar relatórios de avaliação que fornecem recomendações para orientar você quanto às alterações necessárias antes de executar uma migração. Após avaliar e resolver qualquer correção necessária, você estará pronto para iniciar o processo de migração. 
 
