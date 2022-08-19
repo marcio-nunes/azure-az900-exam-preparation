@@ -1174,7 +1174,11 @@ O Azure Arc é uma ponte que estende a plataforma do Azure para ajudar na criaç
 
 ### Describe Azure Resource Manager and Azure Resource Manager templates (ARM templates)
 
-- **Azure Resource Manager** é o serviço de implantação e gerenciamento do Azure. Ele fornece uma camada de gerenciamento que lhe permite criar, atualizar e excluir recursos em sua conta do Azure. Você usa recursos de gerenciamento como controle de acesso, bloqueios e tags para proteger e organizar seus recursos após a implantação. Quando um usuário envia uma solicitação de ferramentas, APIs ou SDKs do Azure, o Resource Manager recebe a solicitação. Ele autentica e autoriza a solicitação. O Resource Manager envia a solicitação para o serviço do Azure, que executa a ação solicitada. Como todas as solicitações são manipuladas por meio da mesma API, você verá funcionalidades e resultados uniformes em todas as diferentes ferramentas. Com o Resource Manager, você pode:
+- **Azure Resource Manager** é o serviço de implantação e gerenciamento do Azure. Ele fornece uma camada de gerenciamento que lhe permite criar, atualizar e excluir recursos em sua conta do Azure. Você usa recursos de gerenciamento como controle de acesso, bloqueios e tags para proteger e organizar seus recursos após a implantação. Quando um usuário envia uma solicitação de ferramentas, APIs ou SDKs do Azure, o Resource Manager recebe a solicitação. Ele autentica e autoriza a solicitação. O Resource Manager envia a solicitação para o serviço do Azure, que executa a ação solicitada. Como todas as solicitações são manipuladas por meio da mesma API, você verá funcionalidades e resultados uniformes em todas as diferentes ferramentas. 
+
+Sua empresa deseja aumentar os limites padrão de quantos recursos selecionados de cada tipo podem ser provisionados por região do Azure. Isso pode ser feito com ARM. Isso permite aumentar os limites padrão, mas não permite que você exceda os limites rígidos.
+
+Com o Resource Manager, você pode:
 
 	- Gerenciar sua infraestrutura por meio de modelos declarativos em vez de scripts. Um modelo do Resource Manager é um arquivo JSON que define o que você deseja implantar no Azure.
 	- Implantar, gerenciar e monitorar todos os recursos da sua solução como um grupo em vez de tratá-los individualmente.
