@@ -2,7 +2,7 @@
 
 ## Considerações
 
-1. Todo conteúdo foi retirado dos módulos e paths do site [Microsoft Learn](https://docs.microsoft.com/pt-br/learn/) para fins de estudo.
+1. Todo conteúdo foi retirado dos módulos e paths do site [Microsoft Learn](https://docs.microsoft.com/pt-br/learn/) e simulados realizados para fins de estudo.
 2. Criei o [Path de estudo para a certificação AZ-900](https://docs.microsoft.com/pt-br/users/marcio-nunes-silva/collections/ew7zi52118116y) e vou atualizando conforme necessidade. 
 3. Esse resumo não substitui os módulos completos. Recomendo fortemente estudar através dos módulos do MS Learn.
 4. Resumo baseado no [Study Guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY) oficial da Microsoft.
