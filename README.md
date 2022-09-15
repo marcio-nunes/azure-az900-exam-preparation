@@ -10,7 +10,6 @@
 6. Façam simulados. 
 	- [Microsoft AZ-900 practice test](https://esi.microsoft.com/getcertification)
 	- Na Udemy você também encontra alguns. [Udemy Practice Test](https://www.udemy.com/course/az-900-microsoft-azure-fundamentals-practice-tests-2022-k)
-	- [itexams](https://www.itexams.com/exam/AZ-900)
 7. [Agendamento do exame](https://esi.microsoft.com/getcertification) de certificação.
 8. Fiquem a vontade para ajudar a melhorar o conteúdo.
 
